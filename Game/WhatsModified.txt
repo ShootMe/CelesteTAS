@@ -1,0 +1,7 @@
+Celeste.Engine
+	Update(TimeSpan gameTime)
+		Changed
+			Added call to TAS.Manager.UpdateInputs
+			Added For Loop for Fast Forward
+---------------------------------------------------------------------------------
+Changed a few fields to public vs private. Will update which ones later.

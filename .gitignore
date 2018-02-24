@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/Game/bin
+/Game/obj
+/Game/Celeste-Addons.csproj.user
+/Game/Celeste.exe
+/Tools/bin
+/Tools/obj
+/Tools/CelesteStudio.csproj.user
