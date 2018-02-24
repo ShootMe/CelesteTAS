@@ -2,16 +2,16 @@
 protected override void Update(GameTime gameTime)
 {
 	Engine.RawDeltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
-	int frameLoops = Manager.FrameLoops;
+	int frameLoops = TAS.Manager.FrameLoops;
 	for (int i = 0; i < frameLoops; i++)
 	{
 		Engine.DeltaTime = Engine.RawDeltaTime * Engine.TimeRate * Engine.TimeRateB;
-		if (!Manager.Running)
+		if (!TAS.Manager.Running || TAS.Manager.Recording)
 		{
 			MInput.Update();
 		}
-		Manager.UpdateInputs();
-		if ((Manager.state & State.FrameStep) == State.FrameStep)
+		TAS.Manager.UpdateInputs();
+		if ((TAS.Manager.state & State.FrameStep) == State.FrameStep)
 		{
 			base.Update(gameTime);
 			return;
