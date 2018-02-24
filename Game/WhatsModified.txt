@@ -1,7 +1,70 @@
-Celeste.Engine
-	Update(TimeSpan gameTime)
-		Changed
-			Added call to TAS.Manager.UpdateInputs
-			Added For Loop for Fast Forward
+// Monocle.Engine
+protected override void Update(GameTime gameTime)
+{
+	Engine.RawDeltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
+	int frameLoops = Manager.FrameLoops;
+	for (int i = 0; i < frameLoops; i++)
+	{
+		Engine.DeltaTime = Engine.RawDeltaTime * Engine.TimeRate * Engine.TimeRateB;
+		if (!Manager.Running)
+		{
+			MInput.Update();
+		}
+		Manager.UpdateInputs();
+		if ((Manager.state & State.FrameStep) == State.FrameStep)
+		{
+			base.Update(gameTime);
+			return;
+		}
+		if (Engine.ExitOnEscapeKeypress && MInput.Keyboard.Pressed(Microsoft.Xna.Framework.Input.Keys.Escape))
+		{
+			base.Exit();
+			return;
+		}
+		if (Engine.OverloadGameLoop != null)
+		{
+			Engine.OverloadGameLoop();
+			base.Update(gameTime);
+			return;
+		}
+		if (Engine.FreezeTimer > 0f)
+		{
+			Engine.FreezeTimer = Math.Max(Engine.FreezeTimer - Engine.RawDeltaTime, 0f);
+		}
+		else if (this.scene != null)
+		{
+			this.scene.BeforeUpdate();
+			this.scene.Update();
+			this.scene.AfterUpdate();
+		}
+		if (Engine.Commands.Open)
+		{
+			Engine.Commands.UpdateOpen();
+		}
+		else if (Engine.Commands.Enabled)
+		{
+			Engine.Commands.UpdateClosed();
+		}
+		if (this.scene != this.nextScene)
+		{
+			Scene from = this.scene;
+			if (this.scene != null)
+			{
+				this.scene.End();
+			}
+			this.scene = this.nextScene;
+			this.OnSceneTransition(from, this.nextScene);
+			if (this.scene != null)
+			{
+				this.scene.Begin();
+			}
+		}
+		base.Update(gameTime);
+	}
+}
 ---------------------------------------------------------------------------------
-Changed a few fields to public vs private. Will update which ones later.
+Changed a few fields/methods to public vs private.
+Monocle.Engine.scene
+Celeste.Player.dashCooldownTimer
+Celeste.Player.WallJumpCheck(int dir)
+Monocle.MInput.UpdateVirtualInputs()
