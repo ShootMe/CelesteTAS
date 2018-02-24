@@ -64,7 +64,6 @@ protected override void Update(GameTime gameTime)
 }
 ---------------------------------------------------------------------------------
 Changed a few fields/methods to public vs private.
-Monocle.Engine.scene
 Celeste.Player.dashCooldownTimer
 Celeste.Player.WallJumpCheck(int dir)
 Monocle.MInput.UpdateVirtualInputs()

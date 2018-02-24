@@ -21,6 +21,7 @@ namespace TAS {
 		public static State state, nextState;
 		public static string CurrentStatus, PlayerStatus;
 		public static int FrameStepCooldown, FrameLoops = 1;
+		private static bool frameStepWasDpadUp, frameStepWasDpadDown;
 		private static bool IsKeyDown(Keys key) {
 			return (GetAsyncKeyState(key) & 32768) == 32768;
 		}
@@ -38,7 +39,7 @@ namespace TAS {
 			return padState;
 		}
 		public static void UpdateInputs() {
-			Level level = Engine.Instance.scene as Level;
+			Level level = Engine.Scene as Level;
 			if (level != null) {
 				Player player = level.Tracker.GetEntity<Player>();
 				if (player != null) {
@@ -133,12 +134,7 @@ namespace TAS {
 				}
 
 				if (dpadUp) {
-					while (dpadUp) {
-						padState = GetGamePadState();
-						dpadUp = padState.DPad.Up == ButtonState.Pressed || IsKeyDown(Keys.OemOpenBrackets);
-						Thread.Sleep(1);
-					}
-					if (!HasFlag(state, State.FrameStep)) {
+					if (frameStepWasDpadUp || !HasFlag(state, State.FrameStep)) {
 						state |= State.FrameStep;
 						nextState &= ~State.FrameStep;
 					} else {
@@ -148,11 +144,6 @@ namespace TAS {
 					}
 					FrameStepCooldown = 60;
 				} else if (dpadDown) {
-					while (dpadDown) {
-						padState = GetGamePadState();
-						dpadDown = padState.DPad.Down == ButtonState.Pressed || IsKeyDown(Keys.OemCloseBrackets);
-						Thread.Sleep(1);
-					}
 					state &= ~State.FrameStep;
 					nextState &= ~State.FrameStep;
 				} else if (HasFlag(state, State.FrameStep) && padState.ThumbSticks.Right.X > 0.1) {
@@ -165,6 +156,9 @@ namespace TAS {
 					}
 				}
 			}
+
+			frameStepWasDpadUp = dpadUp;
+			frameStepWasDpadDown = dpadDown;
 		}
 		private static void CheckControls(GamePadState padState) {
 			bool openBracket = IsKeyDown(Keys.ControlKey) && IsKeyDown(Keys.OemOpenBrackets);
