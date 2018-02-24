@@ -7,6 +7,7 @@ Simple TAS Tools for the game Celeste
 - You will need the modified Celeste.exe as well. I wont host it here.
 - Place those in your Celeste game directory (usually C:\Program Files (x86)\Steam\steamapps\common\Celeste\)
 - Make sure to back up the original Celeste.exe before copying. (Can rename them .bak or something)
+- For playback to be correct, make sure Jump is bound to 'A', Dash is bound to 'B', Grab is bound to 'RB', Quick Reset is bound to 'LB', and talk is bound to 'B'
 
 ## Input File
 Input file is called Celeste.tas and needs to be in the main Celeste directory (usually C:\Program Files (x86)\Steam\steamapps\common\Celeste\Celeste.tas)
