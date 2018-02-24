@@ -42,8 +42,9 @@ namespace TAS {
 			if (level != null) {
 				Player player = level.Tracker.GetEntity<Player>();
 				if (player != null) {
-					string status = "Pos: " + player.Position.X.ToString("0") + "," + player.Position.Y.ToString("0") + "\r\nSpeed: " + player.Speed.X.ToString("0.00") + "," + player.Speed.Y.ToString("0.00") + "," + player.Speed.Length().ToString("0.00") + "\r\nStamina: " + player.Stamina.ToString("0") + " Timer: " + ((double)((Celeste.Celeste)Engine.Instance).AutoSplitterInfo.ChapterTime / (double)10000000).ToString("0.000") + "\r\n" + ((int)(player.dashCooldownTimer * 60f) < 1 && player.Dashes > 0 ? "CanDash " : string.Empty) + (player.LoseShards ? "OnGround " : string.Empty) + (player.WallJumpCheck(1) ? "WallRight " : string.Empty) + (player.WallJumpCheck(-1) ? "WallLeft" : string.Empty);
-					PlayerStatus = status;
+					string statuses = ((int)(player.dashCooldownTimer * 60f) < 1 && player.Dashes > 0 ? "Dash " : string.Empty) + (player.LoseShards ? "Ground " : string.Empty) + (player.WallJumpCheck(1) ? "Wall-R " : string.Empty) + (player.WallJumpCheck(-1) ? "Wall-L " : string.Empty);
+					string info = "Pos: " + player.Position.X.ToString("0") + "," + player.Position.Y.ToString("0") + "\r\nSpeed: " + player.Speed.X.ToString("0.00") + "," + player.Speed.Y.ToString("0.00") + "," + player.Speed.Length().ToString("0.00") + "\r\nStamina: " + player.Stamina.ToString("0") + " Timer: " + ((double)((Celeste.Celeste)Engine.Instance).AutoSplitterInfo.ChapterTime / (double)10000000).ToString("0.000") + "\r\n" + (player.InControl && !level.Transitioning ? statuses : "NoControl ") + (player.TimePaused ? "Paused " : string.Empty);
+					PlayerStatus = info;
 				} else {
 					PlayerStatus = null;
 				}

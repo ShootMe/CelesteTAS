@@ -67,7 +67,11 @@ namespace TAS {
 			return string.Empty;
 		}
 		public void InitializePlayback() {
-			ReadFile();
+			int trycount = 5;
+			while (!ReadFile() && trycount >= 0) {
+				System.Threading.Thread.Sleep(50);
+				trycount--;
+			}
 
 			currentFrame = 0;
 			inputIndex = 0;
@@ -184,26 +188,31 @@ namespace TAS {
 				fs.Close();
 			}
 		}
-		private void ReadFile() {
-			inputs.Clear();
-			HasFastForward = false;
-			if (!File.Exists(filePath)) { return; }
+		private bool ReadFile() {
+			try {
+				inputs.Clear();
+				HasFastForward = false;
+				if (!File.Exists(filePath)) { return false; }
 
-			int lines = 0;
-			using (StreamReader sr = new StreamReader(filePath)) {
-				while (!sr.EndOfStream) {
-					string line = sr.ReadLine();
+				int lines = 0;
+				using (StreamReader sr = new StreamReader(filePath)) {
+					while (!sr.EndOfStream) {
+						string line = sr.ReadLine();
 
-					InputRecord input = new InputRecord(++lines, line);
-					if (input.Frames != 0) {
-						inputs.Add(input);
-					} else if (input.FastForward) {
-						HasFastForward = true;
-						if (inputs.Count > 0) {
-							inputs[inputs.Count - 1].FastForward = true;
+						InputRecord input = new InputRecord(++lines, line);
+						if (input.Frames != 0) {
+							inputs.Add(input);
+						} else if (input.FastForward) {
+							HasFastForward = true;
+							if (inputs.Count > 0) {
+								inputs[inputs.Count - 1].FastForward = true;
+							}
 						}
 					}
 				}
+				return true;
+			} catch {
+				return false;
 			}
 		}
 	}
