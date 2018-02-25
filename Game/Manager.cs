@@ -88,7 +88,7 @@ namespace TAS {
 		private static void HandleFrameRates(GamePadState padState) {
 			if (HasFlag(state, State.Enable) && !HasFlag(state, State.FrameStep) && !HasFlag(nextState, State.FrameStep) && !HasFlag(state, State.Record)) {
 				if (controller.HasFastForward) {
-					FrameLoops = 40;
+					FrameLoops = 400;
 					return;
 				}
 
