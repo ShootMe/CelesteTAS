@@ -59,6 +59,13 @@ protected override void Update(GameTime gameTime)
 				this.scene.Begin();
 			}
 		}
+		if (frameLoops < 10)
+		{
+			base.Update(gameTime);
+		}
+	}
+	if (frameLoops >= 10)
+	{
 		base.Update(gameTime);
 	}
 }

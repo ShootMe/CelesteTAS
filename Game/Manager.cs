@@ -4,7 +4,6 @@ using Microsoft.Xna.Framework.Input;
 using Monocle;
 using System;
 using System.Runtime.InteropServices;
-using System.Threading;
 namespace TAS {
 	[Flags]
 	public enum State {
@@ -26,7 +25,7 @@ namespace TAS {
 			return (GetAsyncKeyState(key) & 32768) == 32768;
 		}
 		public static bool IsLoading() {
-			return !(Engine.Scene is Level);
+			return !(Engine.Scene is Level) && !(Engine.Scene is Overworld);
 		}
 		private static GamePadState GetGamePadState() {
 			GamePadState padState = MInput.GamePads[0].CurrentState;
@@ -89,7 +88,7 @@ namespace TAS {
 		private static void HandleFrameRates(GamePadState padState) {
 			if (HasFlag(state, State.Enable) && !HasFlag(state, State.FrameStep) && !HasFlag(nextState, State.FrameStep) && !HasFlag(state, State.Record)) {
 				if (controller.HasFastForward) {
-					FrameLoops = 9;
+					FrameLoops = 40;
 					return;
 				}
 
@@ -134,8 +133,8 @@ namespace TAS {
 					nextState &= ~State.FrameStep;
 				}
 
-				if (dpadUp) {
-					if (frameStepWasDpadUp || !HasFlag(state, State.FrameStep)) {
+				if (!dpadUp && frameStepWasDpadUp) {
+					if (!HasFlag(state, State.FrameStep)) {
 						state |= State.FrameStep;
 						nextState &= ~State.FrameStep;
 					} else {
@@ -144,7 +143,7 @@ namespace TAS {
 						ReloadRun();
 					}
 					FrameStepCooldown = 60;
-				} else if (dpadDown) {
+				} else if (!dpadDown && frameStepWasDpadDown) {
 					state &= ~State.FrameStep;
 					nextState &= ~State.FrameStep;
 				} else if (HasFlag(state, State.FrameStep) && padState.ThumbSticks.Right.X > 0.1) {
