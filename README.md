@@ -5,6 +5,10 @@ Simple TAS Tools for the game Celeste
 - Go to [Releases](https://github.com/ShootMe/CelesteTAS/releases)
 - Download Celeste-Addons.dll
 - You will need the modified Celeste.exe as well. I wont host it here.
+  - You can modify it yourself with dnSpy or similar
+  - Load Celeste.exe in dnSpy and Celeste-Addons.dll as well
+  - Change Celeste.exe according to the document here [Modified](https://github.com/ShootMe/CelesteTAS/blob/master/Game/WhatsModified.txt)
+  - Save the modified version and you should be good to go
 - Place those in your Celeste game directory (usually C:\Program Files (x86)\Steam\steamapps\common\Celeste\)
 - Make sure to back up the original Celeste.exe before copying. (Can rename them .bak or something)
 - For playback to be correct, make sure Jump is bound to 'A', Dash is bound to 'B', Grab is bound to 'RB', Quick Reset is bound to 'LB', and talk is bound to 'B'
@@ -26,6 +30,10 @@ ie) 123,R,J (For 123 frames, hold Right and Jump)
 - G = Grab
 - S = Start
 - Q = Quick Reset
+
+## Special Input
+- You can create a break point in the input file by typing *** by itself on a single line
+- The program when played back form the start will go very fast till it reaches that line and then go into frame stepping mode
 
 ## Playback / Recording of Input File
 ### Controller
