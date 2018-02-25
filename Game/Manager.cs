@@ -25,7 +25,7 @@ namespace TAS {
 			return (GetAsyncKeyState(key) & 32768) == 32768;
 		}
 		public static bool IsLoading() {
-			return !(Engine.Scene is Level) && !(Engine.Scene is Overworld);
+			return (Engine.Scene is LevelExit) || (Engine.Scene is LevelLoader) || (Engine.Scene is OverworldLoader) || (Engine.Scene is GameLoader);
 		}
 		private static GamePadState GetGamePadState() {
 			GamePadState padState = MInput.GamePads[0].CurrentState;
@@ -48,8 +48,8 @@ namespace TAS {
 				} else {
 					PlayerStatus = null;
 				}
-			} else {
-				PlayerStatus = null;
+			} else if (Engine.Scene != null) {
+				PlayerStatus = Engine.Scene.GetType().Name;
 			}
 
 			GamePadState padState = GetGamePadState();
@@ -124,8 +124,8 @@ namespace TAS {
 		}
 		private static void FrameStepping(GamePadState padState) {
 			bool rightTrigger = padState.Triggers.Right > 0.5f;
-			bool dpadUp = padState.DPad.Up == ButtonState.Pressed || IsKeyDown(Keys.OemOpenBrackets);
-			bool dpadDown = padState.DPad.Down == ButtonState.Pressed || IsKeyDown(Keys.OemCloseBrackets);
+			bool dpadUp = padState.DPad.Up == ButtonState.Pressed || (IsKeyDown(Keys.OemOpenBrackets) && !IsKeyDown(Keys.ControlKey));
+			bool dpadDown = padState.DPad.Down == ButtonState.Pressed || (IsKeyDown(Keys.OemCloseBrackets) && !IsKeyDown(Keys.ControlKey));
 
 			if (HasFlag(state, State.Enable) && !HasFlag(state, State.Record) && !rightTrigger) {
 				if (HasFlag(nextState, State.FrameStep)) {
