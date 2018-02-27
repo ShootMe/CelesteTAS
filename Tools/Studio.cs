@@ -54,6 +54,8 @@ namespace CelesteStudio {
 					tasText.SaveFile();
 				} else if (e.Modifiers == Keys.Control && e.KeyCode == Keys.O) {
 					tasText.OpenFile();
+				} else if (e.Modifiers == Keys.Control && e.KeyCode == Keys.K) {
+					CommentText();
 				} else if (e.Modifiers == Keys.Control && e.KeyCode == Keys.T) {
 					int height = statusBar.Height;
 					int increase = 18;
@@ -234,17 +236,60 @@ namespace CelesteStudio {
 			lastChanged = DateTime.Now;
 			UpdateLines((RichText)sender, e.ChangedRange);
 		}
+		private void CommentText() {
+			Range range = tasText.Selection;
+
+			int start = range.Start.iLine;
+			int end = range.End.iLine;
+			if (start > end) {
+				int temp = start;
+				start = end;
+				end = temp;
+			}
+
+			tasText.Selection = new Range(tasText, 0, start, tasText[end].Count, end);
+			string text = tasText.SelectedText;
+
+			int i = 0;
+			bool startLine = true;
+			StringBuilder sb = new StringBuilder(text.Length + end - start);
+			while (i < text.Length) {
+				char c = text[i++];
+				if (startLine) {
+					if (c != '#') {
+						sb.Append('#').Append(c);
+					}
+					startLine = false;
+				} else if (c == '\n') {
+					sb.AppendLine();
+					startLine = true;
+				} else if (c != '\r') {
+					sb.Append(c);
+				}
+			}
+
+			tasText.SelectedText = sb.ToString();
+			tasText.Selection = new Range(tasText, 0, start, tasText[end].Count, end);
+		}
 		private void UpdateLines(RichText tas, Range range) {
 			if (updating) { return; }
 			updating = true;
 
 			int start = range.Start.iLine;
 			int end = range.End.iLine;
+			if (start > end) {
+				int temp = start;
+				start = end;
+				end = temp;
+			}
+			int originalStart = start;
+
+			bool modified = false;
+			StringBuilder sb = new StringBuilder();
+			Place place = new Place(0, end);
 			while (start <= end) {
 				InputRecord old = Lines.Count > start ? Lines[start] : null;
-
 				string text = tas[start++].Text;
-
 				InputRecord input = new InputRecord(text);
 				if (old != null) {
 					totalFrames -= old.Frames;
@@ -254,28 +299,42 @@ namespace CelesteStudio {
 						if (old.Frames == 0 && old.ZeroPadding == input.ZeroPadding && old.Equals(input) && line.Length >= text.Length) {
 							line = string.Empty;
 						}
-						Range oldRange = tas.Selection.Clone();
-						tas.Selection = tas.GetLine(start - 1);
-						tas.SelectedText = line;
 
-						int actionPosition = input.ActionPosition();
+						Range oldRange = tas.Selection;
 						if (!string.IsNullOrEmpty(line)) {
 							int index = oldRange.Start.iChar + line.Length - text.Length;
 							if (index < 0) { index = 0; }
 							if (index > 4) { index = 4; }
 							if (old.Frames == input.Frames && old.ZeroPadding == input.ZeroPadding) { index = 4; }
 
-							tas.Selection.Start = new Place(index, start - 1);
+							place = new Place(index, start - 1);
 						}
-
-						Text = titleBarText + " ***";
+						modified = true;
+					} else {
+						place = new Place(4, start - 1);
 					}
+
+					text = line;
 					Lines[start - 1] = input;
+				} else {
+					place = new Place(text.Length, start - 1);
+				}
+
+				if (start <= end) {
+					sb.AppendLine(text);
+				} else {
+					sb.Append(text);
 				}
 
 				totalFrames += input.Frames;
 			}
 
+			if (modified) {
+				tas.Selection = new Range(tas, 0, originalStart, tas[end].Count, end);
+				tas.SelectedText = sb.ToString();
+				tas.Selection = new Range(tas, place.iChar, end, place.iChar, end);
+				Text = titleBarText + " ***";
+			}
 			UpdateStatusBar();
 
 			updating = false;
