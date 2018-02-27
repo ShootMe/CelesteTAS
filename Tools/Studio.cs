@@ -132,11 +132,16 @@ namespace CelesteStudio {
 					}
 					if (lastChanged.AddSeconds(0.6) < DateTime.Now) {
 						lastChanged = DateTime.Now;
+						bool shouldSave = false;
 						this.Invoke((Action)delegate () {
 							if ((!string.IsNullOrEmpty(tasText.LastFileName) || !string.IsNullOrEmpty(tasText.SaveToFileName)) && tasText.IsChanged) {
-								tasText.SaveFile();
+								shouldSave = true;
 							}
 						});
+
+						if (shouldSave) {
+							tasText.SaveFile();
+						}
 					}
 					if (hooked) {
 						UpdateValues();
