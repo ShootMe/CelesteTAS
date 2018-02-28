@@ -12,12 +12,15 @@ namespace TAS {
 		Dash = 32,
 		Grab = 64,
 		Start = 128,
-		Restart = 256
+		Restart = 256,
+		Feather = 512,
+		Journal = 1024
 	}
 	public class InputRecord {
 		public int Line { get; set; }
 		public int Frames { get; set; }
 		public Actions Actions { get; set; }
+		public float Angle { get; set; }
 		public bool FastForward { get; set; }
 		public InputRecord() { }
 		public InputRecord(int number, string line) {
@@ -45,9 +48,21 @@ namespace TAS {
 					case 'G': Actions ^= Actions.Grab; break;
 					case 'S': Actions ^= Actions.Start; break;
 					case 'Q': Actions ^= Actions.Restart; break;
+					case 'N': Actions ^= Actions.Journal; break;
+					case 'F':
+						Actions ^= Actions.Feather;
+						index++;
+						Angle = ReadAngle(line, ref index);
+						continue;
 				}
 
 				index++;
+			}
+
+			if (HasActions(Actions.Feather)) {
+				Actions &= ~Actions.Right & ~Actions.Left & ~Actions.Up & ~Actions.Down;
+			} else {
+				Angle = 0;
 			}
 		}
 		private int ReadFrames(string line, ref int start) {
@@ -79,6 +94,64 @@ namespace TAS {
 
 			return frames;
 		}
+		private float ReadAngle(string line, ref int start) {
+			bool foundAngle = false;
+			bool foundDecimal = false;
+			int decimalPlaces = 1;
+			int angle = 0;
+			bool negative = false;
+
+			while (start < line.Length) {
+				char c = line[start];
+
+				if (!foundAngle) {
+					if (char.IsDigit(c)) {
+						foundAngle = true;
+						angle = c ^ 0x30;
+					} else if (c == ',') {
+						foundAngle = true;
+					} else if (c == '.') {
+						foundAngle = true;
+						foundDecimal = true;
+					} else if (c == '-') {
+						negative = true;
+					}
+				} else if (char.IsDigit(c)) {
+					angle = angle * 10 + (c ^ 0x30);
+					if (foundDecimal) {
+						decimalPlaces *= 10;
+					}
+				} else if (c == '.') {
+					foundDecimal = true;
+				} else if (c != ' ') {
+					return (negative ? (float)-angle : (float)angle) / (float)decimalPlaces;
+				}
+
+				start++;
+			}
+
+			return (negative ? (float)-angle : (float)angle) / (float)decimalPlaces;
+		}
+		public float GetX() {
+			if (HasActions(Actions.Right)) {
+				return 1f;
+			} else if (HasActions(Actions.Left)) {
+				return -1f;
+			} else if (!HasActions(Actions.Feather)) {
+				return 0f;
+			}
+			return (float)Math.Sin(Angle * Math.PI / 180.0);
+		}
+		public float GetY() {
+			if (HasActions(Actions.Up)) {
+				return 1f;
+			} else if (HasActions(Actions.Down)) {
+				return -1f;
+			} else if (!HasActions(Actions.Feather)) {
+				return 0f;
+			}
+			return (float)Math.Cos(Angle * Math.PI / 180.0);
+		}
 		public bool HasActions(Actions actions) {
 			return (Actions & actions) != 0;
 		}
@@ -96,6 +169,8 @@ namespace TAS {
 			if (HasActions(Actions.Grab)) { sb.Append(",G"); }
 			if (HasActions(Actions.Start)) { sb.Append(",S"); }
 			if (HasActions(Actions.Restart)) { sb.Append(",Q"); }
+			if (HasActions(Actions.Journal)) { sb.Append(",N"); }
+			if (HasActions(Actions.Feather)) { sb.Append(",F,").Append(Angle.ToString("0")); }
 			return sb.ToString();
 		}
 		public override bool Equals(object obj) {
@@ -112,7 +187,7 @@ namespace TAS {
 			} else if (oneNull && twoNull) {
 				return true;
 			}
-			return one.Actions == two.Actions;
+			return one.Actions == two.Actions && one.Angle == two.Angle;
 		}
 		public static bool operator !=(InputRecord one, InputRecord two) {
 			bool oneNull = (object)one == null;
@@ -122,7 +197,7 @@ namespace TAS {
 			} else if (oneNull && twoNull) {
 				return false;
 			}
-			return one.Actions != two.Actions;
+			return one.Actions != two.Actions || one.Angle != two.Angle;
 		}
 	}
 }

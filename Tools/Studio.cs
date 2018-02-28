@@ -183,16 +183,21 @@ namespace CelesteStudio {
 					}
 
 					index = tas.IndexOf(':');
-					num = tas.Substring(index + 2, tas.IndexOf(')', index) - index - 2);
+					int pIndex = tas.IndexOf(')', index);
+					if (pIndex >= 0) {
+						num = tas.Substring(index + 2, tas.IndexOf(')', index) - index - 2);
+					}
 					if (int.TryParse(num, out temp)) {
 						currentFrame = temp;
 					}
 
 					index = tas.IndexOf('(');
 					int index2 = tas.IndexOf(' ', index);
-					num = tas.Substring(index + 1, index2 - index - 1);
-					if (tasText.CurrentLineText != num) {
-						tasText.CurrentLineText = num;
+					if (index2 >= 0) {
+						num = tas.Substring(index + 1, index2 - index - 1);
+						if (tasText.CurrentLineText != num) {
+							tasText.CurrentLineText = num;
+						}
 					}
 				} else {
 					currentFrame = 0;
@@ -296,7 +301,7 @@ namespace CelesteStudio {
 
 					string line = input.ToString();
 					if (text != line) {
-						if (old.Frames == 0 && old.ZeroPadding == input.ZeroPadding && old.Equals(input) && line.Length >= text.Length) {
+						if (old.Frames == 0 && input.Frames == 0 && old.ZeroPadding == input.ZeroPadding && old.Equals(input) && line.Length >= text.Length) {
 							line = string.Empty;
 						}
 

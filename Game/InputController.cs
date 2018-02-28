@@ -126,9 +126,23 @@ namespace TAS {
 			SetInputs();
 		}
 		private void SetInputs() {
+			GamePadDPad pad;
+			GamePadThumbSticks sticks;
+			if (Current.HasActions(Actions.Feather)) {
+				pad = new GamePadDPad(ButtonState.Released, ButtonState.Released, ButtonState.Released, ButtonState.Released);
+				sticks = new GamePadThumbSticks(new Vector2(Current.GetX(), Current.GetY()), new Vector2(0, 0));
+			} else {
+				pad = new GamePadDPad(
+					Current.HasActions(Actions.Up) ? ButtonState.Pressed : ButtonState.Released,
+					Current.HasActions(Actions.Down) ? ButtonState.Pressed : ButtonState.Released,
+					Current.HasActions(Actions.Left) ? ButtonState.Pressed : ButtonState.Released,
+					Current.HasActions(Actions.Right) ? ButtonState.Pressed : ButtonState.Released
+				);
+				sticks = new GamePadThumbSticks(new Vector2(0, 0), new Vector2(0, 0));
+			}
 			GamePadState state = new GamePadState(
-				new GamePadThumbSticks(new Vector2(0, 0), new Vector2(0, 0)),
-				new GamePadTriggers(0, 0),
+				sticks,
+				new GamePadTriggers(Current.HasActions(Actions.Journal) ? 1f : 0f, 0),
 				new GamePadButtons(
 					(Current.HasActions(Actions.Jump) ? Buttons.A : (Buttons)0)
 					| (Current.HasActions(Actions.Dash) ? Buttons.B : (Buttons)0)
@@ -136,12 +150,7 @@ namespace TAS {
 					| (Current.HasActions(Actions.Start) ? Buttons.Start : (Buttons)0)
 					| (Current.HasActions(Actions.Restart) ? Buttons.LeftShoulder : (Buttons)0)
 				),
-				new GamePadDPad(
-					Current.HasActions(Actions.Up) ? ButtonState.Pressed : ButtonState.Released,
-					Current.HasActions(Actions.Down) ? ButtonState.Pressed : ButtonState.Released,
-					Current.HasActions(Actions.Left) ? ButtonState.Pressed : ButtonState.Released,
-					Current.HasActions(Actions.Right) ? ButtonState.Pressed : ButtonState.Released
-				)
+				pad
 			);
 
 			for (int i = 0; i < 4; i++) {
@@ -172,6 +181,7 @@ namespace TAS {
 			if (Input.Jump.Check) { record.Actions |= Actions.Jump; }
 			if (Input.Dash.Check) { record.Actions |= Actions.Dash; }
 			if (Input.Grab.Check) { record.Actions |= Actions.Grab; }
+			if (Input.MenuJournal.Check) { record.Actions |= Actions.Journal; }
 			if (Input.Pause.Check) { record.Actions |= Actions.Start; }
 			if (Input.Aim.Value.X < -0.5f) { record.Actions |= Actions.Left; }
 			if (Input.Aim.Value.X > 0.5f) { record.Actions |= Actions.Right; }
