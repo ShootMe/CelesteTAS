@@ -227,9 +227,9 @@ namespace CelesteStudio {
 		}
 		private void UpdateStatusBar() {
 			if (memory.IsHooked) {
-				lblStatus.Text = "F(" + (currentFrame > 0 ? currentFrame + "/" : "") + totalFrames + ") " + memory.TASPlayerOutput();
+				lblStatus.Text = "(" + (currentFrame > 0 ? currentFrame + "/" : "") + totalFrames + ") " + memory.TASPlayerOutput();
 			} else {
-				lblStatus.Text = "F(" + totalFrames + ")\r\nSearching...";
+				lblStatus.Text = "(" + totalFrames + ")\r\nSearching...";
 			}
 		}
 		private void tasText_TextChanged(object sender, TextChangedEventArgs e) {
