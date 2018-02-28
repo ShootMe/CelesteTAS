@@ -3,7 +3,7 @@ using System.Diagnostics;
 namespace CelesteStudio.Entities {
 	public class GameMemory {
 		private static ProgramPointer Celeste = new ProgramPointer(AutoDeref.Single, new ProgramSignature(PointerVersion.V1, "83C604F30F7E06660FD6078BCBFF15????????8D15", 21));
-		private static ProgramPointer TAS = new ProgramPointer(AutoDeref.Single, new ProgramSignature(PointerVersion.V1, "83E00283F80275108B0D????????3909FF15", 10));
+		private static ProgramPointer TAS = new ProgramPointer(AutoDeref.Single, new ProgramSignature(PointerVersion.V1, "8B0D????????3909FF15????????EB5D8B0D", 2));
 		public Process Program { get; set; }
 		public bool IsHooked { get; set; } = false;
 		private DateTime lastHooked;
