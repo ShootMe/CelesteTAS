@@ -180,7 +180,7 @@ namespace CelesteStudio.Entities {
 			if (HasActions(Actions.Start)) { sb.Append(Delimiter).Append('S'); }
 			if (HasActions(Actions.Restart)) { sb.Append(Delimiter).Append('Q'); }
 			if (HasActions(Actions.Journal)) { sb.Append(Delimiter).Append('N'); }
-			if (HasActions(Actions.Feather)) { sb.Append(",F,").Append(Angle.ToString("0")); }
+			if (HasActions(Actions.Feather)) { sb.Append(",F,").Append(Angle == 0 ? string.Empty : Angle.ToString("0")); }
 			return sb.ToString();
 		}
 		public override bool Equals(object obj) {
