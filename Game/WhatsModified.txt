@@ -11,7 +11,7 @@ protected override void Update(GameTime gameTime)
 			MInput.Update();
 		}
 		TAS.Manager.UpdateInputs();
-		if ((TAS.Manager.state & State.FrameStep) == State.FrameStep)
+		if ((TAS.Manager.state & TAS.State.FrameStep) == TAS.State.FrameStep)
 		{
 			base.Update(gameTime);
 			return;
