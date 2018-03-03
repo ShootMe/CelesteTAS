@@ -10,12 +10,14 @@ namespace TAS {
 		private List<InputRecord> inputs = new List<InputRecord>();
 		private int currentFrame, inputIndex, frameToNext;
 		private string filePath;
+		private List<InputRecord> fastForwards = new List<InputRecord>();
 		public InputController(string filePath) {
 			this.filePath = filePath;
 		}
 
 		public bool CanPlayback { get { return inputIndex < inputs.Count; } }
-		public bool HasFastForward { get; set; }
+		public bool HasFastForward { get { return fastForwards.Count > 0; } }
+		public int FastForwardSpeed { get { return fastForwards.Count == 0 ? 1 : fastForwards[0].Frames == 0 ? 400 : fastForwards[0].Frames; } }
 		public int CurrentFrame { get { return currentFrame; } }
 		public int CurrentInputFrame { get { return currentFrame - frameToNext + Current.Frames; } }
 		public InputRecord Current { get; set; }
@@ -94,7 +96,7 @@ namespace TAS {
 					return;
 				}
 				if (Current.FastForward) {
-					HasFastForward = false;
+					fastForwards.RemoveAt(0);
 				}
 				Current = inputs[++inputIndex];
 				frameToNext += Current.Frames;
@@ -106,6 +108,7 @@ namespace TAS {
 			Current = new InputRecord();
 			frameToNext = 0;
 			inputs.Clear();
+			fastForwards.Clear();
 		}
 		public void PlaybackPlayer() {
 			if (inputIndex < inputs.Count && !Manager.IsLoading()) {
@@ -115,7 +118,7 @@ namespace TAS {
 						return;
 					}
 					if (Current.FastForward) {
-						HasFastForward = false;
+						fastForwards.RemoveAt(0);
 					}
 					Current = inputs[++inputIndex];
 					frameToNext += Current.Frames;
@@ -201,7 +204,7 @@ namespace TAS {
 		private bool ReadFile() {
 			try {
 				inputs.Clear();
-				HasFastForward = false;
+				fastForwards.Clear();
 				if (!File.Exists(filePath)) { return false; }
 
 				int lines = 0;
@@ -210,13 +213,14 @@ namespace TAS {
 						string line = sr.ReadLine();
 
 						InputRecord input = new InputRecord(++lines, line);
-						if (input.Frames != 0) {
-							inputs.Add(input);
-						} else if (input.FastForward) {
-							HasFastForward = true;
+						if (input.FastForward) {
+							fastForwards.Add(input);
+
 							if (inputs.Count > 0) {
 								inputs[inputs.Count - 1].FastForward = true;
 							}
+						} else if (input.Frames != 0) {
+							inputs.Add(input);
 						}
 					}
 				}

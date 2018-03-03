@@ -29,8 +29,10 @@ namespace TAS {
 			int index = 0;
 			Frames = ReadFrames(line, ref index);
 			if (Frames == 0) {
-				if (line == "***") {
+				if (line.StartsWith("***")) {
 					FastForward = true;
+					index = 3;
+					Frames = ReadFrames(line, ref index);
 				}
 				return;
 			}

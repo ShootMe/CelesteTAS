@@ -37,7 +37,7 @@ namespace CelesteStudio.Entities {
 			Frames = ReadFrames(line, ref index);
 			if (Frames == 0) {
 				Notes = line;
-				if (Notes == "***") {
+				if (Notes.StartsWith("***")) {
 					FastForward = true;
 				}
 				return;

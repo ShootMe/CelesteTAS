@@ -68,8 +68,9 @@ namespace TAS {
 					controller.RecordPlayer();
 				} else {
 					bool fastForward = controller.HasFastForward;
+					int fastSpeed = controller.FastForwardSpeed;
 					controller.PlaybackPlayer();
-					if (fastForward && !controller.HasFastForward) {
+					if (fastForward && (!controller.HasFastForward || fastSpeed != controller.FastForwardSpeed)) {
 						nextState |= State.FrameStep;
 						FrameLoops = 1;
 					}
@@ -97,7 +98,7 @@ namespace TAS {
 		private static void HandleFrameRates(GamePadState padState) {
 			if (HasFlag(state, State.Enable) && !HasFlag(state, State.FrameStep) && !HasFlag(nextState, State.FrameStep) && !HasFlag(state, State.Record)) {
 				if (controller.HasFastForward) {
-					FrameLoops = 400;
+					FrameLoops = controller.FastForwardSpeed;
 					return;
 				}
 
