@@ -1,0 +1,115 @@
+#Start
+   1,J
+  15
+   1,J
+
+#Prologue
+ 148
+   1,S
+   1,D,J
+  93,R
+
+Read,0 - Prologue.tas,7
+
+#Overworld
+ 192
+   1,J
+  45
+   1,J
+
+#Forsaken City
+ 230
+   1,J
+ 224
+
+Read,1 - Forsaken City.tas,8
+
+#Overworld
+ 183
+   1,J
+ 225
+   1,J
+  45
+   1,J
+
+#Old Site
+ 230
+   1,J
+ 326
+
+Read,2 - Old Site.tas,8
+
+#Overworld
+ 183
+   1,J
+ 225
+   1,J
+  45
+   1,J
+
+#Celestial Resort
+ 230
+   1,J
+ 197
+
+Read,3 - Celestial Resort.tas,7
+
+#Overworld
+ 183
+   1,J
+ 375
+   1,J
+  45
+   1,J
+
+#Golden Ridge
+ 230
+   1,J
+ 205
+
+Read,4 - Golden Ridge.tas,6
+
+#Overworld
+ 183
+   1,J
+ 225
+   1,J
+  45
+   1,J
+
+#Mirror Temple
+ 230
+   1,J
+ 136
+
+Read,5 - Mirror Temple.tas,7
+
+#Overworld
+ 183
+   1,J
+ 225
+   1,J
+  45
+   1,J
+
+#Reflection
+ 230
+   1,J
+ 247
+
+Read,6 - Reflection.tas,5
+
+#Overworld
+ 183
+   1,J
+ 225
+   1,J
+  45
+   1,J
+
+#Summit
+ 167
+   1,J
+ 356
+
+Read,7 - Summit.tas,6

@@ -340,7 +340,6 @@ cutsceneend/999
 /start
 /room16
   31,R
-
    5,U,X
   30,R,D
   19,D
@@ -363,7 +362,6 @@ cutsceneend/999
   40
 /start
 /room17
-yet another room
    5,L,D,X
   18,R,D
    9,D,X
@@ -470,7 +468,6 @@ yet another room
    6,D,X
   10,R
    5,R,D,X
-   ,R,J
   18,R
    5,R,U,X
    6,R
