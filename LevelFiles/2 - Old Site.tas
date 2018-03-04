@@ -1,4 +1,5 @@
 #Created by DevilSquirrel
+#Improved by Kilaye
 #Used KDT's TAS as a guide
 #Start
    1,Q
@@ -136,19 +137,19 @@
   18,L,J
    1,L
    5,L,J,G
-  14,L,D,X
-   1,L,J
-  14,L,D,X
+  10,L,D,X
+   5,L,J
+  15,L,D,X
    1,L,J
   50,L,D,X
 
 #lvl_0
    4,L,D,X
-  10,L,J
+   5,L,J
   39,L,U,X
   11,L,J
   14,U,X
-   9,L,J
+  10,L,J
   11
   14,U,X
   61,R,J
@@ -243,14 +244,13 @@
    5,R,U,X
   15,R
    1,R,J,G
-   4,R
-   5,R,X
-  10,L
-   9,U,X
-   4,L,J
-  13,L
-   5,L,X
-  14,L
+   3,R
+   2,R,J
+  12,L,J
+   1,L
+   4,L,J,G
+   9,L,X
+  12,L
    7,L,J
   51,U,X
 
@@ -284,8 +284,10 @@
 #lvl_8
    1,L,J
   10,L
-  14,L,D,X
+   5,L,D,X
    1,L,J
+   7,L
+   2,L,J
   14,L,D,X
    1,L,J
    5,U,X
@@ -322,9 +324,9 @@
    5,R,X
   29,R
   10,R,D,X
-   2,R,J
-  10,R
-  14,R,D,X
+   5,R,J
+   2,R
+  15,R,D,X
    1,R,J
   10,R,D,X
    1,L,J
@@ -416,9 +418,9 @@
   14,R,D,X
    1,R,J
   14,R,D,X
-  20,R,D
+  21,R,D
    1,R,J
-   8,R,D,X
+   7,R,D,X
   44,R,J
 
 #lvl_11
@@ -497,95 +499,86 @@
 
 #lvl_end_1
    4,R,D
-  15,R,J
-  11,R
+   1,R,J
+  13,R,D,X
+   2,R,J
+   9,R
+   1,R,J
   12,R,D,X
-  11,R,D,J
-   5,R
-  12,R,D,X
+   8,R,J
+   4,R
+   1,R,J
+  11,R,D,X
    1,R,J
    7,R
    1,R,J
-  42,R,J
+  40,R,J
 
 #lvl_end_2
-  24,R,J
+  21,R,J
   14,R,D,X
-   1,R,J
+   7,R,J
   14,R,D,X
-   3,R,J
-  14,R,D,X
-   1,R,J
-  48,R,D,X
+   1,R
+   7,R,J
+  49,R,D,X
 
 #lvl_end_3
    6,R,D,X
    1,R,J
+  14,R
+   3,R,J
+   1,R
+   7,R,J,G
+   1,R
+   9,R,J,G
   14,R,D,X
-   9,R,J
-   6,R
-   8,R,J
-   2,R
-  14,R,D,X
-   2,R,J
-  14,R,D,X
-  47,R,J
- 
+   1,R
+   1,R,J
+  43,R
+
 #lvl_end_4
-   1,R,J
-   5,R
-  13,R,J
-   5,R
-  14,R,D,X
-   1,R,J
-  14,R,D,X
-   5,R
-   1,R,J
-  10,R,D,X
-   8,R,J
-   5,R
-   1,R,J
-  54,R,D,X
-   
+   3,R
+  11,R,J,G
+   1,R
+   1,R,J,G
+   4,R
+  19,R,D,X
+   1,R
+   2,R,J
+   9,R
+  47,R,J
+
 #lvl_end_3b
    5,R,J
-   6,R
   14,R,D,X
-   8,R,J
-   5,R
+   1,R
+   6,R,J
+   7,R
    2,R,J
-   5,R
-  13,R,D,X
-   9,R,J
-  14,R,D,X
-   1,R,J
-  14,R,D,X
-  20,R,J
+   8,R
+   5,R,J
    4,R
   14,R,D,X
-   1,R,J
-  46,R,D,X
+   1,R
+  44,R,J
 
 #lvl_end_5
-   8,R,D,X
-   5,R,J
-  10,R
-   5,R,U,X
-  23,R,D
-   5,R,D,J,X
-  28,R,D
-   3,R,J
-  10,R,X
   12,R,J
-  14,R,D,X
-   1,R,J
-  42,R
+   1,R
+   6,R,J,G
+   2,R
+  21,R,D,X
+   1,R
+  14,R,U,X
+  40
 
 #lvl_end_6
-   5,R
-  12,R,J
-  14,R,X
-   1,R,J
-   4,R
+  11,R,D,X
+  13,R,J
+   1,R
+   7,R,J,G
+   5,R,D,X
+  11,R,J
    1,S
    1,D,J
