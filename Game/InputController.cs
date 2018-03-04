@@ -212,6 +212,12 @@ namespace TAS {
 					while (!sr.EndOfStream) {
 						string line = sr.ReadLine();
 
+						if (line.IndexOf("Read", System.StringComparison.OrdinalIgnoreCase) == 0 && line.Length > 5) {
+							lines++;
+							ReadFile(line.Substring(5), lines);
+							lines--;
+						}
+
 						InputRecord input = new InputRecord(++lines, line);
 						if (input.FastForward) {
 							fastForwards.Add(input);
@@ -227,6 +233,37 @@ namespace TAS {
 				return true;
 			} catch {
 				return false;
+			}
+		}
+		private void ReadFile(string extraFile, int lines) {
+			int index = extraFile.IndexOf(',');
+			string filePath = index > 0 ? extraFile.Substring(0, index) : extraFile;
+			int skipLines = 0;
+			if (index > 0) {
+				int.TryParse(extraFile.Substring(index + 1), out skipLines);
+			}
+
+			if (!File.Exists(filePath)) { return; }
+
+			int subLine = 0;
+			using (StreamReader sr = new StreamReader(filePath)) {
+				while (!sr.EndOfStream) {
+					string line = sr.ReadLine();
+
+					subLine++;
+					if (subLine <= skipLines) { continue; }
+
+					InputRecord input = new InputRecord(lines, line);
+					if (input.FastForward) {
+						fastForwards.Add(input);
+
+						if (inputs.Count > 0) {
+							inputs[inputs.Count - 1].FastForward = true;
+						}
+					} else if (input.Frames != 0) {
+						inputs.Add(input);
+					}
+				}
 			}
 		}
 	}
