@@ -1,7 +1,5 @@
 #Start
    1,J
-  15
-   1,J
 
 #Prologue
  148
@@ -108,8 +106,12 @@ Read,6 - Reflection.tas,5
    1,J
 
 #Summit
- 167
+  55
    1,J
  356
 
 Read,7 - Summit.tas,6
+
+#Credits
+ 183
+   1,J
