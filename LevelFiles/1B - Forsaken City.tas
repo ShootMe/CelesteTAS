@@ -1,0 +1,432 @@
+#Created by KDT
+   1,Q
+   1,J
+ 118,R
+
+/start
+/room0
+  14,R,X
+   7,R,J
+   1,R
+  12,R,J,G
+   1,R
+  12,J,G
+   1,L
+   3,R,J
+  14,R
+  12
+   7,R,J
+  21,R
+  26,R,J
+  14,R,U,X
+  15,R
+   1,R,J,G
+   3,R
+  11
+  11,J
+   1
+  14,U,X
+/end
+/room0
+  40
+/start
+/room1
+  10
+  14,R,D,X
+  13,R,J
+   1,R
+  11,L,J
+   1,R
+   9,R,J
+   1,R
+  19,R,J,G
+  15,R
+  12,L,G
+  20,R,J
+   7,R
+   2,R,J,G
+  10,R
+  28,L,G
+  30,R,J
+  14,U,X
+   5,R,J
+/end
+/room1
+  40
+/start
+/room2
+  10,R
+  14,R,D,X
+  18,R,J
+   1,R
+   6,L,J
+   1,L
+  30,L,U,G
+   3,R,J
+  24,R,D
+  22,L,D
+   1,R,J
+  55,R,G
+  14,U,X
+  18,R,J
+   1,R
+  11,L,J
+   1,L
+  11,R,J
+   1,R
+  11,L,J
+   1,L
+   9,R,J
+/end
+/room2
+  40
+/start
+/room3
+  10,R
+  14,R,D,X
+   8,R
+   1,R,J
+  21,L,J,G
+  40,L,G
+   3,R,J
+  49,R
+  50,L,U,G
+   3,R,J
+  46,R
+   9
+  20,L,G
+  26,R,J
+  14,U,X
+  11,R,J
+   1,R
+  10,L,J
+/end
+/room3
+  40
+/start
+/room4
+
+  26,R
+  12,U,X
+  17,R,J
+  40,L,J,G
+
+  15,L,G
+  30,R,J
+   1,R
+  12,R,J,G
+   1,R
+  20,L,J
+   3,L
+   5,R,J
+  12,R
+   6,R,J,G
+   1
+   2,J
+   1,R
+   2,J
+   9,R,J
+  15,R
+   3,R,J,G
+  39,R,D
+  14,R,D,X
+   1,R,J
+/room4
+  40
+/start
+/room5
+  12,R,X
+   9,R,J
+  31,R
+  20
+  30,R,J
+  14,R,U,X
+  12,R
+   6
+   5,R,J,G
+  25,R
+  14,R,D,X
+   2,R,J
+  14,U,X
+   7,R,J
+/end
+/room5
+  40
+/start
+/room6
+  50,R,U,G
+  30,R,J,G
+  11,R
+  24,L,D
+  16,R,J
+  25,R,X
+   1,R
+  35,R,G
+  20,R,J,G
+/end
+/room6
+  40
+/start
+/room7
+  10,L
+  14,R,D,X
+  17,R,J
+  14,U,X
+   5,R,J
+  20,R
+  14,R,U,X
+   4,R
+  11,R,J
+   1,R
+   3,R,J,G
+  13,R,D
+  14,D,X
+  16,R
+  14,R,U,X
+  26,R,J
+  14,U,X
+  12,R,J
+   1,R
+  11,L,J
+/end
+/room7
+  40
+/start
+/room8
+  14,R
+  14,R,D,X
+  13
+   9,L,J,G
+   1,L
+  13,L,J
+   1,L
+  15,R,J
+  14,R
+  13,L,D
+   3,R,J
+  18,R
+  23,L,D
+  33,R,J
+   1,R
+  12,R,J,G
+   1,R
+   4,R,J,G
+  14,R
+  36,R,J
+  14,R,X
+   1,R,J
+/end
+/room8
+  40
+/start
+/room9
+   7,R,J
+   3,R
+  14,D,X
+   1,R
+  14,R,D,X
+  26,R,J
+   1,R
+  36,R,U,G
+  36,L,J
+  14,L,U,X
+  34,L
+  39,R,G
+  22,L,J
+   1,L
+  12,R,J
+   1,R
+  12,L,J
+   1,L
+  12,R,J
+   1,R
+  12,L,J
+   1,L
+   4,R,J
+/end
+/room9
+  40
+/start
+/room10
+  10,L
+  14,L,D,X
+   5,R,J
+   1,R
+  48,R,J,G
+   1,R,G
+  37,R,J,G
+   1,R
+  48,R,J
+   1,R
+  12,R,J,G
+   6,R,D
+  30,D
+  28,R,J
+  14,U,X
+   2,L
+  12,L,J,G
+   1,L
+  12,L,J,G
+   1,R
+  12,L,J
+   1,L
+   6,R,J
+/end
+/room10
+  40
+/start
+/room11
+  36,R,G
+   5,L,J
+  45,L,J,G
+   1,L,G
+   5,R,J
+  22,R
+  14,R,X
+  45,R,G
+  12,R,J,G
+  43,L,D
+  23,R,J
+   1,R
+  12,R,J,G
+   1,R
+  13,R,J,G
+   1,R
+  13,R,J,G
+  20,R
+  14,D
+   7,R,J
+   1,R
+   8,R,J
+  14,U,X
+  19,R,J
+   1,R
+  12,L,J
+   1,L
+   3,R,J
+/end
+/room11
+  40
+/start
+/room12
+  10,R
+  14,R,D,X
+  10,R,J
+  14,D,X
+  10
+  14,R,X
+   1,L,J
+  17,R,J
+  14,R,X
+  12,R
+  14,D,X
+  15
+   7,R,J
+  12,L,J
+   1,L
+  12,L,J,G
+   1,L
+  12,J,G
+   1,L
+  12,J,G
+  14,U,X
+   5,R,J
+  12,R
+  14,R,D,X
+   1,R,J
+   7,R,D,X
+/end
+/room12
+  40
+/start
+/room13
+   1
+  10,R,J
+  14,D,X
+   8
+  11,L,J
+  12,R,X
+  43,R,D,J
+  19,D
+  20,R,X
+  20,R
+  18
+  43,R,J
+  24,R,D
+  14,R,X
+  19,R
+   8,L
+   5,L,J
+  28,R,J
+  14,R,U,X
+  13,R
+  11,R,D,X
+/end
+/room13
+  40
+/start
+/room14
+   3
+   8,R
+   1,J
+   3,L,J
+  64,L,U,J,G
+   1,L,G
+  22,R,J
+  14,L,U,X
+  10,L
+   2,L,J,G
+  14,R
+   6,R,J
+  14,U,X
+  10,R,J
+  40,R,G
+  16,R,J,G
+  25,R,U,X
+   1,R
+   5,R,X
+  11,R,J
+  10,R
+   5,R,X
+  11,R,J
+  10,R
+  45,R,J,G
+  15,R,G
+  35,L,J
+  40,L,G
+  45,R,J
+  40,R,G
+  29,L,J
+  14,U,X
+  10,R,J
+/end
+/room14
+  40
+/start
+/room15
+  10,R
+  14,R,D,X
+   1,R
+  14,R,U,X
+  20,R
+  14,R,D,X
+   1,R,J
+  18,R
+  14,R,X
+  22,R,J
+  13,U,X
+  10,R,J
+   1,R
+  24,R,J
+   1,R
+   2,R,J,G
+  13,R
+   5,R,J
+  65,R
+   5,R,D,X
+  16,R,J
+  14,R,D,X
+  17,R,J
+  14,U,X
+  21,L,J
+  14,L,X
