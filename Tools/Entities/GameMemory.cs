@@ -2,8 +2,9 @@
 using System.Diagnostics;
 namespace CelesteStudio.Entities {
 	public class GameMemory {
-		private static ProgramPointer Celeste = new ProgramPointer(AutoDeref.Single, new ProgramSignature(PointerVersion.V1, "83C604F30F7E06660FD6078BCBFF15????????8D15", 21));
-		private static ProgramPointer TAS = new ProgramPointer(AutoDeref.Single, new ProgramSignature(PointerVersion.V1, "8B0D????????3909FF15????????EB158325", 2));
+		private static ProgramPointer TAS = new ProgramPointer(AutoDeref.Single,
+			new ProgramSignature(PointerVersion.XNA, "8B0D????????3909FF15????????EB158325", 2),
+			new ProgramSignature(PointerVersion.OpenGL, "89458C837D8C007417908B0D", 12));
 		public Process Program { get; set; }
 		public bool IsHooked { get; set; } = false;
 		private DateTime lastHooked;
@@ -17,10 +18,6 @@ namespace CelesteStudio.Entities {
 		}
 		public string TASPlayerOutput() {
 			return TAS.Read(Program, 0x8, 0x0);
-		}
-		public double LevelTime() {
-			//Celeste.Instance.AutosplitterInfo.ChapterTime
-			return (double)Celeste.Read<long>(Program, 0x0, 0xac, 0x4) / (double)10000000;
 		}
 		public bool HookProcess() {
 			IsHooked = Program != null && !Program.HasExited;

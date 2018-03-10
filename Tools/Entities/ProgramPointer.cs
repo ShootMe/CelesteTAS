@@ -2,7 +2,8 @@
 using System.Diagnostics;
 namespace CelesteStudio.Entities {
 	public enum PointerVersion {
-		V1
+		XNA,
+		OpenGL
 	}
 	public enum AutoDeref {
 		None,
