@@ -4,7 +4,7 @@ Simple TAS Tools for the game Celeste
 ## Installation
 - Currently only works/tested for the Windows Steam XNA version. May look at getting the OpenGL version to work in the future.
 - Go to [Releases](https://github.com/ShootMe/CelesteTAS/releases)
-- Download Celeste-Addons.dll
+- Download Celeste-Addons.dll (Either XNA or OpenGL, then Rename to Celeste-Addons.dll)
 - You will need the modified Celeste.exe as well. I wont host it here.
   - You can modify it yourself with dnSpy or similar
   - Load Celeste.exe in dnSpy and Celeste-Addons.dll as well
