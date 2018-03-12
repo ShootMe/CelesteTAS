@@ -25,13 +25,14 @@ namespace TAS {
 			return (GetAsyncKeyState(key) & 32768) == 32768;
 		}
 		public static bool IsLoading() {
-			IntroVignette intro = Engine.Scene as IntroVignette;
-			if (intro != null) {
-				return intro.timer <= 0;
-			}
 			SummitVignette summit = Engine.Scene as SummitVignette;
 			if (summit != null) {
 				return !summit.ready;
+			}
+			Overworld overworld = Engine.Scene as Overworld;
+			if (overworld != null) {
+				OuiFileSelect slot = overworld.Current as OuiFileSelect;
+				return slot != null && slot.SlotIndex >= 0 && slot.Slots[slot.SlotIndex].StartingGame;
 			}
 			return (Engine.Scene is LevelExit) || (Engine.Scene is LevelLoader) || (Engine.Scene is OverworldLoader) || (Engine.Scene is GameLoader);
 		}
@@ -57,16 +58,11 @@ namespace TAS {
 					PlayerStatus = level.InCutscene ? "Cutscene" : null;
 				}
 			} else if (Engine.Scene != null) {
-				IntroVignette intro = Engine.Scene as IntroVignette;
-				if (intro != null) {
-					PlayerStatus = string.Concat("IntroVignette ", intro.timer.ToString("0.00"));
+				SummitVignette summit = Engine.Scene as SummitVignette;
+				if (summit != null) {
+					PlayerStatus = string.Concat("SummitVignette ", summit.ready);
 				} else {
-					SummitVignette summit = Engine.Scene as SummitVignette;
-					if (summit != null) {
-						PlayerStatus = string.Concat("SummitVignette ", summit.ready);
-					} else {
-						PlayerStatus = Engine.Scene.GetType().Name;
-					}
+					PlayerStatus = Engine.Scene.GetType().Name;
 				}
 			}
 
