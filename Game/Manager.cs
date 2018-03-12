@@ -25,6 +25,14 @@ namespace TAS {
 			return (GetAsyncKeyState(key) & 32768) == 32768;
 		}
 		public static bool IsLoading() {
+			IntroVignette intro = Engine.Scene as IntroVignette;
+			if (intro != null) {
+				return intro.timer <= 0;
+			}
+			SummitVignette summit = Engine.Scene as SummitVignette;
+			if (summit != null) {
+				return !summit.ready;
+			}
 			return (Engine.Scene is LevelExit) || (Engine.Scene is LevelLoader) || (Engine.Scene is OverworldLoader) || (Engine.Scene is GameLoader);
 		}
 		private static GamePadState GetGamePadState() {
@@ -49,7 +57,17 @@ namespace TAS {
 					PlayerStatus = level.InCutscene ? "Cutscene" : null;
 				}
 			} else if (Engine.Scene != null) {
-				PlayerStatus = Engine.Scene.GetType().Name;
+				IntroVignette intro = Engine.Scene as IntroVignette;
+				if (intro != null) {
+					PlayerStatus = string.Concat("IntroVignette ", intro.timer.ToString("0.00"));
+				} else {
+					SummitVignette summit = Engine.Scene as SummitVignette;
+					if (summit != null) {
+						PlayerStatus = string.Concat("SummitVignette ", summit.ready);
+					} else {
+						PlayerStatus = Engine.Scene.GetType().Name;
+					}
+				}
 			}
 
 			GamePadState padState = GetGamePadState();

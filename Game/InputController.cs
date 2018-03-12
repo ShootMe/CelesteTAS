@@ -156,11 +156,18 @@ namespace TAS {
 				pad
 			);
 
+			bool found = false;
 			for (int i = 0; i < 4; i++) {
 				MInput.GamePads[i].Update();
 				if (MInput.GamePads[i].Attached) {
+					found = true;
 					MInput.GamePads[i].CurrentState = state;
 				}
+			}
+
+			if (!found) {
+				MInput.GamePads[0].CurrentState = state;
+				MInput.GamePads[0].Attached = true;
 			}
 			MInput.UpdateVirtualInputs();
 		}
