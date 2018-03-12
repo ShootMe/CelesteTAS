@@ -2,13 +2,16 @@
 Simple TAS Tools for the game Celeste
 
 ## Installation
-- Currently only works/tested for the Windows Steam XNA version. May look at getting the OpenGL version to work in the future.
+- Currently only works/tested for the Windows XNA/OpenGL version.
 - Go to [Releases](https://github.com/ShootMe/CelesteTAS/releases)
 - Download Celeste-Addons.dll (Either XNA or OpenGL, then Rename to Celeste-Addons.dll)
 - You will need the modified Celeste.exe as well. I wont host it here.
   - You can modify it yourself with dnSpy or similar
   - Load Celeste.exe in dnSpy and Celeste-Addons.dll as well
   - Change Celeste.exe according to the document here [Modified](https://github.com/ShootMe/CelesteTAS/blob/master/Game/WhatsModified.txt)
+  - To change it you must modify the IL instructions of the method and add a call into Celeste-Addons.dll first
+  - This adds a reference to the dll and then you can just edit the method with the text in the above link.
+  - You will get errors compiling, just double click the first error and delete any fields with <>
   - Save the modified version and you should be good to go
 - Place those in your Celeste game directory (usually C:\Program Files (x86)\Steam\steamapps\common\Celeste\)
 - Make sure to back up the original Celeste.exe before copying. (Can rename them .bak or something)
@@ -56,7 +59,7 @@ While in game
 - Playback: Control + [
 - Stop: Control + ]
 - Record: Control + Backspace
-- Faster/Slower Playback: RightShift / LeftShift
+- Faster Playback: RightShift
 - Frame Step: [
 - While Frame Stepping:
   - One more frame: [
