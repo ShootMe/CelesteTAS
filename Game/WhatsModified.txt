@@ -2,8 +2,7 @@
 protected override void Update(GameTime gameTime)
 {
 	Engine.RawDeltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
-	int frameLoops = TAS.Manager.FrameLoops;
-	for (int i = 0; i < frameLoops; i++)
+	for (int i = 0; i < TAS.Manager.FrameLoops; i++)
 	{
 		Engine.DeltaTime = Engine.RawDeltaTime * Engine.TimeRate * Engine.TimeRateB;
 		if (!TAS.Manager.Running || TAS.Manager.Recording)
@@ -59,12 +58,12 @@ protected override void Update(GameTime gameTime)
 				this.scene.Begin();
 			}
 		}
-		if (frameLoops < 10)
+		if (TAS.Manager.FrameLoops < 10)
 		{
 			base.Update(gameTime);
 		}
 	}
-	if (frameLoops >= 10)
+	if (TAS.Manager.FrameLoops >= 10)
 	{
 		base.Update(gameTime);
 	}

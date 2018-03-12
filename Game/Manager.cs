@@ -86,9 +86,8 @@ namespace TAS {
 					controller.RecordPlayer();
 				} else {
 					bool fastForward = controller.HasFastForward;
-					int fastSpeed = controller.FastForwardSpeed;
 					controller.PlaybackPlayer();
-					if (fastForward && (!controller.HasFastForward || fastSpeed != controller.FastForwardSpeed)) {
+					if (fastForward && !controller.HasFastForward) {
 						nextState |= State.FrameStep;
 						FrameLoops = 1;
 					}
@@ -121,9 +120,7 @@ namespace TAS {
 				}
 
 				float rightStickX = padState.ThumbSticks.Right.X;
-				if (IsKeyDown(Keys.LShiftKey)) {
-					rightStickX = -0.65f;
-				} else if (IsKeyDown(Keys.RShiftKey)) {
+				if (IsKeyDown(Keys.RShiftKey)) {
 					rightStickX = 1f;
 				}
 
@@ -174,8 +171,12 @@ namespace TAS {
 				} else if (!dpadDown && frameStepWasDpadDown) {
 					state &= ~State.FrameStep;
 					nextState &= ~State.FrameStep;
-				} else if (HasFlag(state, State.FrameStep) && padState.ThumbSticks.Right.X > 0.1) {
-					FrameStepCooldown -= (int)((padState.ThumbSticks.Right.X - 0.1) * 66.6f);
+				} else if (HasFlag(state, State.FrameStep) && (padState.ThumbSticks.Right.X > 0.1 || IsKeyDown(Keys.RShiftKey))) {
+					float rStick = padState.ThumbSticks.Right.X;
+					if (rStick < 0.1f) {
+						rStick = 1f;
+					}
+					FrameStepCooldown -= (int)((rStick - 0.1) * 70f);
 					if (FrameStepCooldown <= 0) {
 						FrameStepCooldown = 60;
 						state &= ~State.FrameStep;
