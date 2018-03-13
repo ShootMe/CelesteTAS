@@ -2,7 +2,6 @@
    1,J
 
 #Prologue
- 150
    1,S
    1,D,J
   93,R
@@ -50,7 +49,7 @@ Read,2A - Old Site.tas,9
    1,J
  197
 
-Read,3A - Celestial Resort.tas,7
+Read,3A - Celestial Resort.tas,6
 
 #Overworld
  183
@@ -106,7 +105,7 @@ Read,6A - Reflection.tas,7
    1,J
 
 #Summit
-  60
+  45
    1,J
  356
 
