@@ -117,3 +117,19 @@ Read,5C - Mirror Temple.tas,4
    1,R
    1,J
   15
+
+Read,6C - Reflection.tas,4
+
+#Overworld
+ 190
+   1,X
+  40
+   1,R
+   8
+   1,J
+  45
+   1,R
+   1
+   1,R
+   1,J
+  15

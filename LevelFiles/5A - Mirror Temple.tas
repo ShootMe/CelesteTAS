@@ -1,4 +1,5 @@
 #Created by KDT
+#Improved by Kilaye
 #Restart
    1,Q
    1,J
@@ -9,793 +10,872 @@
    1,S
    1,D,J
 /skipcutscene
-  34,R
+  34
 /controlstart
 /start
 /room0
 /0.00
   14,R,D,X
    1,R,J
-  14,R,D,X
+  13,R,D,X
    1,R,J
-  14,R,D,X
+   1,R
+   5,R,D,X
+   1,R,J
+   7,R
+   2,R,J
+   5,R,U,X
 /end
 /room0
-/0.595 (0.595)
+/0.646
   40
 /start
 /room1
 /1.275
-   3,R
-  14,R,U,X
-  10,R,D
-   3,R,J
-  14,R,D,X
+   6,R,U,X
+   4,R
    1,R,J
+   1,R
   14,R,D,X
-   6,R,J
-  14,R,U,X
-  26,R
-  14,R,X
-   1,R,J
-   3,R
-  14,R,U,X
-  24,R
+   1,R
    5,R,D,X
    1,R,J
-   8,R
+   7,R
+   7,R,J
+   2,R
+   3,R,J,G
+   1,R
+   3,R,J,G
+   1,R
+  14,R,D,X
+   4,R,D
+  10,R,J
+   1,R
+   3,R,J,G
+  14,R,D,X
+   1,R,J
+  12,R,D,X
+   1,R,J
 /end
 /room1
-/3.893 (2.618)
+/3.060
   40
 /start
 /room2
-/4.573
-   7,R
-  29,R,J
+/3.740
+   7,R,J
+  12,R
+  18,R,J
   14,R,X
-  19,R,J
+  20,R,J
   14,R,X
-   9,R
-  14,R,D,X
-  13,R,J
-  10,R
-   9,R,D,X
    1,R,J
-   4,R
+  14,R,D,X
+  14,R,J
+  14,R,D,X
+   1,R,J
+   7,R,D,X
 /end
 /room2
-/6.817 (2.244)
+/5.797
   40
 /start
 /room3
-/7.497
-   2,R
-  12,R,J
-  14,R,X
-  69,R
+/6.477
+   7,R,D,X
+   4,R,J
+   5,R,X
+  78
+  14,R,D,X
+   6,R
   14,R,D,X
    1,R,J
-  14,L,D,X
-   1,R,J
-  14,R,D,X
-   1,R,J
+   8,R,D,X
 /end
 /room3
-/9.690 (2.193)
+/8.602
   40
 /start
 /room4
-/10.370
-   5,R,D,X
-  11,R,J
+/9.282
+   6,R,D,X
+   1,R,J
   14,R,D,X
-  49,R
-  14,R,U,X
-  17,R
+  32,R,D
+   5,R,U,X
+  27
   14,U,X
-   3,U
-  14,U,X
-  82,R
+   1
+   5,U,X
+  91
 /end
 /room4
-/13.906 (3.536)
-  40
+/12.410
+  43
 /start
 /room5
 /14.586
-  40,R
-  14,R,X
-  11,R,J
-   7,R
+  41
   14,R,D,X
-  26,R,J
-  12,R,X
+  11,R,J
+   5,R
+  11,R,D,X
+  10,R,J
+   8,R
+  14,R,X
    1,R,J
-   7,R,X
+   9,R,D,X
+   1,R,J
 /end
 /room6
-/16.575
+/15.011
   40
 /start
 /room7
-  14
+   9,R,J
    5,R,X
   26,R
   14,R,U,X
-  32,R,D
-  17,D
+  34,R,D
+  15,D
    5,L,X
   52,L
    5,L,U,X
    5,L,J
-   8,L
+   7,L
    5,L,D,X
-   1,L,J
-   4,L
+   3,L,J
+   2,L
 /end
 /room7
+/18.615
   40
 /start
 /room8
-  25,R,D
-  14,D
+  15,L,D
+   6,D
+   9,R,D
   14,R,D,X
-   1,R,J
-  14,L,D,X
-   1,R,J
+   1,J
+   6,L,D,X
+   1,L,J
+   7,L
+   1,L,J
+  11,L,D,X
+   2,L,J
+   2,L
+  10,L,D,X
+   1,L,J
+   1,L
+   4,L,J,G
   14,L,D,X
    1,L,J
-   5,L,D,X
-  10,L
-   5,L,X
-  10,L
-  14,L,D,X
-   1,L,J
-   9,D
+   6,L
   11,D,X
 /end
 /room8
+/21.080
   40
 /start
 /room9
-  42,D
+   6,L,D
+  33,D
   30,R,D
   14,R,D,X
-   6,R
-  14,R,D,X
-  12,R,D
+   6,R,D
+   5,R,D,X
+  17
   14,R,D,X
 /end
 /room9
-  50
+/23.732
+  61
 /start
 /room10
-  11,R
    1,R,J
   14,R,D,X
    1,R,J
   14,R,D,X
-  20
-  20,R,J
-  61,R
-  14,R,D,X
-   1,L,J
-  14,R,D,X
-   4,R,J
-  14,R,D,X
+  66
+  42,L
+   6,R,D,X
    1,R,J
-  14,R,D,X
-
-/end
-/room10
-  40
-/start
-/room11
-   1,R,J
-  14,R,D,X
-   1,R,J
-   7,R,D,X
-   1,S
-   1,D,J
-  40,R
-  15,R,J
-  14,U,X
-   2
-  12,L,J,G
-  17,L,J
-   1,L
-   2,L,J
-  14,R,D,X
-   1,R,J
-  15,R,D
-  14,D,X
-   6,R
-  14,R,X
-  13,R,J
-  14,R,U,X
-  12,R
-  14,R,D,X
-   1,R,J
-  23,R,D
-  10,R,D,X
-/end
-/room11
-  40
-/start
-/room12
-   4
-   1,R,J
-  14,R,X
-  28,R,J
-  14,R,X
-  16,R,J
-  14,U,X
-   2
-   8,R,J,G
-   8,R
-  14,R,X
-   8,R,J
-   1,R
-  12,R,J,G
    7,R
-  14,R,X
-  21,R,J
-  14,R,U,X
-   8,R
-   8,R,J,G
-   8,R
-  14,R,D,X
    1,R,J
-  14,R,D,X
-   1,R,J
-   7,R,D,X
-/end
-/room12
-/upleft route 39.950
-/normal route 39.491
-  40
-/start
-/room13
-   4,R
-   1,R,J
-  27,R
-  14,R,U,X
-   3,R
-  11,R,J,G
-   5,R
-   9,L
-  25,R
-  14,R,U,X
-  25,R
-   7,R,J,G
-  11,R
-  14,R,U,X
-  15,R
-  12,R,D,X
-/end
-/room13
-  40
-/start
-/room14
-   2
-   1,R,J
-  14,R,D,X
-  18,R,J
-  14,R,D,X
-   1,R,J
-   6,R
-  14,R,D,X
-   1,R,J
-   5,R,D,X
-/end
-/room14
-  40
-/start
-/room15
-  10
-   1,R,J
-  14,R,D,X
-   1,R,J
-  14,R,X
-  10,R,J
-   4,R
-  15,R,X
-   9,R,J
-  10,R,D,X
-  21,R,J
-   9,R
-   1,R,G
-   1
-  15,J
-  12,R
-  30,R,J,G
-   8,R
-  30,R,J
-  27,R
-   9,R,U,X
    1,R
-   5,U,X
-  25,U
+   3,R,J,G
   14,R,D,X
    1,R,J
-  14,R,D,X
-   1,R,J
-  14,R,D,X
-   1,R,J
-  14,R,D,X
-   1,R,J
-  14,R,D,X
-   1,R,J
-  14,R,D,X
-   2,R,J
-  14,D,X
-   3
   14,R,D,X
    1,R,J
   11,R,D,X
 /end
+/room10
+/27.778
+  40
+/start
+/room11
+   3,R,D,X
+   1,R,J
+  14,R,D,X
+   1,S
+   1,D,J
+  34
+   6,R
+  15,R,J
+  14,U,X
+   2
+   7,L,J,G
+  12,L
+   5,L,J
+   5,L,D,X
+   1,R,J
+  32,R,D
+  10,R,X
+   3,R,J
+   1,R
+   3,R,J,G
+   1,R
+   5,R,J,G
+   8,U,X
+   2,R,J
+  11,R
+  14,R,D,X
+   1,R,J
+   2,R
+  14,R,D,X
+  10,R,D
+   1,R,J
+   5,R,D,X
+/end
+/room11
+/32.198
+  40
+/start
+/room12
+   5,R,D,X
+   1,R,J
+   7,R
+  11,R,J
+  11,R
+  14,R,X
+  13,R,J
+  14,U,X
+   4
+   8,R,J,G
+   7,R
+  11,R,X
+  11,R,J
+   1,R
+   3,R,J,G
+   8,L,J
+   5,R,D,X
+   1,R,J
+   7,R
+  15,R,J
+  14,R,U,X
+   8,R,J,G
+   1,R
+   4,R,J,G
+   7,R
+   6,R,D,X
+   1,R,J
+   7,R
+   1,R,J
+  14,R,D,X
+   1,R,J
+   5,R,D,X
+/end
+/room12
+/36.312
+  40
+/start
+/room13
+   4,R,D,X
+   1,R,J
+  17,R,D
+  10,R
+   9,R,U,X
+   1,R,J
+   7,R
+   1,R,J
+  25,R
+  11,R,U,X
+  11,R,J
+  21,R
+  14,R,U,X
+  14,R
+   5,R,D,X
+   1,R,J
+   5,R
+/end
+/room13
+/39.457
+  40
+/start
+/room14
+   2,R
+   1,R,J
+   1,R
+  14,R,D,X
+  10,R,J
+   8,R
+  14,R,D,X
+   1,R,J
+   3,R
+  14,R,D,X
+   1,R,J
+   6,R,D,X
+/end
+/room14
+/41.208
+  40
+/start
 /room15
+   8,R,D,X
+   1,R,J
+  14,R,D,X
+   1,R,J
+   8,R,D,X
+   1,R,J
+   7,R
+   9,R,J
+   2,L,J
+   1,R
+   3,R,J,G
+   3,R,J,G
+   1,L
+   4,R,J,G
+  14,R,X
+  21,R,J
+   1,L
+   8,R
+  11,R,J,G
+  21,R
+   3,R,J
+  42,R
+  14,R,U,X
+   2,R,J
+   5,U,X
+  25
+   5,R,D,X
+   1,R,J
+   7,R
+   1,R,J
+   1,R
+  14,R,D,X
+   1,R,J
+  14,R,D,X
+   1,R,J
+  14,R,D,X
+   1,R,J
+  14,R,D,X
+   1,R,J
+  14,R,D,X
+   1
+  14,D,X
+   2,R
+   5,R,D,X
+   1,R,J
+   7,R
+   1,R,J
+   1,R
+   7,R,D,X
+/end
+/room15
+/47.260
   40
 /start
 /room16
-   3
+   7,R,D,X
    1,R,J
-  21,R
-  14,R,X
-  46,R
+  14,R,D,X
+   4,R
+   5,R,X
+  54,R
    2,R,G
-  46,R,J,G
-  10,R,U,X
-  10,R,J
+  23,R,J,G
+  20,R,D
+  11,R,U,X
+  11,R,J
    8,R
-   3,R,J,G
+   2,R,J,G
   19,R
-  14,R,X
-  52,R
+   5,R,X
+  61
    2,G
   11,R,J,G
    1,R
   12,R,J,G
   14,R,X
-  47,R
-  11,R,U,X
+  42,R,D
+  14,R,U,X
   12,R,J
    1,R
   12,R,J,G
    1,R
    7,R,J,G
-  18,R
-  14,R,X
-  33,R
+  19,R
+   5,R,X
+  42
+  14,R,U,X
+  32,R
+   5,R,X
+  13
   14,R,U,X
   33,R
-  14,R,X
-   4
-  14,R,U,X
-  33,R
-  14,R,X
- 138,R
+   5,R,X
+ 140
+  10,R,D,X
 /end
 /room16
+/59.313
   40
 /start
 /room17
-   9,R
+   7,R,J
   14,R,U,X
   10,R
-   2,R,J,G
-   8,R
-  12,R,X
-   8,R,J
+  10,R,X
+  10,R,J
   14,U,X
-   3,L
+   1,L
 /end
 /room17
-  40
+  43
 /start
 /room18
-  14,R,J
-  10,U,X
-   3,R
-  14,U,X
- 184,R
-  14,L,D,X
-   7,L,J
-  14,L,U,X
-  11,L
-   2,L,J
-  12,L,D,X
-   7,R,J
-   1
-   4,R,J,G
-  14,R,X
-   1,R,J
-  14,R,D,X
-   1,R,J
-  14,R,D,X
-   2,R,J
-  12,R,D,X
-  10,L,J
+  11,R,J
+   5,U,X
+   8
+   5,U,X
+ 193
+   5,L,D,X
+   1,L,J
+   7,L
+  11,L,J
    1,L
-  12,L,J,G
-  14,L,X
-  18,L
+  13,L,J,G
+  10,L,D,X
+   7,R,J
+   1,R
+   5,R,J,G
+   5,R,D,X
+   1,R,J
+   7,R
+   1,R,J
+   1,R
+  14,R,D,X
+   9,R,J
+  10,R,D,X
+   4,L,J
+   1,L
+   7,L,J,G
+   5,L,D,X
+   1,L,J
+   7,L
+   1,L,J
+   1,L
+  14,L,D,X
+   1,R,J
+   7,R
+   1,R,J
+   1,R
+  13,L,D,X
    1,S
    1,D,J
- 550
+ 543
   14,R,D,X
-   6,L,D
+   5
   14,L,D,X
-   6,L,U
+  10,L
   14,L,U,X
-   6,L,U
-  14,L,X
-   6,L
+   5
   14,L,U,X
-  11,L
+  14
   14,L,D,X
-  12,L
+   5
   14,D,X
-   6,D
+   5
   14,L,D,X
-   6,L,D
+   5
   14,L,X
-   8,L
-  14,R,U,X
    6
   14,U,X
-   6
-  14,L,X
-  11
-  14,L,X
-   6,L
+   7
   14,L,U,X
-  12
+  14
   14,L,U,X
-   8
+   5
   14,L,D,X
-   8
+  14
   14,L,X
-   8
+   6
+  14,L,U,X
+   9
   14,L,X
-  35,L
+  18
+  14,L,X
+   5
    1,J
  222
   14,L,D,X
    1,L,J
-   1,R,D
   14,D,X
- 223,R,D
-  14,R,D,X
+  12,R,D
+ 210
+   5,R,D,X
+   1,R,J
+   7,R
    8,R,J
-  10,R
-  12,R,D,X
+  14,R,D,X
+   1,R,J
+   3,R
 /end
 /room18
+/1:31.188
   40
 /start
 /room19
-   2
-   1,R,J
-  12,R,D,X
-   1,S
-   1,D,J
-  48
-   1,R,J
-   8,R,D,X
-   1,S
-   1,D,J
-  36
-   3
-   1,R,J
-   6,R
-  14,R,D,X
-   1,R,J
-   8,R,D,X
-   1,S
-   1,D,J
-  36
-   4
-   1,R,J
-  14,R,U,X
-   1
-   2,R,G
-   5,R,J,G
-   7,R
-   5,R,D,X
-   1,R,J
-   6,R
+   4,R
+   2,R,J
+  11,R,D,X
    1,S
    1,D,J
   34
-  10,R,J
+   1,R,J
+   3,R
+  14,R,D,X
+   1,S
+   1,D,J
+  34
+   2,R,J
+   8,R
+  10,R,U,X
+   1,S
+   1,D,J
+  34
+   2,L
+  10,R
+   5,R,J
+   1,S
+   1,D,J
+  34
+   4,R,J
   14,R,U,X
+   1,R
+   1,R,J,G
    4,R
 /end
 /room19
+/1:35.74
   40
 /start
 /room20
-  31,R,D
-   9,R
+  14,L,D
+  20,R,D
   14,R,D,X
-   2,R
+   1,R,D
+   1,R,J
    5,R,D,X
    1,R,J
    8,R
-  10,U,X
-  17,R
+   5,U,X
+  22
   14,L,U,X
-  28,R,D
-  14,L,D,X
-  20,R,J
-  15,R
-  14,R,U,X
-  10,R
+  24,R,D
+  18,D
   10,R,D,X
+   3,R,J
+  11,L,J
+  10,R,X
 /end
 /room20
+/1:39.195
   40
 /start
 /room21
-   4
-  13,R
-  27,D
-  14,R,U,X
-  41,R
-  10,R,J,G
+   4,R,X
+   3,R
+  17,L,D
+  10,D
+   5,R,U,X
+  23
+  28,R
+   9,R,J,G
   18,R
   14,L,X
    7,L,G
-  30,R,J
-  14,R,U,X
-  20,R
-   8,R,D,X
+   5,R,J
+   1,R
+   7,R,J,G
+   7,R
+   5,R,D,X
+   4,R,J
+   1,R
+   9,R,J,G
+   1,R
+   1,R,J,G
+   6,R
 /end
 /room21
+/1:42.867
   40
 /start
 /room22
-   6
-   1,R,J
-   3,R
-  14,D,X
-   4,D
-  10,R,D
+  25,R,D
   14,R,D,X
    1,R,J
-  13,R,U,X
-  11,R,D
-  30,R
-  13,U,X
-  35,R,J
-  30,R,D
-  12,L,D,X
-  12,R,J
-  14,U,X
-  22,R,J
-/end
-/room23
-  40
-/start
-/room24
-   4,R
-  14,R,X
-   8,R
+  14,R,U,X
+  29,R,D
+   2,R,J
+  11,U,X
+  11,R,J
+  13,R,D
+  10,R,D,X
    1,R,J
-  21,R,D
-  12,L,D,X
-   1,R,J
-  18,R
-   1,R,J
+  26,D
   14,R,D,X
    1,R
-  18,R,X
-   2,R,J
-  14,R,U,X
-   2,R
-   9,R,J,G
-   8,R
-  12,R,D,X
-   2,R,J
+  14,U,X
+   1
+  13,R,J
+  12,R
+   5,R,D,X
+   1,R,J
+   1,R
+/end
+/room23
+/1:46.930
+  40
+/start
+/room24
+   6,R
+   5,R,J
+   1,R
+   1,R,J,G
+  20,R,D
+   4,L,D
+  10,L,D,X
+   5,R,J
+  14,R,D,X
+   1,R
+   1,R,J
+  14,R,D,X
+   5,R,J
+  15,R,U,X
+   1,R
+  10,R,J,G
+   7,R
+   5,R,D,X
+   6,R,J
 /end
 /room24
+/1:49.565
   40
 /start
 /room25
-   3,R,J,G
-  14
-  14,R
-  12,L,X
-  26,R,J
-  28,L,D
-  14,L,D,X
-   1,R,J
+   3,R,J
+   4,R
   14,R,D,X
+   5,R,D
+   5,R,J
+   1,R
+   4,R,J,G
+   6,R
+  14,D,X
+  10,L,D
    2,R,J
-  14,U,X
-  10,R,J
-  16,R
-  13,R,D,X
+   2,R
+  11,R,D,X
+   9,R,J
+  10,U,X
+  14,R,J
+  11,R
+   5,R,D,X
+   3,R,J
+   2,R
 /end
 /room25
+/1:52.285
   40
 /start
 /room26
+   4,R
+   8,R,D
+  19,L,D
+  14,U,X
    1
+   5,R,J
+  11,R
+  10,R,D,X
    1,R,J
    7,R
-  11,R,D,X
-   2,R,J
-  12,R,D,X
-   1,R,J
-  14,L,X
-   1
-   6,L,J
-  20,L,D
-  24,D
-  14,R,D,X
-   8,R,J
-  12,R,X
-   1,R,J
-  14,R,D,X
-   1,R,J
-  14,R,D,X
-   6,R,J
-  14,U,X
-  10,R,J
-   4,L,J
-   1,L
-  12,R,J
-   1
-   4,R,J,G
-   8,R
-  13,R,D,X
-/end
-/room27
-  40
-/start
-/room28
-   1
-   1,R,J
-  32,R,D
-  14,R,D,X
-  15,R,J
-  14,R,U,X
-  12,R
-  14,U,X
-   8,R
-  11,L
-  24,R,D
-  12,D
-  14,R,X
-   1,R,J
-  14,R,X
-   1,R,J
-   8,U,X
-   8,R,J
-  12,R
-  13,R,D,X
-/end
-/room28
-  40
-/start
-/room29
-   1
-   1,R,J
-  14,R,X
-   8,R,J
-  37,R
-   1,R,G
-   4,R,J,G
-  14,R,X
-  16,R,J
-  14,R,D,X
-   1,R,J
-/end
-/room29
-  40
-/start
-/room30
-   1
-  10,R,J,G
-   1
-  35,R,G
-  20,R,D
-  10,D
-  10,R,D
-  14,R,D,X
-   1,R,J
-  14,R,D,X
-   7,R,J
-  14,R,U,X
-  11,R,D
-   1,R
-  14,U,X
-   2
-   6,R,J,G
-   1
-  11,R,J,G
-   8,R
-  13,R,D,X
-/end
-/room30
-  40
-/start
-/room31
-   1
-   1,R,J
-   1,R
-   2,R,J,G
-  24,R
-  14,L,D,X
-   1,R,J
-  40,R,D
-   4,R,J
-   7,R
-  14,L,U,X
-   2,R
-  12,R,J,G
-   1
-   4,R,J,G
-   9,R
    5,R,J
   14,R,D,X
-   7,R,J
-  17,R
-  14,R,U,X
-  12,R,J
-  40,R
-  14,L,D,X
-   6,R,J
-   1
-  37,R,J,G
+   9,R
+   6,R,D
+  10,L,D
+   3,L,J
   14,U,X
-   8,L,J
-   1,L
-   5,L,J,G
-   8,L
-  14,U,X
-  41,L,D
-  14,L,U,X
-  14,L
-   5,L,D,X
-   8,L,J
-  15,L
-  14,U,X
-  27,L,D
+  13,R,J
+   1,R
+   9,R,J
+   7,R
+   5,R,D,X
+   1,R,J
+   4,R
+/end
+/room27
+/1:55.787
+  40
+/start
+/room28
+   3,R
+   1,R,J
+   1,R
   14,R,D,X
-  50,L,J
-  14,L,U,X
+  21,R,D
+   3,R,J
+   8,R
+  14,R,U,X
+  14,R
+  14,U,X
+   5,R
+   4,R
+  11
+  14,R,D,X
+   1,R,J
+  14,R,D,X
+   2,R,D
+   1,R,J
+  14,R,D,X
+/end
+/room28
+/1:58.711
+  40
+/start
+/room29
+   2,R,D
+  10,R,J
+  14,R,U,X
+   1,R
+   7,R,J,G
+   8,R
+   4,R,J
+/end
+/room29
+/2:00.122
+  40
+/start
+/room30
+   8,R,J
+  32,R,G
+  22,R,D
+   7,D
+  14,L,D,X
+   1,R,J
+  14,R,D,X
+   5,R,D
+   1,R,J
+   9,R
+  14,R,U,X
+  10,R
+  14,U,X
+   2
+   8,R,J,G
+   1,R
+   9,R,J,G
+   7,R
+   7,R,D,X
+   4,R,J
+/end
+/room30
+/2:03.760
+  40
+/start
+/room31
+   4,R,J,G
+   2,R
+  14,R,D,X
+   3,R,D
+  11,R,J
+  14,R,D,X
+   3,R,D
+   2,R,J
+  14,R,D,X
+   1,R
+  14,R,U,X
+  26,R,D
+  15,D
+   5,R,D,X
+   1,R,J
+   7,R
+   1,R,J
+   1,R
+  14,R,D,X
+   7,R,J
+   1,R
+  14,U,X
+  11,R
+  14,U,X
+   4,R,J
+  22,L,D
+   8,D
+   5,L,D,X
+  13,L,J
    1,L
-  10,L,J,G
+   1,L,J,G
+  22,L,D
+   7,L,J
    1,L
-   8,L,G
-  12,L,J,G
+   8,J,G
+   4,R,J
+   2,L,J
+  12,L,D,X
+   5,L,J
+  13,L,D
+  10,R,D
+  14,R,D,X
+   2,R,D
+   6,L,D
+   5,L,D,X
+   9,L,J
+  14,L
+  20
+  14,U,X
+   7,L
+   2,L,J,G
    1,L
-   1,L,G
+   2,L,J,G
+   1,L
+   4,L,J
+  14,U,X
+   2
 /end
 /room31
+/2:11.444
   40
 /start
 /room32
-  13,L
-  13,L,D,X
+   9,L,J
+   2,L
+   6,L,D,X
+   1,L,J
+   3,L
    1,S
    1,D,J
-  35,L
-   1,L,J
-  14,L,D,X
-   5,L,J
-  14,U,X
-  14,L,J
+  34
+   4,L
+  12,L,J
+  11,U,X
+  13,L,J
    5,R,X
-  47,R
+  45
   14,U,X
    7
    5,L,X
-  54,L
+  54
    2,L,G
    5,L,J,G
    1,L
@@ -804,93 +884,122 @@
   14,U,X
   14,L,J
    5,R,X
-  54,R
-   5,L,J
-  35,L
+  54
+   2,L,J
+  30,L,D
   14,L,X
-   7,L
-  14,U,X
- 147,L
-  14,L,D,X
+  10,L
+   5,U,X
+  64
+/end
+/room32
+/2:19.689
+  57
+/start
+/room33
+  34
+  13,L,D,X
    1,L,J
-  14,L,D,X
-   3,L,J
+   1,L
   14,L,D,X
    2,L,J
+  13,L,D,X
+   4,L,J
   14,U,X
-   8,L,J
-  12,L
-  15,L,D,X
-   1,R,J
-  14,U,X
+   2
    7,L,J
+   1,L
+   1,L,J,G
+  12,L
+   4,L,J
+  14,U,X
+   5,L,J
   11,L
-  14,L,D,X
-   2,L,J
+   7,L,D,X
+   1,L,J
+   4,L
 /end
 /room33
+/2:23.140
   40
 /start
 /room34
-   9,L,J
-  30,L
-   5,L,D,X
-   8,L,J
-   5,L
+   3,L
+   1,L,J
+   2,L
+  14,L,D,X
+  11,L,D
+   1,L,J
+   1,L
+   4,L,J,G
+   7,L
+   2,L,J
+   7,L
    2,L,J
    9,L
-   2,L,J
-   4,L
-  14,L,D,X
-   8,L,J
-  14,L
-  12,R,X
-  34,L,J
-  14,L,U,X
-  24,L
-   3,L,J,G
-   8,L
-  13,L,D,X
+   4,L,J
+   1,R
+  19,L,D
+   3,L,J
+   1,L
+  25,L,J,G
+  14,L,X
+   5,L
+   5,L,D,X
+   1,L,J
+   5,L
 /end
 /room34
+/2:26.183
   40
 /start
 /room35
-  40,R,D
-  77,L,D
-  14,L,D,X
+   4,L
+  14,D,X
+  24,D
+  40
+  24,D
+   8,L,D
+   6,L,D,X
    1,L,J
-  10,L,D,X
+   7,L
+   1,J
+  70,D
+  24,L,D
+   5,L,D,X
+   1,L,J
+   7,L
    4,L,J
-  66,D
-  15,L,D
-  11,L
-  10,L,D,X
-  13,L,J
-  14,U,X
-   9,R,J
+   2,L
+  13,U,X
+  11,R,J
   11,R
-   7,J
-  14,R,U,X
-   1,R
-   7,R,J,G
-  24,R
+   5,R,D,X
+  11,R,J
+   9
+   4,R
+  14,L,U,X
+   7,L
+   3,R
+  12,R
   14,U,X
-  13,R
+  12,R
    4,R,J
   14,U,X
-  13,L,J
-  12,L
    1
-  18,R,J
+  12,L,J
+   8,L
+   3,R
+  13,R,J
   14,U,X
-  16,R,J
+  17,R,J
 /end
 /room35
+/2:33.969
   40
 /start
 /room36
-  12,R,J
+  12,R
   14,U,X
    2,R,G
   12,R,J,G
@@ -901,8 +1010,9 @@
    8,R
    8,R,J
   14,U,X
-  23,R,J
    1,R
+  23,R,J
+   1
   12,R,J,G
    1,R
   12,R,J,G
@@ -912,396 +1022,458 @@
    1,R
   12,R,J,G
    1,R
-   2,R,J,G
-  11,R
-  12,R,D,X
+   1,R,J,G
+   7,R
+   5,R,D,X
    1,R,J
-  35,R,D
+   7,R
+   1,R,J
+   1,R
   14,R,D,X
+  24,R,D
    1,R,J
-   6,R,D,X
+   5,R,D,X
 /end
 /room36
+/2:38.440
   40
 /start
 /room37
-   8
-   1,R,J
-  12,R,D,X
-   1,L,J
-  14,U,X
-   1,R,J
-  18,R
-  14,R,X
-  31,R,J
+   9,R,D,X
+   2,R,J
   14,R,U,X
-  13,R
+   1,R
+   3,R,J,G
+   7,R
+   5,R,D,X
+   1,R,J
+   7,R
+   5,R,J
+  14,R
+  13,R,U,X
+   9
+   4,R
   14,U,X
-  14,R,J
+   1
+  15,R,J
 /end
 /room37
+/160.871
   40
 /start
 /room38
   11,L
-  11,U,X
-   1,R,J
-  20,R
-   1,R,J
-  14,U,X
-  10,R,J
-   2,L,G
-   4,L,J,G
-  70,L,G
+   7,U,X
+   4,R,J
+  14,R
+   4,R,J
+  12,U,X
+  11,R,J
+   1,R
+   3,L,J,G
+  64,L,G
   10,L,J,G
   33,L,D
-  13,D
-  12,L,D,X
-   1,R,J
-  23,R
-  12,L,D,X
-   4,R,J
-  16,R
-  12,R,X
-   8,R,J
-   7,R,J
-  12,R,D,X
-   1,R,J
-   2
-/end
-/room38
-  40
-/start
-/room39
-  14,R,D,X
-   1,R,J
-  14,R,X
-  14,R,J
-  14,R,U,X
-  15,R
-   9,R,D,X
-   1,S
-   1,D,J
-  34,R
-   5,R,D,X
-   1,R,J
-  21,R,G
-   1,R,J,G
-  26,R,G
-   1,R
-  14,R,D,X
-   1,R,J
-  14,R,D,X
-   1,R,J
-  10,R,D,X
-/end
-/room39
-  40
-/start
-/room40
-   4
-   4,R,J
-  22,R,G
-   6,R,J,G
-   1,R,J
-   5,U,X
-  33,R,J,G
-   1,R,G
-   1,J,G
-  12,R,J,G
-  84,R
-  14,R,X
-   5,R,J
-  10,R,D,X
-   1,R,J
-  26,R,G
-   1,R,J,G
-   6,R,G
-/end
-/room40
-  40,G
-/start
-/room41
-   8,R,G
-   1,R,J,G
-  14,R
-   5,R,U,X
-  21,R,G
-  18,R
-  14,R,X
-  20,R,J
-   1,R,G
-  24,R
-  14,R,U,X
-  20,R,D,G
-  40,L,G
-  25,R,G
-   5
-   5,R,X
-  13,R,J
-  10,R
-/end
-/room41
-  40
-/start
-/room42
-  14,R,D,X
-   1,R,J
-  23,L,J,G
-   2,L,G
-  14,U,X
-  21,R,G
-   1,R
-   3,R,J,G
-  11,R
-  12,R,D,X
-   1,R,J
-  10,R,J
-   5,R,X
-  14,R,G
-  38,R,J,G
-   2
-  34,D
+   9,R,D
+   5,D
   14,L,D,X
    1,R,J
-  12,R,D,X
-   2,R,J,G
-  10,R,J,G
-   1,R
-   1,R,J,G
-  14,R,G
-   1,R,J,G
-   2,R,G
-/end
-/room42
-  40,G
-/start
-/room43
-  11,R,G
+  14,R,D,X
+  13,R,D
+   2,R,J
+  11,R
+  14,R,X
    1,R,J
-   5,R,X
-   1,R,J,G
-  52,R,J,G
-   1
    5,R,D,X
    1,R,J
-  19,R,J,G
+   7,R
+/end
+/room38
+/2:45.699
+  40
+/start
+/room39
+   1,R,J
+   1,R
+  13,R,D,X
+   1,R,J
+   7,R
+   9,R,J
+  14,R,U,X
+   1,R
+  11,R,J,G
+   1,S
+   1,D,J
+  34
+   5,R,D,X
+   1,R,J
+   5,R
+  16,R,G
+   1,R,J,G
+  18,R,D,G
+  10,R,D,G
+   1,R,J,G
+  10,R,G
+   1,R
+  14,R,D,X
+   1,R,J
+/end
+/room39
+/2:49.184
+  40
+/start
+/room40
+  11,R,D,X
+  12,R,G
+  15,R,J,G
+   1,R,G
+  11,R,J,G
+   1,R,J
+  14,U,X
+  31,R,G
+   1,R
+  14,R,D,X
+  31,R,D
+  14,L,D,X
+   1,R,J
+   7,R,D,X
+  21,R,G
+   1,R,J,G
+   3,R,G
+/end
+/room40
+/2:52.822
+  40
+/start
+/room41
+  11,R,G
+  11,R,J,G
+   9,R,G
+   1,R,J,G
+   2,L,G
+  12,R,G
+   1,R,J,G
+   4,R,J,G
+  20,R,J,G
+   2,R,D,J
+   1,R,J
+   1,R,J,G
+   3,R,J
+   3,R
+  10,R,D,X
+   1,L,J
+   8,L,D
+   8,R,D
+  14,L,D,X
+   1,R,J
+   2,L,J
+   1,L
+  14,R,D,X
+   1,R
+   5,R,D,X
+   1,R,G
+  12,R,G
+   1,R,J,G
+   8,R,G
+/end
+/room41
+/2:56.001
+  40
+/start
+/room42
+   6,R,G
+   6,R,J,G
+   7,R,G
+   4,R,J,G
+  12,R,G
+   8,R,J,G
+   9,J
+   7,R,J,G
+   3,L,J,G
+   1,L,G
+  11,L,J,G
+   1,L,G
+  12,R,J,G
+   7,R,G
+   1,R,J,G
+  15,R,G
+  12,R,D,G
+   1,R
+  20,R,D
+   5,R,D,X
+   2,R,J
+  18,R
+  14,L,D,X
+   1,R,J
+   5,R,D,X
+  14,R,G
+   1,R,J,G
+  14,R,G
+/end
+/room42
+/3:00.064
+  40
+/start
+/room43
+  18,R,J,G
+  11,R,G
+   8,R,D,G
+   4,R,J,G
+  12,R,G
+  11,R,J,G
+   9,R,G
+   3,R,J,G
+   1,R,J
+  12,U,X
+   9,R,J
+  19,R,D
+  33,L,D
+  14,R,D,X
+   1,R,J
+   5,R,D,X
+  13,R,G
+   1,R,J,G
+   9,R,G
+
+/altern strat with
+/faster end speed
+#   9,R,J,G
+#  13,R,G
+#   9,R,J,G
+#   1,R,G
+#  10,L,J,G
+#   1,L,G
+#  11,R,J,G
+#   1,R
+#  12,R,D,X
+#   2,R,J
+#   1,L
+#  14,R,U,X
+#  26,R,D,G
+#  12,L,D,G
+#   1,R
+#   7,L,D
+#   3
+#  14,L,D,X
+#   1,L
+#  11,R,J
+#  11,R,D,X
+#   5,R,J
+#  14,R,D,X
+#   1,R
+#   1,R,J
+#   5,R,D,X
+#  13,R,G
+#   1,R,J,G
+#   7,R,G
+
+/end
+/room43
+/3:03.872
+  40
+/start
+/room44
    6,R,G
   11,R,J,G
+   1,R
+  13,R,U,X
+  25,R,G
+  11,R,J,G
    7,R,G
-   2
-  12,R,X
-  10,R,J
-   5,U,X
-  25,D,G
-  28,D
-  14,D,X
-  12,D
-  12,L,D,X
+   2,R,G
+   1,R,G
+   1,R,J,G
+   1,R,J
+  11,R,D,X
+   1,R,J
+  16,R,D
+  19,R,X
+   3,R,J
+  14,L,D,X
+  22,R,D
+  14,L,D,X
    1,R,J
    7,R,D,X
   13,R,G
    1,R,J,G
   14,R,G
+   2,R,J,G
+  10,R,G
    1,R,J,G
+  18,R,G
+   8,R,J,G
 /end
-/room43
-  40,R,G
-/start
 /room44
-  14,R,G
-  11,R,J,G
-   4,R
-  14,R,X
-   1,L,J
+/3:08.564
+  40
+/start
+/room45
+   3,R,J,G
+  10,R,G
+   1,R,J,G
+  10,R,G
   14,R,U,X
-   5,R,J,G
-  17,R
-   9,R,J,G
-  12,R
-  12,R,X
-  40,R,J
-  37,R,D
-  14,L,D,X
-   1,L,J
-  13,R
-   6,R,D,X
-  38,R,G
-  57,R,J,G
-   5,R
-  14,L,D,X
-  22,R,J
-   8,R,X
-  20,R,J,G
-/end
-/room44
-  40,R,G
-/start
-/room45
-   8,R,G
-  18,R,J,G
-  20,R
-  14,R,X
-   2,R
-  12,R,J,G
-  21,R
-  20,R,J
-   6,R,D,X
-  10,R,G
-  10,L
-  14,L,D,X
-   1,R,J
-  19,L,G
-  26,R,G
-   2
-   5,R,X
-  22,R,J,G
-/end
-/room45
-  40,R,J,G
-/start
-/room46
-  12,R,J,G
-  15,R
-  25,R,J
-  10,R
-   1,R,G
-  27,R
-   1,R,J
-  33,R
-  14,D,X
-  20,L
-   5,R,D,X
-   1,R,J
-  36,R,J,G
-   1,R,G
-   1,R,J,G
-  60,R,G
-   4,R
-   1,R,J,G
-   2,R
-  11,R,J,G
-   1,R
-  23,R,G
-   2,R
-  24,R,J
-  12,R,X
-   1,R,J
-   5,R,J,G
-  32,R,G
-   2
-   5,R,X
-   1,R,J,G
-  72,R,G
-   1,R
-   5,R,X
-   1,R,J
-  53,R,J,G
-   2
+   6,R
+  26
+  15,L,J
   14,R,D,X
+   1,R,J
+   5,R,D,X
+  25,R,G
+  13,R,D,G
+/end
+/room45
+/3:11.522
+  40
+/start
+/room46
+   1,R,D,G
+  11,R,J,G
+   8,R,G
+   2,R,J,G
+  19,R,G
+   1,L,G
+   1,R
+   1,L,J
+  13,L
+   8,L,D,X
+   1,R,J
+   7,R
+   1,R,J
+   5,R,X
+  13,R,G
+   2,R,J,G
+  12,R,G
+   1,R,J,G
 /end
 /room46
-  40,R
+/3:13.919
+  40
 /start
 /room47
-   1
-   1,R,J
-  12,R,X
-   1,R,J
-  18,R,J,G
+   7,R,J,G
   10,R,G
-  16,R,J,G
-   2,R,J
-   9,U,X
-  33,R,J,G
-   2,R
-   5,R,X
-   6,R,J,G
-  56,R,G
-   2
-   5,R,X
-   6,R,J,G
-  37,R,G
-  10,R,J,G
+   1,L,D,J
+  15,L,D
+   1,R,D
+  14,R,D,X
+   1,R,J
+   5,R,D,X
+  14,R,G
+   3,R,J,G
+  22,R,G
+   5,R,J,G
 /end
 /room47
-  40,R,J
+/3:16.163
+  40
 /start
 /room48
    3,R,J,G
-  10,R,U,X
-  19,L,J,G
-   1,L,G
-  11,R,J,G
-   1,R,G
-  11,L,J,G
-   1,L,G
-   1,R,J,G
-  12,R,G
-   2,R,J
-   5,R,X
+  13,R,G
+  12,R,J,G
+   1,R,J
+  10,U,X
+  21,R,G
   10,R
-  26,R,G
-   2
-  14,R,X
-  30,R,J,G
-  17,R
-  14,R,X
-  50,R,J,G
-  14,R,J
+   5,R,D,X
+   1,R,J
+   3,L,J
+   5,R,J
+  44,R,D,G
+   1
+   6,L
   14,L,D,X
-  18,R,J
-  14,U,X
-  30,R,J,G
-  20,R
-  14,L,D,X
-  52,R,J,G
-   2
-  14,R,X
    1,R,J
    7,R
+   1,R,J
+   1,R
+  14,R,D,X
+   3,R,D
+   1,R,J
+   5,R,D,X
+  13,R,G
+   1,R,J,G
+   1,R,J,G
 /end
 /room48
+/3:19.937
   40
 /start
 /room49
-  14,R,D,X
-   1,R,J
-  17,R,J,G
-  10,R,G
-   1,R,J,G
-  24,R,G
-   3,R,J,G
-  11,R,G
-   7,L,D,X
-   1,R,J,G
-  20,R,J,G
-   7,R,G
-   7,L,D,X
-   1,R,J,G
-  21,R,G
-   1,R,J,G
-   3,R,J,G
-  12,R,G
-   1,R,J,G
-  20,R,G
-   7,L,D,X
-  20,R,J,G
-   9,G
-   2
+
+  18,R,J,G
+   1,R
+  14,R,U,X
+  35,R,J,G
+  28,R,J,G
+   1,R
   14,R,X
-  20,J,G
-  26,R,G
-   7,L,D,X
+   1,L,J
+  14,R,X
+  28,R,J,G
+   1,R,G
+  10,L,J,G
+   1,L,G
+   6,R,J
+   9,L,D,X
+   1,R,J
+   7,R
+   1,R,J
+  10,R,D,X
+  13,R,G
    1,R,J,G
-  21,R,G
+  21,R,D,G
    1,R,J,G
    1,R,G
-   2,R
+/end
+/room49
+/3:24.238
+  40
+/start
+/room50
+  17,R,G
+   2,R,J,G
+   8,R,G
+   1,R,J,G
+   1,R,G
+   1,R
+  14,D,X
+   1
+  12,L,D,X
+   1,R,J
+   7,R
+   1,R,J
+   1,L,J
   14,R,D,X
-  14,R,J,G
-  14,L,D,X
-  32,R,J,G
-  34,R
+   1,R
+   1,R,J
+   5,R,D,X
+  13,R,G
+   6,R,J,G
+   8,R,G
+   4,R,J,G
+  12,R,G
+   1,R,J,G
+  18,R,G
+   3,R,J,G
+  19,R,G
+   1,R,J,G
+   8,R,G
+   5,R
+  14,D,X
+   2
+   1,R
+   5,L,D,X
+   1,R,J
+   7,R
+   3,R,J
+   1,R
+   1,R,J,G
+   5,R,D,X
+  14,R,G
+   2,R,J,G
+  18,R,G
+  14
    1,S
    1,D,J
