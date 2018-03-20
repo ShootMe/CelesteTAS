@@ -36,9 +36,9 @@
 			this.statusBar.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.statusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblStatus});
-			this.statusBar.Location = new System.Drawing.Point(0, 658);
+			this.statusBar.Location = new System.Drawing.Point(0, 640);
 			this.statusBar.Name = "statusBar";
-			this.statusBar.Size = new System.Drawing.Size(308, 72);
+			this.statusBar.Size = new System.Drawing.Size(308, 90);
 			this.statusBar.TabIndex = 1;
 			// 
 			// lblStatus
@@ -46,7 +46,7 @@
 			this.lblStatus.Font = new System.Drawing.Font("Courier New", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblStatus.Name = "lblStatus";
 			this.lblStatus.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
-			this.lblStatus.Size = new System.Drawing.Size(262, 67);
+			this.lblStatus.Size = new System.Drawing.Size(293, 85);
 			this.lblStatus.Spring = true;
 			this.lblStatus.Text = "Searching...";
 			this.lblStatus.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -78,7 +78,7 @@
 			this.tasText.Paddings = new System.Windows.Forms.Padding(0);
 			this.tasText.SaveToFileName = null;
 			this.tasText.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			this.tasText.Size = new System.Drawing.Size(308, 658);
+			this.tasText.Size = new System.Drawing.Size(308, 640);
 			this.tasText.TabIndex = 0;
 			this.tasText.TabLength = 0;
 			this.tasText.TextChanged += new System.EventHandler<CelesteStudio.Controls.TextChangedEventArgs>(this.tasText_TextChanged);

@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Input;
 using Monocle;
 using System;
 using System.Runtime.InteropServices;
+using System.Text;
 namespace TAS {
 	[Flags]
 	public enum State {
@@ -21,6 +22,8 @@ namespace TAS {
 		public static string CurrentStatus, PlayerStatus;
 		public static int FrameStepCooldown, FrameLoops = 1;
 		private static bool frameStepWasDpadUp, frameStepWasDpadDown;
+		private static Vector2 lastPos;
+		private static long lastTimer;
 		private static bool IsKeyDown(Keys key) {
 			return (GetAsyncKeyState(key) & 32768) == 32768;
 		}
@@ -48,12 +51,21 @@ namespace TAS {
 		}
 		public static void UpdateInputs() {
 			Level level = Engine.Scene as Level;
+			Player player = null;
+			long chapterTime = 0;
 			if (level != null) {
-				Player player = level.Tracker.GetEntity<Player>();
+				player = level.Tracker.GetEntity<Player>();
 				if (player != null) {
 					string statuses = ((int)(player.dashCooldownTimer * 60f) < 1 && player.Dashes > 0 ? "Dash " : string.Empty) + (player.LoseShards ? "Ground " : string.Empty) + (player.WallJumpCheck(1) ? "Wall-R " : string.Empty) + (player.WallJumpCheck(-1) ? "Wall-L " : string.Empty);
-					string info = "Pos: " + player.ExactPosition.X.ToString("0.0") + "," + player.ExactPosition.Y.ToString("0.0") + "\r\nSpeed: " + player.Speed.X.ToString("0.00") + "," + player.Speed.Y.ToString("0.00") + "," + player.Speed.Length().ToString("0.00") + "\r\nStamina: " + player.Stamina.ToString("0") + " Timer: " + ((double)((Celeste.Celeste)Engine.Instance).AutoSplitterInfo.ChapterTime / (double)10000000).ToString("0.000") + "\r\n" + (player.InControl && !level.Transitioning ? statuses : "NoControl ") + (player.TimePaused ? "Paused " : string.Empty) + (level.InCutscene ? "Cutscene " : string.Empty);
-					PlayerStatus = info;
+					chapterTime = ((Celeste.Celeste)Engine.Instance).AutoSplitterInfo.ChapterTime;
+					StringBuilder sb = new StringBuilder();
+					sb.Append("Pos: ").Append(player.ExactPosition.X.ToString("0.0")).Append(',').AppendLine(player.ExactPosition.Y.ToString("0.0"));
+					sb.Append("Speed: ").Append(player.Speed.X.ToString("0.00")).Append(',').Append(player.Speed.Y.ToString("0.00")).Append(',').AppendLine(player.Speed.Length().ToString("0.00"));
+					Vector2 diff = (player.ExactPosition - lastPos) * 60;
+					sb.Append("Vel: ").Append(diff.X.ToString("0.00")).Append(',').Append(diff.Y.ToString("0.00")).Append(',').AppendLine(diff.Length().ToString("0.00"));
+					sb.Append("Stamina: ").Append(player.Stamina.ToString("0")).Append(" Timer: ").AppendLine(((double)chapterTime / (double)10000000).ToString("0.000"));
+					sb.Append(player.InControl && !level.Transitioning ? statuses : "NoControl ").Append(player.TimePaused ? "Paused " : string.Empty).Append(level.InCutscene ? "Cutscene " : string.Empty);
+					PlayerStatus = sb.ToString();
 				} else {
 					PlayerStatus = level.InCutscene ? "Cutscene" : null;
 				}
@@ -106,6 +118,11 @@ namespace TAS {
 					}
 					MInput.UpdateVirtualInputs();
 				}
+			}
+
+			if (player != null && chapterTime != lastTimer) {
+				lastPos = player.ExactPosition;
+				lastTimer = chapterTime;
 			}
 		}
 		private static void HandleFrameRates(GamePadState padState) {
