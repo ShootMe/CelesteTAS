@@ -1,0 +1,119 @@
+#Start
+   1,J
+
+#Intro
+   1,S
+   1,D,J
+  93,L
+
+#lvl_0
+   1,L,J
+  20,L
+  29
+
+#lvl_-1
+   1,L
+   1,R
+   1,N
+   1,G
+   1,U
+   1
+   1,U
+   1,D
+   1,L
+   1,G
+   1,J
+
+#Overworld
+ 123
+   1,X
+  40
+   1,R
+   8
+   1,J
+  45
+   1,R
+   1
+   1,R
+   1,J
+  15
+
+Read,1C - Forsaken City.tas,4
+
+#Overworld
+ 190
+   1,X
+  40
+   1,R
+   8
+   1,J
+  45
+   1,R
+   1
+   1,R
+   1,J
+  15
+
+Read,2C - Old Site.tas,4
+
+#Overworld
+ 190
+   1,X
+  40
+   1,R
+   8
+   1,J
+  45
+   1,R
+   1
+   1,R
+   1,J
+  15
+
+Read,3C - Celestial Resort.tas,4
+
+#Overworld
+ 190
+   1,X
+  40
+   1,R
+   8
+   1,J
+  45
+   1,R
+   1
+   1,R
+   1,J
+  15
+
+Read,4C - Golden Ridge.tas,4
+
+#Overworld
+ 190
+   1,X
+  40
+   1,R
+   8
+   1,J
+  45
+   1,R
+   1
+   1,R
+   1,J
+  15
+
+Read,5C - Mirror Temple.tas,4
+
+#Overworld
+ 190
+   1,X
+  40
+   1,R
+   8
+   1,J
+  45
+   1,R
+   1
+   1,R
+   1,J
+  15
