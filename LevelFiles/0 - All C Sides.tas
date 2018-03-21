@@ -1,4 +1,24 @@
-#Start
+#Start from Begin
+   1,D
+   1,J
+  70
+   1,D
+   1
+   1,D
+   1,R
+   1,J
+   1,U
+   1
+   1,U
+   1,L
+   1,J
+   1,D
+   1
+   1,D
+   1,J
+   1,S
+  49
+   1,U
    1,J
 
 #Intro
@@ -133,3 +153,23 @@ Read,6C - Reflection.tas,4
    1,R
    1,J
   15
+
+Read,7C - Summit.tas,4
+
+#Overworld
+ 190
+   1,X
+  40
+   1,R
+   8
+   1,R
+   8
+   1,J
+  45
+   1,R
+   1
+   1,R
+   1,J
+  15
+
+Read,8C - Core.tas,4
