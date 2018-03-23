@@ -148,6 +148,7 @@ namespace TAS {
 				new GamePadTriggers(Current.HasActions(Actions.Journal) ? 1f : 0f, 0),
 				new GamePadButtons(
 					(Current.HasActions(Actions.Jump) ? Buttons.A : (Buttons)0)
+					| (Current.HasActions(Actions.Jump2) ? Buttons.Y : (Buttons)0)
 					| (Current.HasActions(Actions.Dash) ? Buttons.B : (Buttons)0)
 					| (Current.HasActions(Actions.Grab) ? Buttons.RightShoulder : (Buttons)0)
 					| (Current.HasActions(Actions.Start) ? Buttons.Start : (Buttons)0)

@@ -14,7 +14,8 @@ namespace TAS {
 		Start = 128,
 		Restart = 256,
 		Feather = 512,
-		Journal = 1024
+		Journal = 1024,
+		Jump2 = 2048
 	}
 	public class InputRecord {
 		public int Line { get; set; }
@@ -51,6 +52,7 @@ namespace TAS {
 					case 'S': Actions ^= Actions.Start; break;
 					case 'Q': Actions ^= Actions.Restart; break;
 					case 'N': Actions ^= Actions.Journal; break;
+					case 'K': Actions ^= Actions.Jump2; break;
 					case 'F':
 						Actions ^= Actions.Feather;
 						index++;
@@ -167,6 +169,7 @@ namespace TAS {
 			if (HasActions(Actions.Up)) { sb.Append(",U"); }
 			if (HasActions(Actions.Down)) { sb.Append(",D"); }
 			if (HasActions(Actions.Jump)) { sb.Append(",J"); }
+			if (HasActions(Actions.Jump2)) { sb.Append(",K"); }
 			if (HasActions(Actions.Dash)) { sb.Append(",X"); }
 			if (HasActions(Actions.Grab)) { sb.Append(",G"); }
 			if (HasActions(Actions.Start)) { sb.Append(",S"); }
