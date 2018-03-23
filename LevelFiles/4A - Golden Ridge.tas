@@ -70,50 +70,35 @@
    1,R,J
   14,R,D,X
    5,R
-  18,R,J
-  14,R,D,X
-   7,R,J
+   1,R,J
+   1,R,K
+   1,R,J
+   1,R,K
+   1,R,J
+   1,R,K
+   9,R
+  13,R,U,X
    1,S
    1,D,J
-  35,R
-  14,R,U,X
-   1,R
-   4,R,J,G
-   8,R
-  14,R,D,X
-   4,R,J
-  14,R,D,X
-   1,R
-  13,R,J
-   6,R,D,X
   40,R
+  20,R,J,G
+  47,R
 
 #lvl_a-02
-   9,R
-   2,R,J
+   5,R
+  15,R,D,X
+  11,R,J
    8,R
   11,R,J
-   9,R
-   6,R,J
-  10,R
   14,R,D,X
    6,R
-   3,R,J,G
-  14,R
    1,R,J
-  40,R
+  45,R
 
 #lvl_a-03
-   1,R,J
-  14,R,D,X
-   1,R,J
-  18,R
-  14,U,X
-   4,R,J
-   5,R,D,X
-  13,R
-  14,R,X
-  21,R
+  26,R
+  13,R,X
+   1,R
    5,R,X
   13,R
   13,R,X
