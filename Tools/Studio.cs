@@ -66,12 +66,6 @@ namespace CelesteStudio {
 						statusBar.Height -= increase;
 						tasText.Height += increase;
 					}
-				} else if (e.Modifiers == Keys.Control && e.KeyCode == Keys.D) {
-					string newDelimiter = InputRecord.Delimiter.ToString();
-					if (ShowInputDialog("Choose delimiter", ref newDelimiter) == DialogResult.OK) {
-						InputRecord.Delimiter = newDelimiter[0];
-						tasText.ReloadFile();
-					}
 				}
 			} catch (Exception ex) {
 				MessageBox.Show(this, ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
