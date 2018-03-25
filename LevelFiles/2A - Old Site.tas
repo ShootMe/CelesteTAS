@@ -18,62 +18,65 @@
    6,R
    1,R,J
   11,R,D,X
-   2,R,D,J
-   9,R,D
-   1,R,D,J
-  12,R,D,X
-   9,R,J
+   2,R,J
+   9,R
+   1,R,J
+  11,R,D,X
+   8,R,J
+   4,R
+   1,R,J
   14,R,D,X
    1,R,J
-   7,R
-   1,R,D,J
-  45,R,D,X
+  48,R,D,X
 
 #lvl_1
-   9,R,D,X
-   8,R,J
-   1,R
-   5,R,J
-   5,R,X
-  10,R
+   2,R,D,X
+   1,R,J
+   7,R
+  10,R,J
+   3,R,K,G
+   7,R
    5,D,X
   14,R,D
-  43,L,D
+  44,L,D
 
 #lvl_d0
    2,D
   16,L
-  41,L,D
+  40,L,D
   79,R,D
   10,R,D,X
-   8,R,D,J
-   4,R,D
+   8,R,J
+   4,R
   14,R,D,X
-   4,R,D
+   4,R
    6,R,D,X
-   3,R,D,J
-  41,R,D
+   3,R,J
+  41,R
 
 #lvl_d7
-  11,R
-  30,R,J
-  10,R
-   5,R,U,X
-  34,R,D
+   9,R
+   3,R,J
+  19,R
+  10,R,J,G
+   1,R
+  15,R,J
+  15,R,X
+   1,R,J
   10,R,D,X
-   1,R,D,J
-   4,R,D
-  46,R,D,X
+   1,R,J
+  44,R
    
 #lvl_d8
-   8,R,D,X
-  28,R,J
-   5,R,U,X
-  13,R
-  30,R,U,X
-   4,R,J
-   5,R,U,X
-  19,R,D
+  14,R,D,X
+  11,R,J
+  11,R
+  17,R,U,X
+   1,R
+  29,R,U,X
+   5,R,J
+  15,R,U,X
+   9,R
    5,R,D,X
    1,R,J
   42,R
@@ -90,32 +93,28 @@
    5,U,X
   27,L
   15,L,D,X
-  16,L,J
-   1,L
-   6,L,J,G
-  10,L,X
+   4,L,J
+  13,L,K,G
+   7,L,J,G
+   6,L,D,X
    1,L,J
-   4,L
-   5,L,D,X
-  41,L
+  46,L
    
 #lvl_d2
    1,L
    1,L,J
-   7,L
+   6,L
    5,D,X
   10,L
-  15,L,X
-  18,L
-   8,L,J
+  34,L,X
+   7,L,J
   14,L,D,X
    7,L,J
   15,L,D,X
    1,L,J
   14,L,D,X
    7,L,J
-   5,L,X
-  19,L
+  25,L,X
    4,L,J
    3,L
   14,L,D,X
@@ -146,10 +145,10 @@
    5,L,J
   15,L,D,X
    1,L,J
-  50,L,D,X
+  48,L,D,X
 
 #lvl_0
-   4,L,D,X
+   6,L
    5,L,J
   39,L,U,X
   11,L,J
@@ -157,7 +156,8 @@
   10,L,J
   11
   14,U,X
-  61,R,J
+  18,R,J
+  43,R,K,G
 
 #lvl_3x
   11,R
@@ -209,20 +209,16 @@
    1,R,J,G
   10,R
   10,R,D,X
-  12,R,J
-   1,R
-  14,L,J
+  13,R,J
+  14,L,K
   14,R,U,X
   32,R,D
    5,R,X
   15,R
   16,U,X
-  16,R,J
-   1,R
-   6,J,G
-   5,L,J,G
-   1,L
-   2,L,J,G
+  17,R,J
+   6,K,G
+   8,L,J,G
   40
   
 #lvl_6
@@ -235,12 +231,14 @@
    2,L,J,G
    7,L
   10,L,X
-   5,L,J
+   3,L,J
+   2,L,K,G
   13,L,D,X
+   1,L,J
+   7,L
    2,L,J
-  10,L,D
    5,L,D,X
-  16,R,D
+  17,R,D
   10,L,X
    2,R,J
    8,R
@@ -251,19 +249,16 @@
    1,R,J,G
    3,R
    2,R,J
-  12,L,J
-   1,L
-   4,L,J,G
-   9,L,X
-  12,L
+  13,L,J
+   3,L,K,G
+  21,L,X
    7,L,J
   51,U,X
 
 #lvl_7
   10,J
-   8,R,J
-   1,R
-  11,R,J,G
+   9,R,J
+  11,R,K,G
    2,R
   17,U,X
    7,L,J,G
@@ -290,28 +285,24 @@
    1,L,J
   10,L
    5,L,D,X
+   4,L,J
+   9,L
+   4,L,J
+  11,U,X
    1,L,J
-   7,L
-   2,L,J
-  14,L,D,X
-   1,L
-   5,U,X
-  10,L
-   1,L,J,G
-   7
-   2,L
-  14,L,D,X
-  21,L,J
+  14,L
+  10,L,D,X
+   3,L,J
+  28,L
   14,U,X
-  10,R,J
+   5,R,J
   11,R
   10,R,X
-   5,R,J
-  10,R,D,X
-   1,R,J
-   4,R
-  23,R,X
-   8,R,J
+   2,R,J
+   2,R,K,G
+   5,R
+  32,R,X
+   6,R,J
   10,U,X
    5,R,J
   11,R
@@ -319,20 +310,18 @@
   42,R,J
 
 #lvl_9
-   1,R,J
-  24,R
-   5,R,D,X
-  21,R
+   3,R,J
+  22,R
+  26,R,D,X
    4,R,J
-   5,R,X
-  50,R
-   2,R,J
-   8,R
-   5,R,X
-  29,R
+  30,R,X
+  30,R,D
+   9,R,X
+   2,R,J,G
+  17,R
   10,R,D,X
    5,R,J
-   2,R
+   1,R
   15,R,D,X
    1,R,J
   10,R,D,X
@@ -340,22 +329,20 @@
    4,L
   10,L,D,X
    7,L,J
-   1,L
-   8,L,J,G
-   6
-   5,L,X
+   7,L,K,G
+   7,R,K
+   5,L,D,X
   10,L
    1,R,J
-   3,R
+   2,R
    5,D,X
-  57,D
+  56,D
 
 #lvl_10
-   3,L,D
+   4,L,D
    5,L,X
   49,L
-   5,R,D,X
-  12,R
+  17,R,D,X
    5,R,J
   14,R,D
    5,D,X
@@ -434,7 +421,6 @@
    3,R,J
    4,R
   11,R,J
-
    5,R,X
   27,R
   16,R,D,X
@@ -581,8 +567,7 @@
   21,R,D,X
    1,R
    9,R,U,X
-   5,R,J,G
-  40,R
+  45,R,J,G
 
 #lvl_end_6
    3,R,J
