@@ -3,7 +3,8 @@ using System.Diagnostics;
 namespace CelesteStudio.Entities {
 	public enum PointerVersion {
 		XNA,
-		OpenGL
+		OpenGL,
+		Itch
 	}
 	public enum AutoDeref {
 		None,

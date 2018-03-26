@@ -226,7 +226,7 @@ namespace CelesteStudio {
 		}
 		private void UpdateStatusBar() {
 			if (memory.IsHooked) {
-				lblStatus.Text = "(" + (currentFrame > 0 ? currentFrame + "/" : "") + totalFrames + ") " + memory.TASPlayerOutput();
+				lblStatus.Text = "(" + (currentFrame > 0 ? currentFrame + "/" : "") + totalFrames + ") " + memory.TASPlayerOutput() + '[' + memory.LevelName() + ']';
 			} else {
 				lblStatus.Text = "(" + totalFrames + ")\r\nSearching...";
 			}
