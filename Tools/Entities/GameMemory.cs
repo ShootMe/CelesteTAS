@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 namespace CelesteStudio.Entities {
+	//.load C:\Windows\Microsoft.NET\Framework\v4.0.30319\SOS.dll
 	public class GameMemory {
 		private static ProgramPointer TAS = new ProgramPointer(AutoDeref.Single,
 			new ProgramSignature(PointerVersion.XNA, "8B0D????????3909FF15????????EB158325", 2),

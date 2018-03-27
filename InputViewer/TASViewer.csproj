@@ -18,7 +18,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;Normal</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
@@ -28,7 +28,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>TRACE;Normal</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
@@ -88,19 +88,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Images\right.png" />
-    <EmbeddedResource Include="Images\up.png" />
     <EmbeddedResource Include="Images\pad.png" />
-    <EmbeddedResource Include="Images\rightbumper.png" />
-    <EmbeddedResource Include="Images\yellow.png" />
-    <EmbeddedResource Include="Images\blue.png" />
-    <EmbeddedResource Include="Images\green.png" />
     <EmbeddedResource Include="Images\middle.png" />
-    <EmbeddedResource Include="Images\leftbumper.png" />
-    <EmbeddedResource Include="Images\down.png" />
-    <EmbeddedResource Include="Images\left.png" />
+    <EmbeddedResource Include="Images\bumper.png" />
+    <EmbeddedResource Include="Images\button.png" />
+    <EmbeddedResource Include="Images\dpad.png" />
     <Content Include="pad.ico" />
-    <EmbeddedResource Include="Images\red.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -38,6 +38,7 @@
 			this.gamePad.Location = new System.Drawing.Point(0, 0);
 			this.gamePad.Name = "gamePad";
 			this.gamePad.Size = new System.Drawing.Size(469, 213);
+			this.gamePad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.gamePad.TabIndex = 0;
 			this.gamePad.TabStop = false;
 			// 
@@ -48,12 +49,11 @@
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.ClientSize = new System.Drawing.Size(469, 213);
 			this.Controls.Add(this.gamePad);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximizeBox = false;
 			this.Name = "Viewer";
 			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-			this.Text = "TAS Input Viewer";
+			this.Text = "Input Viewer";
 			((System.ComponentModel.ISupportInitialize)(this.gamePad)).EndInit();
 			this.ResumeLayout(false);
 

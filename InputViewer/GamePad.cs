@@ -19,7 +19,8 @@ namespace InputViewer {
 		Restart = 256,
 		Feather = 512,
 		Journal = 1024,
-		Jump2 = 2048
+		Jump2 = 2048,
+		Select = 4096
 	}
 	public class GamePad : PictureBox {
 		[DefaultValue(0)]
@@ -34,10 +35,11 @@ namespace InputViewer {
 		public new Color BackColor { get { return base.BackColor; } set { base.BackColor = value; } }
 		private int opacity, direction;
 		private Color backColor;
-		private Bitmap red, green, blue, yellow, middle, pad, leftBumper, rightBumper, leftDpad, rightDpad, upDpad, downDpad;
+		private Bitmap button, dpad, middle, pad, bumper;
 		private GameMemory memory;
 		private string inputs;
 		private Actions actions;
+		private float percent;
 		public static Stream ReadResourceStream(string path) {
 			Assembly current = Assembly.GetExecutingAssembly();
 			return current.GetManifestResourceStream(typeof(GamePad).Namespace + "." + path);
@@ -45,41 +47,20 @@ namespace InputViewer {
 		public GamePad() {
 			inputs = string.Empty;
 			memory = new GameMemory();
-			using (Stream stream = ReadResourceStream("Images.blue.png")) {
-				blue = new Bitmap(stream);
+			using (Stream stream = ReadResourceStream("Images.button.png")) {
+				button = new Bitmap(stream);
 			}
-			using (Stream stream = ReadResourceStream("Images.green.png")) {
-				green = new Bitmap(stream);
-			}
-			using (Stream stream = ReadResourceStream("Images.yellow.png")) {
-				yellow = new Bitmap(stream);
-			}
-			using (Stream stream = ReadResourceStream("Images.red.png")) {
-				red = new Bitmap(stream);
+			using (Stream stream = ReadResourceStream("Images.dpad.png")) {
+				dpad = new Bitmap(stream);
 			}
 			using (Stream stream = ReadResourceStream("Images.middle.png")) {
 				middle = new Bitmap(stream);
 			}
-			using (Stream stream = ReadResourceStream("Images.leftbumper.png")) {
-				leftBumper = new Bitmap(stream);
-			}
-			using (Stream stream = ReadResourceStream("Images.rightbumper.png")) {
-				rightBumper = new Bitmap(stream);
+			using (Stream stream = ReadResourceStream("Images.bumper.png")) {
+				bumper = new Bitmap(stream);
 			}
 			using (Stream stream = ReadResourceStream("Images.pad.png")) {
 				pad = new Bitmap(stream);
-			}
-			using (Stream stream = ReadResourceStream("Images.up.png")) {
-				upDpad = new Bitmap(stream);
-			}
-			using (Stream stream = ReadResourceStream("Images.down.png")) {
-				downDpad = new Bitmap(stream);
-			}
-			using (Stream stream = ReadResourceStream("Images.left.png")) {
-				leftDpad = new Bitmap(stream);
-			}
-			using (Stream stream = ReadResourceStream("Images.right.png")) {
-				rightDpad = new Bitmap(stream);
 			}
 			Thread game = new Thread(UpdateViewer);
 			game.IsBackground = true;
@@ -89,8 +70,11 @@ namespace InputViewer {
 		private void UpdateViewer() {
 			while (true) {
 				try {
+					if (memory.HookProcess()) {
+#if !Normal
 					string newInputs = UpdateInputs();
 					if (newInputs == null) {
+#endif
 						GamepadState state = memory.GamePadState();
 						Actions newActions = Actions.None;
 						newActions |= state.DPad.Up ? Actions.Up : Actions.None;
@@ -98,12 +82,13 @@ namespace InputViewer {
 						newActions |= state.DPad.Left ? Actions.Left : Actions.None;
 						newActions |= state.DPad.Right ? Actions.Right : Actions.None;
 						newActions |= state.Buttons.A ? Actions.Jump : Actions.None;
-						newActions |= state.Buttons.X ? Actions.Dash : Actions.None;
+						newActions |= state.Buttons.X ? Actions.Journal : Actions.None;
 						newActions |= state.Buttons.Y ? Actions.Jump2 : Actions.None;
 						newActions |= state.Buttons.B ? Actions.Dash : Actions.None;
-						newActions |= state.Buttons.RightShoulder ? Actions.Grab : Actions.None;
-						newActions |= state.Buttons.LeftShoulder ? Actions.Restart : Actions.None;
+						newActions |= state.Buttons.RightShoulder || state.Triggers.Right > 0.5 ? Actions.Grab : Actions.None;
+						newActions |= state.Buttons.LeftShoulder || state.Triggers.Left > 0.5 ? Actions.Restart : Actions.None;
 						newActions |= state.Buttons.Start ? Actions.Start : Actions.None;
+						newActions |= state.Buttons.Back ? Actions.Select : Actions.None;
 						int newDirection = 0;
 						if (state.ThumbSticks.LeftX != 0 || state.ThumbSticks.LeftY != 0) {
 							newActions |= Actions.Feather;
@@ -115,6 +100,7 @@ namespace InputViewer {
 							direction = newDirection;
 							Invoke((Action)Refresh);
 						}
+#if !Normal
 					} else if (newInputs != inputs) {
 						inputs = newInputs;
 						actions = Actions.None;
@@ -140,13 +126,13 @@ namespace InputViewer {
 						}
 						Invoke((Action)Refresh);
 					}
+#endif
+					}
 					Thread.Sleep(10);
 				} catch { }
 			}
 		}
 		private string UpdateInputs() {
-			if (!memory.HookProcess()) { return null; }
-
 			string input = memory.TASOutput();
 			if (string.IsNullOrEmpty(input)) { return null; }
 
@@ -160,6 +146,13 @@ namespace InputViewer {
 		}
 		public bool HasAction(Actions action) {
 			return (actions & action) != 0;
+		}
+		protected override void OnResize(EventArgs e) {
+			base.OnResize(e);
+			percent = (float)Width / 469f;
+			float hp = (float)Height / 213f;
+			percent = Math.Min(percent, hp);
+			Refresh();
 		}
 		protected override void OnPaintBackground(PaintEventArgs e) {
 			base.OnPaintBackground(e);
@@ -190,48 +183,60 @@ namespace InputViewer {
 		protected override void OnPaint(PaintEventArgs e) {
 			base.OnPaint(e);
 
-			e.Graphics.DrawImage(pad, 0, 0, 468, 212);
+			e.Graphics.DrawImage(pad, 0, 0, 468 * percent, 212 * percent);
 
 			if (HasAction(Actions.Feather)) {
-				using (Pen pen = new Pen(Color.Aqua, 8)) {
-					e.Graphics.DrawLine(pen, 101, 105, 101 + GetX() * 59, 105 - GetY() * 59);
+				using (Pen pen = new Pen(Color.Aqua, 8 * percent)) {
+					e.Graphics.DrawLine(pen, 101 * percent, 105 * percent, 101 * percent + GetX() * 59 * percent, 105 * percent - GetY() * 59 * percent);
 				}
 			}
 			if (HasAction(Actions.Start)) {
-				e.Graphics.DrawImage(middle, 230, 105, 33, 31);
+				e.Graphics.DrawImage(middle, 230 * percent, 105 * percent, 33 * percent, 31 * percent);
 			}
-			//if (HasAction(Actions.Restart)) {
-			//	e.Graphics.DrawImage(middle, 178, 105, 33, 31);
-			//}
+			if (HasAction(Actions.Select)) {
+				e.Graphics.DrawImage(middle, 178 * percent, 105 * percent, 33 * percent, 31 * percent);
+			}
 			if (HasAction(Actions.Journal)) {
-				e.Graphics.DrawImage(green, 310, 89, 32, 32);
+				e.Graphics.DrawImage(button, 310 * percent, 89 * percent, 32 * percent, 32 * percent);
 			}
 			if (HasAction(Actions.Dash)) {
-				e.Graphics.DrawImage(red, 394, 90, 32, 32);
+				e.Graphics.DrawImage(button, 394 * percent, 90 * percent, 32 * percent, 32 * percent);
 			}
 			if (HasAction(Actions.Jump2)) {
-				e.Graphics.DrawImage(blue, 353, 52, 32, 32);
+				e.Graphics.DrawImage(button, 353 * percent, 52 * percent, 32 * percent, 32 * percent);
 			}
 			if (HasAction(Actions.Jump)) {
-				e.Graphics.DrawImage(yellow, 351, 127, 32, 32);
+				e.Graphics.DrawImage(button, 351 * percent, 127 * percent, 32 * percent, 32 * percent);
 			}
 			if (HasAction(Actions.Grab)) {
-				e.Graphics.DrawImage(rightBumper, 314, 0, 101, 23);
+				using (Bitmap newImg = new Bitmap(bumper)) {
+					newImg.RotateFlip(RotateFlipType.RotateNoneFlipX);
+					e.Graphics.DrawImage(newImg, 314 * percent, 0, 101 * percent, 23 * percent);
+				}
 			}
 			if (HasAction(Actions.Restart)) {
-				e.Graphics.DrawImage(leftBumper, 53, 0, 101, 23);
+				e.Graphics.DrawImage(bumper, 53 * percent, 0, 101 * percent, 23 * percent);
 			}
 			if (HasAction(Actions.Up)) {
-				e.Graphics.DrawImage(upDpad, 85, 63, 32, 27);
+				using (Bitmap newImg = new Bitmap(dpad)) {
+					newImg.RotateFlip(RotateFlipType.RotateNoneFlipY);
+					e.Graphics.DrawImage(newImg, 85 * percent, 63 * percent, 32 * percent, 27 * percent);
+				}
 			}
 			if (HasAction(Actions.Down)) {
-				e.Graphics.DrawImage(downDpad, 85, 122, 32, 27);
+				e.Graphics.DrawImage(dpad, 85 * percent, 122 * percent, 32 * percent, 27 * percent);
 			}
 			if (HasAction(Actions.Left)) {
-				e.Graphics.DrawImage(leftDpad, 58, 90, 27, 32);
+				using (Bitmap newImg = new Bitmap(dpad)) {
+					newImg.RotateFlip(RotateFlipType.Rotate90FlipY);
+					e.Graphics.DrawImage(newImg, 58 * percent, 90 * percent, 27 * percent, 32 * percent);
+				}
 			}
 			if (HasAction(Actions.Right)) {
-				e.Graphics.DrawImage(rightDpad, 117, 90, 27, 32);
+				using (Bitmap newImg = new Bitmap(dpad)) {
+					newImg.RotateFlip(RotateFlipType.Rotate270FlipNone);
+					e.Graphics.DrawImage(newImg, 117 * percent, 90 * percent, 27 * percent, 32 * percent);
+				}
 			}
 		}
 		public float GetX() {
