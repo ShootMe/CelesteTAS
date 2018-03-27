@@ -90,7 +90,32 @@ namespace InputViewer {
 			while (true) {
 				try {
 					string newInputs = UpdateInputs();
-					if (newInputs != inputs) {
+					if (newInputs == null) {
+						GamepadState state = memory.GamePadState();
+						Actions newActions = Actions.None;
+						newActions |= state.DPad.Up ? Actions.Up : Actions.None;
+						newActions |= state.DPad.Down ? Actions.Down : Actions.None;
+						newActions |= state.DPad.Left ? Actions.Left : Actions.None;
+						newActions |= state.DPad.Right ? Actions.Right : Actions.None;
+						newActions |= state.Buttons.A ? Actions.Jump : Actions.None;
+						newActions |= state.Buttons.X ? Actions.Dash : Actions.None;
+						newActions |= state.Buttons.Y ? Actions.Jump2 : Actions.None;
+						newActions |= state.Buttons.B ? Actions.Dash : Actions.None;
+						newActions |= state.Buttons.RightShoulder ? Actions.Grab : Actions.None;
+						newActions |= state.Buttons.LeftShoulder ? Actions.Restart : Actions.None;
+						newActions |= state.Buttons.Start ? Actions.Start : Actions.None;
+						int newDirection = 0;
+						if (state.ThumbSticks.LeftX != 0 || state.ThumbSticks.LeftY != 0) {
+							newActions |= Actions.Feather;
+							newDirection = (int)(Math.Atan2(state.ThumbSticks.LeftX, state.ThumbSticks.LeftY) * 180 / Math.PI);
+							if (newDirection < 0) { newDirection += 360; }
+						}
+						if (actions != newActions || newDirection != direction) {
+							actions = newActions;
+							direction = newDirection;
+							Invoke((Action)Refresh);
+						}
+					} else if (newInputs != inputs) {
 						inputs = newInputs;
 						actions = Actions.None;
 						for (int i = 0; i < inputs.Length; i++) {
@@ -120,10 +145,10 @@ namespace InputViewer {
 			}
 		}
 		private string UpdateInputs() {
-			if (!memory.HookProcess()) { return string.Empty; }
+			if (!memory.HookProcess()) { return null; }
 
 			string input = memory.TASOutput();
-			if (string.IsNullOrEmpty(input)) { return string.Empty; }
+			if (string.IsNullOrEmpty(input)) { return null; }
 
 			int start = input.IndexOf(',');
 			if (start < 0) { return string.Empty; }

@@ -54,6 +54,7 @@
     <Compile Include="GamePad.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="GamepadState.cs" />
     <Compile Include="MemoryReader.cs" />
     <Compile Include="ProgramPointer.cs" />
     <Compile Include="Viewer.cs">
