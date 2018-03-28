@@ -39,14 +39,18 @@ ie) 123,R,J (For 123 frames, hold Right and Jump)
 
 ## Special Input
 - You can create a break point in the input file by typing *** by itself on a single line
-- The program when played back form the start will go very fast till it reaches that line and then go into frame stepping mode
+- The program when played back from the start will try and go at 400x till it reaches that line and then go into frame stepping mode
+- You can also specify the speed with ***X where X is the speedup factor. ie) ***10 will go at 10x speed
+
+- Read,Relative File Path,Starting Line
+- Will Read inputs from the specified file.
+- ie) Read,1A - Forsaken City.tas,7 will read all inputs after line 7 from the '1A - Forsaken City.tas' file
 
 ## Playback / Recording of Input File
 ### Controller
 While in game
-- Playback: Left Trigger + Right Trigger + Right Stick
-- Stop: Left Trigger + Right Trigger + DPad Down
-- Record: Left Trigger + RIght Trigger + Left Stick
+- Playback: Right Stick
+- Stop: Right Stick
 - Faster Playback: Right Stick X+
 - Frame Step: DPad Up
 - While Frame Stepping:
@@ -59,12 +63,12 @@ While in game
 - Playback: Control + [
 - Stop: Control + ]
 - Record: Control + Backspace
-- Faster Playback: RightShift
+- Faster Playback: Control + RightShift
 - Frame Step: [
 - While Frame Stepping:
   - One more frame: [
   - Continue at normal speed: ]
-  - Frame step continuously: RightShift
+  - Frame step continuously: Control + RightShift
   
 ## Celeste Studio
 Can be used instead of notepad or similar for easier editing of the TAS file. Is located in [Releases](https://github.com/ShootMe/CelesteTAS/releases) as well.
