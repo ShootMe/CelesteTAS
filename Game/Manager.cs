@@ -135,7 +135,7 @@ namespace TAS {
 				}
 
 				float rightStickX = padState.ThumbSticks.Right.X;
-				if (IsKeyDown(Keys.RShiftKey)) {
+				if (IsKeyDown(Keys.RShiftKey) && IsKeyDown(Keys.Control)) {
 					rightStickX = 1f;
 				}
 
@@ -180,23 +180,23 @@ namespace TAS {
 					} else {
 						state &= ~State.FrameStep;
 						nextState |= State.FrameStep;
-						ReloadRun();
+						controller.ReloadPlayback();
 					}
 					FrameStepCooldown = 60;
 				} else if (!dpadDown && frameStepWasDpadDown) {
 					state &= ~State.FrameStep;
 					nextState &= ~State.FrameStep;
-				} else if (HasFlag(state, State.FrameStep) && (padState.ThumbSticks.Right.X > 0.1 || IsKeyDown(Keys.RShiftKey))) {
+				} else if (HasFlag(state, State.FrameStep) && (padState.ThumbSticks.Right.X > 0.1 || (IsKeyDown(Keys.RShiftKey) && IsKeyDown(Keys.ControlKey)))) {
 					float rStick = padState.ThumbSticks.Right.X;
 					if (rStick < 0.1f) {
-						rStick = 1f;
+						rStick = 0.5f;
 					}
-					FrameStepCooldown -= (int)((rStick - 0.1) * 70f);
+					FrameStepCooldown -= (int)((rStick - 0.1) * 80f);
 					if (FrameStepCooldown <= 0) {
 						FrameStepCooldown = 60;
 						state &= ~State.FrameStep;
 						nextState |= State.FrameStep;
-						ReloadRun();
+						controller.ReloadPlayback();
 					}
 				}
 			}
@@ -207,29 +207,17 @@ namespace TAS {
 		private static void CheckControls(GamePadState padState) {
 			bool openBracket = IsKeyDown(Keys.ControlKey) && IsKeyDown(Keys.OemOpenBrackets);
 			bool closeBrackets = IsKeyDown(Keys.ControlKey) && IsKeyDown(Keys.OemCloseBrackets);
-			bool backSpace = IsKeyDown(Keys.ControlKey) && IsKeyDown(Keys.Back);
-			bool leftStick = padState.Buttons.LeftStick == ButtonState.Pressed || backSpace;
 			bool rightStick = padState.Buttons.RightStick == ButtonState.Pressed || openBracket;
 			bool dpadDown = padState.DPad.Down == ButtonState.Pressed || closeBrackets;
-			bool rightTrigger = padState.Triggers.Right > 0.5f || openBracket || closeBrackets || backSpace;
-			bool leftTrigger = padState.Triggers.Left > 0.5f || openBracket || closeBrackets || backSpace;
 
-			if (rightTrigger && leftTrigger) {
-				if (!HasFlag(state, State.Enable) && rightStick) {
-					nextState |= State.Enable;
-				} else if (HasFlag(state, State.Enable) && dpadDown) {
-					DisableRun();
-				} else if (!HasFlag(state, State.Enable) && !HasFlag(state, State.Record) && leftStick) {
-					nextState |= State.Record;
-				}
+			if (!HasFlag(state, State.Enable) && rightStick) {
+				nextState |= State.Enable;
+			} else if (HasFlag(state, State.Enable) && rightStick) {
+				DisableRun();
 			}
 
-			if (!rightTrigger && !leftTrigger) {
-				if (HasFlag(nextState, State.Enable)) {
-					EnableRun();
-				} else if (HasFlag(nextState, State.Record)) {
-					RecordRun();
-				}
+			if (!rightStick && HasFlag(nextState, State.Enable)) {
+				EnableRun();
 			}
 		}
 		private static void DisableRun() {
@@ -246,13 +234,6 @@ namespace TAS {
 		private static void EnableRun() {
 			nextState &= ~State.Enable;
 			UpdateVariables(false);
-		}
-		private static void RecordRun() {
-			nextState &= ~State.Record;
-			UpdateVariables(true);
-		}
-		private static void ReloadRun() {
-			controller.ReloadPlayback();
 		}
 		private static void UpdateVariables(bool recording) {
 			state |= State.Enable;
