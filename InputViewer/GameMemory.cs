@@ -3,13 +3,6 @@ using System.Diagnostics;
 namespace InputViewer {
 	//.load C:\Windows\Microsoft.NET\Framework\v4.0.30319\SOS.dll
 	public class GameMemory {
-		private static ProgramPointer TAS = new ProgramPointer(AutoDeref.Single,
-			new ProgramSignature(PointerVersion.XNA, "8B0D????????3909FF15????????EB158325", 2),
-			new ProgramSignature(PointerVersion.OpenGL, "89458C837D8C007417908B0D", 12));
-		private static ProgramPointer Celeste = new ProgramPointer(AutoDeref.Single,
-			new ProgramSignature(PointerVersion.XNA, "83C604F30F7E06660FD6078BCBFF15????????8D15", 21),
-			new ProgramSignature(PointerVersion.OpenGL, "8B55F08B45E88D5274E8????????8B45F08D15", 19),
-			new ProgramSignature(PointerVersion.Itch, "8D5674E8????????8D15????????E8????????C605", 10));
 		private static ProgramPointer MInput = new ProgramPointer(AutoDeref.Single,
 			new ProgramSignature(PointerVersion.XNA, "80783100745EA1????????3A40048D78048D7024B9", 7),
 			new ProgramSignature(PointerVersion.OpenGL, "558BEC50894DFC833D????????007405E8????????8B45FC8D15????????E8????????908BE55DC3DC", 26));
@@ -21,12 +14,6 @@ namespace InputViewer {
 			lastHooked = DateTime.MinValue;
 		}
 
-		public string TASOutput() {
-			return TAS.Read(Program, 0x4, 0x0);
-		}
-		public string TASPlayerOutput() {
-			return TAS.Read(Program, 0x8, 0x0);
-		}
 		public GamepadState GamePadState() {
 			GamepadState state = new GamepadState();
 			for (int i = 0; i < 4; i++) {
@@ -97,13 +84,6 @@ namespace InputViewer {
 				}
 			}
 			return state;
-		}
-		public string LevelName() {
-			//Celeste.Instance.AutosplitterInfo.Level
-			if (Celeste.Version == PointerVersion.XNA) {
-				return Celeste.Read(Program, 0x0, 0xac, 0x14, 0x0);
-			}
-			return Celeste.Read(Program, 0x0, 0x8c, 0x14, 0x0);
 		}
 		public bool HookProcess() {
 			IsHooked = Program != null && !Program.HasExited;

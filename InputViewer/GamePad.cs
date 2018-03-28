@@ -12,15 +12,15 @@ namespace InputViewer {
 		Right = 2,
 		Up = 4,
 		Down = 8,
-		Jump = 16,
-		Dash = 32,
-		Grab = 64,
-		Start = 128,
-		Restart = 256,
-		Feather = 512,
-		Journal = 1024,
-		Jump2 = 2048,
-		Select = 4096
+		Jump1 = 16,
+		Dash1 = 32,
+		Jump2 = 64,
+		Dash2 = 128,
+		RightBumper = 256,
+		LeftBumper = 512,
+		Start = 1024,
+		Select = 2048,
+		Analog = 4096
 	}
 	public class GamePad : PictureBox {
 		[DefaultValue(0)]
@@ -37,7 +37,6 @@ namespace InputViewer {
 		private Color backColor;
 		private Bitmap button, dpad, middle, pad, bumper;
 		private GameMemory memory;
-		private string inputs;
 		private Actions actions;
 		private float percent;
 		public static Stream ReadResourceStream(string path) {
@@ -45,7 +44,6 @@ namespace InputViewer {
 			return current.GetManifestResourceStream(typeof(GamePad).Namespace + "." + path);
 		}
 		public GamePad() {
-			inputs = string.Empty;
 			memory = new GameMemory();
 			using (Stream stream = ReadResourceStream("Images.button.png")) {
 				button = new Bitmap(stream);
@@ -70,79 +68,40 @@ namespace InputViewer {
 		private void UpdateViewer() {
 			while (true) {
 				try {
+					bool skipSleep = false;
 					if (memory.HookProcess()) {
-#if !Normal
-					string newInputs = UpdateInputs();
-					if (newInputs == null) {
-#endif
 						GamepadState state = memory.GamePadState();
 						Actions newActions = Actions.None;
 						newActions |= state.DPad.Up ? Actions.Up : Actions.None;
 						newActions |= state.DPad.Down ? Actions.Down : Actions.None;
 						newActions |= state.DPad.Left ? Actions.Left : Actions.None;
 						newActions |= state.DPad.Right ? Actions.Right : Actions.None;
-						newActions |= state.Buttons.A ? Actions.Jump : Actions.None;
-						newActions |= state.Buttons.X ? Actions.Journal : Actions.None;
+						newActions |= state.Buttons.A ? Actions.Jump1 : Actions.None;
+						newActions |= state.Buttons.B ? Actions.Dash1 : Actions.None;
 						newActions |= state.Buttons.Y ? Actions.Jump2 : Actions.None;
-						newActions |= state.Buttons.B ? Actions.Dash : Actions.None;
-						newActions |= state.Buttons.RightShoulder || state.Triggers.Right > 0.5 ? Actions.Grab : Actions.None;
-						newActions |= state.Buttons.LeftShoulder || state.Triggers.Left > 0.5 ? Actions.Restart : Actions.None;
+						newActions |= state.Buttons.X ? Actions.Dash2 : Actions.None;
+						newActions |= state.Buttons.RightShoulder || state.Triggers.Right > 0.5 ? Actions.RightBumper : Actions.None;
+						newActions |= state.Buttons.LeftShoulder || state.Triggers.Left > 0.5 ? Actions.LeftBumper : Actions.None;
 						newActions |= state.Buttons.Start ? Actions.Start : Actions.None;
 						newActions |= state.Buttons.Back ? Actions.Select : Actions.None;
 						int newDirection = 0;
 						if (state.ThumbSticks.LeftX != 0 || state.ThumbSticks.LeftY != 0) {
-							newActions |= Actions.Feather;
+							newActions |= Actions.Analog;
 							newDirection = (int)(Math.Atan2(state.ThumbSticks.LeftX, state.ThumbSticks.LeftY) * 180 / Math.PI);
 							if (newDirection < 0) { newDirection += 360; }
 						}
 						if (actions != newActions || newDirection != direction) {
 							actions = newActions;
 							direction = newDirection;
+							skipSleep = true;
 							Invoke((Action)Refresh);
 						}
-#if !Normal
-					} else if (newInputs != inputs) {
-						inputs = newInputs;
-						actions = Actions.None;
-						for (int i = 0; i < inputs.Length; i++) {
-							char c = inputs[i];
-							switch (c) {
-								case 'R': actions |= Actions.Right; break;
-								case 'L': actions |= Actions.Left; break;
-								case 'U': actions |= Actions.Up; break;
-								case 'D': actions |= Actions.Down; break;
-								case 'J': actions |= Actions.Jump; break;
-								case 'K': actions |= Actions.Jump2; break;
-								case 'X': actions |= Actions.Dash; break;
-								case 'G': actions |= Actions.Grab; break;
-								case 'S': actions |= Actions.Start; break;
-								case 'Q': actions |= Actions.Restart; break;
-								case 'F':
-									direction = 0;
-									int.TryParse(inputs.Substring(i + 2), out direction);
-									actions |= Actions.Feather;
-									break;
-							}
-						}
-						Invoke((Action)Refresh);
 					}
-#endif
+					if (!skipSleep) {
+						Thread.Sleep(10);
 					}
-					Thread.Sleep(10);
 				} catch { }
 			}
-		}
-		private string UpdateInputs() {
-			string input = memory.TASOutput();
-			if (string.IsNullOrEmpty(input)) { return null; }
-
-			int start = input.IndexOf(',');
-			if (start < 0) { return string.Empty; }
-
-			int end = input.IndexOf('(');
-			if (end < 0) { return string.Empty; }
-
-			return input.Substring(start + 1, end - start - 1);
 		}
 		public bool HasAction(Actions action) {
 			return (actions & action) != 0;
@@ -183,59 +142,59 @@ namespace InputViewer {
 		protected override void OnPaint(PaintEventArgs e) {
 			base.OnPaint(e);
 
-			e.Graphics.DrawImage(pad, 0, 0, 468 * percent, 212 * percent);
+			e.Graphics.DrawImage(pad, 0, 0, (int)(468 * percent), (int)(212 * percent));
 
-			if (HasAction(Actions.Feather)) {
+			if (HasAction(Actions.Analog)) {
 				using (Pen pen = new Pen(Color.Aqua, 8 * percent)) {
-					e.Graphics.DrawLine(pen, 101 * percent, 105 * percent, 101 * percent + GetX() * 59 * percent, 105 * percent - GetY() * 59 * percent);
+					e.Graphics.DrawLine(pen, (int)(101 * percent), (int)(105 * percent), (int)(101 * percent) + (int)(GetX() * 59 * percent), (int)(105 * percent) - (int)(GetY() * 59 * percent));
 				}
 			}
 			if (HasAction(Actions.Start)) {
-				e.Graphics.DrawImage(middle, 230 * percent, 105 * percent, 33 * percent, 31 * percent);
+				e.Graphics.DrawImage(middle, (int)(230 * percent), (int)(105 * percent), (int)(33 * percent), (int)(31 * percent));
 			}
 			if (HasAction(Actions.Select)) {
-				e.Graphics.DrawImage(middle, 178 * percent, 105 * percent, 33 * percent, 31 * percent);
+				e.Graphics.DrawImage(middle, (int)(178 * percent), (int)(105 * percent), (int)(33 * percent), (int)(31 * percent));
 			}
-			if (HasAction(Actions.Journal)) {
-				e.Graphics.DrawImage(button, 310 * percent, 89 * percent, 32 * percent, 32 * percent);
-			}
-			if (HasAction(Actions.Dash)) {
-				e.Graphics.DrawImage(button, 394 * percent, 90 * percent, 32 * percent, 32 * percent);
+			if (HasAction(Actions.Jump1)) {
+				e.Graphics.DrawImage(button, (int)(351 * percent), (int)(127 * percent), (int)(32 * percent), (int)(32 * percent));
 			}
 			if (HasAction(Actions.Jump2)) {
-				e.Graphics.DrawImage(button, 353 * percent, 52 * percent, 32 * percent, 32 * percent);
+				e.Graphics.DrawImage(button, (int)(353 * percent), (int)(52 * percent), (int)(32 * percent), (int)(32 * percent));
 			}
-			if (HasAction(Actions.Jump)) {
-				e.Graphics.DrawImage(button, 351 * percent, 127 * percent, 32 * percent, 32 * percent);
+			if (HasAction(Actions.Dash1)) {
+				e.Graphics.DrawImage(button, (int)(394 * percent), (int)(90 * percent), (int)(32 * percent), (int)(32 * percent));
 			}
-			if (HasAction(Actions.Grab)) {
+			if (HasAction(Actions.Dash2)) {
+				e.Graphics.DrawImage(button, (int)(310 * percent), (int)(89 * percent), (int)(32 * percent), (int)(32 * percent));
+			}
+			if (HasAction(Actions.LeftBumper)) {
+				e.Graphics.DrawImage(bumper, (int)(53 * percent), 0, (int)(101 * percent), (int)(23 * percent));
+			}
+			if (HasAction(Actions.RightBumper)) {
 				using (Bitmap newImg = new Bitmap(bumper)) {
 					newImg.RotateFlip(RotateFlipType.RotateNoneFlipX);
-					e.Graphics.DrawImage(newImg, 314 * percent, 0, 101 * percent, 23 * percent);
+					e.Graphics.DrawImage(newImg, (int)(314 * percent), 0, (int)(101 * percent), (int)(23 * percent));
 				}
-			}
-			if (HasAction(Actions.Restart)) {
-				e.Graphics.DrawImage(bumper, 53 * percent, 0, 101 * percent, 23 * percent);
 			}
 			if (HasAction(Actions.Up)) {
 				using (Bitmap newImg = new Bitmap(dpad)) {
 					newImg.RotateFlip(RotateFlipType.RotateNoneFlipY);
-					e.Graphics.DrawImage(newImg, 85 * percent, 63 * percent, 32 * percent, 27 * percent);
+					e.Graphics.DrawImage(newImg, (int)(85 * percent), (int)(63 * percent), (int)(32 * percent), (int)(27 * percent));
 				}
 			}
 			if (HasAction(Actions.Down)) {
-				e.Graphics.DrawImage(dpad, 85 * percent, 122 * percent, 32 * percent, 27 * percent);
+				e.Graphics.DrawImage(dpad, (int)(85 * percent), (int)(122 * percent), (int)(32 * percent), (int)(27 * percent));
 			}
 			if (HasAction(Actions.Left)) {
 				using (Bitmap newImg = new Bitmap(dpad)) {
 					newImg.RotateFlip(RotateFlipType.Rotate90FlipY);
-					e.Graphics.DrawImage(newImg, 58 * percent, 90 * percent, 27 * percent, 32 * percent);
+					e.Graphics.DrawImage(newImg, (int)(58 * percent), (int)(90 * percent), (int)(27 * percent), (int)(32 * percent));
 				}
 			}
 			if (HasAction(Actions.Right)) {
 				using (Bitmap newImg = new Bitmap(dpad)) {
 					newImg.RotateFlip(RotateFlipType.Rotate270FlipNone);
-					e.Graphics.DrawImage(newImg, 117 * percent, 90 * percent, 27 * percent, 32 * percent);
+					e.Graphics.DrawImage(newImg, (int)(117 * percent), (int)(90 * percent), (int)(27 * percent), (int)(32 * percent));
 				}
 			}
 		}
