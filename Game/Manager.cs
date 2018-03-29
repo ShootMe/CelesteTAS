@@ -12,7 +12,8 @@ namespace TAS {
 		None = 0,
 		Enable = 1,
 		Record = 2,
-		FrameStep = 4
+		FrameStep = 4,
+		Disable = 8
 	}
 	public class Manager {
 		[DllImport("user32.dll", CharSet = CharSet.Auto, ExactSpelling = true)]
@@ -210,14 +211,16 @@ namespace TAS {
 			bool rightStick = padState.Buttons.RightStick == ButtonState.Pressed || openBracket;
 			bool dpadDown = padState.DPad.Down == ButtonState.Pressed || closeBrackets;
 
-			if (!HasFlag(state, State.Enable) && rightStick) {
-				nextState |= State.Enable;
-			} else if (HasFlag(state, State.Enable) && rightStick) {
-				DisableRun();
-			}
-
-			if (!rightStick && HasFlag(nextState, State.Enable)) {
+			if (rightStick) {
+				if (!HasFlag(state, State.Enable)) {
+					nextState |= State.Enable;
+				} else {
+					nextState |= State.Disable;
+				}
+			} else if (HasFlag(nextState, State.Enable)) {
 				EnableRun();
+			} else if (HasFlag(nextState, State.Disable)) {
+				DisableRun();
 			}
 		}
 		private static void DisableRun() {
