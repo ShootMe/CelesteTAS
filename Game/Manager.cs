@@ -229,10 +229,8 @@ namespace TAS {
 				controller.WriteInputs();
 			}
 			Recording = false;
-			state &= ~State.Enable;
-			state &= ~State.FrameStep;
-			nextState &= ~State.FrameStep;
-			state &= ~State.Record;
+			state = State.None;
+			nextState = State.None;
 		}
 		private static void EnableRun() {
 			nextState &= ~State.Enable;
