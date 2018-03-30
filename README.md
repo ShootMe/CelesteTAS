@@ -30,7 +30,9 @@ ie) 123,R,J (For 123 frames, hold Right and Jump)
 - U = Up
 - D = Down
 - J = Jump
+- K = Jump Bind 2
 - X = Dash
+- C = Dash Bind 2
 - G = Grab
 - S = Start
 - Q = Quick Reset

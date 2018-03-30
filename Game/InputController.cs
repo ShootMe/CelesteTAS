@@ -150,6 +150,7 @@ namespace TAS {
 					(Current.HasActions(Actions.Jump) ? Buttons.A : (Buttons)0)
 					| (Current.HasActions(Actions.Jump2) ? Buttons.Y : (Buttons)0)
 					| (Current.HasActions(Actions.Dash) ? Buttons.B : (Buttons)0)
+					| (Current.HasActions(Actions.Dash2) ? Buttons.X : (Buttons)0)
 					| (Current.HasActions(Actions.Grab) ? Buttons.RightShoulder : (Buttons)0)
 					| (Current.HasActions(Actions.Start) ? Buttons.Start : (Buttons)0)
 					| (Current.HasActions(Actions.Restart) ? Buttons.LeftShoulder : (Buttons)0)

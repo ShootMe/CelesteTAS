@@ -15,7 +15,8 @@ namespace CelesteStudio.Entities {
 		Restart = 256,
 		Feather = 512,
 		Journal = 1024,
-		Jump2 = 2048
+		Jump2 = 2048,
+		Dash2 = 4096
 	}
 	public class InputRecord {
 		public static char Delimiter = ',';
@@ -59,6 +60,7 @@ namespace CelesteStudio.Entities {
 					case 'Q': Actions ^= Actions.Restart; break;
 					case 'N': Actions ^= Actions.Journal; break;
 					case 'K': Actions ^= Actions.Jump2; break;
+					case 'C': Actions ^= Actions.Dash2; break;
 					case 'F':
 						Actions ^= Actions.Feather;
 						index++;
@@ -179,6 +181,7 @@ namespace CelesteStudio.Entities {
 			if (HasActions(Actions.Jump)) { sb.Append(Delimiter).Append('J'); }
 			if (HasActions(Actions.Jump2)) { sb.Append(Delimiter).Append('K'); }
 			if (HasActions(Actions.Dash)) { sb.Append(Delimiter).Append('X'); }
+			if (HasActions(Actions.Dash2)) { sb.Append(Delimiter).Append('C'); }
 			if (HasActions(Actions.Grab)) { sb.Append(Delimiter).Append('G'); }
 			if (HasActions(Actions.Start)) { sb.Append(Delimiter).Append('S'); }
 			if (HasActions(Actions.Restart)) { sb.Append(Delimiter).Append('Q'); }
