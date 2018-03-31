@@ -207,9 +207,7 @@ namespace TAS {
 		}
 		private static void CheckControls(GamePadState padState) {
 			bool openBracket = IsKeyDown(Keys.ControlKey) && IsKeyDown(Keys.OemOpenBrackets);
-			bool closeBrackets = IsKeyDown(Keys.ControlKey) && IsKeyDown(Keys.OemCloseBrackets);
 			bool rightStick = padState.Buttons.RightStick == ButtonState.Pressed || openBracket;
-			bool dpadDown = padState.DPad.Down == ButtonState.Pressed || closeBrackets;
 
 			if (rightStick) {
 				if (!HasFlag(state, State.Enable)) {
