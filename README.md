@@ -8,14 +8,34 @@ Simple TAS Tools for the game Celeste
 - You will need the modified Celeste.exe as well. I wont host it here.
   - You can modify it yourself with dnSpy or similar
   - Load Celeste.exe in dnSpy and Celeste-Addons.dll as well
+
+![dnSpy](https://raw.githubusercontent.com/ShootMe/CelesteTAS/master/Images/dnSpy01.png)
+
   - Change Celeste.exe according to the document here [Modified](https://github.com/ShootMe/CelesteTAS/blob/master/Game/WhatsModified.txt)
-  - To change it you must modify the IL instructions of the method and add a call into Celeste-Addons.dll first
-  - This adds a reference to the dll and then you can just edit the method with the text in the above link.
-  - You will get errors compiling, just double click the first error and delete any fields with <>
+  - First step is to modfy the IL instructions of the method and add a call into TAS.Manager.UpdateInputs()
+  - Find the Monocole.Engine.Update(GameTime) method in dnSpy
+
+![dnSpy](https://raw.githubusercontent.com/ShootMe/CelesteTAS/master/Images/dnSpy02.png)
+
+  - Right click in the right hand window and select Edit IL Instructions...
+  - In this window right click and select Add New Instruction...
+
+![dnSpy](https://raw.githubusercontent.com/ShootMe/CelesteTAS/master/Images/dnSpy03.png)
+
+  - Change the OpCode to be 'call' and then click the 'null' in the operand and select 'Method' then browse to Celeste-Addons.TAS.Manager.UpdateInputs
+  - This adds a reference to Celeste-Addons.dll
+  - Click OK in the Edit Method Body window
+  - Then go to File -> Save Module and save this modified exe
+  - Then go to File -> Close All to remove everything from dnSpy
+  - Then Load back in the exe you just saved off and go back to the Monocle.Engine.Update method
+  - This time right click in the right window and select 'Edit Method (C#)'
+  - Replace the body of the method with the body in the txt file linked above
+  - Hit compile, you will get errors, just double click the first error and delete any fields with <>
+  - Hit compile again after removing the fields and it should update the method
   - Save the modified version and you should be good to go
 - Place those in your Celeste game directory (usually C:\Program Files (x86)\Steam\steamapps\common\Celeste\)
 - Make sure to back up the original Celeste.exe before copying. (Can rename them .bak or something)
-- For playback to be correct, make sure Jump is bound to 'A', Dash is bound to 'B', Grab is bound to 'RB', Quick Reset is bound to 'LB', and talk is bound to 'B'
+- For playback to be correct, make sure Jump is bound to 'A' and 'Y', Dash is bound to 'B' and 'X', Grab is bound to 'RB', Quick Reset is bound to 'LB', and talk is bound to 'B'
 
 ## Input File
 Input file is called Celeste.tas and needs to be in the main Celeste directory (usually C:\Program Files (x86)\Steam\steamapps\common\Celeste\Celeste.tas)
@@ -48,7 +68,7 @@ ie) 123,R,J (For 123 frames, hold Right and Jump)
 - Will Read inputs from the specified file.
 - ie) Read,1A - Forsaken City.tas,7 will read all inputs after line 7 from the '1A - Forsaken City.tas' file
 
-## Playback / Recording of Input File
+## Playback of Input File
 ### Controller
 While in game
 - Playback: Right Stick
@@ -63,8 +83,7 @@ While in game
 ### Keyboard
 While in game
 - Playback: Control + [
-- Stop: Control + ]
-- Record: Control + Backspace
+- Stop: Control + [
 - Faster Playback: Control + RightShift
 - Frame Step: [
 - While Frame Stepping:
