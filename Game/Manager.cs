@@ -4,7 +4,6 @@ using Microsoft.Xna.Framework.Input;
 using Monocle;
 using System;
 using System.Globalization;
-using System.Runtime.InteropServices;
 using System.Text;
 namespace TAS {
 	[Flags]
@@ -16,8 +15,6 @@ namespace TAS {
 		Disable = 8
 	}
 	public class Manager {
-		[DllImport("user32.dll", CharSet = CharSet.Auto, ExactSpelling = true)]
-		public static extern short GetAsyncKeyState(Keys vkey);
 		public static bool Running, Recording;
 		private static InputController controller = new InputController("Celeste.tas");
 		public static State state, nextState;
@@ -27,8 +24,9 @@ namespace TAS {
 		private static Vector2 lastPos;
 		private static long lastTimer;
 		private static CultureInfo enUS = CultureInfo.CreateSpecificCulture("en-US");
+		private static KeyboardState kbState;
 		private static bool IsKeyDown(Keys key) {
-			return (GetAsyncKeyState(key) & 32768) == 32768;
+			return kbState.IsKeyDown(key);
 		}
 		public static bool IsLoading() {
 			SummitVignette summit = Engine.Scene as SummitVignette;
@@ -81,6 +79,7 @@ namespace TAS {
 				}
 			}
 
+			kbState = Keyboard.GetState();
 			GamePadState padState = GetGamePadState();
 			HandleFrameRates(padState);
 			CheckControls(padState);
@@ -136,7 +135,7 @@ namespace TAS {
 				}
 
 				float rightStickX = padState.ThumbSticks.Right.X;
-				if (IsKeyDown(Keys.RShiftKey) && IsKeyDown(Keys.Control)) {
+				if (IsKeyDown(Keys.RightShift) && IsKeyDown(Keys.RightControl)) {
 					rightStickX = 1f;
 				}
 
@@ -165,8 +164,8 @@ namespace TAS {
 		}
 		private static void FrameStepping(GamePadState padState) {
 			bool rightTrigger = padState.Triggers.Right > 0.5f;
-			bool dpadUp = padState.DPad.Up == ButtonState.Pressed || (IsKeyDown(Keys.OemOpenBrackets) && !IsKeyDown(Keys.ControlKey));
-			bool dpadDown = padState.DPad.Down == ButtonState.Pressed || (IsKeyDown(Keys.OemCloseBrackets) && !IsKeyDown(Keys.ControlKey));
+			bool dpadUp = padState.DPad.Up == ButtonState.Pressed || (IsKeyDown(Keys.OemOpenBrackets) && !IsKeyDown(Keys.RightControl));
+			bool dpadDown = padState.DPad.Down == ButtonState.Pressed || (IsKeyDown(Keys.OemCloseBrackets) && !IsKeyDown(Keys.RightControl));
 
 			if (HasFlag(state, State.Enable) && !HasFlag(state, State.Record) && !rightTrigger) {
 				if (HasFlag(nextState, State.FrameStep)) {
@@ -187,7 +186,7 @@ namespace TAS {
 				} else if (!dpadDown && frameStepWasDpadDown) {
 					state &= ~State.FrameStep;
 					nextState &= ~State.FrameStep;
-				} else if (HasFlag(state, State.FrameStep) && (padState.ThumbSticks.Right.X > 0.1 || (IsKeyDown(Keys.RShiftKey) && IsKeyDown(Keys.ControlKey)))) {
+				} else if (HasFlag(state, State.FrameStep) && (padState.ThumbSticks.Right.X > 0.1 || (IsKeyDown(Keys.RightShift) && IsKeyDown(Keys.RightControl)))) {
 					float rStick = padState.ThumbSticks.Right.X;
 					if (rStick < 0.1f) {
 						rStick = 0.5f;
@@ -206,7 +205,7 @@ namespace TAS {
 			frameStepWasDpadDown = dpadDown;
 		}
 		private static void CheckControls(GamePadState padState) {
-			bool openBracket = IsKeyDown(Keys.ControlKey) && IsKeyDown(Keys.OemOpenBrackets);
+			bool openBracket = IsKeyDown(Keys.RightControl) && IsKeyDown(Keys.OemOpenBrackets);
 			bool rightStick = padState.Buttons.RightStick == ButtonState.Pressed || openBracket;
 
 			if (rightStick) {
