@@ -83,14 +83,14 @@ While in game
 
 ### Keyboard
 While in game
-- Playback: Control + [
-- Stop: Control + [
-- Faster Playback: Control + RightShift
+- Playback: RightControl + [
+- Stop: RightControl + [
+- Faster Playback: RightControl + RightShift
 - Frame Step: [
 - While Frame Stepping:
   - One more frame: [
   - Continue at normal speed: ]
-  - Frame step continuously: Control + RightShift
+  - Frame step continuously: RightControl + RightShift
   
 ## Celeste Studio
 Can be used instead of notepad or similar for easier editing of the TAS file. Is located in [Releases](https://github.com/ShootMe/CelesteTAS/releases) as well.
