@@ -26,12 +26,13 @@ Simple TAS Tools for the game Celeste
   - This adds a reference to Celeste-Addons.dll
   - Click OK in the Edit Method Body window
   - Then go to File -> Save Module and save this modified exe
-  - Then go to File -> Close All to remove everything from dnSpy
-  - Then Load back in the exe you just saved off and go back to the Monocle.Engine.Update method
+  - Then go to File -> Reload All Assemblies to load the modified exe
+  - Go back to the Monocle.Engine.Update method
   - This time right click in the right window and select 'Edit Method (C#)'
   - Replace the body of the method with the body in the txt file linked above
-  - Hit compile, you will get errors, just double click the first error and delete any fields with <>
-  - Hit compile again after removing the fields and it should update the method
+  - Go to the Celeste.RunThread.Start method
+  - Right click in the right window and select 'Edit Method (C#)'
+  - Replace the body of the method with the body in the txt file linked above
   - Save the modified version and you should be good to go
 - Place those in your Celeste game directory (usually C:\Program Files (x86)\Steam\steamapps\common\Celeste\)
 - Make sure to back up the original Celeste.exe before copying. (Can rename them .bak or something)
