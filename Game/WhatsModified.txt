@@ -62,6 +62,10 @@ protected override void Update(GameTime gameTime)
 		{
 			base.Update(gameTime);
 		}
+		if (Engine.Scene.Entities.FindFirst<Celeste.FinalBoss>() != null)
+		{
+			break;
+		}
 	}
 	if (TAS.Manager.FrameLoops >= 10)
 	{
