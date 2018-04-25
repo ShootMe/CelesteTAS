@@ -166,6 +166,18 @@ Read,8C - Core.tas,4
  190
    1,X
   40
-   1,X
-  40
+   1,L
+   8
    1,J
+  45
+   1,J
+
+#Epilogue
+ 115
+   8,L,J
+  14,L,X
+   2,L,J,G
+  15,L,D,X
+ 147
+   1,S
+   1,D,J
