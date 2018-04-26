@@ -99,3 +99,17 @@ Celeste.Player.dashCooldownTimer
 Celeste.Player.WallJumpCheck(int dir)
 Celeste.SummitVignette.ready
 Monocle.MInput.UpdateVirtualInputs()
+----------------------------------------------------------------------------------
+If you don't want to get achievements from TAS'ing
+
+Celeste.Achievements.Register: replace if statement condition:
+public static void Register(Achievement achievement)
+{
+	if (Achievements.Has(achievement) || TAS.Manager.Running)
+	{
+
+Celeste.Stats.Increment: replace if statement condition:
+public static void Increment(Stat stat, int increment = 1)
+{
+	if (Stats.ready && !TAS.Manager.Running)
+	{
