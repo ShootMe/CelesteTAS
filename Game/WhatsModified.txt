@@ -62,7 +62,7 @@ protected override void Update(GameTime gameTime)
 		{
 			base.Update(gameTime);
 		}
-		if (Engine.Scene.Entities.FindFirst<Celeste.FinalBoss>() != null)
+		else if (i >= 8 && this.scene != null && this.scene.Entities.FindFirst<FinalBoss>() != null)
 		{
 			break;
 		}
@@ -76,7 +76,7 @@ protected override void Update(GameTime gameTime)
 // Celeste.RunThread
 public static void Start(Action method, string name, bool highPriority = false)
 {
-	if (TAS.Manager.Running || TAS.Manager.Recording)
+	if (TAS.Manager.Running)
 	{
 		RunThread.RunThreadWithLogging(method);
 		return;
