@@ -72,8 +72,11 @@ namespace TAS {
 				}
 			} else if (Engine.Scene != null) {
 				SummitVignette summit = Engine.Scene as SummitVignette;
+				Overworld overworld = Engine.Scene as Overworld;
 				if (summit != null) {
 					PlayerStatus = string.Concat("SummitVignette ", summit.ready);
+				} else if (overworld != null) {
+					PlayerStatus = string.Concat("Overworld ", overworld.ShowInputUI);
 				} else {
 					PlayerStatus = Engine.Scene.GetType().Name;
 				}

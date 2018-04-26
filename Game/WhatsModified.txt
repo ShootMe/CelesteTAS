@@ -62,11 +62,36 @@ protected override void Update(GameTime gameTime)
 		{
 			base.Update(gameTime);
 		}
+		if (Engine.Scene.Entities.FindFirst<Celeste.FinalBoss>() != null)
+		{
+			break;
+		}
 	}
 	if (TAS.Manager.FrameLoops >= 10)
 	{
 		base.Update(gameTime);
 	}
+}
+---------------------------------------------------------------------------------
+// Celeste.RunThread
+public static void Start(Action method, string name, bool highPriority = false)
+{
+	if (TAS.Manager.Running || TAS.Manager.Recording)
+	{
+		RunThread.RunThreadWithLogging(method);
+		return;
+	}
+	Thread thread = new Thread(delegate()
+	{
+		RunThread.RunThreadWithLogging(method);
+	});
+	thread.Name = name;
+	thread.IsBackground = true;
+	if (highPriority)
+	{
+		thread.Priority = ThreadPriority.Highest;
+	}
+	thread.Start();
 }
 ---------------------------------------------------------------------------------
 Changed a few fields/methods to public vs private.
