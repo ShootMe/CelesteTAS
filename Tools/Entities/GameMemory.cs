@@ -26,10 +26,15 @@ namespace CelesteStudio.Entities {
 		}
 		public string LevelName() {
 			//Celeste.Instance.AutosplitterInfo.Level
+			string level;
 			if (Celeste.Version == PointerVersion.XNA) {
-				return Celeste.Read(Program, 0x0, 0xac, 0x14, 0x0);
+				level = Celeste.Read(Program, 0x0, 0xac, 0x14, 0x0);
 			}
-			return Celeste.Read(Program, 0x0, 0x8c, 0x14, 0x0);
+			level = Celeste.Read(Program, 0x0, 0x8c, 0x14, 0x0);
+			if (level == "") {
+				level = TAS.Read(Program, 0xc, 0x0);
+			}
+			return level;
 		}
 		public bool HookProcess() {
 			IsHooked = Program != null && !Program.HasExited;

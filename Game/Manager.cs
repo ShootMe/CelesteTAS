@@ -1,4 +1,5 @@
 ﻿using Celeste;
+using Celeste.Pico8;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using Monocle;
@@ -18,7 +19,7 @@ namespace TAS {
 		public static bool Running, Recording;
 		private static InputController controller = new InputController("Celeste.tas");
 		public static State state, nextState;
-		public static string CurrentStatus, PlayerStatus;
+		public static string CurrentStatus, PlayerStatus, Pico8LevelName;
 		public static int FrameStepCooldown, FrameLoops = 1;
 		private static bool frameStepWasDpadUp, frameStepWasDpadDown;
 		private static Vector2 lastPos;
@@ -29,14 +30,15 @@ namespace TAS {
 			return kbState.IsKeyDown(key);
 		}
 		public static bool IsLoading() {
-			SummitVignette summit = Engine.Scene as SummitVignette;
-			if (summit != null) {
+			if (Engine.Scene is SummitVignette summit) {
 				return !summit.ready;
 			}
-			Overworld overworld = Engine.Scene as Overworld;
-			if (overworld != null) {
-				OuiFileSelect slot = overworld.Current as OuiFileSelect;
-				return slot != null && slot.SlotIndex >= 0 && slot.Slots[slot.SlotIndex].StartingGame;
+			if (Engine.Scene is Overworld overworld) {
+				return overworld.Current is OuiFileSelect slot && slot.SlotIndex >= 0 && slot.Slots[slot.SlotIndex].StartingGame;
+			}
+			if (Engine.Scene is Emulator emulator) {
+				// PICO-8 runs at 30 FPS. It skipped the previous 60fps frame if skipFrame is true.
+				return !emulator.skipFrame;
 			}
 			return (Engine.Scene is LevelExit) || (Engine.Scene is LevelLoader) || (Engine.Scene is OverworldLoader) || (Engine.Scene is GameLoader);
 		}
@@ -51,10 +53,11 @@ namespace TAS {
 			return padState;
 		}
 		public static void UpdateInputs() {
-			Level level = Engine.Scene as Level;
 			Player player = null;
+			Classic.player classicPlayer = null;
 			long chapterTime = 0;
-			if (level != null) {
+			Pico8LevelName = "";
+			if (Engine.Scene is Level level) {
 				player = level.Tracker.GetEntity<Player>();
 				if (player != null) {
 					string statuses = ((int)(player.dashCooldownTimer * 60f) < 1 && player.Dashes > 0 ? "Dash " : string.Empty) + (player.LoseShards ? "Ground " : string.Empty) + (player.WallJumpCheck(1) ? "Wall-R " : string.Empty) + (player.WallJumpCheck(-1) ? "Wall-L " : string.Empty);
@@ -68,18 +71,42 @@ namespace TAS {
 					sb.Append(player.InControl && !level.Transitioning ? statuses : "NoControl ").Append(player.TimePaused ? "Paused " : string.Empty).Append(level.InCutscene ? "Cutscene " : string.Empty);
 					PlayerStatus = sb.ToString();
 				} else {
-					PlayerStatus = level.InCutscene ? "Cutscene" : null;
+					PlayerStatus = level.InCutscene ? "Cutscene " : null;
 				}
+			} else if (Engine.Scene is Emulator emulator) {
+				int levelIndex = (Classic.room.X % 8 + Classic.room.Y * 8);
+				Pico8LevelName = emulator.booting ? "classic_booting" : levelIndex == 31 ? "classic_title" : levelIndex == 30 ? "classic_summit" : string.Concat("classic_", levelIndex + 1, "00m");
+				classicPlayer = emulator.booting ? null : Classic.objects?.Find(o => o is Classic.player) as Classic.player;
+				StringBuilder sb = new StringBuilder();
+				if (classicPlayer != null) {
+					chapterTime = ((Classic.minutes * 60) + Classic.seconds) * 30 + Classic.frames;
+					sb.Append("Pos: ").Append(classicPlayer.x.ToString("0.00", enUS)).Append(',').AppendLine(classicPlayer.y.ToString("0.00", enUS));
+					sb.Append("Speed: ").Append(classicPlayer.spd.X.ToString("0.00", enUS)).Append(',').Append(classicPlayer.spd.Y.ToString("0.00", enUS)).Append(',').AppendLine(classicPlayer.spd.Length().ToString("0.00", enUS));
+					Vector2 diff = (new Vector2(classicPlayer.x, classicPlayer.y) - lastPos) * 60;
+					sb.Append("Vel: ").Append(diff.X.ToString("0.00", enUS)).Append(',').Append(diff.Y.ToString("0.00", enUS)).Append(',').AppendLine(diff.Length().ToString("0.00", enUS));
+					sb.Append("Ground:").Append(classicPlayer.grace).Append(' ')
+						.Append("Dash:").Append(classicPlayer.dash_time).AppendLine();
+				}
+				if (Classic.freeze > 0) {
+					sb.Append("Freeze: ").Append(Classic.freeze).Append(' ');
+				} else if (Classic.pause_player) {
+					sb.Append("NoControl ");
+				} else if (classicPlayer != null) {
+					sb.Append(classicPlayer.is_solid(0, 1) ? "OnGround " : "");
+					sb.Append(classicPlayer.is_ice(0, 1) ? "Ice " : "");
+					sb.Append(classicPlayer.djump > 0 ? "Dash " : "");
+					sb.Append(classicPlayer.is_solid(-1, 0) ? "Wall-L " : "");
+					sb.Append(classicPlayer.is_solid(1, 0) ? "Wall-R " : "");
+				} else if (!emulator.booting && levelIndex < 31) {
+					sb.Append("NoControl Cutscene ");
+				}
+				PlayerStatus = sb.ToString();
+			} else if (Engine.Scene is SummitVignette summit) {
+				PlayerStatus = string.Concat("SummitVignette ", summit.ready, ' ');
+			} else if (Engine.Scene is Overworld overworld) {
+				PlayerStatus = string.Concat("Overworld ", overworld.ShowInputUI, ' ');
 			} else if (Engine.Scene != null) {
-				SummitVignette summit = Engine.Scene as SummitVignette;
-				Overworld overworld = Engine.Scene as Overworld;
-				if (summit != null) {
-					PlayerStatus = string.Concat("SummitVignette ", summit.ready);
-				} else if (overworld != null) {
-					PlayerStatus = string.Concat("Overworld ", overworld.ShowInputUI);
-				} else {
-					PlayerStatus = Engine.Scene.GetType().Name;
-				}
+				PlayerStatus = Engine.Scene.GetType().Name;
 			}
 
 			kbState = Keyboard.GetState();
@@ -127,6 +154,9 @@ namespace TAS {
 
 			if (player != null && chapterTime != lastTimer) {
 				lastPos = player.ExactPosition;
+				lastTimer = chapterTime;
+			} else if (classicPlayer != null && chapterTime != lastTimer) {
+				lastPos = new Vector2(classicPlayer.x, classicPlayer.y);
 				lastTimer = chapterTime;
 			}
 		}
