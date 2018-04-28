@@ -29,14 +29,10 @@ namespace TAS {
 			return kbState.IsKeyDown(key);
 		}
 		public static bool IsLoading() {
-			SummitVignette summit = Engine.Scene as SummitVignette;
-			if (summit != null) {
+			if (Engine.Scene is SummitVignette summit) {
 				return !summit.ready;
-			}
-			Overworld overworld = Engine.Scene as Overworld;
-			if (overworld != null) {
-				OuiFileSelect slot = overworld.Current as OuiFileSelect;
-				return slot != null && slot.SlotIndex >= 0 && slot.Slots[slot.SlotIndex].StartingGame;
+			} else if (Engine.Scene is Overworld overworld) {
+				return overworld.Current is OuiFileSelect slot && slot.SlotIndex >= 0 && slot.Slots[slot.SlotIndex].StartingGame;
 			}
 			return (Engine.Scene is LevelExit) || (Engine.Scene is LevelLoader) || (Engine.Scene is OverworldLoader) || (Engine.Scene is GameLoader);
 		}
@@ -51,10 +47,9 @@ namespace TAS {
 			return padState;
 		}
 		public static void UpdateInputs() {
-			Level level = Engine.Scene as Level;
 			Player player = null;
 			long chapterTime = 0;
-			if (level != null) {
+			if (Engine.Scene is Level level) {
 				player = level.Tracker.GetEntity<Player>();
 				if (player != null) {
 					string statuses = ((int)(player.dashCooldownTimer * 60f) < 1 && player.Dashes > 0 ? "Dash " : string.Empty) + (player.LoseShards ? "Ground " : string.Empty) + (player.WallJumpCheck(1) ? "Wall-R " : string.Empty) + (player.WallJumpCheck(-1) ? "Wall-L " : string.Empty);
@@ -70,16 +65,12 @@ namespace TAS {
 				} else {
 					PlayerStatus = level.InCutscene ? "Cutscene" : null;
 				}
+			} else if (Engine.Scene is SummitVignette summit) {
+				PlayerStatus = string.Concat("SummitVignette ", summit.ready);
+			} else if (Engine.Scene is Overworld overworld) {
+				PlayerStatus = string.Concat("Overworld ", overworld.ShowInputUI);
 			} else if (Engine.Scene != null) {
-				SummitVignette summit = Engine.Scene as SummitVignette;
-				Overworld overworld = Engine.Scene as Overworld;
-				if (summit != null) {
-					PlayerStatus = string.Concat("SummitVignette ", summit.ready);
-				} else if (overworld != null) {
-					PlayerStatus = string.Concat("Overworld ", overworld.ShowInputUI);
-				} else {
-					PlayerStatus = Engine.Scene.GetType().Name;
-				}
+				PlayerStatus = Engine.Scene.GetType().Name;
 			}
 
 			kbState = Keyboard.GetState();
