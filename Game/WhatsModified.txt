@@ -10,7 +10,7 @@ protected override void Update(GameTime gameTime)
 			MInput.Update();
 		}
 		TAS.Manager.UpdateInputs();
-		if ((TAS.Manager.state & TAS.State.FrameStep) == TAS.State.FrameStep)
+		if ((TAS.Manager.state & TAS.State.FrameStep) == TAS.State.FrameStep && !TAS.Manager.IsLoading())
 		{
 			base.Update(gameTime);
 			return;
@@ -62,7 +62,7 @@ protected override void Update(GameTime gameTime)
 		{
 			base.Update(gameTime);
 		}
-		else if (i >= 8 && this.scene != null && this.scene.Entities.FindFirst<FinalBoss>() != null)
+		else if (i >= 8 && this.scene != null && this.scene.Tracker.GetEntity<FinalBoss>() != null)
 		{
 			break;
 		}
@@ -98,6 +98,14 @@ Changed a few fields/methods to public vs private.
 Celeste.Player.dashCooldownTimer
 Celeste.Player.WallJumpCheck(int dir)
 Celeste.SummitVignette.ready
+Celeste.Pico8.Classic.frames
+Celeste.Pico8.Classic.minutes
+Celeste.Pico8.Classic.objects
+Celeste.Pico8.Classic.pause_player
+Celeste.Pico8.Classic.room
+Celeste.Pico8.Classic.seconds
+Celeste.Pico8.Emulator.booting
+Celeste.Pico8.Emulator.skipFrame
 Monocle.MInput.UpdateVirtualInputs()
 ----------------------------------------------------------------------------------
 If you don't want to get achievements from TAS'ing
