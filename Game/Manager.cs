@@ -54,10 +54,21 @@ namespace TAS {
 				if (player != null) {
 					string statuses = ((int)(player.dashCooldownTimer * 60f) < 1 && player.Dashes > 0 ? "Dash " : string.Empty) + (player.LoseShards ? "Ground " : string.Empty) + (player.WallJumpCheck(1) ? "Wall-R " : string.Empty) + (player.WallJumpCheck(-1) ? "Wall-L " : string.Empty);
 					chapterTime = ((Celeste.Celeste)Engine.Instance).AutoSplitterInfo.ChapterTime;
+					Vector2 diff = (player.ExactPosition - lastPos) * 60;
+
+					if (player.Holding == null) {
+						foreach (Component component in level.Tracker.GetComponents<Holdable>()) {
+							Holdable holdable = (Holdable)component;
+							if (holdable.Check(player)) {
+								statuses += "Grab ";
+								break;
+							}
+						}
+					}
+
 					StringBuilder sb = new StringBuilder();
 					sb.Append("Pos: ").Append(player.ExactPosition.X.ToString("0.0", enUS)).Append(',').AppendLine(player.ExactPosition.Y.ToString("0.0", enUS));
 					sb.Append("Speed: ").Append(player.Speed.X.ToString("0.00", enUS)).Append(',').Append(player.Speed.Y.ToString("0.00", enUS)).Append(',').AppendLine(player.Speed.Length().ToString("0.00", enUS));
-					Vector2 diff = (player.ExactPosition - lastPos) * 60;
 					sb.Append("Vel: ").Append(diff.X.ToString("0.00", enUS)).Append(',').Append(diff.Y.ToString("0.00", enUS)).Append(',').AppendLine(diff.Length().ToString("0.00", enUS));
 					sb.Append("Stamina: ").Append(player.Stamina.ToString("0")).Append(" Timer: ").AppendLine(((double)chapterTime / (double)10000000).ToString("0.000", enUS));
 					sb.Append(player.InControl && !level.Transitioning ? statuses : "NoControl ").Append(player.TimePaused ? "Paused " : string.Empty).Append(level.InCutscene ? "Cutscene " : string.Empty);
