@@ -459,9 +459,8 @@
   15,L,D
   14,L,D,X
   22,R
-  14,R,U,X
-  10,R
-  11,R,D,X
+  24,R,U,X
+  11,R,D,C
   40,R
 
 #lvl_15
@@ -1469,61 +1468,57 @@
 #lvl_after-00
    8,L
   12,L,J,G
-  14,L,U,X
-   1,L
-  14,L,D,X
-  19,L,J
+  15,L,U,X
+  10,L,C
+  14,L,J
   14,U,X
-  17,R,J
+   1,J
+  12,R,J
   14,U,X
   11,R
   10,R,X
-   5,R,J
-  16,U,X
+   6,R,J
+  15,U,X
    1,J
   17,L,J
-  16,U,X
+  15,U,X
   18,L,J
   40
 
 #lvl_after-01
    7
-   9,R,J
+   7,R,J
    5,R,D,X
    1,R,J
    7,R
   15,R,J
   14,U,X
-   1,L,J
-  10,L,J
+  11,J
   10,R,X
-  14,L,J
-  18,U,X
-   9,L,J
+  15,L,J
+  17,U,X
+   7,L,J
   14,U,X
-   9,R,J
-   1,R,K,G
-  13,R
-  14,U,X
-   1,U
-  14,U,X
-  18,R
+   7,R,J
+  11,R
+   2,R,J
+  15,R,U,X
+  15,U,C
+  10,R
   14,U,X
   14,R,J
-  11,L,X
+  10,L,X
    1,L,J
    3,R,J
-  14,U,X
-   1,U
-  14,U,X
+  15,U,X
+  14,U,C
   18,R,J
    8,R,K,G
    7,R
    8,L,J
-  15,U,X
-   1,U
-  15,U,X
- 444
+  16,U,X
+  17,U,C
+ 442
 
 #lvl_after-02
    1,S
