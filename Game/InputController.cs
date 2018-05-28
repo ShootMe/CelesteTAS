@@ -1,7 +1,4 @@
 ﻿using Celeste;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Input;
-using Monocle;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -126,52 +123,7 @@ namespace TAS {
 
 				currentFrame++;
 			}
-			SetInputs();
-		}
-		private void SetInputs() {
-			GamePadDPad pad;
-			GamePadThumbSticks sticks;
-			if (Current.HasActions(Actions.Feather)) {
-				pad = new GamePadDPad(ButtonState.Released, ButtonState.Released, ButtonState.Released, ButtonState.Released);
-				sticks = new GamePadThumbSticks(new Vector2(Current.GetX(), Current.GetY()), new Vector2(0, 0));
-			} else {
-				pad = new GamePadDPad(
-					Current.HasActions(Actions.Up) ? ButtonState.Pressed : ButtonState.Released,
-					Current.HasActions(Actions.Down) ? ButtonState.Pressed : ButtonState.Released,
-					Current.HasActions(Actions.Left) ? ButtonState.Pressed : ButtonState.Released,
-					Current.HasActions(Actions.Right) ? ButtonState.Pressed : ButtonState.Released
-				);
-				sticks = new GamePadThumbSticks(new Vector2(0, 0), new Vector2(0, 0));
-			}
-			GamePadState state = new GamePadState(
-				sticks,
-				new GamePadTriggers(Current.HasActions(Actions.Journal) ? 1f : 0f, 0),
-				new GamePadButtons(
-					(Current.HasActions(Actions.Jump) ? Buttons.A : (Buttons)0)
-					| (Current.HasActions(Actions.Jump2) ? Buttons.Y : (Buttons)0)
-					| (Current.HasActions(Actions.Dash) ? Buttons.B : (Buttons)0)
-					| (Current.HasActions(Actions.Dash2) ? Buttons.X : (Buttons)0)
-					| (Current.HasActions(Actions.Grab) ? Buttons.RightShoulder : (Buttons)0)
-					| (Current.HasActions(Actions.Start) ? Buttons.Start : (Buttons)0)
-					| (Current.HasActions(Actions.Restart) ? Buttons.LeftShoulder : (Buttons)0)
-				),
-				pad
-			);
-
-			bool found = false;
-			for (int i = 0; i < 4; i++) {
-				MInput.GamePads[i].Update();
-				if (MInput.GamePads[i].Attached) {
-					found = true;
-					MInput.GamePads[i].CurrentState = state;
-				}
-			}
-
-			if (!found) {
-				MInput.GamePads[0].CurrentState = state;
-				MInput.GamePads[0].Attached = true;
-			}
-			MInput.UpdateVirtualInputs();
+			Manager.SetInputs(Current);
 		}
 		public void RecordPlayer() {
 			InputRecord input = new InputRecord() { Line = inputIndex + 1, Frames = currentFrame };
@@ -249,8 +201,15 @@ namespace TAS {
 			int index = extraFile.IndexOf(',');
 			string filePath = index > 0 ? extraFile.Substring(0, index) : extraFile;
 			int skipLines = 0;
+			int lineLen = 0;
 			if (index > 0) {
-				int.TryParse(extraFile.Substring(index + 1), out skipLines);
+				int indexLen = extraFile.IndexOf(',', index + 1);
+				if (indexLen > 0) {
+					int.TryParse(extraFile.Substring(index + 1, indexLen - index - 1), out skipLines);
+					int.TryParse(extraFile.Substring(indexLen + 1), out lineLen);
+				} else {
+					int.TryParse(extraFile.Substring(index + 1), out skipLines);
+				}
 			}
 
 			if (!File.Exists(filePath)) { return; }
@@ -262,6 +221,7 @@ namespace TAS {
 
 					subLine++;
 					if (subLine <= skipLines) { continue; }
+					if (subLine > lineLen) { break; }
 
 					InputRecord input = new InputRecord(lines, line);
 					if (input.FastForward) {

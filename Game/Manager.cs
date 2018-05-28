@@ -46,7 +46,7 @@ namespace TAS {
 			}
 			return padState;
 		}
-		public static void UpdateInputs() {
+		private static void UpdatePlayerInfo() {
 			Player player = null;
 			long chapterTime = 0;
 			if (Engine.Scene is Level level) {
@@ -84,6 +84,13 @@ namespace TAS {
 				PlayerStatus = Engine.Scene.GetType().Name;
 			}
 
+			if ((!HasFlag(state, State.Enable) || !HasFlag(state, State.FrameStep)) && player != null && chapterTime != lastTimer) {
+				lastPos = player.ExactPosition;
+				lastTimer = chapterTime;
+			}
+		}
+		public static void UpdateInputs() {
+			UpdatePlayerInfo();
 			kbState = Keyboard.GetState();
 			GamePadState padState = GetGamePadState();
 			HandleFrameRates(padState);
@@ -125,11 +132,6 @@ namespace TAS {
 					}
 					MInput.UpdateVirtualInputs();
 				}
-			}
-
-			if (player != null && chapterTime != lastTimer) {
-				lastPos = player.ExactPosition;
-				lastTimer = chapterTime;
 			}
 		}
 		private static void HandleFrameRates(GamePadState padState) {
@@ -253,6 +255,51 @@ namespace TAS {
 		}
 		private static bool HasFlag(State state, State flag) {
 			return (state & flag) == flag;
+		}
+		public static void SetInputs(InputRecord input) {
+			GamePadDPad pad;
+			GamePadThumbSticks sticks;
+			if (input.HasActions(Actions.Feather)) {
+				pad = new GamePadDPad(ButtonState.Released, ButtonState.Released, ButtonState.Released, ButtonState.Released);
+				sticks = new GamePadThumbSticks(new Vector2(input.GetX(), input.GetY()), new Vector2(0, 0));
+			} else {
+				pad = new GamePadDPad(
+					input.HasActions(Actions.Up) ? ButtonState.Pressed : ButtonState.Released,
+					input.HasActions(Actions.Down) ? ButtonState.Pressed : ButtonState.Released,
+					input.HasActions(Actions.Left) ? ButtonState.Pressed : ButtonState.Released,
+					input.HasActions(Actions.Right) ? ButtonState.Pressed : ButtonState.Released
+				);
+				sticks = new GamePadThumbSticks(new Vector2(0, 0), new Vector2(0, 0));
+			}
+			GamePadState state = new GamePadState(
+				sticks,
+				new GamePadTriggers(input.HasActions(Actions.Journal) ? 1f : 0f, 0),
+				new GamePadButtons(
+					(input.HasActions(Actions.Jump) ? Buttons.A : (Buttons)0)
+					| (input.HasActions(Actions.Jump2) ? Buttons.Y : (Buttons)0)
+					| (input.HasActions(Actions.Dash) ? Buttons.B : (Buttons)0)
+					| (input.HasActions(Actions.Dash2) ? Buttons.X : (Buttons)0)
+					| (input.HasActions(Actions.Grab) ? Buttons.RightShoulder : (Buttons)0)
+					| (input.HasActions(Actions.Start) ? Buttons.Start : (Buttons)0)
+					| (input.HasActions(Actions.Restart) ? Buttons.LeftShoulder : (Buttons)0)
+				),
+				pad
+			);
+
+			bool found = false;
+			for (int i = 0; i < 4; i++) {
+				MInput.GamePads[i].Update();
+				if (MInput.GamePads[i].Attached) {
+					found = true;
+					MInput.GamePads[i].CurrentState = state;
+				}
+			}
+
+			if (!found) {
+				MInput.GamePads[0].CurrentState = state;
+				MInput.GamePads[0].Attached = true;
+			}
+			MInput.UpdateVirtualInputs();
 		}
 	}
 }
