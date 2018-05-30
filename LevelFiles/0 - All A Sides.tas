@@ -41,8 +41,7 @@ Read,1H - Forsaken City.tas,8
 #Overworld
  183
    1,J
-
- 412
+ 480
    1,J
   45
    1,J
@@ -52,8 +51,7 @@ Read,1H - Forsaken City.tas,8
    1,J
  326
 
-Read,2H - Old Site.tas,9
-Read,2A - Old Site.tas,4
+Read,2H - Old Site.tas,8
 
 #Overworld
  183
@@ -68,7 +66,7 @@ Read,2A - Old Site.tas,4
    1,J
  197
 
-Read,3H - Celestial Resort.tas,6
+Read,3H - Celestial Resort.tas,7
 
 #Overworld
  183

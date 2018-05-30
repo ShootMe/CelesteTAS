@@ -1,59 +1,70 @@
-#Created by DevilSquirrel
-#Improved by Kilaye, heart added by KDT
-#Used KDT's TAS as a guide
+#Heart added by KDT
+#Improved by DevilSquirrel
 #Start
    1,Q
    1,J
  221,R
 
 #lvl_start
-  12,R,X
-  11,R,J
-  14,U,X
-   4,R
-  40
-   2,L
-  14,U,X
-   4,L
-  40
-   9,L
+   5,R,D,J,X
+   6,R
+   1,L
+  12,L,J
+   5,U,X
+  53,R
+
+#lvl_0
+   5,U,X
+  52,L
+
+#lvl_start
+  10,L
   17,U,X
-   2,J
-  20,R,J
-  40
+  22,R,J
+  40,R
+
+#lvl_s0
   16,R
-  12,R,J,G
-   1,R
-  12,R,J,G
-   1,R
-   6,R,J,G
-   1,R
+  10,R,J,G
+  10,R,K,G
+  10,R,J,G
   14,U,X
-  98,L,J
-  14,L,U,X
-  31,L
-  40
-   5,L
-  13,L,U,X
-  40
-  33,L
-  17,U,X
-   1,J
-  33,R,J
-   1,R
+  24,L,J
+  40,L
+
+#lvl_s1
+  38,L
+  45,L,U,X
+  40,L
+
+#lvl_s0
+   7,L,U,X
+  40,L
+
+#lvl_s1
+  30,L
+  11,L,U,X
+   1,K
+  16,R,J,G
+  12,R,K,G
+  12,R,J,G
+   4,R,K,G
+   7,R
+  10,R,J
+  15,R,U,X
+   3,R,J,G
+  40,R
+
+#lvl_s2
+   8,R
    8,R,J,G
-  10,R
-  12,R,J
-  14,R,U,X
-   3,R
-  40
-   4,R
-  11,R,J,G
   14,R,X
    8,R,J
-  14,R,X
- 192,R
-   1,J
+  13,R,X
+  33
+   5,L,D,J,X
+  37,L
+   5,L,D,J,X
+  87,L
 
-# restart level with A side
-Read,2A - Old Site.tas,4
+Read,2A - Old Site.tas
