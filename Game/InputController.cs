@@ -201,7 +201,7 @@ namespace TAS {
 			int index = extraFile.IndexOf(',');
 			string filePath = index > 0 ? extraFile.Substring(0, index) : extraFile;
 			int skipLines = 0;
-			int lineLen = 0;
+			int lineLen = int.MaxValue;
 			if (index > 0) {
 				int indexLen = extraFile.IndexOf(',', index + 1);
 				if (indexLen > 0) {
@@ -222,6 +222,10 @@ namespace TAS {
 					subLine++;
 					if (subLine <= skipLines) { continue; }
 					if (subLine > lineLen) { break; }
+
+					if (line.IndexOf("Read", System.StringComparison.OrdinalIgnoreCase) == 0 && line.Length > 5) {
+						ReadFile(line.Substring(5), lines);
+					}
 
 					InputRecord input = new InputRecord(lines, line);
 					if (input.FastForward) {
