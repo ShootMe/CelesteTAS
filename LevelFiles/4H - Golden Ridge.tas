@@ -35,17 +35,18 @@ Read,4A - Golden Ridge.tas,8,242
    7,R
   14,R,J
   14,U,X
-  15,L,J
-  13,L
+  17,L,J
+   1,L,K,G
+   7,L
   10,L,X
-  16,R,J
-  12,R,K,G
-  12,R,J,G
+  15,R,J
+  10,R,K,G
+  10,R,J,G
    9,L,K
-  13,U,X
-  13,L,J
+  15,U,X
+  14,L,J
    1,L
-   6,L,J
+   5,L,J
    5,L,K
    5,L,J
   19,L
