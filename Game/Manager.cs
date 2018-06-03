@@ -34,7 +34,7 @@ namespace TAS {
 			} else if (Engine.Scene is Overworld overworld) {
 				return overworld.Current is OuiFileSelect slot && slot.SlotIndex >= 0 && slot.Slots[slot.SlotIndex].StartingGame;
 			}
-			return (Engine.Scene is LevelExit) || (Engine.Scene is LevelLoader) || (Engine.Scene is OverworldLoader) || (Engine.Scene is GameLoader);
+			return (Engine.Scene is LevelExit) || (Engine.Scene is LevelLoader) || (Engine.Scene is GameLoader);
 		}
 		private static GamePadState GetGamePadState() {
 			GamePadState padState = MInput.GamePads[0].CurrentState;
@@ -53,7 +53,7 @@ namespace TAS {
 				player = level.Tracker.GetEntity<Player>();
 				if (player != null) {
 					chapterTime = level.Session.Time;
-					if (chapterTime != lastTimer) {
+					if (chapterTime != lastTimer || lastPos != player.ExactPosition) {
 						string statuses = ((int)(player.dashCooldownTimer * 60f) < 1 && player.Dashes > 0 ? "Dash " : string.Empty) + (player.LoseShards ? "Ground " : string.Empty) + (player.WallJumpCheck(1) ? "Wall-R " : string.Empty) + (player.WallJumpCheck(-1) ? "Wall-L " : string.Empty);
 						Vector2 diff = (player.ExactPosition - lastPos) * 60;
 
