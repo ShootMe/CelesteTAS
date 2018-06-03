@@ -1,0 +1,381 @@
+#Created by DevilSquirrel
+#Restart
+   1,Q
+   1,J
+ 117
+
+Read,5A - Mirror Temple.tas,7,217
+
+#lvl_b-02
+   3,R
+   1,R,J
+  14,R,D,X
+   1,R,J
+  16,R,D
+  15,L,D,X
+   7,L,D
+  26,L
+  66,R,X
+  40,R
+
+#lvl_b-11
+   4,R
+  10,R,D,X
+  15,R,J
+   2,R,K,G
+  14,R,D,X
+  12,R,J
+  13,R,U,X
+   1,J,G
+   8
+   3,L
+  15,U,X
+   9,D
+  30,L,D
+  50,R,D
+   5,R,D,X
+   1,R,J
+  42,R
+
+#lvl_b-13
+   5,R
+   1,R,J
+   2,R
+  18,R,D,X
+   1,R,J
+  14,R
+   4,R,J
+  12,R,K,G
+  10,R,X
+   5,R,J
+  13,U,X
+  33,L,J
+  10,L,K,G
+   8,L
+   1,L,J
+  14,L
+   1,L,J
+  10,L
+  15,L,U,X
+  68,R,D
+  29,R,U,X
+   6,R,D,C
+   1,R,J
+   7,R
+   1,R,J
+   5,R,D,X
+  58,R
+
+#lvl_b-17
+   9,R
+  14,R,J
+  17,R,D,X
+   6,R,J
+   5,R
+  14,R,D,X
+   1,R,J
+  14,R,D,X
+   1,R,J
+   5,R,D,X
+  43,R,J
+
+#lvl_b-22
+   3,R,J
+   4,R,K
+  10,R,X
+   1,R,J
+   4,R
+  15,D,X
+  10,L,D,C
+  11,R,J
+  11,L,X
+  44,R,C
+  21,R,U,G
+  23,R,G
+  26,R,X
+   2,L
+   4,R,J,G
+   5,R
+   3,L
+  10,R,D,X
+  31,R,J
+  13,R,U,X
+  12,R,J
+  12,L,K
+   1,L,J,G
+   7,L
+   6,R,D,X
+   1,L,J
+   7,L
+   5,L,J
+  19,L
+  14,L,X
+   1,L,J
+  14,R,D,X
+   1,R,J
+  14,L,D,X
+   1,R,J
+  13,R,D,X
+   1,L,J
+   7,L
+   3,L,J
+  14,L
+  15,L,D,X
+   8,L,D,J
+  10,L,U,X
+ 257
+   1,J
+ 123
+  16,L,D,X
+   1,L,J
+   7,L,D,X
+  40,L
+
+#lvl_b-17
+   7,L
+   1,L,J
+  14,L,D,X
+   6,L,J
+  14,L,D,X
+   8,L,J
+   5,L,K,G
+  10,L,D,X
+  12,L,J
+   8,L,K,G
+  11,L,D,X
+  58,L
+
+#lvl_b-13
+   2,L
+   1,L,J
+   7,L
+   1,L,J
+  18,L,D,X
+   1,L,J
+   9,L
+   4,L,J
+  12,L,U,X
+   1,L,K,G
+  50,L
+
+#lvl_b-11
+   3,L
+   4,L,J
+  13,L
+   6,L,J
+   3,L,K,G
+  10,L,D,X
+   5,L,J
+  15,L,D,X
+   1,L,J
+  48,L
+
+#lvl_b-02
+  12,L,U,X
+  12,L,J,G
+   9,L,K,G
+   7,L
+   6,R,D,X
+   1,L,J
+   7,L
+  11,L,J
+   5,L,K,G
+  14,L,U,X
+  11,L,J,G
+   7,L
+   5,L,J
+  13,U,X
+  78,U,C
+  23,R,X
+  14,U,C
+  18,R,J
+  11,L,K
+   7,L
+   5,L,J
+   9,U,X
+  40,L
+
+#lvl_b-04
+  11,L
+  12,L,U,X
+   1,L,J,G
+   9,L
+   8,L,J
+   5,L,K,G
+  15,U,X
+  12,L
+   3,L,J
+   1,L
+  15,U,X
+  11,L
+   5,L,D,J,X
+  42,L
+
+#lvl_b-07
+   5,R
+   1,R,J
+   2,R,D
+  22,L,D
+  14,L,X
+  19,L,J
+   7,K,G
+   6,J,G
+   2,R,J
+  15,U,X
+  12,R,J
+  16,R
+  10,U,X
+   4,R,J
+  14,R
+   6,R,D,X
+   1,R,J
+   7,R
+   1,R,J
+  11,R,D,X
+  40,R
+
+#lvl_b-08
+  10,R
+  28,R,D
+  10,R,U,X
+  28,R,J
+  12,R,U,X
+  23,R,J
+  12,R,K,G
+  12,R,J,G
+  12,R,K,G
+   3,R
+   4,R,J,G
+   7,R
+   1,R,J
+  25,R,D
+  10,D
+  15,R,D
+  14,R,D,X
+   1,R,J
+   8,R,D,X
+  40,R
+
+#lvl_b-09
+   7,R
+   5,D,X
+  35,R,C
+  17,D,X
+  18,R,D
+  10,L,D,X
+  19,L,J
+   7,L,K,G
+  14,L
+  12,L,U,X
+   1,L,J,G
+  11,L
+   1,L,J
+   5,L,D,X
+  40,L
+
+#lvl_b-04
+   9,L
+   1,L,J
+  14,L,D,X
+   1,L,J
+  15,L,X
+  45,D,C
+  48,R,D
+
+#lvl_b-02
+  71,R,D
+  14,R,D,X
+   1,R,J
+  12,R,D,X
+  40,R
+
+#lvl_b-06
+   2,R,D,X
+   1,R,J
+  14,R,D,X
+   1,R,J
+  14,R,D,X
+
+Read,5A - Mirror Temple.tas,238,313
+
+#lvl_b-14
+   5,R
+  17,D,X
+   5,R,D,J,C
+   7,L,D
+   8,R,D
+  10,R,J
+  18,R,D,X
+  15,D,C
+  12,R,D
+   5,R,D,J,X
+  12,R
+  10,L,X
+   1,L,J
+   5,L
+   1,L,J,G
+  13,L
+   4,L,J
+  13,L,D,X
+   4,R,J
+   3,R,K,G
+  14,R,D,X
+   1,L,J
+  14,L,D,X
+   1,R,J
+  14,R,D,X
+   1,L,J
+  14,L,D,X
+   1,R,J
+   7,R
+   5,R,J
+  14,R,D,X
+   1,R,J
+   8,R,D,X
+   1,R,J
+   7,R
+  41,R,J
+
+#lvl_b-15
+  10,L,J
+  15,U,X
+   2,L
+  12,L,J,G
+  12,L,K,G
+   8,L,J,G
+   1,K
+  18,L,K
+  18,R,J
+   9,R,K
+  37,R,D
+  12,R,U,X
+  68
+  40,L
+  85,L,D,X
+   1,J
+  38,L
+   1,L,J
+  77,L,D,X
+
+#lvl_b-14
+  14,L,D,C
+   1,L,J
+   7,L
+  12,L,J
+  14,U,X
+   6,L,J
+   2,L
+   1,L,J,G
+   9,L
+  14,U,X
+  18,R,J
+  12,R,K,G
+   9,R
+  14,U,X
+  48,L,J
+
+#lvl_b-16
+  11,J
+  15,U,X
+
+Read,5A - Mirror Temple.tas,325

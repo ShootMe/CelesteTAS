@@ -1,0 +1,79 @@
+#Created by DevilSquirrel
+#Restart
+   1,Q
+   1,J
+ 221,R
+
+Read,2H - Old Site.tas,8,68
+
+Read,2A - Old Site.tas,0,124
+
+#lvl_d0
+   4,L
+   1,L,J
+  35,L,D
+  25,D
+  46,D,X
+  40,R,D
+
+#lvl_d9
+   5,R,D
+  14,R,D,X
+   1,R,J
+  14,R,D,X
+   4,R,J
+  14,R,D,X
+   1,R,J
+  27,R,X
+  16,R,D
+  15,L,D
+  10,R,D,X
+  10,L,J
+   9,L
+  15,L,D,X
+   5,L,J
+   5,L
+  14,L,D,X
+   1,L,J
+   7,L
+  18,L,U,X
+   4,L,J
+   3,L,K
+ 258
+   1,J
+ 123
+   9,L
+  13,L,U,X
+  12,R,J
+  40,R
+
+#lvl_d0
+  11,R,J
+  36,U,X
+   1,R
+   8,R,D,C
+   8,R,J
+   4,R
+   7,R,J
+  35,U,X
+   3,R
+  11,U,X
+   4,J
+   8
+   3,L
+   6,L,J
+  43,L,X
+   4,L,J
+  10,L,K
+  40,U,X
+  15,U,C
+   9,L,J,G
+   2,L
+   5,R
+  10,R,D,X
+   5,R,J
+  21,R,U,X
+   8,R,J
+  57,U,X
+
+Read,2A - Old Site.tas,143

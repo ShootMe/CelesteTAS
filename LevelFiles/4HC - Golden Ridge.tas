@@ -1,0 +1,134 @@
+#Created by DevilSquirrel
+#Restart
+   1,Q
+   1,J
+ 100,R
+
+Read,4A - Golden Ridge.tas,8,158
+
+#lvl_a-07
+   5,R,J
+   6,R
+   9,R,U,X
+  15,U,C
+  15,R,X
+  14,L,D
+   9,L,J
+  25,L
+   5,U,X
+  12,L
+  27,L,U,X
+   2,R,J
+  28,R,D
+   7,D
+  12,D,X
+   4,R
+  10,R,X
+  12,R,J
+  14,R,X
+  10,R,J
+  10,R,X
+   2,R,J
+   6,R,K,G
+  14,R,D,X
+  43,R
+
+#lvl_a-08
+   1,R,J
+  11,R,D,X
+   4,R,J
+   5,R,X
+  20,L
+   5
+  10,R,X
+   6,L,J
+  14,R,J
+  15,U,X
+  20,L,J
+   6,L
+   8,L,J
+  14,L,U,X
+  10,L
+   6,L,J,X
+  40,L
+
+#lvl_a-10
+   5,L,J
+   4,L
+  10,L,D,X
+  10,L,J
+  11,L
+   1,L,J
+  14,L,D,X
+   1,L,J
+  14,L,D,X
+   1,L,J
+   7,L,D,X
+  40,L
+
+#lvl_a-11
+   6,L,J
+   2,L,K,G
+  14,L,D,X
+   7,L,J
+   1,L
+  22,L,J
+  15,L,U,X
+  14,R
+   6,R,D,X
+   1,L,J
+   7,L
+  24,L,J
+  11,L,U,X
+  25,L,J
+  10,L
+   5,R,D,X
+   1,L,J
+   7,L
+  16,L,J
+   1,K
+  26,L,K
+  18,L,D
+   8,R,J
+  35,L,K
+  35,L
+  25,L,X
+ 257
+   1,J
+ 123
+  17,R,D
+   5,R,D,J,X
+  47,R
+
+#lvl_a-10
+   5,R
+   1,R,J
+  14,R,D,X
+   1,R,J
+   7,R
+   7,R,J
+  10,R
+  14,R,X
+   3,R,J
+  14,R,D,X
+  40,R
+
+#lvl_a-08
+   3,R,J
+  15,D,X
+  10,L,D,C
+   5,R,J
+  14,R,D,X
+  35,R,J
+  22,R,D,X
+  12
+  10,R,C
+   6,R,J
+  14,R,U,X
+  15,U,C
+  12,U,X
+  40,R
+
+Read,4A - Golden Ridge.tas,202,242
+
+Read,4H - Golden Ridge.tas,10

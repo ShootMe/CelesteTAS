@@ -1,0 +1,88 @@
+#Created by DevilSquirrel
+#Restart
+   1,Q
+   1,J
+  92,R
+
+Read,3H - Celestial Resort.tas,7,124
+
+Read,3A - Celestial Resort.tas,1047,1298
+
+#lvl_02-c
+   9,L,J
+   6,L
+   9,L,J
+  13,L,D,X
+   2,L,J
+   9,L
+   1,L,J
+  12,L,D,X
+   1,L,J
+   8,L
+   1,L,J
+  12,L,D,X
+   1,L,J
+   8,L
+   1,L,J
+  12,L,D,X
+   1,L,J
+  12,L
+  11,L,J
+   3,L,K,G
+  10,L,D,X
+  40,L
+
+#lvl_01-c
+   5,R
+  21,R,J
+   2,L,K
+   9,L
+   9
+  15,U,X
+  20
+  10,L,D,X
+  13,L,J
+  10,L
+  15,L,X
+  36,L,D
+   8,L,J
+  14,U,X
+   2,L,J
+ 257
+   1,J
+ 123
+   9,R,D,X
+  40,R
+
+#lvl_02-c
+   5,R
+   1,R,J
+   2,R
+  15,R,D,X
+  12,R,J
+  14,R,D,X
+  10,R,J
+  14,R,D,X
+  10,R,J
+  14,R,D,X
+  10,R,J
+  14,R,D,X
+   7,R,J
+  15,R,D,X
+  42,R,J
+
+#lvl_04-c
+   5,R,J
+  14,D,X
+  85
+  14,J
+   9,L,K,G
+  14,U,X
+  14,R,J
+   2,R,K,G
+   3,R
+   4,L
+  11,U,X
+  40,L
+
+Read,3A - Celestial Resort.tas,1442
