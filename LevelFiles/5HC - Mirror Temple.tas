@@ -104,6 +104,7 @@ Read,5A - Mirror Temple.tas,7,217
   12,L,K
    1,L,J,G
    7,L
+   2
    6,R,D,X
    1,L,J
    7,L
@@ -118,8 +119,8 @@ Read,5A - Mirror Temple.tas,7,217
   13,R,D,X
    1,L,J
    7,L
-   3,L,J
-  14,L
+   2,L,J
+  12,L
   15,L,D,X
    8,L,D,J
   10,L,U,X
