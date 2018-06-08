@@ -757,16 +757,20 @@
  219
 
 #lvl_e-00b
+  11,R,U,X
+   1,R,J,G
+   3,L
+   5,R,D,C
    1,R,J
-  15,U,X
-  11,R,D,C
-  14,R,J
-  12,R,D
-  15,R,X
-  22,R,U,C
-   9,U,X
+   6,L
+   1,R
+   9,R,J
+  15,R,D,X
+  12,R,C
+  21,R,U,X
+   7,U,C
   17,L,J
-  28,L,X
+  27,L,X
   15,L,U,C
   15,L,X
   12,U,C
@@ -784,20 +788,19 @@
    5,R,J
   14,R,D,X
    8,R,J
-  10,R,D,X
+  13,R,D,X
+  15,R,J
+  14,R,D,X
+   1,R,J
+  15,R,U,X
+  10,R,D,C
    5,R,J
-  15,R,U,X
-  10,R,D,C
-  10,R,J
-  15,R,U,X
-  10,R,D,C
-   7,R,J
-  17,R,U,X
-   4,R,J,G
+  16,R,U,X
+   8,R,J,G
    6,R,D,X
   44,R,J
 
-#lvl_e-03
+lvl_e-03
   10,R,J
   15,R,D,X
    3,R,J
@@ -811,47 +814,48 @@
    4,L,J
    1,R,J
   15,R,D,X
-  21,R,J
-  16,R,D,X
+  18,R,J
+  18,R,D,X
   15,R,U,C
   17,R,X
-  14,U,C
-  38,R,D
+  10,U,C
+  42,R,D
   27,R,X
   17,R,C
    5,R,J,G
    7,L
    9,U,X
   10,R,J
-  14,R,D,X
+   8,R,D,X
    1,R,J
-   5,R,D,X
-  40,R
+  46,R
   
 #lvl_e-05
-   9,R
-  10,R,J
-  19,R,D,X
-   5,R,J
+   1,R
+   1,R,J
+  14,R,D,X
+   3,R,J
+   4,R
+  17,R,D,X
+   3,R,J
   24,R,D,X
-  17,R,J
+  12,R,J
   17,R,D,X
   21,R,C
-  17,R,X
-  25,R,C
-  18,R,J
+  21,R,X
+  22,R,C
+  11,J
   15,R,X
   14,R,C
-  18,R,D
-  10,L,D,X
-   6,R,J
-  11,R
-  21,R,U,X
-  14,R,C
-   9,L
-  13,R,U,X
-  11,R,J
-   6,R,D,X
+   5,D
+  11,R,D
+  14,R,D,X
+  18,R,J
+  15,R,U,X
+  15,R,U,C
+   9,R,J
+   8,R
+   5,R,D,X
    1,R,J
   42,R
 
@@ -1011,19 +1015,23 @@
    2,R,J
   14,R,D,X
    6,R,J
-  11,R
+  13,R
   15,R,U,X
-  14,R,U,C
-  16,R
-  10
-  23,R,J
-  19,R,X
+  12,R,U,C
+   3,R,J,G
+   4,J
+  18,R,J
+  27,R,X
   14,U,C
-  21,R,J
-  36,L
-  14,U,X
-   3,L
-   6,L,J
+  14,R,J
+  16,R,K,G
+  20,L
+  15,L,U,X
+   1,J
+   3,L,J
+   3,R,J
+   2,R
+   1,L
    8,R,X
    3,R,J,G
    3,R
@@ -1229,11 +1237,12 @@
   14,L,U,X
   24,L
   14,L,D,X
-   7,L,J
+   1,L,J
+   6,R,J
    1,K
-  24,R,K
-  12,R,J,G
-   2,R,K,G
+  16,R,J,G
+  10,R,K,G
+   8,R
    5,R,D,X
    1,R,J
   12,R
@@ -1976,15 +1985,17 @@
    7,R,J
   15,U,X
   24,R,U,C
-  15,R,U,X
-  33,R,U,C
-  15,U,X
-  18,R,C
-   9,R,J
+  13,R,J
+  16,R,U,X
+  13,R,C
+   7,R,J
+   3,R,K,G
+  12,R,U,X
+   7,R,J,G
   14,R,U,X
-   1,R,J,G
-   5,R,X
-   3,R,J
-   6,R,K,G
+   2,R,J,G
+   7,R
+   7,R,D,J,X
+   7,R,K,G
    1,S
    1,D,J
