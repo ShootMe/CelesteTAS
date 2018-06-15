@@ -25,8 +25,9 @@
 
 Read,0 - Prologue.tas,7
 
-#Forsaken City
  193
+
+#1A
    1,J
   45
    1,J
@@ -36,26 +37,11 @@ Read,0 - Prologue.tas,7
 
 Read,1HC - Forsaken City.tas,6
 
-#Overworld
  183
    1,J
  711
-   1,L
-   8
-   1,J
-  45
-   1,R
-   1,J
- 273
 
-Read,1B - Forsaken City.tas,4
-
-#Old Site
- 190
-   1,X
-  40
-   1,R
-   8
+#2A
    1,J
   45
    1,J
@@ -65,26 +51,11 @@ Read,1B - Forsaken City.tas,4
 
 Read,2HC - Old Site.tas,6
 
-#Overworld
  183
    1,J
  540
-   1,L
-   8
-   1,J
-  45
-   1,R
-   1,J
- 273
 
-Read,2B - Old Site.tas,3
-
-#Celestial Resort
- 190
-   1,X
-  40
-   1,R
-   8
+#3A
    1,J
   45
    1,J
@@ -94,26 +65,11 @@ Read,2B - Old Site.tas,3
 
 Read,3HC - Celestial Resort.tas,6
 
-#Overworld
  183
    1,J
  643
-   1,L
-   8
-   1,J
-  45
-   1,R
-   1,J
- 273
 
-Read,3B - Celestial Resort.tas,3
-
-#Golden Ridge
- 190
-   1,X
-  40
-   1,R
-   8
+#4A
    1,J
   45
    1,J
@@ -123,26 +79,11 @@ Read,3B - Celestial Resort.tas,3
 
 Read,4HC - Golden Ridge.tas,6
 
-#Overworld
  183
    1,J
  540
-   1,L
-   8
-   1,J
-  45
-   1,R
-   1,J
- 273
 
-Read,4B - Golden Ridge.tas,3
-
-#Mirror Temple
- 190
-   1,X
-  40
-   1,R
-   8
+#5A
    1,J
   45
    1,J
@@ -152,54 +93,25 @@ Read,4B - Golden Ridge.tas,3
 
 Read,5HC - Mirror Temple.tas,6
 
-#Overworld
  183
    1,J
  540
-   1,L
-   8
-   1,J
-  45
-   1,R
-   1,J
- 273
 
-Read,5B - Mirror Temple.tas,3
-
-#Reflection
- 190
-   1,X
-  40
-   1,R
-   8
+#6A
    1,J
   45
    1,J
  230
    1,J
  247
+
 Read,6HC - Reflection.tas,6
 
-#Overworld
  183
    1,J
  540
-   1,L
-   8
-   1,J
-  45
-   1,R
-   1,J
- 273
 
-Read,6B - Reflection.tas,3
-
-#Summit
- 190
-   1,X
-  40
-   1,R
-   8
+#7A
    1,J
   45
    1,J
@@ -209,47 +121,29 @@ Read,6B - Reflection.tas,3
 
 Read,7HC - Summit.tas,6
 
-#Credits
  183
    1,J
+
+#Credits
   34
    1,S
    1,D,J
   88,L
 
 #Epilogue
-   8,L,J
-  14,L,X
+  10,L,X
+   7,L,J
    2,L,J,G
-  15,L,D,X
- 147
+   5,L,D,X
+   1,L,J
+ 156,L
    1,S
    1,D,J
-
-#Overworld
   96
    1,J
+
+#8A
  423
-   1,L
-   8
-   1,L
-   8
-   1,J
-  45
-   1,R
-   1,J
- 273
-
-Read,7B - Summit.tas,3
-
-#Core
- 190
-   1,X
-  40
-   1,R
-   8
-   1,R
-   8
    1,J
   45
    1,J
@@ -260,18 +154,139 @@ Read,7B - Summit.tas,3
 
 Read,8A - Core.tas,5
 
-#Overworld
+#1B
  421
+   1,X
+  40
+   1,L
+   8
+   1,L
+   8
+   1,L
+   8
+   1,L
+   8
+   1,L
+   8
+   1,L
+   8
+   1,L
+   8
+   1,L
+   8
+   1,J
+  45
+   1,R
+   1,J
+ 273
+
+Read,1B - Forsaken City.tas,4
+
+#2B
+ 190
+   1,X
+  40
+   1,R
+   8
+   1,J
+  45
+   1,R
+   1,J
+ 273
+
+Read,2B - Old Site.tas,3
+
+#3B
+ 190
+   1,X
+  40
+   1,R
+   8
+   1,J
+  45
+   1,R
+   1,J
+ 273
+
+Read,3B - Celestial Resort.tas,3
+
+#4B
+ 190
+   1,X
+  40
+   1,R
+   8
+   1,J
+  45
+   1,R
+   1,J
+ 273
+
+Read,4B - Golden Ridge.tas,3
+
+#5B
+ 190
+   1,X
+  40
+   1,R
+   8
+   1,J
+  45
+   1,R
+   1,J
+ 273
+
+Read,5B - Mirror Temple.tas,3
+
+#6B
+ 190
+   1,X
+  40
+   1,R
+   8
+   1,J
+  45
+   1,R
+   1,J
+ 273
+
+Read,6B - Reflection.tas,3
+
+#7B
+ 190
+   1,X
+  40
+   1,R
+   8
+   1,J
+  45
+   1,R
+   1,J
+ 273
+
+Read,7B - Summit.tas,3
+
+#8B
+ 190
+   1,X
+  40
+   1,R
+   8
+   1,R
+   8
+   1,J
+  45
    1,R
    1,J
  273
 
 Read,8B - Core.tas,3
 
-#Overworld
  336
    1,J
  295
+
+#1C
    1,X
   40
    1,L
@@ -299,7 +314,7 @@ Read,8B - Core.tas,3
 
 Read,1C - Forsaken City.tas,4
 
-#Overworld
+#2C
  190
    1,X
   40
@@ -314,7 +329,7 @@ Read,1C - Forsaken City.tas,4
 
 Read,2C - Old Site.tas,4
 
-#Overworld
+#3C
  190
    1,X
   40
@@ -329,7 +344,7 @@ Read,2C - Old Site.tas,4
 
 Read,3C - Celestial Resort.tas,4
 
-#Overworld
+#4C
  190
    1,X
   40
@@ -344,7 +359,7 @@ Read,3C - Celestial Resort.tas,4
 
 Read,4C - Golden Ridge.tas,4
 
-#Overworld
+#5C
  190
    1,X
   40
@@ -359,7 +374,7 @@ Read,4C - Golden Ridge.tas,4
 
 Read,5C - Mirror Temple.tas,4
 
-#Overworld
+#6C
  190
    1,X
   40
@@ -374,7 +389,7 @@ Read,5C - Mirror Temple.tas,4
 
 Read,6C - Reflection.tas,4
 
-#Overworld
+#7C
  190
    1,X
   40
@@ -389,7 +404,7 @@ Read,6C - Reflection.tas,4
 
 Read,7C - Summit.tas,4
 
-#Overworld
+#8C
  190
    1,X
   40
@@ -406,7 +421,7 @@ Read,7C - Summit.tas,4
 
 Read,8C - Core.tas,4
 
-#Overworld
+#Epilogue
  190
    1,X
   40
@@ -415,13 +430,12 @@ Read,8C - Core.tas,4
    1,J
   45
    1,J
-
-#Epilogue
  115,L
-   8,L,J
-  14,L,X
+  10,L,X
+   7,L,J
    2,L,J,G
-  15,L,D,X
- 147
+   5,L,D,X
+   1,L,J
+ 156,L
    1,S
    1,D,J
