@@ -436,7 +436,7 @@ Read,7A - Summit.tas,682,777
    7,R,J,G
    8,R
 
-Read,7A - Summit.tas,788,1093
+Read,7A - Summit.tas,789,1095
 
 #lvl_f-00
    4,R,J
@@ -524,7 +524,7 @@ Read,7A - Summit.tas,788,1093
    3,J
   11,L,J
 
-Read,7A - Summit.tas,1191,1417
+Read,7A - Summit.tas,1193,1419
 
 #lvl_g-00b
 #CP-28
@@ -606,4 +606,4 @@ Read,7A - Summit.tas,1191,1417
   12,L,J
   11,L,K
 
-Read,7A - Summit.tas,1425
+Read,7A - Summit.tas,1427
