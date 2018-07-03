@@ -5,7 +5,7 @@ namespace CelesteStudio.Entities {
 	public class GameMemory {
 		private static ProgramPointer TAS = new ProgramPointer(AutoDeref.Single,
 			new ProgramSignature(PointerVersion.XNA, "8B0D????????3909FF15????????EB158325", 2),
-			new ProgramSignature(PointerVersion.OpenGL, "89458C837D8C007417908B0D", 12));
+			new ProgramSignature(PointerVersion.OpenGL, "007417908B0D????????3909", 6));
 		private static ProgramPointer Celeste = new ProgramPointer(AutoDeref.Single,
 			new ProgramSignature(PointerVersion.XNA, "83C604F30F7E06660FD6078BCBFF15????????8D15", 21),
 			new ProgramSignature(PointerVersion.OpenGL, "8B55F08B45E88D5274E8????????8B45F08D15", 19),
