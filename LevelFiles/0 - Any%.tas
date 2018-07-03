@@ -28,7 +28,7 @@ Read,0 - Prologue.tas,7
 #Overworld
  193
    1,J
-  45
+  41
    1,J
 
 #Forsaken City
@@ -43,7 +43,7 @@ Read,1A - Forsaken City.tas,8
    1,J
  225
    1,J
-  45
+  41
    1,J
 
 #Old Site
@@ -58,7 +58,7 @@ Read,2A - Old Site.tas,9
    1,J
  225
    1,J
-  45
+  41
    1,J
 
 #Celestial Resort
@@ -73,7 +73,7 @@ Read,3A - Celestial Resort.tas,7
    1,J
  372
    1,J
-  45
+  41
    1,J
 
 #Golden Ridge
@@ -88,7 +88,7 @@ Read,4A - Golden Ridge.tas,8
    1,J
  225
    1,J
-  45
+  41
    1,J
 
 #Mirror Temple
@@ -103,7 +103,7 @@ Read,5A - Mirror Temple.tas,8
    1,J
  225
    1,J
-  45
+  41
    1,J
 
 #Reflection
@@ -118,7 +118,7 @@ Read,6A - Reflection.tas,7
    1,J
  225
    1,J
-  45
+  41
    1,J
 
 #Summit

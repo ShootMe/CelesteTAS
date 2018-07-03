@@ -173,39 +173,48 @@ Read,6A - Reflection.tas,7,211
    1,D,J
    1
    1,J
-  71
-   7,L,D,J,X
-   8,L,D
-  15,R,X
- 183,R
+  71,L
+  15,L,X
+ 134,R
+   1,S
+   1,D
+   1,F,180
+   1,D
+   1,J,F,180
+   1
    1,J
-  30,R
-   5,R,D,J,X
-  43,R
-
-#lvl_04b
-   5,R,J
-  12,R,K,G
-  14,R,D,X
-   4,R,J
-  14,R,D,X
-   1,R,J
-  14,R,U,X
-   1,R,J,G
-  12,R
-   1,R,J
-  14,R
-   5,R,D,X
-  40,R
+ 421
+   1,J
+  30
+   1,J
 
 #lvl_04
-   9,R
- 241,R,J
-  15,R,D,X
+  82,R
+  11,R,X
+   4,R,J
+   5,R,K,G
+   5,R,D,X
+   1,R,J
+   8,R
+   1,R,J
+  15,R,K
+   1,R,J,G
+   7,R
+  14,L,J
+  19,U,X
+   1,J
+  34,R,J
+  15,R,K,G
+  15,R,J,G
+  15,R,K,G
+   1,J
+  24,R,J
+  21,R,K,G
+   3,R,J
+  14,R,X
    1,R,J
   14,R,D,X
    1,R,J
-   7,R,D,X
-  41,R,J
+  40,R
 
 Read,6A - Reflection.tas,246

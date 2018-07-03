@@ -28,7 +28,7 @@ Read,0 - Prologue.tas,7
 #Forsaken City
  193
    1,J
-  45
+  41
    1,J
  230
    1,J
@@ -41,7 +41,7 @@ Read,1H - Forsaken City.tas,7
    1,J
  481
    1,J
-  45
+  41
    1,J
  230
    1,J
@@ -54,7 +54,7 @@ Read,2H - Old Site.tas,7
    1,J
  310
    1,J
-  45
+  41
    1,J
  230
    1,J
@@ -67,7 +67,7 @@ Read,3H - Celestial Resort.tas,7
    1,J
  481
    1,J
-  45
+  41
    1,J
  230
    1,J
@@ -80,7 +80,7 @@ Read,4H - Golden Ridge.tas,7
    1,J
  310
    1,J
-  45
+  41
    1,J
  230
    1,J
@@ -93,7 +93,7 @@ Read,5A - Mirror Temple.tas,8
    1,J
  225
    1,J
-  45
+  41
    1,J
  230
    1,J
@@ -106,7 +106,7 @@ Read,6A - Reflection.tas,7
    1,J
  225
    1,J
-  45
+  41
    1,J
   45
    1,J
@@ -137,7 +137,7 @@ Read,7A - Summit.tas,7
    1,J
  423
    1,J
-  45
+  41
    1,J
   45
    1,S
@@ -153,7 +153,7 @@ Read,8A - Core.tas,5
    1,L
    8
    1,J
-  45
+  41
    1,J
  115,L
   10,L,X

@@ -29,7 +29,7 @@ Read,0 - Prologue.tas,7
 
 #1A
    1,J
-  45
+  41
    1,J
  230
    1,J
@@ -43,7 +43,7 @@ Read,1HC - Forsaken City.tas,6
 
 #2A
    1,J
-  45
+  41
    1,J
  230
    1,J
@@ -57,7 +57,7 @@ Read,2HC - Old Site.tas,6
 
 #3A
    1,J
-  45
+  41
    1,J
  230
    1,J
@@ -71,7 +71,7 @@ Read,3HC - Celestial Resort.tas,6
 
 #4A
    1,J
-  45
+  41
    1,J
  230
    1,J
@@ -85,7 +85,7 @@ Read,4HC - Golden Ridge.tas,6
 
 #5A
    1,J
-  45
+  41
    1,J
  230
    1,J
@@ -99,7 +99,7 @@ Read,5HC - Mirror Temple.tas,6
 
 #6A
    1,J
-  45
+  41
    1,J
  230
    1,J
@@ -109,11 +109,11 @@ Read,6HC - Reflection.tas,6
 
  183
    1,J
- 540
+ 225
 
 #7A
    1,J
-  45
+  41
    1,J
   45
    1,J
@@ -145,7 +145,7 @@ Read,7HC - Summit.tas,6
 #8A
  423
    1,J
-  45
+  41
    1,J
   45
    1,S
@@ -175,7 +175,7 @@ Read,8A - Core.tas,5
    1,L
    8
    1,J
-  45
+  41
    1,R
    1,J
  273
@@ -189,7 +189,7 @@ Read,1B - Forsaken City.tas,4
    1,R
    8
    1,J
-  45
+  41
    1,R
    1,J
  273
@@ -203,7 +203,7 @@ Read,2B - Old Site.tas,3
    1,R
    8
    1,J
-  45
+  41
    1,R
    1,J
  273
@@ -217,7 +217,7 @@ Read,3B - Celestial Resort.tas,3
    1,R
    8
    1,J
-  45
+  41
    1,R
    1,J
  273
@@ -231,7 +231,7 @@ Read,4B - Golden Ridge.tas,3
    1,R
    8
    1,J
-  45
+  41
    1,R
    1,J
  273
@@ -245,7 +245,7 @@ Read,5B - Mirror Temple.tas,3
    1,R
    8
    1,J
-  45
+  41
    1,R
    1,J
  273
@@ -259,7 +259,7 @@ Read,6B - Reflection.tas,3
    1,R
    8
    1,J
-  45
+  41
    1,R
    1,J
  273
@@ -275,7 +275,7 @@ Read,7B - Summit.tas,3
    1,R
    8
    1,J
-  45
+  41
    1,R
    1,J
  273
@@ -306,7 +306,7 @@ Read,8B - Core.tas,3
    1,L
    8
    1,J
-  45
+  41
    1,R
    1,F,90
    1,J
@@ -321,7 +321,7 @@ Read,1C - Forsaken City.tas,4
    1,R
    8
    1,J
-  45
+  41
    1,R
    1,F,90
    1,J
@@ -336,7 +336,7 @@ Read,2C - Old Site.tas,4
    1,R
    8
    1,J
-  45
+  41
    1,R
    1,F,90
    1,J
@@ -351,7 +351,7 @@ Read,3C - Celestial Resort.tas,4
    1,R
    8
    1,J
-  45
+  41
    1,R
    1,F,90
    1,J
@@ -366,7 +366,7 @@ Read,4C - Golden Ridge.tas,4
    1,R
    8
    1,J
-  45
+  41
    1,R
    1,F,90
    1,J
@@ -381,7 +381,7 @@ Read,5C - Mirror Temple.tas,4
    1,R
    8
    1,J
-  45
+  41
    1,R
    1,F,90
    1,J
@@ -396,7 +396,7 @@ Read,6C - Reflection.tas,4
    1,R
    8
    1,J
-  45
+  41
    1,R
    1,F,90
    1,J
@@ -413,7 +413,7 @@ Read,7C - Summit.tas,4
    1,R
    8
    1,J
-  45
+  41
    1,R
    1,F,90
    1,J
@@ -428,7 +428,7 @@ Read,8C - Core.tas,4
    1,L
    8
    1,J
-  45
+  41
    1,J
  115,L
   10,L,X
