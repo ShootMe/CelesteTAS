@@ -62,7 +62,7 @@ protected override void Update(GameTime gameTime)
 		{
 			base.Update(gameTime);
 		}
-		else if (i >= 8 && this.scene != null && this.scene.Tracker.GetEntity<FinalBoss>() != null)
+		else if (i >= 8 && this.scene != null && this.scene.Tracker.GetEntity<Celeste.FinalBoss>() != null)
 		{
 			break;
 		}
