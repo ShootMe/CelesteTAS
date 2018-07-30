@@ -6,16 +6,14 @@
  100,R
 
 #lvl_a-00
-   3,R,J
-  10,R,X
-   7,R,J
-  15,R,X
-   1,R,J
+   8,R,D,J,X
+   9,R,K,G
+  11,R
   16,L
   16,R,J
   10,R,X
-   5,R,J
-   4,R,K,G
+   7,R,J
+   2,R,K,G
   10,R,D,X
    1,R,J
    6,R
