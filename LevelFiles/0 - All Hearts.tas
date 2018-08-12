@@ -155,7 +155,11 @@ Read,7HC - Summit.tas,6
 Read,8A - Core.tas,5
 
 #1B
- 421
+ 193
+   1,J
+ 361
+   1,J
+ 422
    1,X
   40
    1,L
@@ -183,7 +187,11 @@ Read,8A - Core.tas,5
 Read,1B - Forsaken City.tas,4
 
 #2B
- 190
+ 193
+   1,J
+ 361
+   1,J
+ 192
    1,X
   40
    1,R
@@ -197,7 +205,11 @@ Read,1B - Forsaken City.tas,4
 Read,2B - Old Site.tas,3
 
 #3B
- 190
+ 193
+   1,J
+ 361
+   1,J
+ 192
    1,X
   40
    1,R
@@ -211,7 +223,11 @@ Read,2B - Old Site.tas,3
 Read,3B - Celestial Resort.tas,3
 
 #4B
- 190
+ 193
+   1,J
+ 361
+   1,J
+ 192
    1,X
   40
    1,R
@@ -225,7 +241,11 @@ Read,3B - Celestial Resort.tas,3
 Read,4B - Golden Ridge.tas,3
 
 #5B
- 190
+ 193
+   1,J
+ 361
+   1,J
+ 192
    1,X
   40
    1,R
@@ -239,7 +259,11 @@ Read,4B - Golden Ridge.tas,3
 Read,5B - Mirror Temple.tas,3
 
 #6B
- 190
+ 193
+   1,J
+ 361
+   1,J
+ 192
    1,X
   40
    1,R
@@ -253,7 +277,11 @@ Read,5B - Mirror Temple.tas,3
 Read,6B - Reflection.tas,3
 
 #7B
- 190
+ 193
+   1,J
+ 361
+   1,J
+ 192
    1,X
   40
    1,R
@@ -267,7 +295,11 @@ Read,6B - Reflection.tas,3
 Read,7B - Summit.tas,3
 
 #8B
- 190
+ 193
+   1,J
+ 361
+   1,J
+ 192
    1,X
   40
    1,R
@@ -282,7 +314,11 @@ Read,7B - Summit.tas,3
 
 Read,8B - Core.tas,3
 
- 336
+ 193
+   1,J
+ 361
+   1,J
+ 338
    1,J
  295
 
@@ -315,7 +351,11 @@ Read,8B - Core.tas,3
 Read,1C - Forsaken City.tas,4
 
 #2C
- 190
+ 193
+   1,J
+ 361
+   1,J
+ 192
    1,X
   40
    1,R
@@ -330,7 +370,11 @@ Read,1C - Forsaken City.tas,4
 Read,2C - Old Site.tas,4
 
 #3C
- 190
+ 193
+   1,J
+ 361
+   1,J
+ 192
    1,X
   40
    1,R
@@ -345,7 +389,11 @@ Read,2C - Old Site.tas,4
 Read,3C - Celestial Resort.tas,4
 
 #4C
- 190
+ 193
+   1,J
+ 361
+   1,J
+ 192
    1,X
   40
    1,R
@@ -360,7 +408,11 @@ Read,3C - Celestial Resort.tas,4
 Read,4C - Golden Ridge.tas,4
 
 #5C
- 190
+ 193
+   1,J
+ 361
+   1,J
+ 192
    1,X
   40
    1,R
@@ -375,7 +427,11 @@ Read,4C - Golden Ridge.tas,4
 Read,5C - Mirror Temple.tas,4
 
 #6C
- 190
+ 193
+   1,J
+ 361
+   1,J
+ 192
    1,X
   40
    1,R
@@ -390,7 +446,11 @@ Read,5C - Mirror Temple.tas,4
 Read,6C - Reflection.tas,4
 
 #7C
- 190
+ 193
+   1,J
+ 361
+   1,J
+ 192
    1,X
   40
    1,R
@@ -405,7 +465,11 @@ Read,6C - Reflection.tas,4
 Read,7C - Summit.tas,4
 
 #8C
- 190
+ 193
+   1,J
+ 361
+   1,J
+ 192
    1,X
   40
    1,R
@@ -421,21 +485,5 @@ Read,7C - Summit.tas,4
 
 Read,8C - Core.tas,4
 
-#Epilogue
- 190
-   1,X
-  40
-   1,L
-   8
+ 193
    1,J
-  41
-   1,J
- 115,L
-  10,L,X
-   7,L,J
-   2,L,J,G
-   5,L,D,X
-   1,L,J
- 156,L
-   1,S
-   1,D,J
