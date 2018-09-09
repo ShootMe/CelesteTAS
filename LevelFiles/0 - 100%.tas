@@ -1,10 +1,4 @@
-   1,J
-  95
-   1,J
-
-  70
-   1,D,J
-  14
+#Start from selected game file
    1,J
   14
    1,J
@@ -48,7 +42,7 @@ Read,2A - Old Site - 100%.tas,6
 #Overworld
  183
    1,J
- 530
+ 528
    1,J
   41
    1,J
@@ -63,7 +57,7 @@ Read,3A - Celestial Resort - 100%.tas,6
 #Overworld
  183
    1,J
- 403
+ 648
    1,J
   41
    1,J
@@ -93,7 +87,7 @@ Read,5A - Mirror Temple - 100%.tas,8
 #Overworld
  183
    1,J
- 897
+ 554
    1,J
   41
    1,J
@@ -103,12 +97,12 @@ Read,5A - Mirror Temple - 100%.tas,8
    1,J
  248
 
-Read,6HC - Reflection.tas,6
+Read,6A - Reflection.tas,6
 
 #Overworld
  183
    1,J
- 425
+ 225
    1,J
   41
    1,J
@@ -144,10 +138,10 @@ Read,7A - Summit - 100%.tas,7
   41
    1,J
 
-#Core - Needs optimization
-  54
+#Core
+  47
    1,S
    1,D,J
-  90
+  87
 
 Read,8A - Core - 100%.tas,7
