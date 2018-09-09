@@ -1,10 +1,4 @@
-   1,J
-  95
-   1,J
-
-  70
-   1,D,J
-  14
+#Start from selected game file
    1,J
   14
    1,J
@@ -48,7 +42,7 @@ Read,2A - Old Site - 100%.tas,6
 #Overworld
  183
    1,J
- 530
+ 527
    1,J
   41
    1,J
@@ -63,7 +57,7 @@ Read,3A - Celestial Resort - 100%.tas,6
 #Overworld
  183
    1,J
- 403
+ 649
    1,J
   41
    1,J
@@ -78,7 +72,7 @@ Read,4A - Golden Ridge - 100%.tas,8
 #Overworld
  183
    1,J
- 579
+ 575
    1,J
   41
    1,J
@@ -93,7 +87,7 @@ Read,5A - Mirror Temple - 100%.tas,8
 #Overworld
  183
    1,J
- 667
+ 664
    1,J
   41
    1,J
