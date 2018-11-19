@@ -153,6 +153,13 @@ namespace TAS {
 			if (Input.MenuUp.Check || Input.MoveY.Value < 0) { record.Actions |= Actions.Up; }
 			if (Input.MenuDown.Check || Input.MoveY.Value > 0) { record.Actions |= Actions.Down; }
 		}
+		internal void RemoveBreakpoint() {
+			if (Current.FastForward)
+			{
+				Current.FastForward = false;
+				fastForwards.RemoveAt(0);
+			}
+		}
 		public void WriteInputs() {
 			using (FileStream fs = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.ReadWrite)) {
 				for (int i = 0; i < inputs.Count; i++) {
