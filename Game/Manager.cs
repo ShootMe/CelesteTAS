@@ -108,8 +108,9 @@ namespace TAS {
 				} else {
 					bool fastForward = controller.HasFastForward;
 					controller.PlaybackPlayer();
-					if (fastForward && controller.Current.FastForward && controller.CurrentInputFrame == controller.Current.Frames) {
-						controller.RemoveBreakpoint();
+					if (fastForward
+						&& (!controller.HasFastForward
+							|| controller.Current.ForceBreak && controller.CurrentInputFrame == controller.Current.Frames)) {
 						nextState |= State.FrameStep;
 						FrameLoops = 1;
 					}
