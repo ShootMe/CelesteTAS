@@ -24,6 +24,7 @@ namespace TAS {
 		public Actions Actions { get; set; }
 		public float Angle { get; set; }
 		public bool FastForward { get; set; }
+		public bool ForceBreak { get; set; }
 		public InputRecord() { }
 		public InputRecord(int number, string line) {
 			Line = number;
@@ -31,9 +32,17 @@ namespace TAS {
 			int index = 0;
 			Frames = ReadFrames(line, ref index);
 			if (Frames == 0) {
+
+				// allow whitespace before the breakpoint
+				line = line.Trim();
 				if (line.StartsWith("***")) {
 					FastForward = true;
 					index = 3;
+
+					if(line.Length>=4 && line[3] == '!') {
+						ForceBreak = true;
+					}
+
 					Frames = ReadFrames(line, ref index);
 				}
 				return;
