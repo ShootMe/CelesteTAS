@@ -39,8 +39,9 @@ namespace TAS {
 					FastForward = true;
 					index = 3;
 
-					if(line.Length>=4 && line[3] == '!') {
+					if (line.Length >= 4 && line[3] == '!') {
 						ForceBreak = true;
+						index = 4;
 					}
 
 					Frames = ReadFrames(line, ref index);
