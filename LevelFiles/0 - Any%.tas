@@ -130,9 +130,9 @@ Read,5B - Mirror Temple.tas,3
 #Reflection
  230
    1,J
- 247
+ 136
 
-Read,6HC - Reflection.tas,6,56
+Read,6HC - Reflection.tas,6,58
 
   62
    1,S
@@ -145,9 +145,9 @@ Read,6HC - Reflection.tas,6,56
  312
    1,R
    1,J
- 273
+ 304
 
-Read,6B - Reflection.tas,3
+Read,6B - Reflection.tas,8
 
 #Overworld
  193
