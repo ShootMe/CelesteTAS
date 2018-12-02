@@ -2,9 +2,9 @@
 #Restart
    1,Q
    1,J
- 141
+  31
 
-Read,6A - Reflection.tas,7,211
+Read,6A - Reflection.tas,9,206
 
 #lvl_04
    4
@@ -53,8 +53,6 @@ Read,6A - Reflection.tas,7,211
   13,L,K,G
   14,L,X
  257
-   1,J
- 123
   14,R,D
   47,R,D,J,X
 
