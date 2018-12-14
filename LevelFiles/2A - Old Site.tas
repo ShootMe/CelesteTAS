@@ -565,21 +565,23 @@
   14,R,D,X
    7,R,J
    5,R,D,X
-   3,R,J,G
-  14,R
+   2,R,J,G
+   5,R
+   1,R,J
+   8,R
    5,R,J
   40
 
-
 #lvl_end_2
-  20,R,J
+  19,R,J
+   1
   14,R,D,X
    5,R,J
   15,R,D,X
    6,R,J
    1,R
    9,R,D,X
-  40
+  40R,J
 
 #lvl_end_3
    5,R,D,X

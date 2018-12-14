@@ -1,9 +1,10 @@
-#Created by DevilSquirrel
+Created by DevilSquirrel
    1,Q
    1,J
- 221,R
+  31
 
 #lvl_start
+ 190
    1,D,X
    5,R,X
    1,R,J
@@ -72,28 +73,37 @@
    3,R
    4,R,D
    5,L,D
-   3,L
-   2,L,D
-   6,U,X
-  28,R,J
-   4,L
-  12,R,K,G
-   7,R
+   5,L,D,X
+   1,J,G
+   1,L,K,G
+  20,R,K,G
+  11,J,G
+   1,L,J
+   1,R
+   7,R,K,G
+   5,R
+   2,R,J
+   2,R
+   1,R,J
   10,R,X
-   6,R,J
+   5,R,J
   14,U,X
-  12,R,J
+  13,J
   40
 
 #lvl_b-00
-  11,R
+   1,L
+   2
+   1,R
+   1,R,J,G
+   6,R,K,G
    4,D,X
    6,R,X
-   4,R,J
-   4,R
+   7,R,J
    4,D,X
   10,R,U,X
-   9,R,J,G
+   2,R,J,G
+   6,R
   40
 
 #lvl_b-01
@@ -151,7 +161,8 @@
   16,R,D
   21,U,X
   20,L,C
-  39,D
+  29,D
+  10
   15,L,X
   14,U,C
   26,L,J
@@ -280,26 +291,27 @@
    2,R,J
   10,R,D,X
    9,L,J
-   5,L,K,G
-   6,L,D,X
+   3,L,K,G
+   1,D,X
+   5,L,X
    1,L,J
    7,L
    1,L,J
   14,L,D,X
    1,L,J
-  10,L,D,X
+  14,L,D,X
    1,L,J
-   4,L
   10,L,D,X
    9,R,J
-   5,R,K,G
-   6,R,D,X
+   3,R,K,G
+   1,D,X
+   5,R,X
    1,R,J
    7,R
    1,R,J
   14,R,D,X
    1,L,J
-   6,L,D,X
+   8,L,D,X
    1,S
    1,D,J
  224
@@ -318,13 +330,13 @@
   11,D
    9,R,D
   19,R,D,X
-  25,L,J
-  30,L,D
+  12,L,J
+  39,L,D
    5,L,D,X
   14,D
   15,L,D
-  35,D
-   7,R,D
+  33,D
+   8,R,D
   14,R,D,X
    1,R,J
   14,R,D,X
@@ -414,7 +426,8 @@
    2,R,D
    1,R,J,G
    7,R
-   6,R,D,X
+   1,D,X
+   5,R,X
    1,R,J
    5,R
   40
@@ -635,4 +648,3 @@
    7,R
    4,R,J
   14,R,U,X
-

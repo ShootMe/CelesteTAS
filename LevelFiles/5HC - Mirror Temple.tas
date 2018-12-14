@@ -96,21 +96,25 @@ Read,5A - Mirror Temple.tas,7,242
    4
    2,R
    1,K
-  24,R,K
-   2,R,J,G
-   8,L
-  14,R,X
-   2,R
-   9,L
+  18,R,K
+   6,R,X
+   3,R,J,G
+   5,R
+   1,R,J
+   7,R
+   4,L
+  18,D,C
   14,R,D,X
-  15,R,J
+   5,R,J
    1,L,J
-   8,R,J
-   4,R,J
-  10,R,K,G
-  14,U,X
-   3,R
-   8,L
+  22,R,J
+   8,R,K,G
+  15,U,X
+   2,L,J,G
+   1,L
+   1,L,J,G
+   5,L
+   2
   14,L,X
    1,R,J
   13,R,D,X
@@ -122,7 +126,7 @@ Read,5A - Mirror Temple.tas,7,242
    1,L,J
   14,D,X
    4,L
-   2
+   1
   14,L,X
    1,R,J
   14,R,D,X
