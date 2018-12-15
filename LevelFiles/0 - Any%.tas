@@ -66,7 +66,7 @@ Read,2A - Old Site.tas,10
    1,J
  197
 
-Read,3A - Celestial Resort.tas,7
+Read,3A - Celestial Resort.tas,9
 
 #Overworld
  183
@@ -81,7 +81,7 @@ Read,3A - Celestial Resort.tas,7
    1,J
  205
 
-Read,4A - Golden Ridge.tas,8
+Read,4A - Golden Ridge.tas,9
 
 #Overworld
  183
@@ -145,7 +145,7 @@ Read,6HC - Reflection.tas,6,62
  312
    1,R
    1,J
- 273
+ 271
 
 Read,6B - Reflection.tas,3
 
@@ -168,4 +168,4 @@ Read,6B - Reflection.tas,3
    1,J
  356
 
-Read,7A - Summit.tas,13
+Read,7A - Summit.tas,12
