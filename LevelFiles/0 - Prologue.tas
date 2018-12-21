@@ -2,7 +2,7 @@
 #Restart
    1,Q
    1,J
-  31,R
+  31
 
 #lvl_0
   61
@@ -13,18 +13,28 @@
    6,R,J
    1,R,K,G
    1,R,J,G
-  21,R
-  27,R,J
   12,R
-   8,R,J
-  22,R
-   1,R,J
-  14,R
-   1,R,J
-  14,R
+   3,R,J
+  25,R
+  11,R,J
+   1,R,K,G
+   1,R,J,G
    4,R,J
-  24,R
-  10,R,J
+   1,R
+   5,R,J
+  11,R
+   2,L
+   2,R
+   1,R,K,G
+   1,R,J,G
+  13,R
+   1,R,J
+  14,R
+   1,R,J
+  25,R
+   8,R,J
+   1,L,J
+   1,R,J
    1,R,K,G
    1,R,J,G
   11,R
@@ -33,6 +43,7 @@
    1,R,J
 
 #lvl_1
+
   40
   14,R
    1,R,J
@@ -40,18 +51,18 @@
    8,R,J
   16,R
   17,R,J
-   1,R,K,G
+   2,R,K,G
    1,R,J,G
    4,L,J
-   7,R,J
+   8,R,J
    1,R,K,G
    1,R,J,G
-  10,R
+  13,R
    1,R,J
-  14,R
-   6,R,J
-  28,R,D
-   4,R
+  15,R
+   1,R,J
+  24,R,D
+   7,R
   20,R,J
    2,R,K,G
    1,R,J,G
@@ -59,36 +70,39 @@
    8,R,J
    1,R,K,G
    1,R,J,G
-  31,R,D
+  13,R,D
    1,R,J
-   3,R,D
   20,R,D
+   1,L,D
+   9,R,D
    2,L,D
+   4,R,D
+   1,L,D
    3,R,D
-   2,R,J
+   5,R
    1,R,J
+   3,R
    1,R,K,G
    1,R,J,G
-   3,L,J
-   1,R,J
+   2,L,J
+   2,R,J
    2,R
    1,R,K,G
-   0,R,K,G
   10,R
   13,R,J
-   3,R,K,G
+   4,R,K,G
    1,R,J,G
    4,L,J,G
-   7,R,J,G
+   8,R,J,G
    1,R,K,G
    1,R,J,G
-  10,R
+  13,R
    1,R,J
-   5,R
+   1,R
 
 #lvl_2
   40
-  20,R
+  19,R
   13,R,J
    1,R,K,G
    4,K
