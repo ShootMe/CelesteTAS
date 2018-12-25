@@ -50,9 +50,9 @@ ie) 123,R,J (For 123 frames, hold Right and Jump)
 - L = Left
 - U = Up
 - D = Down
-- J = Jump
+- J = Jump / Confirm
 - K = Jump Bind 2
-- X = Dash
+- X = Dash / Talk
 - C = Dash Bind 2
 - G = Grab
 - S = Start
