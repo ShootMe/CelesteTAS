@@ -180,21 +180,17 @@ Created by DevilSquirrel
    1,L,J
    6,L
    1,L,J
-   9,L,D,X
+   6,L,D,X
    1,L,J
    7,L
-  13,L,J
-   8,L,K,G
-   2,L,J,G
-  10,L,D,X
-   1,R,J
-   2,L
-  10,R,J
-   5,R,K,G
-  12,R
-  15,R,X
+  12,L,J
+  10,L,X
+   6,R,J
+   8,R,K,G
+  13,R
+  14,R,X
   33,U,C
-  40
+  41
 
 #lvl_b-08
   11
@@ -333,12 +329,14 @@ Created by DevilSquirrel
   50,L
   15,L,U,X
    7,R,D
-  47,D
-  15,R,X
-  30,L,D
+  32,D
+   4,R
+   6,R,J,G
+  25,R,D,X
+  18,L,D
   11,D
-   9,R,D
-  19,R,D,X
+   3,R,D
+  20,R,D,X
   12,L,J
   39,L,D
    5,L,D,X
