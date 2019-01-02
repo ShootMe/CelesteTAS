@@ -78,46 +78,50 @@ Read,6A - Reflection.tas,9,206
   15,D,C
   42
   17,L,J
-  25,L,U,X
-  14,L,J
-  14,L,K,G
-  15,L,J,G
+  26,L,U,X
+  11,J,G
+   2,R,J
   15,L,K,G
-  15,L,J,G
-   1,K
-  24,L,K
-   1,J
-  25,L,J
-   1,K
-  25,L,K
-   1,J
-  25,L,J
-   1,K
-  25,L,K
-   1,J
-  25,L,J
+  11,J,G
+   2,R,J
+  15,L,K,G
+  11,J,G
+   2,R,J
+  15,L,K,G
+  11,J,G
+   2,R,J
+  15,L,K,G
+  11,J,G
+   2,R,J
    1,K
   25,L,K
-   1,J
-  25,L,J
+  11,J,G
+   2,R,J
    1,K
   25,L,K
-   1,J
-  20,L,J
-  20,U,X
-  36,L,J
+  11,J,G
+   2,R,J
+   1,K
+  23,L,K
+  15,U,X
+   3,L
+  32,L,K
+  11,J,G
+   2,R,J
    1,K
   25,L,K
-   1,J
-  25,L,J
+  11,J,G
+   2,R,J
    1,K
   25,L,K
-   1,J
-  11,L,J
-  17,L
+   5,J,G
+   2,R,J
+  10,L,K,G
+   7,L
    6,L,D,X
    1,L,J
-  47,L
+   4,L
+  43
 
 #lvl_04b
    3,L
@@ -137,12 +141,11 @@ Read,6A - Reflection.tas,9,206
   40,L
 
 #lvl_04c
+   2,L
    1,L,J
-   9,R
+  10,L
   15,D,X
-   3,L
-   1,L,J
-  24,L,D
+  10,L,D
   15,L,C
   15,R,U,X
   15,R,D,C
@@ -156,9 +159,10 @@ Read,6A - Reflection.tas,9,206
   15,R,D,C
   15,U,X
   15,R,C
-  15,L,D,X
+  14,L,D,X
+   1,L,J
   14,L,U,C
-   4,R,J
+   1,R,J
   15,R,X
    5,R,U,C
    1,R,J,G
@@ -168,10 +172,10 @@ Read,6A - Reflection.tas,9,206
    9,R,D
   15,L,X
   15,R,D,C
-   5,R,U,X
-  10,L,J
+  10,R,U,X
+   5,L,J
    5,L,X
-   5,R,J
+   3,R,J
    7,R
    5,L,U,X
    1,S
@@ -188,13 +192,15 @@ Read,6A - Reflection.tas,9,206
    1,J,F,180
    1
    1,J
+  31
+
  421
    1,J
   30
    1,J
 
 #lvl_04
-  82,R
+  36,R
   11,R,X
    4,R,J
    5,R,K,G
@@ -220,6 +226,6 @@ Read,6A - Reflection.tas,9,206
    1,R,J
   14,R,D,X
    1,R,J
-  40,R
+  40
 
-Read,6A - Reflection.tas,246
+Read,6A - Reflection.tas,239

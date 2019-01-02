@@ -6,44 +6,46 @@
 
 Read,1H - Forsaken City.tas,7,172
 
-Read,1A - Forsaken City.tas,163,222
+Read,1A - Forsaken City.tas,183,247
 
 #lvl_9b
    3,R
    1,R,J
   15,R,U,X
-   1,L,J,G
-   2,R,J
-   6,J
+   1,J
+   3,L,J
+   1,L
+   4,L,K,G
    7,L
-   5,L,D,J,X
-   9,L,G
-  12,L,J,G
-   5,L,U,G
-   3,L,J,G
-   1,L,K,G
-  17,L,D
-  14,L,X
-   2,L,J
-  11,U,X
-  17,L,J
+  10,L,X
+  18,L,J
+   4,D,X
+  16,L,U,X
+   6,J
+   7,R
+   4,R,J
+  16,U,X
   40,L
 
 #lvl_10
-  11,L
-   7,L,D,X
+   5,L
+   1,L,J,G
+   5,L
+   4,D,X
+   1,L,D,X
    1,L,J
   15,L
   15,D,X
    4,L
-  12
-  12,J
+   5
+  17,J
   14,U,X
-  13,L
-   5,L,D,J,X
+  11,L
+   4,L,D,X
+   1,L,J
    7,L
-   3,L,J
-   5,L,K,G
+   4,L,J
+   4,L,K,G
   14,U,X
   40
 
@@ -53,25 +55,25 @@ Read,1A - Forsaken City.tas,163,222
   20,D,G
   21,G
    4,L,J,G
-   8,L,X
+   4,L,D,X
+   1,L,X
    1,L,J
-  44,L
+   6,L
+  40
 
 #lvl_11z
-  10,L
-  10,L,J
-   3,R,J
-  19,U,X
+   1,L
+  14,L,J
+   2,R,J
+  17,U,X
    1,L,J
    4,L
-   1,K
-   2,L
-   2,R
+   4,R
    1,R,J,G
    6,R,K,G
    7,R
-  15,R,U,X
- 252
+  10,R,U,X
+ 257
    1,J
  123
   14,R,D
@@ -79,16 +81,19 @@ Read,1A - Forsaken City.tas,163,222
   41,R
 
 #lvl_11
-  29,R,G
-   6,R
-  21,R,D,X
-   4,R,J
-   3,R,K,G
-   1,L
-   2,R
-  15,R,U,X
-  12,R,J,G
-  79,R,D
+  33,R,G
+  10,R
+   4,D,X
+  11,R,U,X
+   1,L,J,G
+   9,L,K,G
+   2,L
+   2,L,J,G
+   7,L
+   4,D,X
+   5,R,J
+  37,R,D
+  40
 
 #lvl_10
   14,R,D
