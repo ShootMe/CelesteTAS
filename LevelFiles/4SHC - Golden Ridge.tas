@@ -1,4 +1,9 @@
-read,4SH - Golden Ridge.tas,0,307
+#Restart
+   1,Q
+   1,J
+  31
+
+read,4SH - Golden Ridge.tas,6,309
 
   16,R,D
   27,L,D
@@ -21,4 +26,4 @@ read,4HC - Golden Ridge.tas,60,112
    4,D,X
    5,R,X
 
-read,4SH - Golden Ridge.tas,320
+read,4SH - Golden Ridge.tas,322
