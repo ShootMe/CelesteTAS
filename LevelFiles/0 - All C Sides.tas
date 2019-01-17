@@ -41,7 +41,7 @@
    1,X
   40
    1,R
-   8
+  12
    1,J
   41
    1,R
@@ -52,15 +52,15 @@
 Read,1C - Forsaken City.tas,6
 
 #Overworld
-  59
+   1,S
+   1,U,J
+   1
    1,J
- 361
-   1,J
- 192
+  86
    1,X
   40
    1,R
-   8
+  12
    1,J
   41
    1,R
@@ -71,15 +71,15 @@ Read,1C - Forsaken City.tas,6
 Read,2C - Old Site.tas,8
 
 #Overworld
-  59
+   1,S
+   1,U,J
+   1
    1,J
- 361
-   1,J
- 192
+  86
    1,X
   40
    1,R
-   8
+  12
    1,J
   41
    1,R
@@ -90,15 +90,15 @@ Read,2C - Old Site.tas,8
 Read,3C - Celestial Resort.tas,7
 
 #Overworld
-  59
+   1,S
+   1,U,J
+   1
    1,J
- 361
-   1,J
- 192
+  86
    1,X
   40
    1,R
-   8
+  12
    1,J
   41
    1,R
@@ -109,15 +109,15 @@ Read,3C - Celestial Resort.tas,7
 Read,4C - Golden Ridge.tas,6
 
 #Overworld
-  59
+   1,S
+   1,U,J
+   1
    1,J
- 361
-   1,J
- 192
+  86
    1,X
   40
    1,R
-   8
+  12
    1,J
   41
    1,R
@@ -128,15 +128,15 @@ Read,4C - Golden Ridge.tas,6
 Read,5C - Mirror Temple.tas,7
 
 #Overworld
-  59
+   1,S
+   1,U,J
+   1
    1,J
- 361
-   1,J
- 192
+  86
    1,X
   40
    1,R
-   8
+  12
    1,J
   41
    1,R
@@ -147,15 +147,15 @@ Read,5C - Mirror Temple.tas,7
 Read,6C - Reflection.tas,7
 
 #Overworld
-  59
+   1,S
+   1,U,J
+   1
    1,J
- 361
-   1,J
- 192
+  86
    1,X
   40
    1,R
-   8
+  12
    1,J
   41
    1,R
@@ -166,17 +166,17 @@ Read,6C - Reflection.tas,7
 Read,7C - Summit.tas,5
 
 #Overworld
-  59
+   1,S
+   1,U,J
+   1
    1,J
- 361
-   1,J
- 192
+  86
    1,X
   40
    1,R
-   8
+  12
    1,R
-   8
+  12
    1,J
   41
    1,R
@@ -187,5 +187,37 @@ Read,7C - Summit.tas,5
 Read,8C - Core.tas,6
 
 #Overworld
-  59
+   1,S
+   1,U,J
+   1
    1,J
+  86
+   1,X
+  40
+
+#Journal
+   1,N
+  50
+   1,R
+ 140
+   1,R
+ 140
+   1,X
+  50
+
+
+#Epilogue
+   1,L
+  12
+   1,J
+  41
+   1,J
+ 115
+  10,L,X
+   7,L,J
+   2,L,J,G
+   5,L,D,X
+   1,L,J
+ 156,L
+   1,S
+   1,D,J
