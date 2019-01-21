@@ -1,98 +1,117 @@
-#Created by DevilSquirrel
 #Restart
    1,Q
    1,J
-  92
+  31
 
 #lvl_00
+  61
   10,R,X
    1,R,J
    8,R,G
-  22,U,G
-   8,G
-  18,U,X
-  14,R,C
-  29,R,G
-  30,U,G
-  15,U,X
-  14,R,C
-  43,R,G
-  30,U,G
-  30,R,U,X
-  20,R,U,C
+   4,R,J,G
+  16,R,U,G
+   1,R,J,G
+   4,D,X
+  13,R,U,X
+   4,R,J,G
+   2,L,J
+   3,L
+  14,R,D,C
+  12,R,G
+   3,D,G
+  16,R,G
+   4,D,X
+  11,R,U,X
    7,R,J,G
-  14,R,X
-  29,R,D
-   6,R,D,X
-   1,R,J
-   7,R
-   1,R,J
+  14,R,D,X
+  17,R
+  32,R,U,G
+  10,U,X
+  25,L,U,G
+  16,L,G
+   4,D,X
+  10,R,U,X
+  15,R,K,G
+  13,R,D,X
   40,R
 
 #lvl_01
-  14,R,D,X
-   9,R,J
-   6,R
+   2,R,D
+  17,R,D,C
+   7,R
    5,R,J
-  17,R
-  18,R,X
-  14,R,D,C
-  10,R,J
-  26,R,D
-  17,R,X
-  52,L,G
-  35,R,J
-  38,R,G
+   2,R
+   1
+   4,R
+   1,R,J
+   1,R,J
+  15,R,D,X
+   2,R
+   8,R,D
+  38,R,J,G
+  37,R,U,G
    1,J
    7,L,J
    3,R,J
   16,R
-   5,R,D,X
-   1,R,J
-   7,R
+   4,R,D,X
+   5,R,X
    4,R,J
-  16,R,D
-  15,R,D,X
+  21,R,D
+  14,R,D,X
    1,R,J
-  10,R,D,X
+   9,R,D,X
   40,R
 
 #lvl_02
-   1,R
-   6,R,J
-  25,R
-   9,R,J,G
-  11,R
-  12,R,U,X
+   4,R
+   1,R,J
+  10,R
+   1,L
+  14,R
+   5,R,J,G
+  10,R
+  14,R,U,X
    1,J,G
-  20,R,D
-   7,R,D,J,X
+   1
+  19,R,D
+   6,R,D,J,X
    8,R
    3,R,J
    1,L,J
   14,U,X
-  36,U,G
-   1,R,J
-  15,L,J
-  25,L
-  13,L,D
-   9,R,D
-  13,R,D,X
-   9,R,J
-  16,R
-  13,R,U,X
+  30,U,G
    1,J
-   9,K
-  39,R,G
-   5,D
-   7,L,D
-  12,R,D
-   6,R,D,X
+   1,L,K,G
+   1,L,J,G
+  10,R,J
+  15,R
+  17,L
+  10,L,D
+   9,D
+  10,R,D,X
+   9,R,J
+  15,R
+   4,D,X
+   9,R,U,X
+   1,L
+   1,J,G
+   7,J
+   1,J
+   2
+   3,R
+  24,L,J,G
+   1,R,K
+  31,R,D
+   4,R,D,X
    1,R,J
    7,R
-   1,R,J
-  20,R,G
-  22,U,G
-   9,J,G
-  10,R,J
-   8,R,X
+   1,R,D,J
+  22,R,G
+  11,U,G
+   5,U,X
+  10,J
+   8,R,J
+  11,R,K,G
+   4,R,X
+ 134

@@ -1,0 +1,166 @@
+#Start from Begin
+   1,D
+   1,J
+  70
+   1,D
+   1,F,180
+   1,R
+   1,J
+   1,U
+   1,F,
+   1,L
+   1,J
+   1,D
+   1,F,180
+   1,J
+   1,S
+  49
+   1,U
+   1,J
+
+#Prologue
+   1,S
+   1,D,J
+  32
+
+Read,0 - Prologue.tas,7
+
+#Forsaken City
+ 196
+   1,J
+  41
+   1,J
+ 230
+   1,J
+ 136
+
+Read,1SH - Forsaken City.tas,9
+
+#Old Site
+ 278
+   1,J
+  41
+   1,J
+ 230
+   1,J
+ 136
+
+Read,2S - Old Site.tas,8
+
+#Celestial Resort
+ 278
+   1,J
+  41
+   1,J
+ 230
+   1,J
+ 136
+
+Read,3SH - Celestial Resort.tas,8
+
+#Golden Ridge
+ 278
+   1,J
+  41
+   1,J
+ 230
+   1,J
+ 136
+
+Read,4SH - Golden Ridge.tas,8
+
+#Mirror Temple
+ 278
+   1,J
+  41
+   1,J
+ 230
+   1,J
+ 136
+
+Read,5S - Mirror Temple.tas,9
+
+#Reflection
+ 278
+   1,J
+  41
+   1,J
+ 230
+   1,J
+ 136
+
+Read,6HC - Reflection.tas,6,61
+
+  62
+   1,S
+   1,U,J
+   1
+   1,J
+  31
+
+#Overworld
+  58
+   1,R
+   1,J
+ 304
+
+Read,6B - Reflection.tas,8
+
+#Overworld
+  60
+   1,J
+ 361
+   1,J
+ 106
+   1,X
+  40
+   1,R
+  12
+   1,J
+  41
+   1,J
+  45
+   1,J
+  32
+
+Read,7S - Summit.tas,8
+
+#Credits
+ 183
+   1,J
+  34
+   1,S
+   1,D,J
+  88,L
+
+#Epilogue
+  10,L,X
+   7,L,J
+   2,L,J,G
+   5,L,D,X
+   1,L,J
+ 156,L
+   1,S
+   1,D,J
+
+#Core
+  96
+   1,J
+ 423
+   1,J
+  41
+   1,J
+  45
+   1,S
+   1,D,J
+  32,R
+
+Read,8S - Core.tas,9
+
+  60
+   1,J
+ 196
+
+#AreaComplete
+ 165
+   1,J

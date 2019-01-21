@@ -1,0 +1,17 @@
+read,3SH - Celestial Resort.tas,0,2003
+
+  16,U,X
+
+#lvl_02-c (2)
+  40
+  27,L,J
+  13,L,D,X
+   2,L,J
+  10,L,D,X
+   1,L,J
+   8,L
+   1,L,J
+
+read,3HC - Celestial Resort.tas,50,135
+
+read,3SH - Celestial Resort.tas,2068
