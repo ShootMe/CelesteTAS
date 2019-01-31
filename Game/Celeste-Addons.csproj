@@ -55,4 +55,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>REM automated deployment stuff, because I was too lazy to always
+REM copy the output file directly for every change (and didn't want
+REM to use a symlink for reasons)
+IF EXIST "$(ProjectDir)deploy.bat" (
+    call "$(ProjectDir)deploy.bat"
+)</PostBuildEvent>
+  </PropertyGroup>
 </Project>

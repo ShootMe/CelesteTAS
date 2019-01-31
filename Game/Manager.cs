@@ -108,7 +108,9 @@ namespace TAS {
 				} else {
 					bool fastForward = controller.HasFastForward;
 					controller.PlaybackPlayer();
-					if (fastForward && !controller.HasFastForward) {
+					if (fastForward
+						&& (!controller.HasFastForward
+							|| controller.Current.ForceBreak && controller.CurrentInputFrame == controller.Current.Frames)) {
 						nextState |= State.FrameStep;
 						FrameLoops = 1;
 					}
@@ -298,7 +300,14 @@ namespace TAS {
 				MInput.GamePads[0].CurrentState = state;
 				MInput.GamePads[0].Attached = true;
 			}
-			MInput.UpdateVirtualInputs();
+
+            if (input.HasActions(Actions.Confirm)) {
+                MInput.Keyboard.CurrentState = new KeyboardState(Keys.Enter);
+            } else {
+                MInput.Keyboard.CurrentState = new KeyboardState();
+            }
+
+            MInput.UpdateVirtualInputs();
 		}
 	}
 }

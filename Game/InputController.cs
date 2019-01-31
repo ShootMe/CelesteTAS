@@ -185,6 +185,7 @@ namespace TAS {
 							fastForwards.Add(input);
 
 							if (inputs.Count > 0) {
+								inputs[inputs.Count - 1].ForceBreak = input.ForceBreak;
 								inputs[inputs.Count - 1].FastForward = true;
 							}
 						} else if (input.Frames != 0) {
@@ -232,6 +233,7 @@ namespace TAS {
 						fastForwards.Add(input);
 
 						if (inputs.Count > 0) {
+							inputs[inputs.Count - 1].ForceBreak = input.ForceBreak;
 							inputs[inputs.Count - 1].FastForward = true;
 						}
 					} else if (input.Frames != 0) {

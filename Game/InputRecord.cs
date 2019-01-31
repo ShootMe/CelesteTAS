@@ -16,7 +16,8 @@ namespace TAS {
 		Feather = 512,
 		Journal = 1024,
 		Jump2 = 2048,
-		Dash2 = 4096
+		Dash2 = 4096,
+        Confirm = 8192
 	}
 	public class InputRecord {
 		public int Line { get; set; }
@@ -24,6 +25,7 @@ namespace TAS {
 		public Actions Actions { get; set; }
 		public float Angle { get; set; }
 		public bool FastForward { get; set; }
+		public bool ForceBreak { get; set; }
 		public InputRecord() { }
 		public InputRecord(int number, string line) {
 			Line = number;
@@ -31,9 +33,18 @@ namespace TAS {
 			int index = 0;
 			Frames = ReadFrames(line, ref index);
 			if (Frames == 0) {
+
+				// allow whitespace before the breakpoint
+				line = line.Trim();
 				if (line.StartsWith("***")) {
 					FastForward = true;
 					index = 3;
+
+					if (line.Length >= 4 && line[3] == '!') {
+						ForceBreak = true;
+						index = 4;
+					}
+
 					Frames = ReadFrames(line, ref index);
 				}
 				return;
@@ -55,7 +66,8 @@ namespace TAS {
 					case 'N': Actions ^= Actions.Journal; break;
 					case 'K': Actions ^= Actions.Jump2; break;
 					case 'C': Actions ^= Actions.Dash2; break;
-					case 'F':
+                    case 'O': Actions ^= Actions.Confirm; break;
+                    case 'F':
 						Actions ^= Actions.Feather;
 						index++;
 						Angle = ReadAngle(line, ref index);
@@ -178,7 +190,8 @@ namespace TAS {
 			if (HasActions(Actions.Start)) { sb.Append(",S"); }
 			if (HasActions(Actions.Restart)) { sb.Append(",Q"); }
 			if (HasActions(Actions.Journal)) { sb.Append(",N"); }
-			if (HasActions(Actions.Feather)) { sb.Append(",F,").Append(Angle == 0 ? string.Empty : Angle.ToString("0")); }
+            if (HasActions(Actions.Confirm)) { sb.Append(",O"); }
+            if (HasActions(Actions.Feather)) { sb.Append(",F,").Append(Angle == 0 ? string.Empty : Angle.ToString("0")); }
 			return sb.ToString();
 		}
 		public override bool Equals(object obj) {
