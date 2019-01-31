@@ -1,4 +1,9 @@
-read,1SH - Forsaken City.tas,0,682
+#Restart
+   1,Q
+   1,J
+  31
+
+read,1SH - Forsaken City.tas,7,678
 
   14,L
    4,L,D,X
@@ -20,8 +25,4 @@ read,1HC - Forsaken City.tas,49,92
   40
    3,L,D
 
-read,1SH - Forsaken City.tas,704,762
-
- 220
-
-read,1SH - Forsaken City.tas,762
+read,1SH - Forsaken City.tas,700

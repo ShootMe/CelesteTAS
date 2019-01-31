@@ -1,4 +1,9 @@
-read,5S - Mirror Temple.tas,0,1157
+#Restart
+   1,Q
+   1,J
+  31
+
+read,5S - Mirror Temple.tas,7,1156
 
   10,R,D
    8,D
@@ -29,7 +34,7 @@ read,5S - Mirror Temple.tas,0,1157
 
 read,5HC - Mirror Temple.tas,93,175
 
-read,5S - Mirror Temple.tas,1183,1301
+read,5S - Mirror Temple.tas,1182,1300
 
 read,5HC - Mirror Temple.tas,209,307
 
@@ -39,7 +44,7 @@ read,5HC - Mirror Temple.tas,209,307
   16,R,D
   20,R,X
 
-read,5S - Mirror Temple.tas,1302,1438
+read,5S - Mirror Temple.tas,1301,1437
 
 #lvl_b-14
    5,R
@@ -64,4 +69,4 @@ read,5S - Mirror Temple.tas,1302,1438
 
 read,5HC - Mirror Temple.tas,351,415
 
-read,5S - Mirror Temple.tas,1448
+read,5S - Mirror Temple.tas,1447

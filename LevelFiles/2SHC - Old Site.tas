@@ -1,4 +1,9 @@
-Read,2HC - Old Site.tas,0,70
+#Restart
+   1,Q
+   1,J
+  31
+
+Read,2HC - Old Site.tas,6,68
 
 Read,2S - Old Site.tas,0,166
 
@@ -6,11 +11,12 @@ Read,2S - Old Site.tas,0,166
   40
    3,L,D,X
    1,L,J
-  35,L,D
+   8,L
+  27,L,D
   25,D
   47,D,X
 
-Read,2HC - Old Site.tas,79,106
+Read,2HC - Old Site.tas,77,104
 
    4,L
   15,L,U,X

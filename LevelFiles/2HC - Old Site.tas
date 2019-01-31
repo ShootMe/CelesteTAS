@@ -7,13 +7,11 @@
 
 #lvl_start
  190
-   5,R,D,J,X
-   6,R
-   1,L
-   9,L,J
-   3,R,J
+  10,X
+   9,R,J
+   5,J
    5,U,X
-  52,R
+  51,R
 
 #lvl_0
    5,U,X

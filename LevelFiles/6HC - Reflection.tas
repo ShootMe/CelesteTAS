@@ -7,27 +7,31 @@
 Read,6A - Reflection.tas,9,206
 
 #lvl_04
-   4
-   1,J
-   6,L,J
+   3
+   2,J,G
+   3,R,J
+   3,R
   15,U,X
-   4,L,J,G
-  11,L
+   1,L,J,G
+   3,L,K,G
+   9,L
    3,L,J
   10,L,X
-   5,L,J
+   4,L,J
+   1,L
   14,L,U,X
    8,L,J,G
-   5,L
-   3,R
+   6,L
+   1,R
    9,R,J
   13,L,U,X
    1,L,J,G
    7,L
-  10,L,D,X
+   4,L,D,X
+   6,L,X
    1,L,J
-   5,L
-  14,L,X
+   4,L
+  15,L,X
    1,L,J,G
   22,D
   10,R,D
@@ -41,30 +45,25 @@ Read,6A - Reflection.tas,9,206
   14,R,D,X
    1,L,J
   14,L,D
-   3,L,J
-  43
-
-#lvl_04e
-   6,L,J
-   3,L
-  14,L,D,X
-   2,L,D
    1,L,J
-  15,L
-   1,L,J
-   1,R,J
-   9,L
-  12,L,U,X
-   8,L,K,G
-  11,L
+  53,L,D,X
+   1,R,J,G
+  11,L,J
+  15,L,D,X
+   2,L,J
+   1,L,K,G
+   6,L
+  17,L,U,X
+   1,L,J,G
+  16,L,D,X
  257
    1,J
  123
-  14,R,D
-  47,R,D,J,X
+  17,R,D
+  46,R,D,J,X
 
 #lvl_04
-   4,R,J
+   5,R,J
    4,R
    8,R,J
   16,U,X
@@ -80,8 +79,8 @@ Read,6A - Reflection.tas,9,206
   17,L,J
   26,L,U,X
   11,J,G
-   2,R,J
-  15,L,K,G
+   1,R,J
+  14,L,K,G
   11,J,G
    2,R,J
   15,L,K,G
@@ -92,33 +91,34 @@ Read,6A - Reflection.tas,9,206
    2,R,J
   15,L,K,G
   11,J,G
-   2,R,J
+   1,R,J
    1,K
-  25,L,K
+  24,L,K
   11,J,G
-   2,R,J
+   1,R,J
    1,K
-  25,L,K
+  24,L,K
   11,J,G
-   2,R,J
+   1,R,J
    1,K
-  23,L,K
+  22,L,K
   15,U,X
-   3,L
+   2,L
   32,L,K
   11,J,G
-   2,R,J
+   1,R,J
    1,K
-  25,L,K
+  24,L,K
   11,J,G
-   2,R,J
+   1,R,J
    1,K
-  25,L,K
-   5,J,G
+  24,L,K
+   8,J,G
    2,R,J
-  10,L,K,G
+  12,L,K,G
    7,L
-   6,L,D,X
+   4,L,D,X
+   2,L,X
    1,L,J
    4,L
   43
@@ -126,26 +126,26 @@ Read,6A - Reflection.tas,9,206
 #lvl_04b
    3,L
    1,L,J
-  14,L,D,X
-   1,L,J
   15,L,D,X
-  16,L,D,C
-  18,L,D,J,X
-   4,L,K,G
-   7,L
+  12,L,D,C
+   3,L,J
+  17,L,D,C
+   1
    1,L,J
    5,L
-  16,L,D,X
-   1,L,J
-   5,L,D,X
-  40,L
+   7,L,U,X
+   2,L,J,G
+   5,L
+   3,L,J
+   6,L,D
+   3,L,J
+  10,L,D,X
+  40
 
 #lvl_04c
-   2,L
-   1,L,J
-  10,L
+  12,L,D
   15,D,X
-  10,L,D
+   3,L,D
   15,L,C
   15,R,U,X
   15,R,D,C
@@ -186,18 +186,19 @@ Read,6A - Reflection.tas,9,206
   15,L,X
  134,R
    1,S
-   1,D
-   1,F,180
-   1,D
-   1,J,F,180
+   1,U,J
    1
    1,J
   31
 
- 421
+#Overworld
+  60
    1,J
-  30
+  31
+   1,R
+   1,F,90
    1,J
+  46
 
 #lvl_04
   36,R
@@ -212,20 +213,6 @@ Read,6A - Reflection.tas,9,206
    1,R,J,G
    7,R
   14,L,J
-  19,U,X
-   1,J
-  34,R,J
-  15,R,K,G
-  15,R,J,G
-  15,R,K,G
-   1,J
-  24,R,J
-  21,R,K,G
-   3,R,J
-  14,R,X
-   1,R,J
-  14,R,D,X
-   1,R,J
-  40
+  18,U,X
 
-Read,6A - Reflection.tas,239
+Read,6A - Reflection.tas,223
