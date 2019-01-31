@@ -16,7 +16,8 @@ namespace TAS {
 		Feather = 512,
 		Journal = 1024,
 		Jump2 = 2048,
-		Dash2 = 4096
+		Dash2 = 4096,
+        Confirm = 8192
 	}
 	public class InputRecord {
 		public int Line { get; set; }
@@ -65,7 +66,8 @@ namespace TAS {
 					case 'N': Actions ^= Actions.Journal; break;
 					case 'K': Actions ^= Actions.Jump2; break;
 					case 'C': Actions ^= Actions.Dash2; break;
-					case 'F':
+                    case 'O': Actions ^= Actions.Confirm; break;
+                    case 'F':
 						Actions ^= Actions.Feather;
 						index++;
 						Angle = ReadAngle(line, ref index);
@@ -188,7 +190,8 @@ namespace TAS {
 			if (HasActions(Actions.Start)) { sb.Append(",S"); }
 			if (HasActions(Actions.Restart)) { sb.Append(",Q"); }
 			if (HasActions(Actions.Journal)) { sb.Append(",N"); }
-			if (HasActions(Actions.Feather)) { sb.Append(",F,").Append(Angle == 0 ? string.Empty : Angle.ToString("0")); }
+            if (HasActions(Actions.Confirm)) { sb.Append(",O"); }
+            if (HasActions(Actions.Feather)) { sb.Append(",F,").Append(Angle == 0 ? string.Empty : Angle.ToString("0")); }
 			return sb.ToString();
 		}
 		public override bool Equals(object obj) {

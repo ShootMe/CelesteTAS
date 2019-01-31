@@ -300,7 +300,14 @@ namespace TAS {
 				MInput.GamePads[0].CurrentState = state;
 				MInput.GamePads[0].Attached = true;
 			}
-			MInput.UpdateVirtualInputs();
+
+            if (input.HasActions(Actions.Confirm)) {
+                MInput.Keyboard.CurrentState = new KeyboardState(Keys.Enter);
+            } else {
+                MInput.Keyboard.CurrentState = new KeyboardState();
+            }
+
+            MInput.UpdateVirtualInputs();
 		}
 	}
 }

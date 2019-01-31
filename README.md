@@ -58,6 +58,7 @@ ie) 123,R,J (For 123 frames, hold Right and Jump)
 - S = Start
 - Q = Quick Reset
 - F = Feather Aim
+- O = Confirm
 - N = Journal (Used only for Cheat Code)
 
 ## Special Input
