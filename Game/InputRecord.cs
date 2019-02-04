@@ -20,15 +20,15 @@ namespace TAS {
         Confirm = 8192
 	}
 	public class InputRecord {
-		public int Line { get; set; }
+		public string Line { get; set; }
 		public int Frames { get; set; }
 		public Actions Actions { get; set; }
 		public float Angle { get; set; }
 		public bool FastForward { get; set; }
 		public bool ForceBreak { get; set; }
 		public InputRecord() { }
-		public InputRecord(int number, string line) {
-			Line = number;
+		public InputRecord(string location, string line) {
+			Line = location;
 
 			int index = 0;
 			Frames = ReadFrames(line, ref index);

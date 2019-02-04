@@ -126,7 +126,7 @@ namespace TAS {
 			Manager.SetInputs(Current);
 		}
 		public void RecordPlayer() {
-			InputRecord input = new InputRecord() { Line = inputIndex + 1, Frames = currentFrame };
+			InputRecord input = new InputRecord() { Frames = currentFrame };
 			GetCurrentInputs(input);
 
 			if (currentFrame == 0 && input == Current) {
@@ -167,68 +167,43 @@ namespace TAS {
 			try {
 				inputs.Clear();
 				fastForwards.Clear();
-				if (!File.Exists(filePath)) { return false; }
-
-				int lines = 0;
-				using (StreamReader sr = new StreamReader(filePath)) {
-					while (!sr.EndOfStream) {
-						string line = sr.ReadLine();
-
-						if (line.IndexOf("Read", System.StringComparison.OrdinalIgnoreCase) == 0 && line.Length > 5) {
-							lines++;
-							ReadFile(line.Substring(5), lines);
-							lines--;
-						}
-
-						InputRecord input = new InputRecord(++lines, line);
-						if (input.FastForward) {
-							fastForwards.Add(input);
-
-							if (inputs.Count > 0) {
-								inputs[inputs.Count - 1].ForceBreak = input.ForceBreak;
-								inputs[inputs.Count - 1].FastForward = true;
-							}
-						} else if (input.Frames != 0) {
-							inputs.Add(input);
-						}
-					}
-				}
+				ReadFile(filePath, 0, int.MaxValue);
 				return true;
 			} catch {
 				return false;
 			}
 		}
-		private void ReadFile(string extraFile, int lines) {
-			int index = extraFile.IndexOf(',');
-			string filePath = index > 0 ? extraFile.Substring(0, index) : extraFile;
-			int skipLines = 0;
-			int lineLen = int.MaxValue;
-			if (index > 0) {
-				int indexLen = extraFile.IndexOf(',', index + 1);
-				if (indexLen > 0) {
-					int.TryParse(extraFile.Substring(index + 1, indexLen - index - 1), out skipLines);
-					int.TryParse(extraFile.Substring(indexLen + 1), out lineLen);
-				} else {
-					int.TryParse(extraFile.Substring(index + 1), out skipLines);
-				}
-			}
-
-			if (!File.Exists(filePath)) { return; }
-
-			int subLine = 0;
+		private void ReadFile(string file, int skipLines, int numLines) {
+			int lineNum = 0;
 			using (StreamReader sr = new StreamReader(filePath)) {
 				while (!sr.EndOfStream) {
 					string line = sr.ReadLine();
 
-					subLine++;
-					if (subLine <= skipLines) { continue; }
-					if (subLine > lineLen) { break; }
+					lineNum++;
+					if (lineNum <= skipLines) { continue; }
+					if (lineNum > numLines) { break; }
 
 					if (line.IndexOf("Read", System.StringComparison.OrdinalIgnoreCase) == 0 && line.Length > 5) {
-						ReadFile(line.Substring(5), lines);
+						string readCommand = line.Substring(5);
+						int index = readCommand.IndexOf(',');
+						string extraFile = index > 0 ? readCommand.Substring(0, index) : readCommand;
+						int extraSkipLines = 0;
+						int extraNumLines = int.MaxValue;
+						if (index > 0) {
+							int indexLen = readCommand.IndexOf(',', index + 1);
+							if (indexLen > 0) {
+								int.TryParse(readCommand.Substring(index + 1, indexLen - index - 1), out extraSkipLines);
+								int.TryParse(readCommand.Substring(indexLen + 1), out extraNumLines);
+							} else {
+								int.TryParse(readCommand.Substring(index + 1), out extraSkipLines);
+							}
+						}
+						// interpret the path as relative to the current file, instead of relative to Celeste.exe
+						extraFile = Path.Combine(Path.GetDirectoryName(file), extraFile);
+						ReadFile(extraFile, extraSkipLines, extraNumLines);
 					}
 
-					InputRecord input = new InputRecord(lines, line);
+					InputRecord input = new InputRecord(Path.GetFileName(file) + ":" + lineNum, line);
 					if (input.FastForward) {
 						fastForwards.Add(input);
 
