@@ -89,13 +89,12 @@ Read,5S - Mirror Temple.tas,9
    1,J
  136
 
-Read,6HC - Reflection.tas,6,61
+Read,6HC - Reflection.tas,6,60
 
   62
    1,S
    1,U,J
-   1
-   1,J
+   1,O
   31
 
 #Overworld
