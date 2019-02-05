@@ -21,98 +21,118 @@
 #Prologue
    1,S
    1,D,J
-  93,R
+  32
 
 Read,0 - Prologue.tas,7
 
 #Forsaken City
- 193
+ 196
    1,J
   41
    1,J
  230
    1,J
- 224
+ 136
 
-Read,1H - Forsaken City.tas,7
+Read,1SH - Forsaken City.tas,9
 
 #Old Site
- 183
-   1,J
- 481
+ 350
    1,J
   41
    1,J
  230
    1,J
- 326
+ 136
 
-Read,2H - Old Site.tas,7
+Read,2S - Old Site.tas,8
 
 #Celestial Resort
- 183
-   1,J
- 310
+ 427
    1,J
   41
    1,J
  230
    1,J
- 197
+ 136
 
-Read,3H - Celestial Resort.tas,7
+Read,3SH - Celestial Resort.tas,8
 
 #Golden Ridge
- 183
-   1,J
- 481
+ 636
    1,J
   41
    1,J
  230
    1,J
- 205
+ 136
 
-Read,4H - Golden Ridge.tas,7
+Read,4SH - Golden Ridge.tas,8
 
 #Mirror Temple
- 183
-   1,J
- 310
+ 653
    1,J
   41
    1,J
  230
    1,J
- 222
+ 136
 
-Read,5A - Mirror Temple.tas,8
+Read,5S - Mirror Temple.tas,9
 
 #Reflection
- 183
-   1,J
- 225
+ 561
    1,J
   41
    1,J
  230
    1,J
- 247
+ 136
 
-Read,6A - Reflection.tas,10
+Read,6HC - Reflection.tas,6,58
+
+  62
+   1,S
+   1,D
+   1,F,180
+   1,D
+   1,J,F,180
+   1
+   1,J
+  31
+
+#Overworld
+ 290
+   1,R
+   1,J
+ 304
+
+Read,6B - Reflection.tas,8
+
+  60
+   1,J
+ 196
+
+#AreaComplete
+ 165
+   1,J
 
 #Summit
- 183
-   1,J
- 225
+ 200
+   1,X
+  41
+   1,R
+   8
    1,J
   41
    1,J
+
+#Summit
   45
    1,J
- 356
+  32
 
-Read,7A - Summit.tas,7
+Read,7S - Summit.tas,8
 
 #Credits
  183
@@ -135,16 +155,21 @@ Read,7A - Summit.tas,7
 #Core
   96
    1,J
- 423
+ 473
    1,J
   41
    1,J
   45
    1,S
    1,D,J
-  86,R
+  32
 
-Read,8A - Core.tas,5
+Read,8S - Core.tas,9
 
- 193
+  60
+   1,J
+ 196
+
+#AreaComplete
+ 165
    1,J

@@ -2,6 +2,43 @@
 Simple TAS Tools for the game Celeste
 
 ## Installation
+
+### Everest
+
+The easiest way to install is through the [Everest interop mod](https://github.com/EverestAPI/CelesteTAS-EverestInterop). 
+
+- [Download the zip from here](https://github.com/EverestAPI/CelesteTAS-EverestInterop/releases)
+- Place it in your `Mods` directory
+- [Download the TAS addon here](https://github.com/ShootMe/CelesteTAS/releases), either Celeste-Addons-OpenGL.dll or Celeste-Addons-XNA.dll, whichever corresponds with your version of Celeste
+- Place it in the same directory as `Celeste.exe`, and rename it to `Celeste-Addons.dll`
+- Enable TAS in the mod settings.
+
+For playback to be correct, make sure Jump is bound to 'A' and 'Y', Dash is bound to 'B' and 'X', Grab is bound to 'RB', Quick Reset is bound to 'LB', and talk is bound to 'B'. If you don't have a controller, you have to edit the settings file manually. Here's the relevant section:
+
+```
+  <BtnGrab>
+    <Buttons>RightTrigger</Buttons>
+    <Buttons>RightShoulder</Buttons>
+  </BtnGrab>
+  <BtnJump>
+    <Buttons>A</Buttons>
+    <Buttons>Y</Buttons>
+  </BtnJump>
+  <BtnDash>
+    <Buttons>X</Buttons>
+    <Buttons>B</Buttons>
+  </BtnDash>
+  <BtnTalk>
+    <Buttons>B</Buttons>
+  </BtnTalk>
+  <BtnAltQuickRestart>
+    <Buttons>LeftTrigger</Buttons>
+    <Buttons>LeftShoulder</Buttons>
+  </BtnAltQuickRestart>
+```
+
+### Manually
+
 - Currently only works/tested for the Windows XNA/OpenGL version.
 - Go to [Releases](https://github.com/ShootMe/CelesteTAS/releases)
 - Download Celeste-Addons.dll (Either XNA or OpenGL, then Rename to Celeste-Addons.dll)
@@ -36,7 +73,6 @@ Simple TAS Tools for the game Celeste
   - Save the modified version and you should be good to go
 - Place those in your Celeste game directory (usually C:\Program Files (x86)\Steam\steamapps\common\Celeste\)
 - Make sure to back up the original Celeste.exe before copying. (Can rename them .bak or something)
-- For playback to be correct, make sure Jump is bound to 'A' and 'Y', Dash is bound to 'B' and 'X', Grab is bound to 'RB', Quick Reset is bound to 'LB', and talk is bound to 'B'
 
 ## Input File
 Input file is called Celeste.tas and needs to be in the main Celeste directory (usually C:\Program Files (x86)\Steam\steamapps\common\Celeste\Celeste.tas)
@@ -50,14 +86,15 @@ ie) 123,R,J (For 123 frames, hold Right and Jump)
 - L = Left
 - U = Up
 - D = Down
-- J = Jump
+- J = Jump / Confirm
 - K = Jump Bind 2
-- X = Dash
+- X = Dash / Talk
 - C = Dash Bind 2
 - G = Grab
 - S = Start
 - Q = Quick Reset
 - F = Feather Aim
+- O = Confirm
 - N = Journal (Used only for Cheat Code)
 
 ## Special Input

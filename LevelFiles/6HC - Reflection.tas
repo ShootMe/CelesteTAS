@@ -2,7 +2,7 @@
 #Restart
    1,Q
    1,J
- 141
+   141
 
 Read,6A - Reflection.tas,10,205
 
@@ -59,8 +59,6 @@ Read,6A - Reflection.tas,10,205
    8,L,K,G
   11,L
  257
-   1,J
- 123
   14,R,D
   47,R,D,J,X
 
