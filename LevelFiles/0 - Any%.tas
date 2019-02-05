@@ -1,3 +1,5 @@
+#Version 1.2.6.1
+#Needs Speedrun Clock to File for faster hub animations
 #Start from Begin
    1,D
    1,J
@@ -21,12 +23,12 @@
 #Prologue
    1,S
    1,D,J
-  93,R
+  93
 
-Read,0 - Prologue.tas,7
+Read,0 - Prologue.tas,8
 
 #Overworld
- 193
+ 194
    1,J
   41
    1,J
@@ -41,7 +43,7 @@ Read,1A - Forsaken City.tas,8
 #Overworld
  183
    1,J
- 225
+ 226
    1,J
   41
    1,J
@@ -51,12 +53,12 @@ Read,1A - Forsaken City.tas,8
    1,J
  326
 
-Read,2A - Old Site.tas,9
+Read,2A - Old Site.tas,10
 
 #Overworld
  183
    1,J
- 225
+ 226
    1,J
   41
    1,J
@@ -66,12 +68,12 @@ Read,2A - Old Site.tas,9
    1,J
  197
 
-Read,3A - Celestial Resort.tas,7
+Read,3A - Celestial Resort.tas,9
 
 #Overworld
  183
    1,J
- 372
+ 276
    1,J
   41
    1,J
@@ -81,12 +83,12 @@ Read,3A - Celestial Resort.tas,7
    1,J
  205
 
-Read,4A - Golden Ridge.tas,8
+Read,4A - Golden Ridge.tas,9
 
 #Overworld
  183
    1,J
- 225
+ 226
    1,J
   41
    1,J
@@ -94,19 +96,14 @@ Read,4A - Golden Ridge.tas,8
 #Mirror Temple
  230
    1,J
- 222
+ 246
 
-Read,5HC - Mirror Temple.tas,6,128
-
+Read,5HC - Mirror Temple.tas,6,141
   62
    1,S
-   1,D
-   1,F,180
-   1,D
-   1,J,F,180
-   1
-   1,J
- 312
+   1,U,J
+   1,O
+  82
    1,R
    1,J
  273
@@ -118,11 +115,11 @@ Read,5B - Mirror Temple.tas,3
    1,J
  361
    1,J
- 192
+  84
    1,X
   40
    1,R
-   8
+  11
    1,J
   41
    1,J
@@ -130,19 +127,14 @@ Read,5B - Mirror Temple.tas,3
 #Reflection
  230
    1,J
- 136
+ 247
 
-Read,6HC - Reflection.tas,6,58
-
+Read,6HC - Reflection.tas,6,62
   62
    1,S
-   1,D
-   1,F,180
-   1,D
-   1,J,F,180
-   1
-   1,J
- 312
+   1,U,J
+   1,O
+  82
    1,R
    1,J
  304
@@ -150,15 +142,15 @@ Read,6HC - Reflection.tas,6,58
 Read,6B - Reflection.tas,8
 
 #Overworld
- 193
+  60
    1,J
  361
    1,J
- 192
+  84
    1,X
   40
    1,R
-   8
+  11
    1,J
   41
    1,J
@@ -168,4 +160,4 @@ Read,6B - Reflection.tas,8
    1,J
  356
 
-Read,7A - Summit.tas,7
+Read,7A - Summit.tas,12

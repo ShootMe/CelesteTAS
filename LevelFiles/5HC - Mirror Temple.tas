@@ -4,126 +4,139 @@
    1,J
  117
 
-Read,5A - Mirror Temple.tas,7,212
+Read,5A - Mirror Temple.tas,9,240
 
 #lvl_b-02
-   3,R
+   2,R
    1,R,J
   14,R,D,X
-   1,R,J
-  16,R,D
+   2,R,J
+  15,R,D
   15,L,D,X
    7,L,D
-  26,L
+  27,L
   66,R,X
-  40,R
+  40
 
 #lvl_b-11
    4,R
-  10,R,D,X
-  15,R,J
-   2,R,K,G
-  14,R,D,X
+  12,R,D,X
   12,R,J
-  13,R,U,X
+   3,R,K,G
+  14,R,D,X
+   6,R,J
+   2,R
+  14,R,U,X
    1,J,G
    8
-   3,L
+   2,L
   15,U,X
    9,D
   30,L,D
   50,R,D
-   5,R,D,X
-   1,R,J
-  42,R
+  10,R,U,X
+  40
 
 #lvl_b-13
-   5,R
-   1,R,J
-   2,R
-  18,R,D,X
-   1,R,J
-  14,R
-   4,R,J
-  12,R,K,G
-  10,R,X
-   5,R,J
-  13,U,X
-  33,L,J
-  10,L,K,G
-   8,L
-   1,L,J
-  14,L
-   1,L,J
-  10,L
-  15,L,U,X
-  68,R,D
-  29,R,U,X
-   6,R,D,C
+   5,R,U,X
+   5,J
+   4,D,X
+   2,L,X
+   9,R,J
+   6,R
+  16,R,J
+   4,R,D,X
+  10,R,U,X
+   1,R,J,G
+   1,R
+   1,R,J,G
+   6,R
+   1
+  10,R,D,X
+   5,L,J
+  14,L,U,X
+  69,R,D
+  14,R,U,X
+   7,R
+   7,L
+   6,R,D,X
    1,R,J
    7,R
    1,R,J
    5,R,D,X
-  58,R
+  58
 
 #lvl_b-17
-   9,R
+   9,R,D,X
   14,R,J
   17,R,D,X
-   6,R,J
-   5,R
+   5,R,J
+   6,R
+   1,R,J,G
   14,R,D,X
    1,R,J
   14,R,D,X
-   1,R,J
-   5,R,D,X
-  43,R,J
+   3,R,J
+  40
 
 #lvl_b-22
-   3,R,J
-   4,R,K
-  10,R,X
-   1,R,J
-   4,R
-  15,D,X
-  10,L,D,C
-  11,R,J
-  11,L,X
-  44,R,C
-  21,R,U,G
-  23,R,G
-  26,R,X
-   2,L
-   4,R,J,G
-   5,R
-   3,L
-  10,R,D,X
-  31,R,J
-  13,R,U,X
-  12,R,J
-  12,L,K
+   1,D,X
+   6,R,U,X
    1,L,J,G
-   7,L
-   2
-   6,R,D,X
-   1,L,J
-   7,L
-   5,L,J
-  19,L
-  14,L,X
-   1,L,J
-  14,R,D,X
+  11,R
+  10,L,D,X
+   5,R,J
+  14,D,X
+   1,R
+  11,L,X
+   4,R,J
+   5,U,X
+  44,R,C
+  16,R,D,G
+   4
+   2,R
+   1,K
+  18,R,K
+   6,R,X
+   3,R,J,G
+   5,R
    1,R,J
-  14,L,D,X
+   7,R
+   4,L
+  18,D,C
+  14,R,D,X
+   5,R,J
+   1,L,J
+  22,R,J
+   8,R,K,G
+  15,U,X
+   2,L,J,G
+   1,L
+   1,L,J,G
+   5,L
+   2
+  14,L,X
    1,R,J
   13,R,D,X
    1,L,J
-   7,L
+   1,L
+  11,L,D,X
+   5,L,J
+  14,L,X
+   1,L,J
+  14,D,X
+   4,L
+   1
+  14,L,X
+   1,R,J
+  14,R,D,X
+   1,L,J
+  14,L,D,X
    2,L,J
-  12,L
-  15,L,D,X
-   8,L,D,J
-  10,L,U,X
+   2,L,K,G
+  14,L,D,X
+   1,L,D
+  11,L,D,J
  257
    1,J
  123
