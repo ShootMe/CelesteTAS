@@ -1,5 +1,4 @@
-#Created by EuniverseCat
-
+#By EuniverseCat and Kilaye
 #Restart
    1,Q
    1,J
@@ -8,7 +7,7 @@
 #lvl_s0
   61
    4,R,D,X
-   2,R,X
+   2,R
    1,R,J
    7,R
    1,R,J
@@ -1381,7 +1380,6 @@
   15,R,D,X
    3,R
    1,L,D
-
    5,R,D
    9,L,D
   13,R,D
@@ -1824,7 +1822,7 @@
    9,L
    7,L,D,X
 
-#lvl_2-c (10
+#lvl_2-c (1()
   40
    8,L
    1,L,J

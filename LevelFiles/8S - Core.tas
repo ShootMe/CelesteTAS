@@ -1,6 +1,4 @@
-#Created by DevilSquirrel
-#Optimized by EuniverseCat
-#Berries added by EuniverseCat
+#By DevilSquirrel and EuniverseCat
 #Restart
    1,Q
    1,J
@@ -8,34 +6,36 @@
 
 #lvl_00
   54
-  21
+  20
    4,R,D,X
    2,R,X
    1,R,J
    7,R
    1,R,J
-  10,R,D,X
-   7,R,J
+   6,R,D,X
+   1,R,J
+   7,R
+   4,R,J
    1,R,K,G
   11,R,D,X
    1,S
    1,D,J
   34,R
-   1,R,J
    3,R
+   1,R,J
   14,R,D,X
    1,R,J
-  10,R,D,X
+   8,R,D,X
 
 #lvl_01
   40
-   4,R,D,X
-   1,R,J
-   7,R
+   6,R,D,X
    1,R,J
   14,R,D,X
    1,R,J
-  14,R,D,X
+   5,R,D,X
+   1,R,J,G
+  14,R
    1,R,J
   13,R,D,X
    1,R,J
@@ -56,16 +56,15 @@
   15,R,U,X
    4,D,C
   10,R,C
+   2,R,J
+   8,R
    1,R,J
-   7,R
-   1,R,J
-   2,R
 
 #lvl_02
   40
-  11,R,D,X
-   4,R,J
-   3,R,K,G
+  12,R,D,X
+   2,R,J
+   4,R,K,G
   13,R,D,X
    1,S
    1,D,J
@@ -74,7 +73,7 @@
   14,R
    1,R,J
   18,R
-   3,R,J
+   2,R,J
    1,R,K,G
   13,R,D
   20,D,J
@@ -93,7 +92,7 @@
    1,R,J
   14
    1,R,J
-  20
+  19
    9,D,J
    7,R,D
    1,R,J
@@ -181,16 +180,19 @@
    3,J
   11,R,J
   14,U,X
-  15,R,J
+  11,R,J
+   4,L,J
 
 #lvl_b-00 (1)
   40
-   1
    1,R
-   9,R,J,G
+   1,R,K,G
+   8,R,J,G
+   1,R
    4,D,X
   10,R,X
-   5,R,J
+   2,R,J
+   3,R
   14,R,D,X
    2,R,J
 

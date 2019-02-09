@@ -1,5 +1,4 @@
-#Created by EuniverseCat
-
+#By EuniverseCat and Kilaye
 #Restart
    1,Q
    1,J
@@ -393,7 +392,8 @@
   40
    1,S
    1,D,J
-   1,O
+   1
+   1,J
   68
    5,L,D,X
    1,R,J
