@@ -1,8 +1,8 @@
-#Created by DevilSquirrel, improvements by fishmcmuffins
-#Used KDT's TAS as a guide
+#By DevilSquirrel, fishmcmuffins, EuniverseCat
+#Restart
    1,Q
    1,J
-  31,R
+  31
  
 #lvl_00
   88
@@ -342,7 +342,7 @@
    1,R,J
    5,R,D,X
   40,R
- 
+
 #lvl_10
    8,R,J
    3,R
