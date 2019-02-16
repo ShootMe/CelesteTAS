@@ -4,7 +4,7 @@
    1,J
   31
 
-Read,5A - Mirror Temple.tas,7,242
+Read,5A - Mirror Temple.tas,5,238
 
 #lvl_b-02
    2,R
@@ -322,8 +322,8 @@ Read,5A - Mirror Temple.tas,7,242
    1,R,J
   13,R,D,X
 
-read,5A - Mirror Temple.tas,262,338
-***
+read,5A - Mirror Temple.tas,257,333
+
 #lvl_b-14
    5,R
   17,D,X
@@ -404,13 +404,14 @@ read,5A - Mirror Temple.tas,262,338
   14,R,J
    4,R
   10,R,K,G
-   7,R
-   2,R,J
-  13,U,X
-  48,L,J
+   6,R
+   1,L
+   8,L,J
+  17,U,X
+  40
 
 #lvl_b-16
   11,J
-  15,U,X
+  13,U,X
 
-Read,5A - Mirror Temple.tas,349
+Read,5A - Mirror Temple.tas,347
