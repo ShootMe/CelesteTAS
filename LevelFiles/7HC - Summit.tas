@@ -1,4 +1,10 @@
-Read,7A - Summit.tas,0,167
+#By DevilSquirrel, EuniverseCat
+#Restart
+   1,Q
+   1,J
+  31
+
+Read,7A - Summit.tas,6,166
 
   40,L
   15,U,X
@@ -18,7 +24,7 @@ Read,7A - Summit.tas,0,167
    4,L,J
   27,L,D,X
 
-Read,7A - Summit.tas,172,230
+Read,7A - Summit.tas,171,229
 
 #lvl_b-02
   10,R,D,X
@@ -118,7 +124,7 @@ Read,7A - Summit.tas,172,230
    1,R,J
    3,R
 
-Read,7A - Summit.tas,242,470
+Read,7A - Summit.tas,241,469
 
 #lvl_c-04
    1,R,J
@@ -229,7 +235,7 @@ Read,7A - Summit.tas,242,470
   11,R,D,X
    7,R,J
 
-Read,7A - Summit.tas,514,669
+Read,7A - Summit.tas,513,668
 
 #lvl_d-03
    8,R
@@ -343,7 +349,7 @@ Read,7A - Summit.tas,514,669
    4,R,D,C
    3,R,X
 
-Read,7A - Summit.tas,723,768
+Read,7A - Summit.tas,722,767
 
 #lvl_d-05
    3,R,J
@@ -406,7 +412,7 @@ Read,7A - Summit.tas,723,768
   18,R,D,X
    9,D,C
 
-Read,7A - Summit.tas,798,890
+Read,7A - Summit.tas,797,889
 
 #lvl_e-00
    1,L,J
@@ -518,7 +524,7 @@ Read,7A - Summit.tas,798,890
    7,R,J
   14,U,X
 
-Read,7A - Summit.tas,914,1262
+Read,7A - Summit.tas,913,1261
 
 #lvl_f-00
    4,R,J
@@ -626,7 +632,7 @@ Read,7A - Summit.tas,914,1262
    3,R,J
   11,R
 
-Read,7A - Summit.tas,1375,1627
+Read,7A - Summit.tas,1374,1626
 
 #lvl_g-00b
 #CP-28
@@ -709,7 +715,6 @@ Read,7A - Summit.tas,1375,1627
   16
    1,J
   68
-   1,D
    1,J
   16
    1,J
@@ -718,4 +723,4 @@ Read,7A - Summit.tas,1375,1627
   37
    2,R,X
 
-Read,7A - Summit.tas,1627
+Read,7A - Summit.tas,1626

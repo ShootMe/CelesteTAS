@@ -1,9 +1,10 @@
+#By DevilSquirrel, EuniverseCat
 #Restart
    1,Q
    1,J
   31
 
-Read,4A - Golden Ridge.tas,5,165
+Read,4A - Golden Ridge.tas,6,166
 
 #lvl_a-07
    5,R,J
@@ -146,7 +147,7 @@ Read,4A - Golden Ridge.tas,5,165
   12,U,X
   40,R
 
-read,4A - Golden Ridge.tas,214,260
+read,4A - Golden Ridge.tas,215,261
 
 #lvl_b-02
    9,R

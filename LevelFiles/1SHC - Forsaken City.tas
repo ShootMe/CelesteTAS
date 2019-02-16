@@ -1,9 +1,10 @@
+#By EuniverseCat
 #Restart
    1,Q
    1,J
   31
 
-read,1SH - Forsaken City.tas,7,678
+read,1SH - Forsaken City.tas,5,694
 
   14,L
    4,L,D,X
@@ -12,7 +13,7 @@ read,1SH - Forsaken City.tas,7,678
    5,L,K,G
   15,U,X
 
-read,1HC - Forsaken City.tas,49,92
+read,1HC - Forsaken City.tas,207,250
 
    4,R,D,X
    7,R,J
@@ -25,4 +26,4 @@ read,1HC - Forsaken City.tas,49,92
   40
    3,L,D
 
-read,1SH - Forsaken City.tas,700
+read,1SH - Forsaken City.tas,716

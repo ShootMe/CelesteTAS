@@ -1,10 +1,10 @@
-#Created by DevilSquirrel
+#By DevilSquirrel, EuniverseCat
 #Restart
    1,Q
    1,J
   31
 
-Read,5A - Mirror Temple.tas,5,238
+Read,5A - Mirror Temple.tas,6,239
 
 #lvl_b-02
    2,R
@@ -287,13 +287,15 @@ Read,5A - Mirror Temple.tas,5,238
   16,R,D
    2,D
   10,L,D,X
-  19,L,J
-   6,L,K,G
-  13,L
+  11,L,J
+   5,J
+   3
+   4,L,K,G
+   4,L
    4,D,X
-   9,L,U,X
+   8,L,U,X
    1,L,J,G
-  11,L
+  10,L
   40,L
 
 #lvl_b-04
@@ -322,7 +324,7 @@ Read,5A - Mirror Temple.tas,5,238
    1,R,J
   13,R,D,X
 
-read,5A - Mirror Temple.tas,257,333
+read,5A - Mirror Temple.tas,258,334
 
 #lvl_b-14
    5,R
@@ -414,4 +416,4 @@ read,5A - Mirror Temple.tas,257,333
   11,J
   13,U,X
 
-Read,5A - Mirror Temple.tas,347
+Read,5A - Mirror Temple.tas,348

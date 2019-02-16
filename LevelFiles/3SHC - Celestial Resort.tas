@@ -1,9 +1,10 @@
+#By EuniverseCat
 #Restart
    1,Q
    1,J
   31
 
-read,3SH - Celestial Resort.tas,6,1765
+read,3SH - Celestial Resort.tas,6,1713
 
    4,L,D,X
    7,L,X
@@ -86,7 +87,7 @@ read,3SH - Celestial Resort.tas,6,1765
    8,L,D,X
   10,D,C
 
-read,3SH - Celestial Resort.tas,1833,1872
+read,3SH - Celestial Resort.tas,1782,1819
 
   16,U,X
 
@@ -100,10 +101,10 @@ read,3SH - Celestial Resort.tas,1833,1872
    8,L
    1,L,J
 
-read,3HC - Celestial Resort.tas,50,120
+read,3HC - Celestial Resort.tas,166,236
 
    3
 
-read,3HC - Celestial Resort.tas,121,137
+read,3HC - Celestial Resort.tas,237,253
 
-read,3SH - Celestial Resort.tas,1946
+read,3SH - Celestial Resort.tas,1893

@@ -1,3 +1,5 @@
+#By DevilSquirrel, Higashi Dong, EuniverseCat
+#Restart
    1,Q
    1,J
   31
@@ -157,26 +159,21 @@
    1,R,J
    1,R
   23,R,D,X
-   2,R,J
-   8,R
-   1,R,J
-  14,R,D,X
-   1,R,J
-  11,R,D,X
-   8,R,J
-   4,R
-   1,R,J
+   5,R,J
+   5,R,D,X
+   1,R,J,G
+  14,R
+  11,R,J
   10,R,D,X
-   8,R,J
-   4,R
+   1,R,J,G
+  10,R
+   2,R
    1,R,J
-  12,R,D,X
+   3,R
+   5,R,D,X
+   1,R,J,G
+  11,R
+   3,R,J
+  11,R
    8,R,J
-   4,R
-   1,R,J
-  14,R,D,X
-   9,R,J
-   8,R
-  15,R,U,X
-  14,R,C
- 134
+ 147,R,X

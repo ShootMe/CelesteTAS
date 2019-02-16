@@ -1,4 +1,5 @@
-#Created by DevilSquirrel
+#By DevilSquirrel, Higashi Dong, EuniverseCat
+#Restart
    1,Q
    1,J
   31
@@ -132,69 +133,86 @@
   76
   15,R,U,X
   10,R,C
-  10,R,K
+  12,R,K
   11,J,G
    2,L,J
-   1,K
-  25,R,K
+  15,R,K,G
   11,J,G
    2,L,J
-   1,K
-  25,R,K
-  13,J,G
-   5,L,K
+  15,R,K,G
+  11,J,G
+   1,L,J
+   6,K
   13,L,J
-  20,U,X
-  11,R,J,G
+  16,U,X
+   1,R
+   1,J,G
+  10,R,J
    2,L,J
+  15,R,K,G
+   1,J,G
+   5,R,J
+   1,L,J
+  16,U,X
+  30,L,G
+   6,L,U,G
+  11,R,J
+   1,L,J
+   1,J
+   1,L,J
+  14,K
+  11,J
    1,K
-  24,R,K
-   1,R,J,G
-   5,J
-  14,U,X
-  33,L,U,G
-  89,L,G
-   4,J,G
-   1,R,J
-   4,L,J
-  11,L
-   2,R,J
-  14,U,X
   40
 
 #lvl_b-01
+   5
+   1,L
   14,L,J
-  20,L,X
-  20
-   8,L,J
-  13,R,J
-  17,R,X
-  16,R,C
-  16,L
-  11
-   5,L,J
-  15,R,J
+  16,L,X
+   2,L,J,G
+  10
+  13,L
+   4,L,J
+   5,R,J
+  10,R,K,G
   16,R,X
   15,R,C
+  17,L
+   6
+   6,L,J
+   3,R,J
+  10,R,K,G
+  17,R,X
+  15,R,C
   16,L
-  10
-  11,L,J
-   5,U,X
-  55,R,U,G
-   3,L,J
-  11,R,J
-  17,R,K
-   6,L,J,G
-   8,L,K,G
-   4,L,J,G
-   8,L,J
-   2,L
-  14,L,D,X
-   9,L,D
+   7
+   9,L,J
+   1,R,K,G
+   1,L,K
+  11,K,G
+   2,R,K
+   1,R,J,G
+  37,R,U,G
+   3,J,G
    1,L,J
-  32,L,D
-  10,R
-  27
+   5,R,J
+  14,R,K,G
+   6,L,K
+   6,J,G
+   2,R,J
+   5,L,X
+   1,L,J,G
+   5,L
+   1,L,J
+  11,L,D
+   1,D
+   7,L,D
+   4,L,J
+  15,L,D,X
+  10,D
+   7,R
+  30
   21,J
   16,U,X
   16,U,C
@@ -202,7 +220,8 @@
   40,R
 
 #lvl_b-02
-   5,J,G
+   4,J,G
+   1,R,J
    6,R
   10,R,X
    5,R,J
@@ -211,45 +230,52 @@
   10,R,C
    1,R,J
   14,R,D,X
-  33,R,J
+  30,R,J
    4,D,X
   11,R,X
-   5,U,C
-  13,L
-  45,R
-   5,R,J
-  23,R,D
-   4,D,X
-   8,R,X
-   1,R,J,G
-  20,D
-   4,D,X
-   5,R,U,X
-   9,R
-  17,R,D,X
+   7,U,C
+   1,J
+  21,R
+  15,R,X
+  47,R
+   6,R,D
+  15,U,X
+   1,R
+   7,R,J
+  20,R
+  16,R,D,X
   19,R,D,C
-   2,R,J
+   1,R,J
+   2,R
   15,R,U,X
    4,D,C
   10,R,C
-  40,R,J
-  34,R,U,X
+  45,R,J
+  24,R,U,X
   15,R,U,C
    8,L,J,G
-  67,R
-  17,R,X
+  56,R
+   8,R,D
+   4,D,X
+  15,R,X
   14,U,C
-  10,R,J
-  14,R
-   6,R,D,X
+   5,R,J
+   3,J
+   1,R,J
+   1,R,K,G
+   1,R,J,G
+   7,R
+   4,R,D,X
+   4,R,X
    1,R,J
    7,R
-  41,R,J
+  40,R
 
 #lvl_b-03
+   1,R,J
   14,R,D,X
    1,R,J
-  14,R,X
+  13,R,D,X
   76,R,G
    8,R
   14,R,U,X

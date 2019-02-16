@@ -1,9 +1,10 @@
+#By DevilSquirrel, EuniverseCat
 #Restart
    1,Q
    1,J
   31
 
-read,3A - Celestial Resort.tas,5,1036
+read,3A - Celestial Resort.tas,6,1037
 
 #lvl_12-x
    6,D,X
@@ -123,7 +124,7 @@ read,3A - Celestial Resort.tas,5,1036
   11,L
   20
 
-read,3A - Celestial Resort.tas,1098,1302
+read,3A - Celestial Resort.tas,1099,1303
 
   12,L,J
    1,L,K,G
@@ -251,4 +252,4 @@ read,3A - Celestial Resort.tas,1098,1302
    1,L,J
   44,L
 
-read,3A - Celestial Resort.tas,1345
+read,3A - Celestial Resort.tas,1329

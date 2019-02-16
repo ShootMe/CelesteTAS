@@ -1,9 +1,10 @@
+#By DevilSquirrel, EuniverseCat
 #Restart
    1,Q
    1,J
   31
 
-Read,1A - Forsaken City.tas,5,147
+Read,1A - Forsaken City.tas,6,147
 
 #lvl_6a
   19,R,J
@@ -163,7 +164,7 @@ Read,1A - Forsaken City.tas,5,147
   12,U,X
   43,R
 
-Read,1A - Forsaken City.tas,191,254
+Read,1A - Forsaken City.tas,191,264
 
 #lvl_9b
    3,R
@@ -274,4 +275,4 @@ Read,1A - Forsaken City.tas,191,254
   11,U,X
   40,R
 
-Read,1A - Forsaken City.tas,276
+Read,1A - Forsaken City.tas,286

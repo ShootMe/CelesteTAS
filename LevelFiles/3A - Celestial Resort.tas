@@ -1,5 +1,4 @@
-#Created by KDT
-#Improved by Kilaye
+#
 #Restart
    1,Q
    1,J
@@ -73,7 +72,7 @@
    7,L
    1,L,J
    5,L
-  61
+  60
    1,R
    5,R,D,X
    1,R,J
@@ -83,29 +82,27 @@
    4,R,K,G
    5,R,D,X
    1,R,J,G
-  10,R
+   8
+   4,R
    1,R,J
-   1,R
    1,R,K,G
   12,R,D,X
-   1,R,J
   40
 
 #lvl_0x-a
   11,R,J
-   9,R,K,G
+  10,R,K,G
    5,R,J,G
-   2,R
+   1,R
   14,R,D,X
-   4,D
+   4,R,D
+   1,R
    1,X
    1,S
    1,D,J
   34
    1,R,J
   14,R,D,X
-   1,R,J
-   5,R,D,X
    1,R,J
    7,R
    1,R,J

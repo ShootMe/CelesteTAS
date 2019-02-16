@@ -1,13 +1,11 @@
-#Created by KDT
-#Improved by DevilSquirrel
+#
 #Restart
    1,Q
    1,J
   31
 
 #lvl_a-00
-  68
-   1,R
+  69
    4,R,D,X
    4,R,J
    9,R,K,G
@@ -103,10 +101,10 @@
   40
 
 #lvl_a-03
-
-  13,R,D
+   1,R
+  12,R,D
   23,R
-  18,R,U,X
+  17,R,U,X
   11,R,C
   15,R,U,X
   14,R,D,C
