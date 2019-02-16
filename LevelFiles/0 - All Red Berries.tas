@@ -1,9 +1,9 @@
 #To sync:
 #Use Celeste v.1.2.6.1
-#Turn on speedrun timer
 #Use the controller bindings in the CelesteTAS readme
-#Start on the main save file
+#Turn on speedrun timer
 #If you're using Everest, turn off show Mod Options in game
+#Start on the main save file
 #Start from Begin
    1,D
    1,J
