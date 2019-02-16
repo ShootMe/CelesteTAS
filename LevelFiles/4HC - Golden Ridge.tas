@@ -1,4 +1,9 @@
-Read,4A - Golden Ridge.tas,0,168
+#Restart
+   1,Q
+   1,J
+  31
+
+Read,4A - Golden Ridge.tas,5,165
 
 #lvl_a-07
    5,R,J
@@ -119,7 +124,7 @@ Read,4A - Golden Ridge.tas,0,168
    1,R,J
    7,R
    7,R,J
-  10,R
+  11,R
   14,R,X
    3,R,J
   14,R,D,X
@@ -140,3 +145,75 @@ Read,4A - Golden Ridge.tas,0,168
   15,U,C
   12,U,X
   40,R
+
+read,4A - Golden Ridge.tas,214,260
+
+#lvl_b-02
+   9,R
+  15,R,D,X
+   1,R,J
+   2,R,K
+  14,R,D,X
+   3,R,U,J
+  15,R,U,X
+  11,R,C
+   1,R,J
+   3,R,K
+  15,R,X
+  18,R,D,C
+   7,R,D,X
+   1,R,J
+  42,R
+
+#lvl_b-sec
+   5,R
+   1,R,J
+  14,R,D,X
+   1,R,J
+  14,R,D,X
+   1,R,J
+   7,R
+  14,R,J
+  14,U,X
+  17,L,J
+   1,L,K,G
+   7,L
+  10,L,X
+  15,R,J
+  10,R,K,G
+  10,R,J,G
+   9,L,K
+  15,U,X
+  14,L,J
+   1,L
+   5,L,J
+   5,L,K
+   5,L,J
+  19,L
+ 197,L,D,X
+   1,J
+  77,L,D
+   6,L,D,X
+   1,L,J
+  50,L
+
+#lvl_b-02
+   1,L,J
+  14,L,D,X
+   3,L,J
+   4,L
+  15,L,D,X
+  14,L,D,C
+   3,L,J
+  19,U,X
+  22,L,J
+   9,U,X
+  40
+
+#lvl_b-05
+   5
+  32,L,J
+  14,U,X
+  31,R,J
+   9,R,K,G
+  40,L
