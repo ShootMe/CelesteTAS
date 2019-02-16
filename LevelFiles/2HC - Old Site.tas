@@ -1,5 +1,3 @@
-#Heart added by KDT
-#Improved by DevilSquirrel
 #Start
    1,Q
    1,J
@@ -66,9 +64,8 @@
    1,R,J
   30,R,U,X
  114,R,D
-  59
 
-Read,2A - Old Site.tas,1,147
+Read,2A - Old Site.tas,0,147
 
 #lvl_d0
    4,L,J

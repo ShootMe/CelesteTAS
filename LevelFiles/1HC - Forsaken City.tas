@@ -1,12 +1,169 @@
-#Created by DevilSquirrel
 #Restart
    1,Q
    1,J
- 119
+  31
 
-Read,1H - Forsaken City.tas,7,172
+Read,1A - Forsaken City.tas,5,147
 
-Read,1A - Forsaken City.tas,183,247
+#lvl_6a
+  19,R,J
+  16,R,X
+  14,R,D,J,C
+   7,R
+  20,R,J
+  13,R,U,X
+  40,R
+
+#lvl_6b
+   8,L
+  18,U,X
+   5,L
+   4,L,J,G
+   1,K
+   9,L,K
+   8,L
+  12,L,J
+   2,L,K,G
+   5,L,D,X
+   1,L,J
+  42,L
+
+#lvl_s0
+   5,L
+  12,L,J
+  11,U,X
+  15,L,J
+   6,K
+   8,L,G
+  12,R,J
+   9,L,K
+   2,L,J,G
+  44,L,D
+   6,R,D
+  14,L,D,X
+  19,L,J
+  14,U,X
+   2,L,J
+  11,L
+   4,L,J
+  16,U,X
+  11,L,J,G
+   7,L
+   5,L,D,J,X
+  44,L
+
+#lvl_s1
+   3,L
+  11,L,J
+  10,L
+  15,U,X
+   1,L,J,G
+   7,L
+  14,L,X
+   1,L,J
+  27,L
+   2,L,K
+   5,L
+  10,R,D,X
+   5,L,J
+  13,L
+   6,R,U,X
+   1,L,J,G
+  11,L,K,G
+   5,L
+   6,L,J,G
+   7,L
+  15,L,X
+   6,L,U,C
+   1,S
+   1,D,J
+   1
+   1,J
+  68
+   6,R,D,X
+   1,L,J
+   7,L
+   3,L,J
+  15,L,D,X
+   7,L,J
+   4,L,K,G
+  43,D,X
+  32,U,C
+  62,R,J,G
+  76,R,K,G
+   1,J
+  30
+   2,R,J,G
+   7,R
+   1,R,J
+  11,R
+  10,L,D,X
+   1,R,J
+   7,R
+  16,R,J
+   5,R,D,X
+   1,R,J
+   7,L
+   2,R,J
+  20,R,D,X
+   2,R,J
+  12,R
+  13,R,U,X
+   1,R,J,G
+  36,R,D
+   8,R,D,J,X
+  41,R
+
+#lvl_s0
+   9,R
+  14,D,X
+  14,R,D
+  18,R,J
+  14,U,X
+  12,R,J
+   7,R
+   6,R,D,X
+   1,R,J
+   7,R
+   1,R,J
+  14,R,D,X
+   5,R,J
+  10,D,X
+   1,J
+  55,R,D
+   7,R,D,X
+  40,R
+
+#lvl_6b
+  10,R,D
+  10,L,D,X
+  13,R,J
+  10,R,D,X
+   5,R,J
+  12,R,U,X
+   2,R,J,G
+   7,R
+   5,R,D,J,X
+   7,R
+   3,R,J
+  15,R,D,X
+  46,R,J
+
+#lvl_6c
+   5,R,J
+  20,R,D
+  13,R,X
+   1,R,J,G
+  22,R
+  14,R,U,X
+  11,R,J,G
+   2,R,K,G
+  11,R
+   4,R,J
+  12,U,X
+  43,R
+
+Read,1A - Forsaken City.tas,191,254
 
 #lvl_9b
    3,R
@@ -111,9 +268,10 @@ Read,1A - Forsaken City.tas,183,247
    7,R
   25,R,J
   14,R,U,X
-   5,R,J,G
-   7
+   3,R,J,G
+   2,L,J
+   7,L
   11,U,X
   40,R
 
-Read,1A - Forsaken City.tas,242
+Read,1A - Forsaken City.tas,276
