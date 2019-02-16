@@ -1,5 +1,4 @@
-#Created by EuniverseCat
-
+#By EuniverseCat and Kilaye
 #Restart
    1,Q
    1,J
@@ -393,8 +392,7 @@
   40
    1,S
    1,D,J
-   1
-   1,J
+   1,O
   68
    5,L,D,X
    1,R,J
@@ -491,14 +489,21 @@
 #lvl_b-06
   40
   15,R,X
-  15,D,C
-  13
-   2,L
-  10,R,X
-  28,R,J
-  16,U,X
-  16,U,C
-   2,R,J,G
+   6,R
+  15,D,X
+   3
+  10,L,D,C
+   1,R,J
+   5
+   1,L,J,G
+  19,R,J
+  15,U,X
+  15,U,C
+   3,R,J,G
+   2
+   1,R,K,G
+   2,L,K
+   1,R,K
    7,R
    4,R,D,X
    2,R,X
@@ -599,12 +604,10 @@
    1,R,J
    7,R
    2,R,J
-  17,R,D
-  14,L,D,X
-   4,R
-  14,R,U,X
-   6,R
-   3,L,J
+  20,R,D
+  15,L,D,X
+  15,R,U,C
+   5,L,J
    7,L
    4,L,D,X
    2,L,X
@@ -696,15 +699,13 @@
   15,L,U,X
   36,L,C
    4,L,J
-   1,L,K
-  17,L,D,X
-   4,L,J
-   8,L,K
-  20,L,U,X
-  11,U,C
-   8,J
-  22,D,X
-  24,R,D
+  15,L,D,X
+   4
+  27,L,U,C
+  11,U,X
+   8,L,J
+  20,D,X
+  26,R,D
   15,R,U,X
    6,R
   26,R,U,X
@@ -806,18 +807,19 @@
    9,L
    4,D,X
   11,L,X
-  31,U,C
+  27,U,C
+   4,L
 
 #lvl_c-06 (1)
   40
-   3
-   1,R
+   3,R
+   1,R,K,G
    7,R,J,G
   15,R,U,X
   22,U,C
    1,R
   15,U,X
-  28,R,C
+  27,R,C
    4,R,J
    1,R,K
 
@@ -933,13 +935,13 @@
   14,L,X
    1,L,J
    4,L,D,X
-   8,L,X
+   9,L,X
    1,R,J
-   2,R
+   1,R
   14,R,D,X
    1,R,J
   14,R,D,X
-   8,R,D
+   8,D
    4,D,X
   14,R,X
    4,R,J
@@ -1356,15 +1358,18 @@
    2,R,J
   21,R,D
    4,L,D
-  14,R,D
-  15,R,U,X
-  15,U,C
-  35,R,D
-   9,L,D
+  13,R,D
    4,D,X
   11,R,U,X
+  14,R,U,C
+   1,R,J,G
+  17,R,D
+  14,D
+   4,D,X
+  11,R,X
   14,U,C
-  15,R,J
+  10,R,J
+   5,J
   14,L,U,X
    1,J
    9,U,C
@@ -1402,23 +1407,26 @@
    5
    1,J
    6,L,D
-  33,R,D
+  28,R,D
+   5,R
    4,D,X
   11,R,U,X
-  15,U,C
-  36,R,D
-   8,L,D
+  14,R,U,C
+   1,R,J,G
+  17,R,D
+  14,D
    4,D,X
-  11,R,U,X
-   7,U,C
+  11,R,X
+   8,U,C
   10,R,J
-   2,R
+   1,R
    1,R,J,G
   10,R
    5,L
   16,R,D
-  10,R
-  11,U,X
+   3,R
+  10,R,J,G
+   6,U,X
   23,R,J
    3,R,K,G
    4,R,D,X
@@ -2121,23 +2129,24 @@
    6,R,J
   15,R,U,X
   14,U,C
-  11,R,J
-   3,L,K
+   9,R,J
+   3,L,J
+   2,L,K
 
 #lvl_f-07 (1)
   40
    1,L,J,G
+   1,L,K,G
   14,L
-   4,L,J
-   5,L
-   2,L,J
+   6,L,J
+   3
   11,R,K
    1,R
-   7,R,K
+   4,R
    1,J
   12,L,J
   17,U,X
-  17,U,C
+  16,U,C
    5,L,J
    1,L,K,G
    7,L
@@ -2262,21 +2271,24 @@
   40
    7
   18,L,J
-   3,K,G
+   1,L,K,G
    3,R,K
-   1,R
-   1
+   1,K
+   2,R,J
+   1,R,K,G
    1,R,J,G
-   9,R
-   4,R,J
-  13,R
-   9,R,J,G
-  18,R
-  21,L,D
+  10,R
+   1,R,J
+   7,R
+   5,R,J,G
+   7,R
+  30,L,D
   25,R
    9,U,X
-   4,J
-  16,R,J
+   3,J
+   2,R,J
+   1,J
+  14,R,J
   15,R,X
    5,R,J
    4,R

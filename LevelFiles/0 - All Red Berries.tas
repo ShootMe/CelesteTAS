@@ -1,3 +1,9 @@
+#To sync:
+#Use Celeste v.1.2.6.1
+#Use the controller bindings in the CelesteTAS readme
+#Turn on speedrun timer
+#If you're using Everest, turn off show Mod Options in game
+#Start on the main save file
 #Start from Begin
    1,D
    1,J
@@ -23,7 +29,7 @@
    1,D,J
   32
 
-Read,0 - Prologue.tas,7
+Read,0 - Prologue.tas,6
 
 #Forsaken City
  196
@@ -34,7 +40,7 @@ Read,0 - Prologue.tas,7
    1,J
  136
 
-Read,1SH - Forsaken City.tas,9
+Read,1SH - Forsaken City.tas,6
 
 #Old Site
  278
@@ -45,7 +51,7 @@ Read,1SH - Forsaken City.tas,9
    1,J
  136
 
-Read,2S - Old Site.tas,8
+Read,2S - Old Site.tas,6
 
 #Celestial Resort
  278
@@ -56,7 +62,7 @@ Read,2S - Old Site.tas,8
    1,J
  136
 
-Read,3SH - Celestial Resort.tas,8
+Read,3SH - Celestial Resort.tas,6
 
 #Golden Ridge
  278
@@ -67,7 +73,7 @@ Read,3SH - Celestial Resort.tas,8
    1,J
  136
 
-Read,4SH - Golden Ridge.tas,8
+Read,4SH - Golden Ridge.tas,6
 
 #Mirror Temple
  278
@@ -78,7 +84,7 @@ Read,4SH - Golden Ridge.tas,8
    1,J
  136
 
-Read,5S - Mirror Temple.tas,9
+Read,5S - Mirror Temple.tas,6
 
 #Reflection
  278
@@ -89,13 +95,12 @@ Read,5S - Mirror Temple.tas,9
    1,J
  136
 
-Read,6HC - Reflection.tas,6,61
+Read,6HC - Reflection.tas,6,64
 
   62
    1,S
    1,U,J
-   1
-   1,J
+   1,O
   31
 
 #Overworld
@@ -104,7 +109,7 @@ Read,6HC - Reflection.tas,6,61
    1,J
  304
 
-Read,6B - Reflection.tas,8
+Read,6B - Reflection.tas,6
 
 #Overworld
   60
@@ -123,7 +128,7 @@ Read,6B - Reflection.tas,8
    1,J
   32
 
-Read,7S - Summit.tas,8
+Read,7S - Summit.tas,6
 
 #Credits
  183
@@ -155,7 +160,7 @@ Read,7S - Summit.tas,8
    1,D,J
   32,R
 
-Read,8S - Core.tas,9
+Read,8S - Core.tas,6
 
   60
    1,J
@@ -164,3 +169,22 @@ Read,8S - Core.tas,9
 #AreaComplete
  165
    1,J
+
+#Epilogue
+ 104
+   1,X
+  40
+   1,L
+  12
+   1,J
+  41
+   1,J
+ 115
+  10,L,X
+   7,L,J
+   2,L,J,G
+   5,L,D,X
+   1,L,J
+ 156,L
+   1,S
+   1,D,J
