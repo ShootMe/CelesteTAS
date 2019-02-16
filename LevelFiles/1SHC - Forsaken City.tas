@@ -1,0 +1,28 @@
+#Restart
+   1,Q
+   1,J
+  31
+
+read,1SH - Forsaken City.tas,7,678
+
+  14,L
+   4,L,D,X
+  10,L,X
+   3,L,J
+   5,L,K,G
+  15,U,X
+
+read,1HC - Forsaken City.tas,49,92
+
+   4,R,D,X
+   7,R,J
+  31,R,D
+   4,J
+  15,L,D,X
+   1,L,D
+
+#lvl_10 (2)
+  40
+   3,L,D
+
+read,1SH - Forsaken City.tas,700

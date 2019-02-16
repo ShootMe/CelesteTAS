@@ -1,35 +1,24 @@
-#Created by DevilSquirrel
-#Restart
-   1,Q
-   1,J
- 355
+Read,7A - Summit.tas,0,167
 
-Read,7A - Summit.tas,7,136
-
-#lvl_a-06
-  35,R
-  32,R,X
-  34,R,U,C
-  12,R,J,G
-   2,R,K,G
+  40,L
+  15,U,X
+   9,L,U,C
+  36,R
+  37,R,U,X
+  42,R,U,C
+   5,R,J,G
    7,R
-  10,R,X
-  10,R,J
-  22,R,X
-  28,L,D,C
-   2,L
-   6,L,U,X
-  11,L,J,G
-   2,L,K,G
-  15,L,D,C
-   1,L,J
-  22,L,D,C
- 158
-   1,S
-   1,D,J
- 217
+   4,D,X
+   3,L,X
+   1,R,J
+   7,R
+  16,R,J
+  26,L,X
+  18,L,D,C
+   4,L,J
+  27,L,D,X
 
-Read,7A - Summit.tas,145,196
+Read,7A - Summit.tas,172,230
 
 #lvl_b-02
   10,R,D,X
@@ -77,69 +66,83 @@ Read,7A - Summit.tas,145,196
 
 #lvl_b-02c
    5,R
+   2,R,J
+   1,J
    1,R,J
-  10,R,D
-  24,R,X
-  15,R,U,C
-  28,R,D
-  28,R,X
-  15,D,C
-   5,R,D
-  51,L,D
+   9,R,D,X
+   7,R,J,G
+  15,R,D,X
+   1,L
+  20,R
+   1,J,G
+   3,R
+   9
+   1,L
+   1,J,G
+  25,L,D
+  40
 
 #lvl_b-02d
    5,R,D
-   5,L,D,X
+   4,L,D,X
    6,L,J
-  10,L
+   5,L
+   5,L,J
   28,L,D,X
   11,L,U,C
-   2,L,J,G
-   7,L
+   1,L,J,G
+   6,L
   18,L,X
   15,D,C
-  15,R,D
-  33,R,X
-  14,R,U,C
-   1,R,J,G
-   9,R
-  14,R,D,X
-   1,R,J
-  15,R,D,X
-  24,L,D,C
-   4,L,J
-  15,L,D,X
-  46,R,D
+  14,R,D
+   1,D,X
+  32,R,X
+  13,R,U,C
+   3,R,J,G
+   3,R
+  16,R,D,X
+   4,R,D,C
+   8,R,J
+   6,R
+  36,L,D,X
+   2,R,D
+  40
 
 #lvl_b-02
    3,R,D
   14,R,D,X
    1,R,J
-  13,R,D,X
+  14,R,D,X
    1,R,J
-   7,R
-  41,R,J
+   6,R,D,X
+   1,R,J
+   3,R
 
-Read,7A - Summit.tas,210,408
+Read,7A - Summit.tas,242,470
 
 #lvl_c-04
-   6,R,J
-   9,R,U,X
-  14,R,J,G
-  25,R,X
+   1,R,J
+   4,D,X
+   8,R,U,X
+  11,R,J,G
+  24,R,X
    4,R,J
-  21,R,D,K,X
-  24,R,C
+   4,R,D,X
+  13,R,J
+  23,R,C
    4,R,J
-   4,R,K
-   3,R,J,G
-  18,R
-  28,U,X
-  10,U,C
+   5,R,K
+   4,R,J,G
+   5,R
+   7,R,J
+  25,U,X
+   1,R,J
+   9,U,C
   40
 
 #lvl_c-06b
-  11,R,J
+   8,R,J
+   3,R,K,G
    7,R,D,X
    1,R,J
    7,R
@@ -155,48 +158,55 @@ Read,7A - Summit.tas,210,408
    7,L,J,G
    7,L
   15,R,J,X
-  19,R,U,C
-   8,R,J
+  25,R,U,C
   18,R,X
   14,R,D,C
    1,R,J
-   6,R,D,X
+   2,R
   40,R
 
 #lvl_c-06c
-   8,R
-  12,R,J
-   1,R,K,G
-  10,R
-   1,J
-  27,R,D
-  11,R,U,X
-  50,R,J
-  27,R,X
+   5,R
+   7,R,J
+   5,R
+   4,D,X
+  10,R,X
+   5,J
+  22,R,D
+   4,D,X
+   6,R,U,X
+   1,L
+   6,J,G
+   2
+  34,R
+  30,R,X
    4,R,J
    1,R,K
-  17,R
-  35,L
-   5,L,D
-  10,L,D,X
-   4,L,J
-  11,L,K
-  28,L
-  18,L,U,X
+  28,R,D,X
+  21,L,D,C
    4,L,J
    1,L,K
-  15,L
-  20,L,X
-  26,L,C
-   4,L,J
-   8,L,K
+  27,L,D
   15,U,X
-  42,R,C
-  18,U,X
-  11,L,J
+  15,L,U,C
+   4,L,J
+   4,L,D,X
+   5,L,J
+   1,L
+  23,L,J
+  22,L,X
+   4,L,J
+   4,L,K
+   4,L
+  15,U,X
+   1,R
+  40,R,C
+   2,R,J
+  14,U,X
+  13,L,J
   11,L,X
-   7,L,J
-   2,L,K,G
+   8,L,J
+   1,L,K,G
    5,L,X
   47,L,J
 
@@ -217,66 +227,71 @@ Read,7A - Summit.tas,210,408
   14,R,X
    1,R,J
   11,R,D,X
-   6,R,J
+   7,R,J
 
-Read,7A - Summit.tas,448,584
+Read,7A - Summit.tas,514,669
 
 #lvl_d-03
-   7,R
-  21,R,J
-  17,R,D,X
-   2,R,J
-  15,R,U,X
-  14,R,U,C
-   1,R,J,G
-  13,R,D
-   6,R,D,X
-   1,L,J
-   7,L
-  15,L,J
-  15,L,U,X
-  12,U,C
-  40,L
+   8,R
+  18,R,J
+   4,D,X
+  11,R,U,X
+   3
+  17,L,U,C
+  12,L,J,G
+  12,L,K,G
+   2,L,J,G
+   1,K
+  40
 
 #lvl_d-03b
-   2,L
-  10,R,J
-  14,R,D,X
+  12,R,J
+   2,K,G
+   1,L,K
+   2
+   4,D,X
+  10,R,X
    1,R,J
    7,R,D,X
    1,R,J
    7,R
-  21,R,J
-  15,U,X
-  31,R
-  18,R,X
-   6,L,D,C
-   1,R,J
-   7,R
-  10,R,J
-  25,R
-  26,U,X
-  39,U,C
-  15,R,X
-  15,L,C
-  14,R,D,X
-   1,R,J
-  15,R,D,X
-  21,R,D,C
-   5,R,J
-  12,R
-  14,R,U,X
+   4,R,J
+   5,R
+   2,R,J
+   9,R
+   4,D,X
+  16,R,X
+  16,R,U,C
    1,R,J,G
-  14,R,D,X
+   7,R
+   1
+   4,D,X
    1,R,J
+   6,R
+  12,R,J
+   6,R
+  15,R,D,X
+   4,R
+  32,R,J,G
+  15,R,X
+   5,R
+   4,R,D,X
+  10,R,X
+   9,R,J
+  15,R,U,X
+   4,D,C
+  10,R,C
+   1,R,J
+  12,R,D,X
+   3,R,J
    7,R,U,X
  257
    1,J
  123
   16,L,D,X
-   1,J
-  10,D
-   9,D,X
+   5,J
+   4
+  11,D,X
   40,R,D
 
 #lvl_d-03
@@ -284,52 +299,92 @@ Read,7A - Summit.tas,448,584
   24,R,D,X
   25,R,D,C
    1,R,J
-  18,R,U,X
-  30,R,U,C
-   3
+  17,R,U,X
+  29,R,U,C
+  11,R,X
+  12,R,J
+  16,R
+  14,R,X
    1,R
+  14,R,D,X
+  15,R
+   4,R,D
+   4,R,D,X
+   1,R,J
+   7,R
+  10,R,J
+   2,R
+   4,D,X
+  11,R,X
+  15,D,C
+   4,R,D,X
+   1,R,J
+   7,R
+  13,J
+  19,U,X
+  18,R,J
+  12,R,K,G
+   2,R,J,G
+   4,R,D,X
+   7,R,X
+   1,R,J
+  10,R,D
+  11,L,D
+  12,D
+  14,R,D
+  15,R,U,X
+   1,R,J
+   4,R,K
+   2,R
+   3,J,G
+   5,K,G
+   9,R,J
+  24,R,U,X
+   4,R,D,C
+   3,R,X
 
-Read,7A - Summit.tas,593,664
+Read,7A - Summit.tas,723,768
 
 #lvl_d-05
-   4,R,J
+   3,R,J
   15,R,U,X
   27,R,D,C
-   7,R,D,X
+   7,R,X
    1,R,J
    7,R
   41,R,J
 
 #lvl_d-05b
    8,R,J
-  31,R
-  18,R,U,X
-  17,R,C
-  15,R,D,X
-  13,L,D
-  15,L,D,X
-  14,L,D,C
+  24,R,D
+  24,R,X
+   4,D,C
+  19,R,C
+  18,D,X
+  15,L,D,C
+  12,L,D,X
    1,L,J
    8,L
    5,L,J
-  37,L,X
-   3,L,J
-  18,U,X
-  12,L,J
-  12,L,U,X
+  36,L,X
+  17,U,C
+  12,J
+  13,L,U,X
    7,L,J,G
-   9,L
-  45,L,D,J,X
+   7,L
+   5,L,D,J,X
+   2,L
+  40
 
 #lvl_d-05
-   7,L
-   5,L,J
-  16,U,X
-   9,R,J,G
-  10,R
-   8,R,J
+   5,L
+   7,L,J
   15,U,X
-  13,U,C
+   9,R,J,G
+   9,R
+   7,R,J
+  15,U,X
+  14,U,C
   40,R
 
 #lvl_d-06
@@ -343,8 +398,15 @@ Read,7A - Summit.tas,593,664
   18,R,U,X
   14,R,C
   20,R,D
+   1,R,J
+  15,R,U,X
+  15,R,C
+  26,R,D
+   7,R,J
+  18,R,D,X
+   9,D,C
 
-Read,7A - Summit.tas,682,777
+Read,7A - Summit.tas,798,890
 
 #lvl_e-00
    1,L,J
@@ -355,41 +417,44 @@ Read,7A - Summit.tas,682,777
 
 #lvl_e-01
    3,L
-   2,L,J
-  14,L,X
+   2,J
+   4,D,X
+  10,L,X
    1,L,J
   14,L,D,X
-  37,L,J
-  20,L,U,X
-  15,L,C
+  41,L,J
+  16,L,U,X
+  16,L,U,C
   40,L
 
 #lvl_e-01b
-   2,L
-   4,R
-   8,L,J,G
-   7,L
-  11,L,X
+   4,D,X
+   6,L,X
    1,L,J
-  38,L
-  15,U,X
-  15,U,C
-  22,L,J
-   3,L,K,G
-   6,L
-   6,R
-  17,L,D
-  15,L,X
-  25,L,D
-  12,L,U,C
+  30,L
+  14,U,X
    1,J
-  16,R,K,G
+  14,U,C
+  20,L,J
+   1,K,G
+   5,L
+   2,L,J
+   1,R
+  20,L,D
+   4,D,X
+  11,L,X
+  23,L,D
+   4,D,X
+  11,L,U,C
   12,R,J,G
-   6,R,K,G
+  12,R,K,G
+  12,R,J,G
+   1,K,G
    4,L,K
-   5,J
+   2,J
   12,L,K
-  12,R,J
+   1,L,J,G
+   8,R,K
   40,R
 
 #lvl_e-01c
@@ -402,41 +467,58 @@ Read,7A - Summit.tas,682,777
   24,R,D,C
    8,R,D,J,X
   17,R
-  16,R,J
+  12,R,J
+   4,R
   16,R,U,X
    2,R,J,G
-   8,R
-  21
+  10,R
+  15
   10,L,D,X
    1,R,J
-   7,R
+   6,R
    1,R,J
-  12,R,D
-  12,R
-  14,R,X
+   1,R
+  14,R,D,X
+   1,L,J,G
    2,R,J,G
-   7,R
+   5,R
+   1,R,J
+  12,R
   15,D,X
-  47,R,D
+   4,R,D
+  40
 
 #lvl_e-01
-  20,R,D
-  20,R,X
-  10,R,U,C
+  15,R,D
+   4,D,X
+  18,R,X
+   4,D,C
+   6,R,U,C
   40,R
 
 #lvl_e-00
    5,R
+   2,R,J
   15,R,U,X
-  14,R,U,C
-  40,R
+   9,U,C
 
 #lvl_e-02
-  11,R
-   7,R,J,G
-   8,R
+  40
+  12,R,J
+   4,D,X
+  10,R,X
+   9,R,J
+  14,R,D,X
+  14,R,J
+  14,R,D,X
+   1,R,J
+  15,R,U,X
+   4,D,C
+  10,R,C
+   7,R,J
+  14,U,X
 
-Read,7A - Summit.tas,789,1095
+Read,7A - Summit.tas,914,1262
 
 #lvl_f-00
    4,R,J
@@ -459,8 +541,12 @@ Read,7A - Summit.tas,789,1095
  393,R
 
 #lvl_f-02
-  80,R
-  49,U,X
+  53,R
+   7,R,D,X
+   3,R,J
+   9,R
+   4,R,J
+  48,U,X
 
 #lvl_f-02b
   11,R,J
@@ -468,37 +554,47 @@ Read,7A - Summit.tas,789,1095
   25,R,C
   15,R,U,X
   15,R,D,C
-   8,R
-  20,R,X
-  18,R,U,C
-  15,R,X
-  15,R,C
-  24,R,D
+   7,R
+  25,R,X
+  21,R,U,C
+  25,R,X
+  15,R,D,C
+   4,R,D
   18,R,X
   15,R,U,C
-  14,R,J,G
-   6,R,K,G
-  10,L,K
-   1,J
-   9,L,J
-   3,R,J
-   8,R,K
-  38,R,D
-   6,R
-  24,R,U,X
-   9,R,J,G
-   4,R,K,G
-  25,R,D
+  10,J,G
+   2,L,J
+   2,K
+  12,J
+   1,K,G
+   5,L,K
+   2,R,K
+   7,J
+   1,K
+   8,R,J
+  28,R
+   4,R,D
+   4,D,X
+  11,R,X
+   4
+   5,R
+   1,R,K,G
+   5,R
+   1,R,J
+  18,R,D
   69,R,X
   15,R,U,C
-  24,R,D
-  17,R,U,X
-   2,R,J,G
+  21,R,D
+   1,R,J,G
+   1,R,K,G
+   5,R
+   3,R,J
+   7,U,X
+   8,R,J
    7,R
-  25,R,U,X
-  26,R,D,C
-   1,R,J
-  15,R,D,X
+  22,R,D,C
+   7,R,J
+  17,R,D,X
   40,R
 
 #lvl_f-07
@@ -523,8 +619,14 @@ Read,7A - Summit.tas,789,1095
   10,L
    3,J
   11,L,J
+   1,K
+  12,R,K
+  17,U,X
+  16,U,C
+   3,R,J
+  11,R
 
-Read,7A - Summit.tas,1193,1419
+Read,7A - Summit.tas,1375,1627
 
 #lvl_g-00b
 #CP-28
@@ -534,76 +636,86 @@ Read,7A - Summit.tas,1193,1419
    3,R,K,G
   15,R,D,X
   13,R,D,C
-   2,R,J
+   2,L,J
   15,R,U,X
-  10,R,C
-  10,R,J
+   4,D,C
+   6,R,C
+   1,R,J
+   7,R
+   7,R,J
+  16,R
+  34
+   1,L
+  45
+   1,R
+  40
+   1,L
+  17
+   1,R
+  13
+   1,L
+  10
+   1,R
+  10
+   4,D,X
+   1,R,J
+  16,R
+  70
+  12,L
+  45
   15,R,X
-  17,R,C
-  12,U,X
-   1,L,J
-  32,D
-   1,J
-  14
-   1,J
-  14
-   1,J
-  14
-   1,J
-  14
-   1,J
-  14
-   1,J
-  14
-   1,J
-  14
-   1,J
-  14
-   1,J
-  14
-   1,J
-  14
-   1,J
-  14
-   1,J
-  14
-   1,J
-  14
-   1,J
-  14
-   1,J
-  14
-   1,J
-  14
-   1,J
-  14
-   1,J
-  14
-   1,J
-  14
-   1,J
-  14
-   1,J
-  14
-   1,J
-  14
-   1,J
-  14
-   1,J
-  14
-   1,J
-  14
-   1,J
-  14
-   1,J
-  32,U,X
-  60,L,D,C
-  20,L,D,J,X
- 106,L
-   1,J
-  47,L,D
-  28,L,X
-  12,L,J
-  11,L,K
+  25
+  12,L
+  24
+   3,L
+  15
+   4,L,X
+   6,L,J
+   7,L
+   6,R,J
+   2
+  15,U,X
+  44,D,C
+   1,L
+   1,R
+   1,L
+   1,R
+   2,L
+   2,R
+   2,L
+   3,R
+   3,L
+   3,R
+   3,L
+   3,R
+   3,L
+   4,R
+   4,L
+   4,R
+   4,L
+   5,R
+   5,L
+   6,R
+   7,L
+   8,R
+   9,L
+  12,R
+   1,S
+   1,D
+   1,J,F,180
+  31
 
-Read,7A - Summit.tas,1427
+#Main Menu
+  16
+   1,J
+  68
+   1,D
+   1,J
+  16
+   1,J
+
+#lvl_g-00b
+  37
+   2,R,X
+
+Read,7A - Summit.tas,1627
