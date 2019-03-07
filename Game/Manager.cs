@@ -93,7 +93,7 @@ namespace TAS {
 							sb.AppendLine(statuses);
 						}
 						sb.Append(timers);
-						PlayerStatus = sb.ToString();
+						PlayerStatus = sb.ToString().TrimEnd();
 						lastPos = player.ExactPosition;
 						lastTimer = chapterTime;
 					}
