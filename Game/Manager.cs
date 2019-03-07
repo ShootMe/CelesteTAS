@@ -57,6 +57,7 @@ namespace TAS {
 					chapterTime = level.Session.Time;
 					if (chapterTime != lastTimer || lastPos != player.ExactPosition) {
 						string statuses = ((int)(player.dashCooldownTimer * 60f) < 1 && player.Dashes > 0 ? "Dash " : string.Empty) + (player.LoseShards ? "Ground " : string.Empty) + (player.WallJumpCheck(1) ? "Wall-R " : string.Empty) + (player.WallJumpCheck(-1) ? "Wall-L " : string.Empty) + (!player.LoseShards && player.jumpGraceTimer > 0 ? "Coyote " : string.Empty);
+                    				statuses = ((player.InControl && !level.Transitioning ? statuses : "NoControl ") + (player.TimePaused ? "Paused " : string.Empty) + (level.InCutscene ? "Cutscene " : string.Empty));
 						Vector2 diff = (player.ExactPosition - lastPos) * 60;
 
 						if (player.Holding == null) {
@@ -83,15 +84,17 @@ namespace TAS {
 							    }
 						    }
 						}
-	                    			string timers = (berryTimer !=-10 ? $"BerryTimer: {berryTimer.ToString()} " : string.Empty) + ((int)(player.dashCooldownTimer * 60f) != 0 ? $"DashTimer: {((int)Math.Round(player.dashCooldownTimer * 60f)).ToString()} " : string.Empty);
+	                			string timers = (berryTimer !=-10 ? $"BerryTimer: {berryTimer.ToString()} " : string.Empty) + ((int)(player.dashCooldownTimer * 60f) != 0 ? $"DashTimer: {((int)Math.Round(player.dashCooldownTimer * 60f)).ToString()} " : string.Empty);
 						
 						StringBuilder sb = new StringBuilder();
 						sb.Append("Pos: ").Append(player.ExactPosition.X.ToString("0.0", enUS)).Append(',').AppendLine(player.ExactPosition.Y.ToString("0.0", enUS));
 						sb.Append("Speed: ").Append(player.Speed.X.ToString("0.00", enUS)).Append(',').Append(player.Speed.Y.ToString("0.00", enUS)).Append(',').AppendLine(player.Speed.Length().ToString("0.00", enUS));
 						sb.Append("Vel: ").Append(diff.X.ToString("0.00", enUS)).Append(',').Append(diff.Y.ToString("0.00", enUS)).Append(',').AppendLine(diff.Length().ToString("0.00", enUS));
 						sb.Append("Stamina: ").Append(player.Stamina.ToString("0")).Append(" Timer: ").AppendLine(((double)chapterTime / (double)10000000).ToString("0.000", enUS));
-						sb.Append(player.InControl && !level.Transitioning ? statuses : "NoControl ").Append(player.TimePaused ? "Paused " : string.Empty).AppendLine(level.InCutscene ? "Cutscene " : string.Empty);
-                        			sb.Append(timers);
+						if (statuses != string.Empty) {
+						    sb.AppendLine(statuses);
+						}
+						sb.Append(timers);
 						PlayerStatus = sb.ToString();
 						lastPos = player.ExactPosition;
 						lastTimer = chapterTime;
