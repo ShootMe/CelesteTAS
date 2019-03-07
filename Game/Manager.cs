@@ -26,7 +26,6 @@ namespace TAS {
 		private static long lastTimer;
 		private static CultureInfo enUS = CultureInfo.CreateSpecificCulture("en-US");
 		private static KeyboardState kbState;
-		private static List<Strawberry> heldBerries;
 		private static bool IsKeyDown(Keys key) {
 			return kbState.IsKeyDown(key);
 		}
@@ -57,7 +56,7 @@ namespace TAS {
 					chapterTime = level.Session.Time;
 					if (chapterTime != lastTimer || lastPos != player.ExactPosition) {
 						string statuses = ((int)(player.dashCooldownTimer * 60f) < 1 && player.Dashes > 0 ? "Dash " : string.Empty) + (player.LoseShards ? "Ground " : string.Empty) + (player.WallJumpCheck(1) ? "Wall-R " : string.Empty) + (player.WallJumpCheck(-1) ? "Wall-L " : string.Empty) + (!player.LoseShards && player.jumpGraceTimer > 0 ? "Coyote " : string.Empty);
-                    				statuses = ((player.InControl && !level.Transitioning ? statuses : "NoControl ") + (player.TimePaused ? "Paused " : string.Empty) + (level.InCutscene ? "Cutscene " : string.Empty));
+						statuses = ((player.InControl && !level.Transitioning ? statuses : "NoControl ") + (player.TimePaused ? "Paused " : string.Empty) + (level.InCutscene ? "Cutscene " : string.Empty));
 						Vector2 diff = (player.ExactPosition - lastPos) * 60;
 
 						if (player.Holding == null) {
@@ -69,30 +68,29 @@ namespace TAS {
 								}
 							}
 						}
-						
+
 						int berryTimer = -10;
-						Manager.heldBerries = new List<Strawberry>();
 						if (player.Leader.HasFollower<Strawberry>()) {
-									    foreach (Follower follower in player.Leader.Followers) {
-							if (follower.Entity is Strawberry) {
-							    Manager.heldBerries.Add(follower.Entity as Strawberry);
+							List<Follower> followers = player.Leader.Followers;
+							for (int i = 0; i < followers.Count; i++) {
+								Follower follower = followers[i];
+								if (follower.Entity is Strawberry strawberry) {
+									if (strawberry.IsFirstStrawberry) {
+										berryTimer = (int)Math.Round(60f * strawberry.collectTimer);
+										break;
+									}
+								}
 							}
-						    }
-						    foreach (Strawberry strawberry in Manager.heldBerries)  {
-							    if (strawberry.IsFirstStrawberry) {                         
-								    berryTimer = (int)Math.Round(60f * strawberry.collectTimer);
-							    }
-						    }
 						}
-	                			string timers = (berryTimer !=-10 ? $"BerryTimer: {berryTimer.ToString()} " : string.Empty) + ((int)(player.dashCooldownTimer * 60f) != 0 ? $"DashTimer: {((int)Math.Round(player.dashCooldownTimer * 60f)).ToString()} " : string.Empty);
-						
+						string timers = (berryTimer != -10 ? $"BerryTimer: {berryTimer.ToString()} " : string.Empty) + ((int)(player.dashCooldownTimer * 60f) != 0 ? $"DashTimer: {((int)Math.Round(player.dashCooldownTimer * 60f)).ToString()} " : string.Empty);
+
 						StringBuilder sb = new StringBuilder();
 						sb.Append("Pos: ").Append(player.ExactPosition.X.ToString("0.0", enUS)).Append(',').AppendLine(player.ExactPosition.Y.ToString("0.0", enUS));
 						sb.Append("Speed: ").Append(player.Speed.X.ToString("0.00", enUS)).Append(',').Append(player.Speed.Y.ToString("0.00", enUS)).Append(',').AppendLine(player.Speed.Length().ToString("0.00", enUS));
 						sb.Append("Vel: ").Append(diff.X.ToString("0.00", enUS)).Append(',').Append(diff.Y.ToString("0.00", enUS)).Append(',').AppendLine(diff.Length().ToString("0.00", enUS));
 						sb.Append("Stamina: ").Append(player.Stamina.ToString("0")).Append(" Timer: ").AppendLine(((double)chapterTime / (double)10000000).ToString("0.000", enUS));
-						if (statuses != string.Empty) {
-						    sb.AppendLine(statuses);
+						if (!string.IsNullOrEmpty(statuses)) {
+							sb.AppendLine(statuses);
 						}
 						sb.Append(timers);
 						PlayerStatus = sb.ToString();
@@ -323,13 +321,13 @@ namespace TAS {
 				MInput.GamePads[0].Attached = true;
 			}
 
-            if (input.HasActions(Actions.Confirm)) {
-                MInput.Keyboard.CurrentState = new KeyboardState(Keys.Enter);
-            } else {
-                MInput.Keyboard.CurrentState = new KeyboardState();
-            }
+			if (input.HasActions(Actions.Confirm)) {
+				MInput.Keyboard.CurrentState = new KeyboardState(Keys.Enter);
+			} else {
+				MInput.Keyboard.CurrentState = new KeyboardState();
+			}
 
-            MInput.UpdateVirtualInputs();
+			MInput.UpdateVirtualInputs();
 		}
 	}
 }
