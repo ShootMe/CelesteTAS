@@ -70,19 +70,12 @@ namespace TAS {
 						}
 
 						int berryTimer = -10;
-						if (player.Leader.HasFollower<Strawberry>()) {
-							List<Follower> followers = player.Leader.Followers;
-							for (int i = 0; i < followers.Count; i++) {
-								Follower follower = followers[i];
-								if (follower.Entity is Strawberry strawberry) {
-									if (strawberry.IsFirstStrawberry) {
-										berryTimer = (int)Math.Round(60f * strawberry.collectTimer);
-										break;
-									}
-								}
-							}
+						Follower firstRedBerryFollower =
+							player.Leader.Followers.Find(follower => follower.Entity is Strawberry berry && !berry.Golden);
+						if (firstRedBerryFollower?.Entity is Strawberry firstRedBerry) {
+							berryTimer = (int)Math.Round(60f * firstRedBerry.collectTimer);
 						}
-						string timers = (berryTimer != -10 ? $"BerryTimer: {berryTimer.ToString()} " : string.Empty) + ((int)(player.dashCooldownTimer * 60f) != 0 ? $"DashTimer: {((int)Math.Round(player.dashCooldownTimer * 60f)).ToString()} " : string.Empty);
+						string timers = (berryTimer != -10 ? $"BerryTimer: {berryTimer.ToString()} " : string.Empty) + ((int)(player.dashCooldownTimer * 60f) != 0 ? $"DashTimer: {((int)Math.Round(player.dashCooldownTimer * 60f)-1).ToString()} " : string.Empty);
 
 						StringBuilder sb = new StringBuilder();
 						sb.Append("Pos: ").Append(player.ExactPosition.X.ToString("0.0", enUS)).Append(',').AppendLine(player.ExactPosition.Y.ToString("0.0", enUS));
