@@ -1693,11 +1693,17 @@
    8,R
    1,R,J
    8,R,D,X
-***
+
 #lvl_d-10
   40
    6,R,D,X
    1,R,J
   14,R,D,X
-
    3,R,J
+   1,S
+   1,D,J
+  18
+   
+#AreaComplete
+ 165
+   1,j
