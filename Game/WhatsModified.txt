@@ -99,7 +99,6 @@ Celeste.Player.dashCooldownTimer
 Celeste.Player.JumpGraceTimer
 Celeste.Player.WallJumpCheck(int dir)
 Celeste.Strawberry.collectTimer
-Celeste.Strawberry.IsFirstStrawberry.get_IsFirstStrawberry()
 Celeste.SummitVignette.ready
 Monocle.MInput.UpdateVirtualInputs()
 ----------------------------------------------------------------------------------
