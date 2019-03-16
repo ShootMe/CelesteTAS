@@ -78,7 +78,7 @@ namespace TAS {
 						string timers = (berryTimer != -10 ? $"BerryTimer: {berryTimer.ToString()} " : string.Empty) + ((int)(player.dashCooldownTimer * 60f) != 0 ? $"DashTimer: {((int)Math.Round(player.dashCooldownTimer * 60f)-1).ToString()} " : string.Empty);
 
 						StringBuilder sb = new StringBuilder();
-						sb.Append("Pos: ").Append(player.ExactPosition.X.ToString("0.0", enUS)).Append(',').AppendLine(player.ExactPosition.Y.ToString("0.0", enUS));
+						sb.Append("Pos: ").Append(player.ExactPosition.X.ToString("0.00", enUS)).Append(',').AppendLine(player.ExactPosition.Y.ToString("0.00", enUS));
 						sb.Append("Speed: ").Append(player.Speed.X.ToString("0.00", enUS)).Append(',').Append(player.Speed.Y.ToString("0.00", enUS)).Append(',').AppendLine(player.Speed.Length().ToString("0.00", enUS));
 						sb.Append("Vel: ").Append(diff.X.ToString("0.00", enUS)).Append(',').Append(diff.Y.ToString("0.00", enUS)).Append(',').AppendLine(diff.Length().ToString("0.00", enUS));
 						sb.Append("Stamina: ").Append(player.Stamina.ToString("0")).Append(" Timer: ").AppendLine(((double)chapterTime / (double)10000000).ToString("0.000", enUS));
