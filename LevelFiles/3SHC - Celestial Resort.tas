@@ -4,7 +4,7 @@
    1,J
   31
 
-read,3SH - Celestial Resort.tas,6,1713
+read,3SH - Celestial Resort.tas,6,1722
 
    4,L,D,X
    7,L,X
@@ -87,7 +87,7 @@ read,3SH - Celestial Resort.tas,6,1713
    8,L,D,X
   10,D,C
 
-read,3SH - Celestial Resort.tas,1782,1819
+read,3SH - Celestial Resort.tas,1791,1828
 
   16,U,X
 
@@ -107,4 +107,4 @@ read,3HC - Celestial Resort.tas,166,236
 
 read,3HC - Celestial Resort.tas,237,253
 
-read,3SH - Celestial Resort.tas,1893
+read,3SH - Celestial Resort.tas,1902

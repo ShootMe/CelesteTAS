@@ -4,11 +4,11 @@
    1,J
   31
 
-read,7S - Summit.tas,6,238
+read,7S - Summit.tas,6,247
 
 read,7HC - Summit.tas,7,26
 
-read,7S - Summit.tas,243,344
+read,7S - Summit.tas,252,356
 
 #lvl_b-02b (1)
   45,R,U,G
@@ -108,7 +108,7 @@ read,7HC - Summit.tas,79,114
   15,L,D,X
   18,L,D
 
-read,7S - Summit.tas,439,824
+read,7S - Summit.tas,453,848
 
 #lvl_c-06b (1)
   40
@@ -164,7 +164,7 @@ read,7HC - Summit.tas,167,221
   17,L,D,X
   15,L,J
 
-read,7S - Summit.tas,859,1165
+read,7S - Summit.tas,883,1197
 
 read,7HC - Summit.tas,239,309
 
@@ -173,7 +173,7 @@ read,7HC - Summit.tas,239,309
    9,R
   16,D,X
 
-read,7S - Summit.tas,1176,1213
+read,7S - Summit.tas,1211,1249
 
    1,K
    5,R,K
@@ -197,7 +197,7 @@ read,7S - Summit.tas,1176,1213
    4,D,X
   22,R,X
 
-read,7S - Summit.tas,1236,1266
+read,7S - Summit.tas,1274,1304
 
 read,7HC - Summit.tas,354,389
 
@@ -207,14 +207,14 @@ read,7HC - Summit.tas,354,389
   15,U,X
   14,U,C
 
-read,7S - Summit.tas,1275,1491
+read,7S - Summit.tas,1313,1541
 
 read,7HC - Summit.tas,417,524
 
   13,U,X
    4,R,J
 
-read,7S - Summit.tas,1516,1982
+read,7S - Summit.tas,1566,2030
 
    4,R,J
   15,R,U,X
@@ -223,7 +223,7 @@ read,7S - Summit.tas,1516,1982
    1,R,J
   11,R,U,C
 
-read,7S - Summit.tas,2037,2047
+read,7S - Summit.tas,2090,2100
 
   17,L,J
   15,U,X
@@ -254,7 +254,7 @@ read,7S - Summit.tas,2037,2047
    1,L,K,G
   17,L,U,X
 
-read,7S - Summit.tas,1987,2023
+read,7S - Summit.tas,2035,2076
 
 read,7HC - Summit.tas,542,602
 
@@ -278,8 +278,8 @@ read,7HC - Summit.tas,542,602
    1,L,K,G
    7,L
 
-read,7S - Summit.tas,2152,2559
+read,7S - Summit.tas,2211,2627
 
 read,7HC - Summit.tas,638,725
 
-read,7S - Summit.tas,2559
+read,7S - Summit.tas,2627

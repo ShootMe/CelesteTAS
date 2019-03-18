@@ -4,7 +4,7 @@
    1,J
   31
 
-read,5S - Mirror Temple.tas,6,1133
+read,5S - Mirror Temple.tas,6,1149
 
   10,R,D
    8,D
@@ -35,7 +35,7 @@ read,5S - Mirror Temple.tas,6,1133
 
 read,5HC - Mirror Temple.tas,93,177
 
-read,5S - Mirror Temple.tas,1161,1278
+read,5S - Mirror Temple.tas,1177,1298
 
 read,5HC - Mirror Temple.tas,209,309
 
@@ -45,7 +45,7 @@ read,5HC - Mirror Temple.tas,209,309
   16,R,D
   20,R,X
 
-read,5S - Mirror Temple.tas,1279,1414
+read,5S - Mirror Temple.tas,1299,1434
 
    4,D,X
   10,R,X
@@ -76,4 +76,4 @@ read,5S - Mirror Temple.tas,1279,1414
 
 read,5HC - Mirror Temple.tas,353,417
 
-read,5S - Mirror Temple.tas,1433
+read,5S - Mirror Temple.tas,1453
