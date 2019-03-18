@@ -1,4 +1,4 @@
-#Created by DevilSquirrel
+#By DevilSquirrel, EuniverseCat, and Kilaye
 #Restart
    1,Q
    1,J
@@ -43,6 +43,7 @@
    1,R,J
 
 #lvl_1
+
   40
   14,R
    1,R,J
@@ -180,8 +181,8 @@
   14,R
    1,R,J
   14,R
-  11,R,J
-  17,R
+  20,R,J
+   8,R
    1,S
    1,D,J
  231

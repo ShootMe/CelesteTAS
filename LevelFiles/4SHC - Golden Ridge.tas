@@ -1,0 +1,30 @@
+#By EuniverseCat
+#Restart
+   1,Q
+   1,J
+  31
+
+read,4SH - Golden Ridge.tas,6,329
+
+  13,R,D
+  27,L,D
+   4,L,D,X
+   4,L,X
+
+read,4HC - Golden Ridge.tas,66,118
+
+#lvl_a-11
+  40
+   2,R
+  10,R,D,X
+   1,R,J
+   7,R
+  13,R,J
+   6,U,X
+   2,R,J
+  34,R,D
+  11,R,J
+   4,D,X
+   5,R,X
+
+read,4SH - Golden Ridge.tas,345

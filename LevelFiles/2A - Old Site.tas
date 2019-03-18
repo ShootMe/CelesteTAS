@@ -1,7 +1,5 @@
-#Created by DevilSquirrel
-#Improved by Kilaye
-#Used KDT's TAS as a guide
-#Start
+#
+#Restart
    1,Q
    1,J
   31
@@ -387,17 +385,16 @@
   40
 
 #lvl_10
-   5,L,D
+   4,L,D
    5,L,X
   49,L
-  13,R,D,X
+  14,R,D,X
    4,R,J
    1,R,K
-  14,R,D,X
-   1,R,J
+  12,R,D
    5,D,X
-  18,L,D
-  15,L,D,X
+  19,L,D
+  15,L,X
   10,D,C
    1,J
   20,D
@@ -458,24 +455,24 @@
   40
 
 #lvl_2
-  36,D
-   5,L,D
-  40,R,D
-  14,R,D,X
+  59,D
+   7,R,D
+   4,R
+  14,L,D,X
    1,R,J
-  14,R,D,X
+  16,R,D,X
+   2,R,J
+   4,R
+  36,R,D,X
    1,R,J
-  14,R,D,X
-  21,R,D
-   1,R,J
-   6,R,D,X
-   4,R,J
+   3,J
+   8,R,X
   40
 
+
 #lvl_11
-   3,R,J
    4,R
-  11,R,J
+  11,R,J,G
    5,R,X
   27,R
   16,R,D,X
@@ -545,9 +542,10 @@
   11,R
    1,S
    1,D,J
- 208
+  18
 
 #lvl_end_0
+ 190
    1,D,X
    5,R,X
    1,R,J
@@ -582,7 +580,7 @@
    6,R,J
    1,R
    9,R,D,X
-  40,R,J
+  40R,J
 
 #lvl_end_3
    5,R,D,X

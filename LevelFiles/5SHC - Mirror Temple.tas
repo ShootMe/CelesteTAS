@@ -1,0 +1,79 @@
+#By EuniverseCat
+#Restart
+   1,Q
+   1,J
+  31
+
+read,5S - Mirror Temple.tas,6,1149
+
+  10,R,D
+   8,D
+   6,L,D
+  19,R,D
+   4,R,D,X
+   2,R,X
+   1,R,J
+   7,R
+   1,R,J
+  13,R,D,X
+
+#lvl_b-22
+  40
+   1,R
+   2,R,J
+   1,D,X
+   6,R,U,X
+   2,R,J,G
+   9,R
+  14,R,D,X
+   1,L,J
+  14,D,X
+   1,R
+  10,L,D,X
+   7,R,J
+   1,R,C
+
+read,5HC - Mirror Temple.tas,93,177
+
+read,5S - Mirror Temple.tas,1177,1298
+
+read,5HC - Mirror Temple.tas,209,309
+
+#lvl_b-02 (4)
+  40
+  15,D
+  16,R,D
+  20,R,X
+
+read,5S - Mirror Temple.tas,1299,1434
+
+   4,D,X
+  10,R,X
+   1,R,J
+   3,R
+  40
+
+#lvl_b-14
+   4,R
+  17,D,X
+   5,R,D,J,C
+   7,L,D
+   8,R,D
+  10,R,J
+  18,R,D,X
+  15,D,C
+  12,R,D
+   5,R,D,J,X
+  12,R
+  10,L,X
+   1,L,J
+   5,L
+   1,L,J,G
+  13,L
+   4,L,J
+  14,L,D,X
+  26
+
+read,5HC - Mirror Temple.tas,353,417
+
+read,5S - Mirror Temple.tas,1453

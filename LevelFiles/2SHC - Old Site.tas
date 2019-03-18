@@ -1,0 +1,43 @@
+#By EuniverseCat
+#Restart
+   1,Q
+   1,J
+  31
+
+Read,2HC - Old Site.tas,6,68
+
+Read,2S - Old Site.tas,0,164
+
+#lvl_d0
+  40
+   3,L,D,X
+   1,L,J
+   8,L
+  27,L,D
+  25,D
+  47,D,X
+
+Read,2HC - Old Site.tas,75,102
+
+   4,L
+   4,D,X
+  11,L,U,X
+   1,J
+   6,L,J
+   2,K
+
+#lvl_d0
+  40
+   4,L
+   1,L,J,G
+   6,L,K,G
+  36,U,X
+   1,L
+  10,L,D,X
+  10,L,J
+   4,L,K,G
+  10,L,D,X
+   1,L,J
+   6,L
+
+Read,2S - Old Site.tas,178
