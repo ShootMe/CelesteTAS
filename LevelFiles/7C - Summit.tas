@@ -1,9 +1,9 @@
-#By DevilSquirrel, Higashi Dong, EuniverseCat
+#By DevilSquirrel, Higashi Dong, EuniverseCat, fishmcmuffins
 #Restart
    1,Q
    1,J
   31
-
+ 
 #lvl_01
   61
   10,R,X
@@ -12,25 +12,50 @@
   19,L,J
   14,U,X
   27,L,J
-  10,U,X
-  12,R,J
-  36,R,D
-  26,R,X
+   8,U,X
+   1,R,J
+   9,R
+   1,L,D,X
+  11,L,X
+   1,R,J
+   2,R
+   1,D,X
+  16,R,X
+  15,R,C
+  17,R
   14,U,C
   31,R,J
   14,U,X
   34,R,J
-  12,U,X
-  31,R,J
-  12,U,X
-   6,R,J
-  47,R
-   5,R,X
-  28,R,D
-   5,R,X
- 235,R
-
+   6,U,X
+   2,R,J
+   7,R
+   1,D,X
+   9,L,X
+   1,R,J
+  15,L,J
+  23,U,X
+   5,R,J
+   6,R
+   1,D,X
+   9,L,X
+   9,R,J
+   1,R
+   2,R,J
+  38,R
+   1,D,X
+  13,R,U,X
+  22,R
+  16,U,X
+   2,L,J
+  28,L,J
+  12,L,K,G
+   5,R,J
+  40
+ 
 #lvl_02
+   6,R
+   5
   15,U,X
   14,U,C
   11,R
@@ -51,7 +76,7 @@
   15,R,D,X
   13,R,D,C
  180
-
+ 
 #lvl_03
    8,R,J
   15,R,U,X
