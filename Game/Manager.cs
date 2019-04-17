@@ -111,7 +111,7 @@ namespace TAS {
 		}
 		public static float GetAngle(Vector2 vector) {
 			float angle = 360f/6.283186f*Calc.Angle(vector);
-			if (angle < -90f) {
+			if (angle < -90.01f) {
 				return 450f + angle;
 			} else {
 				return 90f + angle;
