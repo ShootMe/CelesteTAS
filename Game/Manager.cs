@@ -5,7 +5,6 @@ using Monocle;
 using System;
 using System.Globalization;
 using System.Text;
-using System.Collections.Generic;
 namespace TAS {
 	[Flags]
 	public enum State {
@@ -55,13 +54,12 @@ namespace TAS {
 				if (player != null) {
 					chapterTime = level.Session.Time;
 					if (chapterTime != lastTimer || lastPos != player.ExactPosition) {
-						string pos = ("Pos: ") + player.ExactPosition.X.ToString("0.00") + (',') + player.ExactPosition.Y.ToString("0.00");
-						string speed = ("Speed: ") + (player.Speed.X.ToString("0.00")) + (',') + (player.Speed.Y.ToString("0.00"));
+						string pos = $"Pos: {player.ExactPosition.X.ToString("0.00", enUS)},{player.ExactPosition.Y.ToString("0.00", enUS)}";
+						string speed = $"Speed: {player.Speed.X.ToString("0.00", enUS)},{player.Speed.Y.ToString("0.00", enUS)}";
 						Vector2 diff = (player.ExactPosition - lastPos) * 60;
-						string vel = ("Vel: ") + (diff.X.ToString("0.00")) + (',') + (diff.Y.ToString("0.00"));
-						string polarvel = ("     ") + (diff.Length().ToString("0.00")) + (',') + (GetAngle(diff).ToString("0.00")) + "°";
-						string miscstats = ("Stamina: ") + (player.Stamina.ToString("0")) + (" Timer: ") + (((double)chapterTime / (double)10000000).ToString("0.000"));
-
+						string vel = $"Vel: {diff.X.ToString("0.00", enUS)},{diff.Y.ToString("0.00", enUS)}";
+						string polarvel = $"     {diff.Length().ToString("0.00", enUS)},{GetAngle(diff).ToString("0.00", enUS)}°";
+						string miscstats = $"Stamina: {player.Stamina.ToString("0")} Timer: {((double)chapterTime / 10000000D).ToString("0.000", enUS)}";
 						string statuses = ((int)(player.dashCooldownTimer * 60f) < 1 && player.Dashes > 0 ? "Dash " : string.Empty) + (player.LoseShards ? "Ground " : string.Empty) + (player.WallJumpCheck(1) ? "Wall-R " : string.Empty) + (player.WallJumpCheck(-1) ? "Wall-L " : string.Empty) + (!player.LoseShards && player.jumpGraceTimer > 0 ? "Coyote " : string.Empty);
 						statuses = ((player.InControl && !level.Transitioning ? statuses : "NoControl ") + (player.TimePaused ? "Paused " : string.Empty) + (level.InCutscene ? "Cutscene " : string.Empty));
 						if (player.Holding == null) {
@@ -75,12 +73,11 @@ namespace TAS {
 						}
 
 						int berryTimer = -10;
-						Follower firstRedBerryFollower =
-							player.Leader.Followers.Find(follower => follower.Entity is Strawberry berry && !berry.Golden);
+						Follower firstRedBerryFollower = player.Leader.Followers.Find(follower => follower.Entity is Strawberry berry && !berry.Golden);
 						if (firstRedBerryFollower?.Entity is Strawberry firstRedBerry) {
 							berryTimer = (int)Math.Round(60f * firstRedBerry.collectTimer);
 						}
-						string timers = (berryTimer != -10 ? $"BerryTimer: {berryTimer.ToString()} " : string.Empty) + ((int)(player.dashCooldownTimer * 60f) != 0 ? $"DashTimer: {((int)Math.Round(player.dashCooldownTimer * 60f)-1).ToString()} " : string.Empty);
+						string timers = (berryTimer != -10 ? $"BerryTimer: {berryTimer.ToString()} " : string.Empty) + ((int)(player.dashCooldownTimer * 60f) != 0 ? $"DashTimer: {((int)Math.Round(player.dashCooldownTimer * 60f) - 1).ToString()} " : string.Empty);
 
 						StringBuilder sb = new StringBuilder();
 						sb.AppendLine(pos);
@@ -110,7 +107,7 @@ namespace TAS {
 			}
 		}
 		public static float GetAngle(Vector2 vector) {
-			float angle = 360f/6.283186f*Calc.Angle(vector);
+			float angle = 360f / 6.283186f * Calc.Angle(vector);
 			if (angle < -90.01f) {
 				return 450f + angle;
 			} else {
