@@ -23,9 +23,9 @@
 #Prologue
    1,S
    1,D,J
-  93
+  32
 
-Read,0 - Prologue.tas,8
+Read,0 - Prologue.tas,lvl_0
 
 #Overworld
  194
@@ -36,9 +36,9 @@ Read,0 - Prologue.tas,8
 #Forsaken City
  230
    1,J
- 224
+ 136
 
-Read,1A - Forsaken City.tas,8
+Read,1A - Forsaken City.tas,lvl_1
 
 #Overworld
  183
@@ -51,9 +51,9 @@ Read,1A - Forsaken City.tas,8
 #Old Site
  230
    1,J
- 326
+ 136
 
-Read,2A - Old Site.tas,10
+Read,2A - Old Site.tas,lvl_start
 
 #Overworld
  183
@@ -66,9 +66,9 @@ Read,2A - Old Site.tas,10
 #Celestial Resort
  230
    1,J
- 197
+ 136
 
-Read,3A - Celestial Resort.tas,9
+Read,3A - Celestial Resort.tas,lvl_s0
 
 #Overworld
  183
@@ -81,9 +81,9 @@ Read,3A - Celestial Resort.tas,9
 #Golden Ridge
  230
    1,J
- 205
+ 136
 
-Read,4A - Golden Ridge.tas,8
+Read,4A - Golden Ridge.tas,lvl_a-00
 
 #Overworld
  183
@@ -96,9 +96,9 @@ Read,4A - Golden Ridge.tas,8
 #Mirror Temple
  230
    1,J
- 246
+ 136
 
-Read,5HC - Mirror Temple.tas,6,141
+Read,5HC - Mirror Temple.tas,6,Return
   62
    1,S
    1,U,J
@@ -106,9 +106,9 @@ Read,5HC - Mirror Temple.tas,6,141
   82
    1,R
    1,J
- 273
+ 304
 
-Read,5B - Mirror Temple.tas,3
+Read,5B - Mirror Temple.tas,lvl_start
 
 #Overworld
  193
@@ -127,9 +127,9 @@ Read,5B - Mirror Temple.tas,3
 #Reflection
  230
    1,J
- 247
+ 136
 
-Read,6HC - Reflection.tas,6,62
+Read,6HC - Reflection.tas,6,Return
   62
    1,S
    1,U,J
@@ -139,7 +139,7 @@ Read,6HC - Reflection.tas,6,62
    1,J
  304
 
-Read,6B - Reflection.tas,8
+Read,6B - Reflection.tas,lvl_a-00
 
 #Overworld
   60
@@ -158,6 +158,6 @@ Read,6B - Reflection.tas,8
 #Summit
   45
    1,J
- 356
+  32
 
-Read,7A - Summit.tas,12
+Read,7A - Summit.tas,lvl_a-00-intro
