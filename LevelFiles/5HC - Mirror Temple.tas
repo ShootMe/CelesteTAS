@@ -43,13 +43,15 @@ Read,5A,lvl_a-00b,lvl_b-02
   15,U,X
    9,D
   30,L,D
-  50,R,D
-  10,R,U,X
+  36,R,D
+   6,D
+   4,D,X
+   8,R,X
   40
 
 #lvl_b-13
-   5,R,U,X
-   5,J
+   6,R
+   3,J
    4,D,X
    2,L,X
    9,R,J
@@ -157,7 +159,6 @@ Read,5A,lvl_a-00b,lvl_b-02
    1,L,J
    7,L,D,X
   40,L
-
 #lvl_b-17
    7,L
    1,L,J
