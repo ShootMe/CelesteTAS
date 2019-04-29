@@ -1,4 +1,3 @@
-#By DevilSquirrel, Kilaye, fishmcmuffins
 #Restart
    1,Q
    1,J
@@ -135,16 +134,17 @@
   40
 
 #lvl_b-07
-   5,R,J
+   5,J
    1,R,K,G
-   6,R
-  17,U,X
-  10,R,J
+   5,R,J,G
+   4,D,X
+  11,U,X
+  11,R,J
   18,L,J,G
    2,L,G
   10,L,J,G
-  53,L,U,G
-   1,L,J,G
+  54,L,U,G
+   1,J,G
    2,R,J
   23,R,K
    8,R,J
@@ -314,46 +314,52 @@
 
 #lvl_c-00
  206
-  15,R,X
-  18,D
-  14,R,D
-  14,R
-  50,L
+   4,D,X
+   3,L,X
+   1,R,J
+  27,D
+   8,R,D
+  13,R
+  30,L
+  15,L,D
+   1,L
   15,L,U,X
-   7,R,D
+   6,L,D
+   1,R,D
   32,D
-   4,R
-   6,R,J,G
+   3,R
+   7,R,J,G
   25,R,D,X
-  18,L,D
-  11,D
-   3,R,D
-  20,R,D,X
-  12,L,J
-  39,L,D
+  19,L,D
+  13,R,D
+  15,R,D,X
+   8,L,J
+  41,L,D
    5,L,D,X
   14,D
   15,L,D
-  33,D
-   8,R,D
-  14,R,D,X
+  29,D
+  12,R,D
+  13,R,D,X
    1,R,J
-  14,R,D,X
+   7,R
    1,R,J
-  16,R,D,X
-   1,R,J
-   7,R,D,X
+  17,R,D,X
+   1,R,D,J
+   9,R,D,X
   40,R
 
 #lvl_c-01
+   5,R,D,X
+   2,R,J
+   7,L,J
+  10,U,X
+  36,R,J
    7,R
-   1,R,J
-   4,L,J
-  12,U,X
-  29,R,J
-  12,R
-  20,R,K
-   2,K
+  17,K
+   4,R,K
+   1,R
+   1
   34,R,D,X
    6,R,J,G
   24,R
@@ -363,6 +369,22 @@
    1,R,J
    8,R,D,X
   40
+
+# Alternate strat
+#   7,R,D,J
+#  40,R
+
+#lvl_c-01
+#  13,R,J
+#   1,L,K,G
+#  19,R,K
+#  12,R
+#  14,R,X
+#   5,L,J
+#   6,R,J
+#  14,L,K
+#  14,L,U,X
+#  59,R,J
 
 #lvl_c-02
    6,R,D,X
