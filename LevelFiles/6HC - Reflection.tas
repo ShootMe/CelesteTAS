@@ -46,20 +46,19 @@ Read,6A,lvl_start,lvl_04
    1,L,J
   14,L,D
    1,L,J
-   6,L,D,X
-
+   6,L,U,X
+ 
 #lvl_04e
-  40
-   7,L,D,X
+  43
    1,R,J,G
-  11,L,J
-  15,L,D,X
-   2,L,J
-   1,L,K,G
-   6,L
+   7,L,J
+   3,L
+  17,L,D,X
+   1,L
+   1,L,J
   17,L,U,X
    1,L,J,G
-  16,L,D,X
+  14,L,X
  257
    1,J
 #Return
