@@ -4,17 +4,17 @@
    1,J
   31
 
-read,4SH - Golden Ridge.tas,6,329
+read,4SH,lvl_a-00,4SHC1
 
-  13,R,D
+  14,R,D
   27,L,D
    4,L,D,X
    4,L,X
+  40
 
-read,4HC - Golden Ridge.tas,66,118
+read,4HC,lvl_a-11,lvl_a-10 (2)
 
 #lvl_a-11
-  40
    2,R
   10,R,D,X
    1,R,J
@@ -26,5 +26,8 @@ read,4HC - Golden Ridge.tas,66,118
   11,R,J
    4,D,X
    5,R,X
+   1,R,J
+  14,R,D
+  40
 
-read,4SH - Golden Ridge.tas,345
+read,4SH,lvl_a-08 (2)
