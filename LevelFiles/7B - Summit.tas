@@ -76,7 +76,8 @@
   15,U,X
   15,R,C
   18,R,D
-   5,L,D
+   3,L,D
+   2,L
   46,R
   35,R,X
   32,R,C
@@ -229,7 +230,7 @@
   16,U,X
   16,U,C
   11,L,J
-  40,R
+  40
  
 #lvl_b-02
    4,J,G
@@ -245,7 +246,8 @@
   12,R,J
   22,R
    4,D,X
-  10,R,U,X
+   9,R,U,X
+   1,L
    7,R,J
    7,L,U,C
   40,R
@@ -277,16 +279,19 @@
   14,R,D
    1,D,X
   17,R,X
-   7,R,J,G
+   1,R,G
+   3,R,J,G
+   2,R
+   1,R,J,G
    6,R
-   3,L
+   1
    4,D,X
-   3,L,X
+   2,L,X
    1,R,J
    7,R
    1,R,J
    8,R,U,X
-  40,R
+  40
  
 #lvl_b-03
    4,R,U,X
@@ -295,49 +300,64 @@
   11,R
   15,R,U,X
   10,R,G
-  10,D,X
-  12,L,D
+  15,D,X
+   7,L,D
   55,R
   11,U,X
    9,R,J
-   8,L,J
-   2,L,K,G
-  12,R,J
+   7,L,J
+   1,K,G
+   2,L,J,G
+   9,R,K
+   2,R,K
+   1,R
   10,L,X
    6,R,J
-  13,U,X
-   3,J
-  14,R,J
+  14,U,X
+  15,R,J
   12,L,U,X
    1,L,J,G
   18,L,D
-  96,L,U,G
-  29,R,J
+  93,L,U,G
+   1,K,G
+   1,J,G
+   1,R,K
+  28,R,J
   14,U,X
-  12,R,J
+   9,L,J
+   2,R,J
   12,R,K
   12,L,J
   12,R,K
-  12,L,J
-   8,L,K,G
-  13,L,J,G
-  12,R,K
-  12,R,J,G
-  13,L,K
+   3,J,G
+   2,L,J
+  11,L,K
+  11,L,J,G
+   3,K,G
+   2,R,K
   12,R,J
+   2,K,G
+   9,R,K,G
+   1,L,K
+  12,L,J
+  12,R,K
+  11,L,J
+   5,K,G
+   2,R,K
+  11,R,J
   12,L,K
-  13,R,J
-  15,L,K
-  18,U,X
+  16,U,X
  373
- 
+
 #lvl_c-01
-   9,R,J
-   6,R,D,X
+   5,R,J
+   2,R
+   4,D,X
+   1,R,X
    1,R,J
-   7,R
+   6,R
    8,R,J
-  29,R,X
+  30,R,X
    3,R,J
    5,R,K
   13,R,X
@@ -347,45 +367,51 @@
    5,R,J
   41,R,D,X
    4,R
-   5,R,D,K,X
+   4,D,X
+   1,R,K
   15,R
   38,R,U,C
    4,R,J
-  40,R,D
+  37,R,D
+   4,D,X
+  11,R,X
+  39,R,U,C
+   4
+   4,D,X
+  24,R,J
   15,R,X
-  43,R,U,C
-   4,R,J
-  12,R,D,K,X
-  13,R
-  15,R,C
-  12,R,D
-  16,L
-  13,L,D
-  36,R
-  11,U,X
+  15,R,D
+  26,L,D
+  34,R
+  10,U,X
   26,R,J
-  14,U,X
-   7,R,J
-  40,R
- 
+  12,U,X
+   9,R,J
+   1,R,K,G
+  40
+
 #lvl_c-00
-  15,R
-  15,R,X
-  30,R,U,C
+  11,R,J,G
+   9,R,X
+   6,R,J,G
+  26,R,U,C
    4,R,J
-  10,R,D,K,X
-   5,R
-  30,R,D,C
-   5,R,D,K,X
+   4,D,X
+   9,R,K
+   3,R
+  29,R,D,C
+   4,D,X
+   1,R,K
   11,R
    4,D,X
   21,R,U,X
    4,R,J
    2,R,K
-  15,U,X
+  14,U,X
+   1,J
   11,U,C
   40
- 
+
 #lvl_c-02
   11,R,J
   17,U,X
@@ -433,15 +459,15 @@
   20,L,K
   15,U,X
   12,R,J,G
-   4,R,K,G
+   3,R,K,G
   12,R,X
    4,R,J
    2,L,J
   13,R,D,K,X
    4,R
-   6,R,J,G
+   4,R,J,G
   10,R,D,X
-  10,R
+  12,R
   48,L
   15,U,X
   25,L,C
@@ -472,55 +498,61 @@
   15,R,C
   15,U,X
   11,U,C
- 407
+ 331
  
 #lvl_d-00
+  76
   15,U,X
-   6,R,J
+   3,R,J
+   3,L,J
    1,D,X
    5,R,X
    1,R,J
    7,R
-   1,R,D,J
+   1,R,J
   19,R,D,X
    1,D,C
    9,R,C
-  15,R,J,G
-   9,R
+  11,R,J,G
+   1,R
    1
+   7,R
+   2,R,J
    9,R
-   1,J,G
-  11,D
-   8,R,D
-  15,R,C
-   4,L
-  13,R,U,X
-   1,L,J,G
-  10,R,J
-  20,R,D
-   5,L,D
-  10,R,D
-   1,D
-   2,R
-   1,D,C
-  25,R,C
-  22,R,X
+   2,R,D
+   1,R
    1,R,J,G
+   6,R
+   1,R,J
+   9,R
+  29,R,X
+   3,R,D
+   4,D,C
+  11,R,C
+   3,R
+  10,R
+  19,R,X
+   4,D,C
+  21,R,C
    2
-  18,R
+   5,R
+   5,R,D
+   1,R,J,G
+   1,R,K,G
+  19,R
   34,R,X
-  15,R,U,C
+   4,D,C
+  11,R,U,C
   24,R
    4,R,D,X
+   2,R,J
+   8,R
    1,R,J
-   7,R
-   1,R,J
-   2,R
-   6,R,D,X
-  40,R
+   7,R,D,X
+  40
  
 #lvl_d-01
-   4,R,D,X
+   3,R,D,X
    1,R,J
    7,R
    2,R,D
@@ -1500,7 +1532,13 @@
   15,U,X
   13,U,C
  138
-#-18f flag 3 bhop reverse cornerboost strat
-#-71f flag 2 different dash usages in middle, and then demohyper on cloud at ending
-#-13f flag 1 new movement, plus uphyper in 2nd climb
-#-131f g-03 make the heart room less trash
+# -3f b-02 better landing at end
+# -1f b-03 subpixel optimization to 2nd badeline
+# -5f b-03 better climb
+# -6f c-01 actually optimizing the end
+# -8f c-00 cross-screen cb
+# -1f c-03 earlier dash into dream block
+#-16f d-00 demo through first spike wall
+
+
+
