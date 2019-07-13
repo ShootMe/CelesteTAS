@@ -8,15 +8,24 @@
   69
    4,R,D,X
    9,R,X
-  42,R,D,J
+  36,R,D,J
+   5,R
+   2,R,D
    4,D,X
-  44,R,X
-  15,R,C
-   1
-  41,R,D
-  14,U,X
+  11,R,X
+   9,R
+   2
+  19,R
+   4,D,X
+  11,R,X
+   2
+  34,R
+   2
+  13,U,X
    8,R,J
   11,R
+#+1f spinner cycle
+   1
    4,R,D,X
    6,R,X
    5,R,J
