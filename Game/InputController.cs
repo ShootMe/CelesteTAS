@@ -260,7 +260,7 @@ namespace TAS {
 				while (!sr.EndOfStream) {
 					curLine++;
 					string line = sr.ReadLine();
-					if (line.StartsWith("#" + label)) {
+					if (line == ("#" + label)) {
 						return curLine;
 					}
 				}

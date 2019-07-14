@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="InputController.cs" />
     <Compile Include="InputRecord.cs" />
+    <Compile Include="KeyBindings.cs" />
     <Compile Include="Manager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

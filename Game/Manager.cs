@@ -6,6 +6,8 @@ using System;
 using System.Globalization;
 using System.Text;
 using System.Collections.Generic;
+using System.IO;
+using System.Xml.Serialization;
 namespace TAS {
 	[Flags]
 	public enum State {
@@ -26,8 +28,16 @@ namespace TAS {
 		private static long lastTimer;
 		private static CultureInfo enUS = CultureInfo.CreateSpecificCulture("en-US");
 		private static KeyboardState kbState;
-		private static bool IsKeyDown(Keys key) {
-			return kbState.IsKeyDown(key);
+		private static List<VirtualButton.Node>[] playerBindings;
+		private static KeyBindings bindings;
+		private static bool keysInitialized;
+
+		private static bool IsKeyDown(List<Keys> keys) {
+			foreach (Keys key in keys) {
+				if (!kbState.IsKeyDown(key))
+					return false;
+			}
+			return true;
 		}
 		public static bool IsLoading() {
 			if (Engine.Scene is SummitVignette summit) {
@@ -118,6 +128,8 @@ namespace TAS {
 			}
 		}
 		public static void UpdateInputs() {
+			if (!keysInitialized)
+				InitializeKeys();
 			UpdatePlayerInfo();
 			kbState = Keyboard.GetState();
 			GamePadState padState = GetGamePadState();
@@ -172,37 +184,20 @@ namespace TAS {
 				}
 
 				float rightStickX = padState.ThumbSticks.Right.X;
-				if (IsKeyDown(Keys.RightShift) && IsKeyDown(Keys.RightControl)) {
+				if (IsKeyDown(bindings.keyFastForward))
 					rightStickX = 1f;
-				}
-
-				if (rightStickX <= 0.2) {
+				if (rightStickX <= 0.2)
 					FrameLoops = 1;
-				} else if (rightStickX <= 0.3) {
-					FrameLoops = 2;
-				} else if (rightStickX <= 0.4) {
-					FrameLoops = 3;
-				} else if (rightStickX <= 0.5) {
-					FrameLoops = 4;
-				} else if (rightStickX <= 0.6) {
-					FrameLoops = 5;
-				} else if (rightStickX <= 0.7) {
-					FrameLoops = 6;
-				} else if (rightStickX <= 0.8) {
-					FrameLoops = 7;
-				} else if (rightStickX <= 0.9) {
-					FrameLoops = 8;
-				} else {
-					FrameLoops = 9;
-				}
+				else
+					FrameLoops = (int)(10 * rightStickX);
 			} else {
 				FrameLoops = 1;
 			}
 		}
 		private static void FrameStepping(GamePadState padState) {
 			bool rightTrigger = padState.Triggers.Right > 0.5f;
-			bool dpadUp = padState.DPad.Up == ButtonState.Pressed || (IsKeyDown(Keys.OemOpenBrackets) && !IsKeyDown(Keys.RightControl));
-			bool dpadDown = padState.DPad.Down == ButtonState.Pressed || (IsKeyDown(Keys.OemCloseBrackets) && !IsKeyDown(Keys.RightControl));
+			bool dpadUp = padState.DPad.Up == ButtonState.Pressed || (IsKeyDown(bindings.keyFrameAdvance) && !IsKeyDown(bindings.keyStart));
+			bool dpadDown = padState.DPad.Down == ButtonState.Pressed || (IsKeyDown(bindings.keyPause) && !IsKeyDown(bindings.keyStart));
 
 			if (HasFlag(state, State.Enable) && !HasFlag(state, State.Record) && !rightTrigger) {
 				if (HasFlag(nextState, State.FrameStep)) {
@@ -223,7 +218,7 @@ namespace TAS {
 				} else if (!dpadDown && frameStepWasDpadDown) {
 					state &= ~State.FrameStep;
 					nextState &= ~State.FrameStep;
-				} else if (HasFlag(state, State.FrameStep) && (padState.ThumbSticks.Right.X > 0.1 || (IsKeyDown(Keys.RightShift) && IsKeyDown(Keys.RightControl)))) {
+				} else if (HasFlag(state, State.FrameStep) && (padState.ThumbSticks.Right.X > 0.1 || IsKeyDown(bindings.keyFastForward))) {
 					float rStick = padState.ThumbSticks.Right.X;
 					if (rStick < 0.1f) {
 						rStick = 0.5f;
@@ -242,7 +237,7 @@ namespace TAS {
 			frameStepWasDpadDown = dpadDown;
 		}
 		private static void CheckControls(GamePadState padState) {
-			bool openBracket = IsKeyDown(Keys.RightControl) && IsKeyDown(Keys.OemOpenBrackets);
+			bool openBracket = IsKeyDown(bindings.keyStart);
 			bool rightStick = padState.Buttons.RightStick == ButtonState.Pressed || openBracket;
 
 			if (rightStick) {
@@ -265,10 +260,27 @@ namespace TAS {
 			Recording = false;
 			state = State.None;
 			nextState = State.None;
+			RestorePlayerBindings();
 		}
 		private static void EnableRun() {
 			nextState &= ~State.Enable;
 			UpdateVariables(false);
+			BackupPlayerBindings();
+		}
+		private static void BackupPlayerBindings() {
+			playerBindings = new List<VirtualButton.Node>[5] { Input.Jump.Nodes, Input.Dash.Nodes, Input.Grab.Nodes, Input.Talk.Nodes, Input.QuickRestart.Nodes};
+			Input.Jump.Nodes = new List<VirtualButton.Node> { new VirtualButton.PadButton(Input.Gamepad, Buttons.A), new VirtualButton.PadButton(Input.Gamepad, Buttons.Y) };
+			Input.Dash.Nodes = new List<VirtualButton.Node> { new VirtualButton.PadButton(Input.Gamepad, Buttons.B), new VirtualButton.PadButton(Input.Gamepad, Buttons.X) };
+			Input.Grab.Nodes = new List<VirtualButton.Node> { new VirtualButton.PadButton(Input.Gamepad, Buttons.RightShoulder) };
+			Input.Talk.Nodes = new List<VirtualButton.Node> { new VirtualButton.PadButton(Input.Gamepad, Buttons.B) };
+			Input.QuickRestart.Nodes = new List<VirtualButton.Node> { new VirtualButton.PadButton(Input.Gamepad, Buttons.LeftShoulder) };
+		}
+		private static void RestorePlayerBindings() {
+			Input.Jump.Nodes = playerBindings[0];
+			Input.Dash.Nodes = playerBindings[1];
+			Input.Grab.Nodes = playerBindings[2];
+			Input.Talk.Nodes = playerBindings[3];
+			Input.QuickRestart.Nodes = playerBindings[4];
 		}
 		private static void UpdateVariables(bool recording) {
 			state |= State.Enable;
@@ -305,13 +317,13 @@ namespace TAS {
 				sticks,
 				new GamePadTriggers(input.HasActions(Actions.Journal) ? 1f : 0f, 0),
 				new GamePadButtons(
-					(input.HasActions(Actions.Jump) ? Buttons.A : (Buttons)0)
-					| (input.HasActions(Actions.Jump2) ? Buttons.Y : (Buttons)0)
-					| (input.HasActions(Actions.Dash) ? Buttons.B : (Buttons)0)
-					| (input.HasActions(Actions.Dash2) ? Buttons.X : (Buttons)0)
-					| (input.HasActions(Actions.Grab) ? Buttons.RightShoulder : (Buttons)0)
-					| (input.HasActions(Actions.Start) ? Buttons.Start : (Buttons)0)
-					| (input.HasActions(Actions.Restart) ? Buttons.LeftShoulder : (Buttons)0)
+					(input.HasActions(Actions.Jump) ? Buttons.A : 0)
+					| (input.HasActions(Actions.Jump2) ? Buttons.Y : 0)
+					| (input.HasActions(Actions.Dash) ? Buttons.B : 0)
+					| (input.HasActions(Actions.Dash2) ? Buttons.X : 0)
+					| (input.HasActions(Actions.Grab) ? Buttons.RightShoulder : 0)
+					| (input.HasActions(Actions.Start) ? Buttons.Start : 0)
+					| (input.HasActions(Actions.Restart) ? Buttons.LeftShoulder : 0)
 				),
 				pad
 			);
@@ -337,6 +349,28 @@ namespace TAS {
 			}
 
 			MInput.UpdateVirtualInputs();
+		}
+		private static void InitializeKeys() {
+			string filePath = Directory.GetCurrentDirectory() + "\\TASsettings.xml";
+			try {
+				using (FileStream fs = File.OpenRead(filePath)) {
+					XmlSerializer xml = new XmlSerializer(typeof(KeyBindings));
+					bindings = (KeyBindings)xml.Deserialize(fs);
+				}
+			}
+			catch {
+				bindings.keyStart = new List<Keys> { Keys.RightControl, Keys.OemOpenBrackets };
+				bindings.keyFastForward = new List<Keys> { Keys.RightControl, Keys.RightShift };
+				bindings.keyFrameAdvance = new List<Keys> { Keys.OemOpenBrackets };
+				bindings.keyPause = new List<Keys> { Keys.OemCloseBrackets };
+				using (FileStream fs = File.Create(filePath)) {
+					XmlSerializer xml = new XmlSerializer(typeof(KeyBindings));
+					xml.Serialize(fs, bindings);
+				}
+				InitializeKeys();
+			}
+
+			keysInitialized = true;
 		}
 	}
 }
