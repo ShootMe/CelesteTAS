@@ -89,7 +89,7 @@ While in game
 - Fast Forward / Frame Advance Continuously: RightControl + RightShift
 - Pause / Frame Advance: [
 - Unpause: ]
-These can be rebound in TASsettings.xml, found in the main Celeste directory.
+- These can be rebound in TASsettings.xml, found in the main Celeste directory.
   
 ### Controller
 While in game
