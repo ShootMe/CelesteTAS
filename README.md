@@ -13,30 +13,6 @@ The easiest way to install is through the [Everest interop mod](https://github.c
 - Place it in the same directory as `Celeste.exe`, and rename it to `Celeste-Addons.dll`
 - Enable TAS in the mod settings.
 
-For playback to be correct, make sure Jump is bound to 'A' and 'Y', Dash is bound to 'B' and 'X', Grab is bound to 'RB', Quick Reset is bound to 'LB', and talk is bound to 'B'. If you don't have a controller, you have to edit the settings file manually. Here's the relevant section:
-
-```
-  <BtnGrab>
-    <Buttons>RightTrigger</Buttons>
-    <Buttons>RightShoulder</Buttons>
-  </BtnGrab>
-  <BtnJump>
-    <Buttons>A</Buttons>
-    <Buttons>Y</Buttons>
-  </BtnJump>
-  <BtnDash>
-    <Buttons>X</Buttons>
-    <Buttons>B</Buttons>
-  </BtnDash>
-  <BtnTalk>
-    <Buttons>B</Buttons>
-  </BtnTalk>
-  <BtnAltQuickRestart>
-    <Buttons>LeftTrigger</Buttons>
-    <Buttons>LeftShoulder</Buttons>
-  </BtnAltQuickRestart>
-```
-
 ### Manually
 
 - Currently only works/tested for the Windows XNA/OpenGL version.
@@ -107,27 +83,21 @@ ie) 123,R,J (For 123 frames, hold Right and Jump)
 - ie) Read,1A - Forsaken City.tas,7 will read all inputs after line 7 from the '1A - Forsaken City.tas' file
 
 ## Playback of Input File
-### Controller
-While in game
-- Playback: Right Stick
-- Stop: Right Stick
-- Faster Playback: Right Stick X+
-- Frame Step: DPad Up
-- While Frame Stepping:
-  - One more frame: DPad Up
-  - Continue at normal speed: DPad Down
-  - Frame step continuously: Right Stick X+
-
 ### Keyboard
 While in game
-- Playback: RightControl + [
-- Stop: RightControl + [
-- Faster Playback: RightControl + RightShift
-- Frame Step: [
-- While Frame Stepping:
-  - One more frame: [
-  - Continue at normal speed: ]
-  - Frame step continuously: RightControl + RightShift
+- Start/Stop Playback: RightControl + [
+- Fast Forward / Frame Advance Continuously: RightControl + RightShift
+- Pause / Frame Advance: [
+- Unpause: ]
+- These can be rebound in TASsettings.xml, found in the main Celeste directory.
+  
+### Controller
+While in game
+
+- Start/Stop Playback: Right Stick
+- Fast Forward / Frame Advance Continuously: Right Stick X+
+- Pause / Frame Advance: DPad Up
+- Unpause: DPad Down
   
 ## Celeste Studio
 Can be used instead of notepad or similar for easier editing of the TAS file. Is located in [Releases](https://github.com/ShootMe/CelesteTAS/releases) as well.
