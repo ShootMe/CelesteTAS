@@ -176,7 +176,7 @@ namespace TAS {
 
 						if (line.IndexOf("Read", System.StringComparison.OrdinalIgnoreCase) == 0 && line.Length > 5) {
 							lines++;
-							ReadFile(line.Substring(5), lines);
+							ReadFileParser(line.Substring(5), lines, filePath);
 							lines--;
 						}
 
@@ -198,9 +198,11 @@ namespace TAS {
 				return false;
 			}
 		}
-		private void ReadFile(string extraFile, int lines) {
+		private void ReadFileParser(string extraFile, int lines, string currentFile) {
 			int index = extraFile.IndexOf(',');
 			string filePath = index > 0 ? extraFile.Substring(0, index) : extraFile;
+			string relativePath = Path.GetDirectoryName(currentFile);
+			filePath = Path.Combine(relativePath, filePath);
 			if (!File.Exists(filePath)) {
 				string[] files = Directory.GetFiles(Directory.GetCurrentDirectory(), $"{filePath}*.tas");
 				filePath = (files.GetValue(0)).ToString();
@@ -220,7 +222,9 @@ namespace TAS {
 					GetLine(startLine, filePath, out skipLines);
 				}
 			}
-
+			ReadFile(filePath, lines, skipLines, lineLen);
+		}
+		private void ReadFile(string filePath, int lines, int skipLines, int lineLen) {
 			int subLine = 0;
 			using (StreamReader sr = new StreamReader(filePath)) {
 				while (!sr.EndOfStream) {
@@ -231,7 +235,7 @@ namespace TAS {
 					if (subLine > lineLen) { break; }
 
 					if (line.IndexOf("Read", System.StringComparison.OrdinalIgnoreCase) == 0 && line.Length > 5) {
-						ReadFile(line.Substring(5), lines);
+						ReadFileParser(line.Substring(5), lines, filePath);
 					}
 
 					InputRecord input = new InputRecord(lines, line);
