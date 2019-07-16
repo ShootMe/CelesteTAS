@@ -260,19 +260,21 @@
   13,R,J
    5,L,J
    4,K,G
-   2,L,K
-   2,L,J,G
+   1,L,J,G
+   1,L,K,G
+   1,L,J,G
+   1,K
 
 #lvl_6
   40
-   3,L,J,G
-   8,L
-  13,L,U,X
+  11,L,J,G
+  12,L,U,X
    1,R
-   6,J,G
+   3,J,G
    1
-   5,L
-   3,R
+   1,L
+   4
+   3,L
    4,D,X
    6,L,X
    1,L,J
