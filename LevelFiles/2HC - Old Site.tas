@@ -66,7 +66,8 @@
   30,R,U,X
  116,R,D
 
-Read,2A - Old Site.tas,0,147
+#Restart
+Read,2A - Old Site.tas,0,140
 
 #lvl_d0
    4,L,J
@@ -99,14 +100,21 @@ Read,2A - Old Site.tas,0,147
    5,L,K
  257
    1,J
+#Return
  123
-   9,L
-  13,L,U,X
-  12,R,J
+   4,L
+   4,D,X
+  11,L,U,X
+   1,J
+   6,L,J
+   2,K
   40,R
 
-#lvl_d0
-  11,R,J
+#lvl_d0 (3)
+   4,R
+   1,R,J,G
+   3,R,K,G
+   3,K
   36,U,X
    1,R
    8,R,D,C
