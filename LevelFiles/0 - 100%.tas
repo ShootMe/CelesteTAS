@@ -99,7 +99,7 @@ Read,3SHC - Celestial Resort.tas,6
  136
 
 Read,4SHC - Golden Ridge.tas,6
-   
+
  165
    1,J
  278
@@ -112,6 +112,8 @@ Read,4SHC - Golden Ridge.tas,6
 
 Read,5SHC - Mirror Temple.tas,6
 
+ 165
+   1,J
  278
    1,J
   41
@@ -119,9 +121,9 @@ Read,5SHC - Mirror Temple.tas,6
  230
    1,J
  136
-***15
+
 Read,6HC - Reflection.tas,6
-***15
+
  165
    1,J
  183
@@ -167,7 +169,7 @@ Read,7SHC - Summit.tas,6
   32,R
 
 Read,8S - Core.tas,6
-***15
+
   74
    1,J
 
