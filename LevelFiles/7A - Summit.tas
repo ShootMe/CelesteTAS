@@ -1276,13 +1276,13 @@
 
 #lvl_f-00
   78
-   4,R,X
-   3,R,J
-   3,R,K,G
+   4,D,X
+   2,R,J
+   5,R,K,G
    2,R,J,G
-  12,R,K,G
-   3,R,J,G
-  13,R,U,X
+   2,R,K,G
+  12,R,U,X
+  11,R,J,G
   76,R,C
   20,R,U,X
   14,R,C
