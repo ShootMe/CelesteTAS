@@ -74,7 +74,7 @@ Read,1SHC,6
    1,J
  136
 
-Read,2SHC - Old Site.tas,6
+Read,2SHC,6
 
  165
    1,J
@@ -86,7 +86,7 @@ Read,2SHC - Old Site.tas,6
    1,J
  136
 
-Read,3SHC - Celestial Resort.tas,6
+Read,3SHC,6
    
  165
    1,J
@@ -98,7 +98,7 @@ Read,3SHC - Celestial Resort.tas,6
    1,J
  136
 
-Read,4SHC - Golden Ridge.tas,6
+Read,4SHC,6
 
  165
    1,J
@@ -110,7 +110,7 @@ Read,4SHC - Golden Ridge.tas,6
    1,J
  136
 
-Read,5SHC - Mirror Temple.tas,6
+Read,5SHC,6
 
  165
    1,J
@@ -122,7 +122,7 @@ Read,5SHC - Mirror Temple.tas,6
    1,J
  136
 
-Read,6HC - Reflection.tas,6
+Read,6HC,6
 
  165
    1,J
@@ -136,7 +136,7 @@ Read,6HC - Reflection.tas,6
    1,J
   32
 
-Read,7SHC - Summit.tas,6
+Read,7SHC,6
 
 #Credits
  183
@@ -159,7 +159,7 @@ Read,7SHC - Summit.tas,6
    1,J
 
 #8A
- 473
+ 426
    1,J
   41
    1,J
@@ -168,9 +168,9 @@ Read,7SHC - Summit.tas,6
    1,D,J
   32,R
 
-Read,8S - Core.tas,6
-
-  74
+Read,8S,6
+***
+  60
    1,J
 
 #1B
@@ -201,7 +201,7 @@ Read,8S - Core.tas,6
    1,J
  304
 
-Read,1B - Forsaken City.tas,6
+Read,1B,6
 
 #2B
    1,S
@@ -219,7 +219,7 @@ Read,1B - Forsaken City.tas,6
    1,J
  304
 
-Read,2B - Old Site.tas,6
+Read,2B,6
 
 #3B
    1,S
@@ -237,7 +237,7 @@ Read,2B - Old Site.tas,6
    1,J
  304
 
-Read,3B - Celestial Resort.tas,6
+Read,3B,6
 
 #4B
    1,S
@@ -255,7 +255,7 @@ Read,3B - Celestial Resort.tas,6
    1,J
  304
 
-Read,4B - Golden Ridge.tas,6
+Read,4B,6
 
 #5B
    1,S
@@ -273,10 +273,9 @@ Read,4B - Golden Ridge.tas,6
    1,J
  304
 
-Read,5B - Mirror Temple.tas,6
+Read,5B,6
 
 #6B
- 134,R
    1,S
    1,U,J
    1
@@ -292,10 +291,9 @@ Read,5B - Mirror Temple.tas,6
    1,J
  304
 
-Read,6B - Reflection.tas,6
+Read,6B,6
 
 #7B
-   1
    1,S
    1,U,J
    1
@@ -311,10 +309,9 @@ Read,6B - Reflection.tas,6
    1,J
  304
 
-Read,7B - Summit.tas,6
+Read,7B,6
 
 #8B
-  10
    1,S
    1,U,J
    1
@@ -332,9 +329,8 @@ Read,7B - Summit.tas,6
    1,J
  304
 
-Read,8B - Core.tas,6
+Read,8B,6
 
- 134
    1,S
    1,U,J
    1
@@ -369,7 +365,7 @@ Read,8B - Core.tas,6
    1,J
   46
 
-Read,1C - Forsaken City.tas,6
+Read,1C,6
 
 #2C
    1,S
@@ -388,7 +384,7 @@ Read,1C - Forsaken City.tas,6
    1,J
   46
 
-Read,2C - Old Site.tas,6
+Read,2C,6
 
 #3C
    1,S
@@ -407,7 +403,7 @@ Read,2C - Old Site.tas,6
    1,J
   46
 
-Read,3C - Celestial Resort.tas,6
+Read,3C,6
 
 #4C
    1,S
@@ -426,7 +422,7 @@ Read,3C - Celestial Resort.tas,6
    1,J
   46
 
-Read,4C - Golden Ridge.tas,6
+Read,4C,6
 
 #5C
    1,S
@@ -445,7 +441,7 @@ Read,4C - Golden Ridge.tas,6
    1,J
   46
 
-Read,5C - Mirror Temple.tas,6
+Read,5C,6
 
 #6C
    1,S
@@ -464,7 +460,7 @@ Read,5C - Mirror Temple.tas,6
    1,J
   46
 
-Read,6C - Reflection.tas,6
+Read,6C,6
 
 #7C
    1,S
@@ -483,7 +479,7 @@ Read,6C - Reflection.tas,6
    1,J
   46
 
-Read,7C - Summit.tas,6
+Read,7C,6
 
 #8C
    1,S
@@ -504,7 +500,29 @@ Read,7C - Summit.tas,6
    1,J
   46
 
-Read,8C - Core.tas,6
+Read,8C,6
 
-  60
+#Overworld
+   1,S
+   1,U,J
+   1
    1,J
+  86
+   1,X
+  40
+
+#Epilogue
+   1,L
+  12
+   1,J
+  41
+   1,J
+ 115
+  10,L,X
+   7,L,J
+   2,L,J,G
+   5,L,D,X
+   1,L,J
+ 156,L
+   1,S
+   1,D,J

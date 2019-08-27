@@ -188,15 +188,10 @@ read,7HC,lvl_c-06c,lvl_c-06b (2)
   40
 
 #lvl_c-07b
-   1,R,J
    1,L,J
-  11,L,C
-   3,L,J,G
-   9,L,K,G
-   2,L
-  15,L,D,X
-   1,L
-  16,L,J
+   3,L
+   4,D,X
+   6,L,C
 
 read,7S,7SHC3,lvl_d-03
 

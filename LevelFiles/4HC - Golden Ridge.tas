@@ -8,8 +8,8 @@ Read,4A - Golden Ridge.tas,6,lvl_a-07
 
 #lvl_a-07
    5,R,J
-   6,R
-   9,R,U,X
+   4,R
+  11,R,U,X
   15,U,C
   15,R,X
   14,L,D
@@ -67,35 +67,38 @@ Read,4A - Golden Ridge.tas,6,lvl_a-07
   40,L
 
 #lvl_a-11
-   6,L,J
-   2,L,K,G
+   5,L,J
+   1,L
+   1,K,G
+   1
+  13,L,X
+   2,R,J
   14,L,D,X
    7,L,J
    1,L
   22,L,J
    4,D,X
   10,L,U,X
-   1,J
-   1,R,K,G
-   1,L,K
-  13
-   6,R,D,X
+  10
+   4,D,X
+   1,R,X
    1,L,J
    7,L
-  22,L,J
+  20,L,J
    4,D,X
    8,L,U,X
    1,R
    1,R,J,G
-   9,L,J
+   6,L,J
    7,L
-  13
+  10,L
   15,D,X
   15,D,C
   15,D,X
    2
    1,R,J
-   6,R,D,X
+   4,D,X
+   2,R,X
    1,L,J
    7,L
   17,L,J
