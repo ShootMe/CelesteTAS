@@ -7,6 +7,7 @@
 Read,7A - Summit.tas,lvl_a-00-intro,lvl_a-06
 
 #lvl_a-06
+  40
    2,R
    1,R,J
   14,R,D,X
@@ -48,6 +49,7 @@ Read,7A - Summit.tas,lvl_a-00-intro,lvl_a-06
 Read,7A - Summit.tas,lvl_b-00,lvl_b-02
 
 #lvl_b-02 (1)
+  40
    1,R
    4,R,D,X
    9,R,X
@@ -160,10 +162,10 @@ Read,7A - Summit.tas,lvl_b-00,lvl_b-02
   14,R,D,X
    1,R,J
    3,R
+  40
 
 Read,7A - Summit.tas,lvl_b-03,lvl_c-04
 
-  40
 #lvl_c-04
    1,R,J
    4,D,X
@@ -290,7 +292,7 @@ Read,7A - Summit.tas,lvl_b-03,lvl_c-04
    1,R,J
   15,R,D,C
   30,R,U,X
-   4,R,J
+   4,R,J,O
   17,R,D,K,X
   14,R,D,C
    1,R,J
@@ -299,6 +301,7 @@ Read,7A - Summit.tas,lvl_b-03,lvl_c-04
    1,R,J
   43,R
 
+#lvl_c-08
 Read,7A - Summit.tas,lvl_c-08,lvl_d-03
 
   40
@@ -875,6 +878,7 @@ Read,7A - Summit.tas,lvl_f-05 (2),lvl_g-00b
    8,R
    9,L
   12,R
+   1
    1,S
    1,D
    1,J,F,180

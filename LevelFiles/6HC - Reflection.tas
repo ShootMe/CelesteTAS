@@ -189,15 +189,18 @@ Read,6A,lvl_start,lvl_04
   71,L
   15,L,X
  134,R
+   1
    1,S
    1,U,J
    1,O
   31
 
 #Overworld
-  60
+  51
+   1,S
+  52
    1,J
-  31
+  30
    1,R
    1,F,90
    1,J

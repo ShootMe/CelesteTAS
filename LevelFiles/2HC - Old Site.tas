@@ -71,6 +71,7 @@
    1,R,J
   30,R,U,X
  114,R,D
+   1
 
 #Restart
 Read,2A,Start,lvl_d0 (2)
