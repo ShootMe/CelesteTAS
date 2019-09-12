@@ -258,7 +258,10 @@
    6,L,D
    1,L,X
   10,L
- 124,R
+#spike cycle
+   2,R
+#Resume
+ 122,R
    1,X
   19
    4,D,X

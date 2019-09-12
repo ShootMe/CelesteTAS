@@ -6,13 +6,13 @@ read,9-1,lvl_intro-00-past
 
 read,9-3,Start
 
-read,9-4,Start,+0f spike cycle
+read,9-4,Start
+
+read,9-5,Start,spike cycle
 
    0
 
-read,9-4,Resume
-
-read,9-5,Start
+read,9-5,Resume
 
 read,9-6,Start
 
