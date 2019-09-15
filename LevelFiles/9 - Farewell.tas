@@ -12,7 +12,7 @@ read,9-4,Start
 
 read,9-5,Start,spike cycle
 
-   0
+   1
 
 read,9-5,Resume
 
