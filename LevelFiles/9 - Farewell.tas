@@ -4,24 +4,32 @@
    1,J
   31
 
+#Singular
 read,9-1,lvl_intro-00-past
 
+#Power Source
 read,9-3,Start
 
+#Remembered
 read,9-4,Start
 
+#Event Horizon
 read,9-5,Start,spike cycle
 
-   1
+   0
 
 read,9-5,Resume
 
+#Determination
 read,9-6,Start
 
+#Stubbornness
 read,9-7,Start
 
+#Reconciliation
 read,9-8,Start
 
+#Farewell
 read,9-9,Start
 
   29
