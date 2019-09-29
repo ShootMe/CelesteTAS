@@ -40,11 +40,15 @@ namespace TAS {
 			return true;
 		}
 		public static bool IsLoading() {
-			if (Engine.Scene is SummitVignette summit) {
-				return !summit.ready;
-			} else if (Engine.Scene is Overworld overworld) {
-				return overworld.Current is OuiFileSelect slot && slot.SlotIndex >= 0 && slot.Slots[slot.SlotIndex].StartingGame;
+			if (Engine.Scene is Level level) {
+				if (!level.IsAutoSaving())
+					return false;
+				return (level.Session.Level == "end-cinematic");
 			}
+			if (Engine.Scene is SummitVignette summit)
+				return !summit.ready;
+			else if (Engine.Scene is Overworld overworld)
+				return overworld.Current is OuiFileSelect slot && slot.SlotIndex >= 0 && slot.Slots[slot.SlotIndex].StartingGame;
 			return (Engine.Scene is LevelExit) || (Engine.Scene is LevelLoader) || (Engine.Scene is GameLoader);
 		}
 		private static GamePadState GetGamePadState() {
