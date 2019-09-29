@@ -176,7 +176,7 @@ namespace TAS {
 
 						if (line.IndexOf("Read", System.StringComparison.OrdinalIgnoreCase) == 0 && line.Length > 5) {
 							lines++;
-							ReadFile(line.Substring(5), lines);
+							ReadFileParser(line.Substring(5), lines, filePath);
 							lines--;
 						}
 
@@ -198,9 +198,11 @@ namespace TAS {
 				return false;
 			}
 		}
-		private void ReadFile(string extraFile, int lines) {
+		private void ReadFileParser(string extraFile, int lines, string currentFile) {
 			int index = extraFile.IndexOf(',');
 			string filePath = index > 0 ? extraFile.Substring(0, index) : extraFile;
+			string relativePath = Path.GetDirectoryName(currentFile);
+			filePath = Path.Combine(relativePath, filePath);
 			if (!File.Exists(filePath)) {
 				string[] files = Directory.GetFiles(Directory.GetCurrentDirectory(), $"{filePath}*.tas");
 				filePath = (files.GetValue(0)).ToString();
@@ -213,20 +215,16 @@ namespace TAS {
 				if (indexLen > 0) {
 					string startLine = extraFile.Substring(index + 1, indexLen - index - 1);
 					string endLine = extraFile.Substring(indexLen + 1);
-					if (!int.TryParse(startLine, out skipLines)) {
-						skipLines = GetLine(startLine, filePath);
-					}
-					if (!int.TryParse(endLine, out lineLen)) {
-						lineLen = GetLine(endLine, filePath);
-					}
+					GetLine(startLine, filePath, out skipLines);
+					GetLine(endLine, filePath, out lineLen);
 				} else {
 					string startLine = extraFile.Substring(index + 1);
-					if (!int.TryParse(startLine, out skipLines)) {
-						skipLines = GetLine(startLine, filePath);
-					}
+					GetLine(startLine, filePath, out skipLines);
 				}
 			}
-
+			ReadFile(filePath, lines, skipLines, lineLen);
+		}
+		private void ReadFile(string filePath, int lines, int skipLines, int lineLen) {
 			int subLine = 0;
 			using (StreamReader sr = new StreamReader(filePath)) {
 				while (!sr.EndOfStream) {
@@ -237,7 +235,7 @@ namespace TAS {
 					if (subLine > lineLen) { break; }
 
 					if (line.IndexOf("Read", System.StringComparison.OrdinalIgnoreCase) == 0 && line.Length > 5) {
-						ReadFile(line.Substring(5), lines);
+						ReadFileParser(line.Substring(5), lines, filePath);
 					}
 
 					InputRecord input = new InputRecord(lines, line);
@@ -254,17 +252,20 @@ namespace TAS {
 				}
 			}
 		}
-		private int GetLine(string label, string path) {
-			int curLine = 0;
-			using (StreamReader sr = new StreamReader(path)) {
-				while (!sr.EndOfStream) {
-					curLine++;
-					string line = sr.ReadLine();
-					if (line == ("#" + label)) {
-						return curLine;
+		private void GetLine(string labelOrLineNumber, string path, out int lineNumber) {
+                	if (!int.TryParse(labelOrLineNumber, out lineNumber)) {
+				int curLine = 0;
+				using (StreamReader sr = new StreamReader(path)) {
+					while (!sr.EndOfStream) {
+						curLine++;
+						string line = sr.ReadLine();
+						if (line == ("#" + labelOrLineNumber)) {
+							lineNumber = curLine;
+							return;
+						}
 					}
+					lineNumber = int.MaxValue;
 				}
-				return int.MaxValue;
 			}
 		}
 	}

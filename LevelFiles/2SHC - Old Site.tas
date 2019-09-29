@@ -4,30 +4,22 @@
    1,J
   31
 
-Read,2HC - Old Site.tas,6,68
+Read,2HC,lvl_start,Restart
 
-Read,2S - Old Site.tas,0,164
+Read,2S,Restart,lvl_d0 (2)
 
 #lvl_d0
-  40
    3,L,D,X
    1,L,J
    8,L
   27,L,D
   25,D
   47,D,X
+  40
 
-Read,2HC - Old Site.tas,75,102
-
-   4,L
-   4,D,X
-  11,L,U,X
-   1,J
-   6,L,J
-   2,K
+Read,2HC,lvl_d9,lvl_d0 (3)
 
 #lvl_d0
-  40
    4,L
    1,L,J,G
    6,L,K,G
@@ -39,5 +31,6 @@ Read,2HC - Old Site.tas,75,102
   10,L,D,X
    1,L,J
    6,L
+  40
 
-Read,2S - Old Site.tas,178
+Read,2S,lvl_d6

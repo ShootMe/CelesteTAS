@@ -4,18 +4,19 @@
    1,J
   31
 
-read,3A - Celestial Resort.tas,6,1037
+read,3A - Celestial Resort.tas,6,1023
 
 #lvl_12-x
    6,D,X
  103
   14,R,X
-  13,R,J
+  11,R,J
   15,U,X
    1,R,J
-   8,R
+  10,R
+   2,R,J
   14,U,X
-  48,R,J
+  47,R,J
 
 #lvl_11-a
    7
@@ -124,7 +125,7 @@ read,3A - Celestial Resort.tas,6,1037
   11,L
   20
 
-read,3A - Celestial Resort.tas,1099,1303
+read,3A - Celestial Resort.tas,1087,1296
 
   12,L,J
    1,L,K,G
@@ -164,6 +165,7 @@ read,3A - Celestial Resort.tas,1099,1303
    2,L,J
    9,L
    1,L,J
+#3SHC1
   12,L,D,X
    1,L,J
    8,L
@@ -180,9 +182,9 @@ read,3A - Celestial Resort.tas,1099,1303
    7,L,D,X
    1,L,J
    2,L
+  40
 
 #lvl_01-c
-  40
    9,L
    1,L,J
    2,L
@@ -194,35 +196,40 @@ read,3A - Celestial Resort.tas,1099,1303
   11,L
    1,D,X
   14,L,X
-  12,L,D
-   5,L,J
-  14,U,X
-   2,L,J
+   4,L,D
+   1,R,D
+   7,L,D
+   6,L,D,J
+  13,U,X
+   1,L,J
  257
    1,J
+#Return
  123
    8,R,D,X
    1,R,J
+  40
 
 #lvl_02-c (3)
-  40
    6,R,J
   15,R,D,X
   11,R,J
   14,R,D,X
-  10,R,J
+   7,R,J
+   3,R
   14,R,D,X
-  10,R,J
+   7,R,J
+   3,R
   14,R,D,X
-  10,R,J
+   9,R,J
   14,R,D,X
    5,R,J
   15,R,D,X
    1,R,J
-   2,R
+   3,R
+  40
 
 #lvl_04-c (2)
-  40
    5,R
   10,U,X
   26,D
@@ -243,9 +250,9 @@ read,3A - Celestial Resort.tas,1099,1303
    7
    4,L
   11,U,X
+  40
 
 #lvl_04-d
-  40
    6,L,J
    5
    6,L,D,X

@@ -1,9 +1,9 @@
-#By DevilSquirrel, EuniverseCat
+#By DevilSquirrel, EuniverseCat, Dahlukeh
 #Restart
    1,Q
    1,J
   31
-
+ 
 #lvl_00
   91
    4,R,D,X
@@ -13,15 +13,16 @@
    3,L
   23,R,U,X
    4,L,G
-  11,L,J,G
-   1,L,K,G
-   3,R,K
-  21,R,X
+  10,L,J,G
+   1,K,G
+   1,R,K
+   3,K
+  20,R,X
    4,R,J
    1,R,K
   11,R,D,X
   40
-
+ 
 #lvl_01
    3,R,D,X
    1,R,J
@@ -56,7 +57,7 @@
    2,R
    8,R,J
   40
-
+ 
 #lvl_02
    8,R
   27,R,X
@@ -75,16 +76,16 @@
   15,R,K
   42,R,X
    4,R,J
-   6,R,K
-   5,R
-   1,R,J
-   3,R
-   1,L
-  13,R
-   4,R,J,G
+   9,R,K
+   1,K
+   4,R,K
+  15,R,D,X
+   2,R
+   7,R,J,G
+   1,R
+   6,R,J
   11,R
-  18,R,X
-  42,R,C
+  44,R,X
    4,L,G
   22,D
   14,R,D
@@ -106,7 +107,7 @@
    4,J
    1,K
   11,L,K
-  12,L,J,G
+  11,L,J,G
    3,L,K,G
  114,L,X
    4,L,J
