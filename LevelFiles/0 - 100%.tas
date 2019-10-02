@@ -62,7 +62,7 @@ Read,1SH1,lvl_6
    1,F,90
    1,J
   46
-
+***
 Read,1SHC,6
 
 #Old Site
@@ -137,7 +137,7 @@ Read,8S,6
 
   60
    1,J
-
+***
 #1B
  361
    1,J
@@ -279,7 +279,7 @@ Read,6C,6
 Read,LoadC
 
 Read,7C,6
-
+***
 #8C
    1
    1,S
@@ -323,8 +323,8 @@ Read,8C,6
   43
    1,J
   46
-
-read,9,6
+***
+read,9S,6
 
 #idk
 

@@ -146,25 +146,33 @@
 #
   12,U,X
   13,G
-  41,R,U,G
+  28,R,U,J,G
+  13,R,U,G
   85,U,G
-  39,L,U,G
-  50,R,U,G
-  25,R,D,G
-   5,R,U,G
-   1,R,D,G
-  35,R,U,G
-  17,U,G
+  38,L,U,G
+  21,U,G
+  30,R,U,G
+  24,R,D,G
+   7,R,U,G
+   2,R,D,G
+  32,R,U,G
+  16,U,G
    1,R,U,G
-   4,U,G
+   5,U,G
   30,L,U,G
    6,L,G
   69,L,U,G
-  25,R,U,G
+  34,R,U,G
    1,U,G
-  13,R,U,G
-  25,R,D,G
+   3,R,U,G
+  24,R,D,G
   11,R,G
+   2,R,D,G
+   1,R,U,G
+   1,R,D,G
+   1,R,U,G
+   1,R,D,G
+   1,R,U,G
    1,R,D,G
    1,R,U,G
    1,R,D,G
@@ -172,103 +180,120 @@
    1,R,D,G
    1,R,U,G
    1,R,D,G
-  11,R,U,G
-  11,R,D,G
    1,R,U,G
    1,R,D,G
    1,R,U,G
    1,R,D,G
    1,R,U,G
    1,R,D,G
-  11,R,U,G
-  11,R,D,G
    1,R,U,G
    1,R,D,G
    1,R,U,G
    1,R,D,G
    1,R,U,G
    1,R,D,G
-  11,R,U,G
-  10,R,D,G
    1,R,U,G
    1,R,D,G
    1,R,U,G
    1,R,D,G
    1,R,U,G
    1,R,D,G
-   6,R,U,G
+   1,R,U,G
    1,R,D,G
-  48,R,U,G
+   1,R,U,G
+   1,R,D,G
+   1,R,U,G
+   1,R,D,G
+   1,R,U,G
+   1,R,D,G
+   1,R,U,G
+   1,R,D,G
+   1,R,U,G
+   1,R,D,G
+   1,R,U,G
+   1,R,D,G
+  44,R,U,G
+  18,R,D,G
+   8,R,U,G
+   1,R,D,G
+  33,R,U,G
  132,U,G
-  22,R,U,G
-  51,L,U,G
-   9,L,D,G
-  11,D,G
+  19,R,U,G
+  20,U,G
+  31,L,U,G
+   2,D,G
+   8,L,D,G
+   9,D,G
   48,R,U,J,G
-   3,D
-   6,R,D
+   3,D,J
+   6,R,J
   12,U,X
-  30,L,U,G
-   6,U,G
-   5,L
-   1,R
+  13,G
+   2,G
+  14,L,U,G
+   8,U,G
+   4,J
   17,R
    9,U,X
   84,R,G
-  12,R,D,G
-#
+   2,R,D,G
+   1,R,G
+   8,R,D,G
    1,R,J,G
   30,R,G
   29,R,U,G
-   1,R,D
-   6,R
-   2
+   1,R,D,J
+   6,R,J
+   2,J
   12,U,X
   29,U,G
    7,U,G
   16,R,U,G
+#
    1,R
-  20
-   8,L
+  19
+   9,L
   48,D
    1
    1,D
-   1
+   1,R
   18,D
-   1
+   1,R
    2,R
   30,D
   12,L,D
-  18,R,D
+  19,R,D
   13,R
-  16,R,D
-   5,L,D
-  15,L,D,X
-   1,L
-   4,L,D
   15,R,D
-  15,R,X
-  18,R,D,C
-   9,D,X
-  25,R,D
-***
-  20,L,D
+   2,L,D
+   3,L
   15,L,D,X
-   9,L
+  14,L,D
+   6,R,D
+  15,R,X
+  15,R,D,C
+   1
+   1,R
+   1
+   9,D,X
+  24,R,D
+  21,L,D
+  15,L,D,X
+   8,L
   15,D,X
-   1,D
-   3,R,D
+   1,L,D
+   4,R,D
   15,R
-   2,R,D
    4,R
   15,R,X
-  24,R
-  13,R,D
-   1,L,D
-  10,R,D
+  27,R
+   9,R,D
+   7,D
+   7,R,D
   18,L,D
-  42,D
-   1,D
+   6,D
+   1,L,D
+  35,D
 #
   11,L,D,X
    2,L,J
@@ -299,33 +324,31 @@
    5,R,J,G
    6,L,J,G
    7,L,U,G
-  16,L,D,G
-   1,L,D,G
-   1,R,D,G
+  15,L,D,G
+   2,R,D,G
+   1,D,G
    2,R,G
-  34,R,G
+  33,R,G
    1,L
-   8,R
    1
+   9,R
   10,R,U,X
   13,R,G
-   1,G
-   7,G
+   8,R,G
    1,L
-   1
-   1,R
-   1,R
-   4,R
-   2,R
-  14,R,D,X
+   3,R
+   5
+  13,R,D,X
   13,R,U,G
-   8,R,U,G
+   1,U,G
+   7,R,U,G
    1,L
-  13,R,D
-  12,R,U,X
-  65,R,U,G
+  12,R,D
+  10,R,U,X
+  60,R,U,G
+   3,R,G
    1,L
-  25,R
+  22,R
    5,D,X
    6
    1,R,J
@@ -334,20 +357,19 @@
   12
    1,R,J
    9,R
-  14,R,D,X
-  46,R
-  15,R,X
-  37,R
+  13,R,D,X
+  60,R
+  35
   13,U,X
   43,R
   15,R,X
-  37,R
+  37
   13,U,X
   42,R
-  15,R,X
-  37,R
+  14,R,X
+  37
    1,D,X
-  12,U,X
+  13,U,X
   26
    1,L,U
   64,F,1

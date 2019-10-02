@@ -16,7 +16,7 @@ read,9-4,Start
 #Event Horizon
 read,9-5,Start,spike cycle
 
-   0
+   1
 
 read,9-5,Resume
 
@@ -25,13 +25,13 @@ read,9-6,Start
 
 #Stubbornness
 read,9-7,Start
-
+***!
 #Reconciliation
 read,9-8,Start
 
 #Farewell
 read,9-9,Start
-
+***
   29
    1,J
   30
@@ -48,7 +48,6 @@ read,9-9,Start
   80
 
 #end-cinematic
-  13
    1,S
    1,D,J
  165
