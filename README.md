@@ -23,7 +23,7 @@ Input file is called Celeste.tas and needs to be in the main Celeste directory (
 
 Format for the input file is (Frames),(Actions)
 
-eg) 123,R,J (For 123 frames, hold Right and Jump)
+e.g. 123,R,J (For 123 frames, hold Right and Jump)
 
 ## Actions Available
 - R = Right
@@ -68,9 +68,10 @@ While in game
 ### Read
 - Read,File Name,Starting Line,(Optional Ending Line)
 - Will read inputs from the specified file.
+- Currently requires files to be in the main Celeste directory.
 - e.g. "Read,1A - Forsaken City.tas,6" will read all inputs after line 6 from the '1A - Forsaken City.tas' file
-- This will also work if you shorten the file name, i.e. "Read,1A,6 will" do the same 
-- It's recommended to use label names instead of line numbers, so "Read,1A,lvl_1" would be the preferred format for this example.
+- This will also work if you shorten the file name, i.e. "Read,1A,6" will do the same 
+- It's recommended to use labels instead of line numbers, so "Read,1A,lvl_1" would be the preferred format for this example.
 
 ### Labels
 - Prefixing a line with # will comment out the line
