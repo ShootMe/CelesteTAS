@@ -181,14 +181,16 @@
   13,R,U,X
    1,R,J,G
   23,R,D
-  15,R,J
-   9,U,X
-   5,R,J
-   1,R,K,G
+  12,R,J
+   4,D,X
+   7,U,X
+   1,R,J
+   4,R
+   2,R,K,G
   40
  
 #lvl_05
-  37,R,U,G
+  36,R,U,G
   20,G
    2,R,J,G
    1,R,K,G

@@ -13,15 +13,4 @@ read,9-9S,Start
    1,D,J
   18
 
-#end-granny
- 122
-   1,S
-   1,D,J
-  80
-
-#end-cinematic
-   1,S
-   1,D,J
- 165
-   1,J
- 483
+read,9,end-granny
