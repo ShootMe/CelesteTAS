@@ -82,33 +82,37 @@
    9,R,X
    1,R,J
    7,R
-  11,R,J
+  10,R,J
+   1,R
   14,R,X
    1,R,J,G
    2,J
-   3,R,J
-   5,R
-   5,R,J,G
+   4,R,J
    4,R
-   5
+   4,R,J,G
+   5,R
+   1,J
+   4
    4,D,X
-   4,L,X
+   3,L,X
    1,R,J
-   7,R
-   3,R,J
+   6,R
+   2,R,J
+   1,R
    5,R,D,X
    1,R,J,G
-  11,R
+  10,R
   40
 
 #lvl_f-01
    1,R
-  16,R,J
+  15,R,J
   15,R,D,X
-   8,R
-  18,R,J
-  20,U,X
-   6,R,G
+   7,R
+  10,R,J
+   8,J
+  24,U,X
+   2,R,G
   12,R,J,G
    1,R,K,G
    4,L,K
@@ -259,7 +263,7 @@
    1,L,X
   10,L
 #spike cycle
-   2,R
+   1,R
 #Resume
  122,R
    1,X
@@ -445,21 +449,18 @@
    1,L
    1,R,J,G
    7,R,K,G
-  17,U,X
-  14,R,D,C
-   1,J,G
-   7
-   2,R
+  16,U,X
+  15,R,D,C
+   4,J,G
+   7,R
    4,D,X
-   4,L,X
+   4,L,D,X
    1,R,J
-   4
-   3,R
-  24,R,J
-  15,U,X
-   1,L,J,G
-   2,L
-   1,L,J,G
+   6,R
+  21,R,J
+   4,D,X
+  11,U,X
+   3,L,J,G
    7,L
    4,D,X
    4,R,X
@@ -712,36 +713,34 @@
    1,R,J
   14,R,D,X
    1,R,J
-   2,R
-   6,R,U,X
-   1,R,J,G
-   1,R,K,G
-   1,R
+   8,R,U,X
    1,R,J,G
    2,R,K,G
-   7,R
+   3
+   4,R
    1,R,J
-  18,R,D,X
    1,R
-   3,R,J
-   3,R
+  19,R,D,X
+   4,R,J
   15,R,D,X
    1,R,J
-   3,R
-  11,R,U,X
+  10,R,U,X
+   2,R
    1,R,J,G
-   7,R
+   6,R
   40
 
 #lvl_h-00b
    7,R
    1,R,J
-  17,R
-   9,R,U,X
-  38,R,D
-  34,F,122
-  37,F,78
-  29,F,97
+   2,R
+  12
+   7,R,U,X
+  42,R,D
+  27,F,133
+  38,F,78
+   5,F,90
+  25,F,97
   21,R,X
   18,R,C
   21,R,X

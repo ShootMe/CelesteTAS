@@ -709,16 +709,16 @@ Read,7A - Summit.tas,lvl_e-03,lvl_f-00
 #lvl_f-02b
   11,R,J
   11,U,X
-  25,R,C
-  15,R,U,X
-  15,R,D,C
-   7,R
-  25,R,X
+  19,R,C
+  17,R,D,X
+  18,R,U,C
+  16,R,X
    4,D,C
-  17,R,U,C
-  25,R,X
-  15,R,D,C
-   4,R,D
+  16,R,C
+  16,R,X
+   4,D,C
+  11,R,C
+  20,R,D
   18,R,X
   15,R,U,C
   10,J,G
