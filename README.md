@@ -8,7 +8,7 @@ Simple TAS Tools for the game Celeste
 The easiest version to install is the [Everest version](https://github.com/EverestAPI/CelesteTAS-EverestInterop). 
 
 - Install [Everest](https://everestapi.github.io/) if you haven't already.
-- Use the 1-click installer [here](https://gamebanana.com/tools/6715)
+- Use the 1-click installer [here.](https://gamebanana.com/tools/6715)
 - Enable TAS in the mod settings.
 
 ### Manually
