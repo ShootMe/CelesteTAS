@@ -5,13 +5,10 @@ Simple TAS Tools for the game Celeste
 
 ### Everest
 
-The easiest way to install is through the [Everest interop mod](https://github.com/EverestAPI/CelesteTAS-EverestInterop). 
+The easiest version to install is the [Everest version](https://github.com/EverestAPI/CelesteTAS-EverestInterop). 
 
-- [Download the zip from here](https://github.com/EverestAPI/CelesteTAS-EverestInterop/releases)
-- Place it in your `Mods` directory (The .zip itself, not the contents)
-- [Download the TAS addon here](https://github.com/ShootMe/CelesteTAS/releases), either Celeste-Addons-OpenGL.dll or Celeste-Addons-XNA.dll, whichever corresponds with your version of Celeste
-  - If you're unsure of your version, Steam defaults to XNA and Epic Games always is OpenGL
-- Place it in the same directory as `Celeste.exe`
+- Install [Everest](https://everestapi.github.io/) if you haven't already.
+- Use the 1-click installer [here.](https://gamebanana.com/tools/6715)
 - Enable TAS in the mod settings.
 
 ### Manually
@@ -48,7 +45,8 @@ While in game
 - Fast Forward / Frame Advance Continuously: RightControl + RightShift
 - Pause / Frame Advance: [
 - Unpause: ]
-- These can be rebound in TASsettings.xml, found in the main Celeste directory.
+- These can be rebound in (Main Celeste Directory)\Saves\modsettings-CelesteTAS.celeste
+  - Note that you may have to reload Mod Settings in Celeste for this file to appear.
   
 ### Controller
 While in game
