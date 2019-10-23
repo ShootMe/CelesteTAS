@@ -193,7 +193,13 @@ read,7HC,lvl_c-06c,lvl_c-06b (2)
    4,D,X
    6,L,C
 
-read,7S,7SHC3,lvl_d-03
+read,7S,7SHC3,Berry1-1
+
+   8,L,X
+   1,R,J
+   2,R
+
+read,7S,Berry1-2,lvl_d-03
 
 read,7HC,lvl_d-03 (1),lvl_d-03 (2)
 
@@ -311,7 +317,36 @@ read,7HC,lvl_e-00 (1),lvl_e-02
   12,U,X
    4,R,J
 
-read,7S,7SHC5,lvl_f-00 (1)
+read,7S,7SHC5,Berry2-1
+
+   4,D,X
+  10,R,X
+   1,L,J
+  14,L,D,X
+  10,L
+   4,D,X
+  10,L,X
+   1,R,J
+  15,R,D,X
+   4,D,C
+   4,L,C
+   1,R,J
+   7,R
+  16,R,J
+  14,U,X
+  18,L,J
+   1,L,K
+   3,L
+   4,D,X
+  10,L,X
+   2,R,J
+   4,D,X
+   1,L,J
+   1,L
+   4,R
+   1,R,J
+
+read,7S,Berry2-2,lvl_f-00 (1)
 
 #lvl_f-00 (1)
   78
@@ -418,8 +453,97 @@ read,7HC,lvl_f-00 (2),7SHC4
    7,D,X
   40
 
-read,7S,lvl_f-05 (2),lvl_g-00b
+read,7S,lvl_f-05 (2),lvl_f-05 (3)
+
+#lvl_f-05 (2)
+   8,R,D
+  24,R,D,X
+   7,D
+   2,L,D
+   2,R,D
+   2,L,D
+   2,R,D
+   2,L,D
+   2,R,D
+   2,L,D
+   2,R,D
+   2,L,D
+   2,R,D
+   2,L,D
+   2,R,D
+   2,L,D
+   2,R,D
+   2,L,D
+   2,R,D
+   2,L,D
+   2,R,D
+   2,L,D
+   2,R,D
+   2,L,D
+   2,R,D
+   2,L,D
+   2,R,D
+   2,L,D
+   2,R,D
+   2,L,D
+   2,R,D
+   2,L,D
+   2,R,D
+   2,L,D
+   2,R,D
+   2,L,D
+   2,R,D
+   2,L,D
+   2,R,D
+   2,L,D
+   2,R,D
+   2,L,D
+   2,R,D
+   2,L,D
+  14,L,D,X
+   1,R,J
+   6,R,D,X
+   1,R,J,G
+  12,R,D
+   1,R,J
+   2,J
+  40
+
+read,7S,lvl_f-08,Berry3-1
+
+   4,R,D,C
+   9,R,C
+   1,R,J
+   1,R
+  40
+
+#lvl_f-08c
+   2,R,J
+  18,R
+   8,R,D,X
+   1,R,J
+   7,L
+   1,L,J
+  10,R,J
+
+read,7S,Berry3-2,Berry4
+
+  10,R,X
+   1,R,J
+   4,D,X
+   1,R,J
+  40
+
+read,7S,lvl_f-11,Berry5-1
+
+   4,R,J
+   1,J
+  14,R,D,X
+   1,J
+
+read,7S,Berry5-2,lvl_g-00b
 
 read,7HC,lvl_g-00b,7SHC5
 
-read,7S,CP-28
+read,7S,7SHC7
+#

@@ -359,13 +359,7 @@
    1,J,F,180
   31
 
-#Main Menu
-  16
-   1,J
-  68
-   1,J
-  16
-   1,J
+Read,SaveandQuit
 
 #lvl_s1
   37
@@ -638,21 +632,21 @@
    1,R
    1,R,K,G
    7,R
-   4,R,D,X
-  10,R,X
+   4,D,X
    1,R,J
-  14,R,D,X
+  12,R
    1,R,J
+  11,R,D,X
   40
 
 #lvl_9b (1)
-   5,R
-  15,R,U,X
+   3,R
+   1,R,J
+   4,D,X
+  11,R,U,X
    1,J
-   3,L,J
-   1,L,J
-   2,L,K,G
-   2,L,J,G
+   1,L,K,G
+   3,L,J,G
    7,L
    4,L,D,X
    1,L,J
@@ -725,7 +719,6 @@
   14,U,X
   12,L,J
    5,R,J
-
   40
 
 #lvl_11

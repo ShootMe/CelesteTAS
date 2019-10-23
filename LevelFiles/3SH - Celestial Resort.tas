@@ -1220,13 +1220,7 @@
    1,J,F,180
   31
 
-#Main Menu
-  16
-   1,J
-  68
-   1,J
-  16
-   1,J
+Read,SaveandQuit
 
 #lvl_11-c (2)
   37

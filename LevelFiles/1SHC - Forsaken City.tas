@@ -43,11 +43,12 @@ read,1SH2,lvl_9b,lvl_10 (1)
 #lvl_10zb
    2,R,J
   13,R
-  20,R,D
+  17,R,D
+   3,D
   15,U,X
-   1,J,G
-   1,L,J
-  11,R,K,G
+   1,R,K,G
+   4,L,K
+   7,R,K
    7,R
    4,R,D,X
    7,R,J
