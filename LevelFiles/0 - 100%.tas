@@ -1,3 +1,5 @@
+read,StartFullGameFile
+
 #Start from Begin
    1,D
    1,J
@@ -17,6 +19,7 @@
   49
    1,U
    1,J
+Add 128
 
 #Prologue
    1,S
@@ -25,17 +28,12 @@
 
 Read,0 - Prologue.tas,6
 
- 195
-   1,J
-  43
-   1,J
- 230
-   1,J
- 136
+Read,Load1A
 
 Read,1SH0,lvl_1
 
 #Reenter City
+Add 197
  165
    1,J
   83
@@ -50,9 +48,11 @@ Read,1SH0,lvl_1
    1,R
    1,J
   46
+Add 1
 
 Read,1SH1,lvl_6
 
+Add 58
   50
    1,S
   52
@@ -62,23 +62,13 @@ Read,1SH1,lvl_6
    1,F,90
    1,J
   46
+Add 1
 
 Read,1SHC,6
 
 #Old Site
-  51
-   1,S
-  52
-   1,X
-  42
-   1,R
-   9
-   1,J
-  43
-   1,J
- 230
-   1,J
- 136
+Add 58
+Read,LoadAFromB,SkipExit
 
 Read,2SHC,6
 
@@ -98,75 +88,20 @@ Read,LoadA
 
 Read,6HC,6
 
- 165
-   1,J
-  83
-   1,S
- 146
-   1,J
-  43
-   1,J
+Read,LoadA,0,Summit
+
   45
+Add 29
    1,J
   32
 
 Read,7SHC,6
 
-#Credits
- 183
-   1,J
-  34
-   1,S
-   1,D,J
-  88
-
-Read,0 - Epilogue.tas
-
-#8A
-   1,J
- 428
-   1,J
-  43
-   1,J
-  45
-   1,S
-   1,D,J
-  32
+Read,LoadCoreFromSummit
 
 Read,8S,6
 
-  60
-   1,J
-
-#1B
- 361
-   1,J
-  86
-   1,S
- 394
-   1,L
-   9
-   1,L
-   9
-   1,L
-   9
-   1,L
-   9
-   1,L
-   9
-   1,L
-   9
-   1,L
-   9
-   1,L
-   9
-   1,L
-   9
-   1,J
-  43
-   1,R
-   1,J
- 304
+Read,Load1B
 
 Read,1B,6
 
@@ -194,65 +129,14 @@ Read,LoadB
 
 Read,7B,6
 
-#8B
-   1
-   1,S
-   1,U,J
-   1,O
-  31
-  51
-   1,S
-  52
-   1,X
-  42
+Read,LoadB,0,Core
    1,R
    9
-   1,R
-   9
-   1,J
-  43
-   1,R
-   1,J
- 304
+Read,LoadB,Core
 
 Read,8B,6
 
-   1
-   1,S
-   1,U,J
-   1
-   1,J
- 338
-   1,J
- 188
-
-#1C
-   1,S
-  52
-   1,X
-  42
-   1,L
-   9
-   1,L
-   9
-   1,L
-   9
-   1,L
-   9
-   1,L
-   9
-   1,L
-   9
-   1,L
-   9
-   1,L
-   9
-   1,J
-  43
-   1,R
-   1,F,90
-   1,J
-  46
+Read,Load1C
 
 Read,1C,6
 
@@ -280,28 +164,10 @@ Read,LoadC
 
 Read,7C,6
 
-#8C
-   1
-   1,S
-   1,U,J
-   1
-   1,J
-  31
-  51
-   1,S
-  52
-   1,X
-  42
+Read,LoadC,0,Core
    1,R
    9
-   1,R
-   9
-   1,J
-  43
-   1,R
-   1,F,90
-   1,J
-  46
+Read,LoadC,Core
 
 Read,8C,6
 
@@ -309,20 +175,12 @@ Read,8C,6
    1
    1,S
    1,U,J
-   1
-   1,J
+   1,O
   31
-  51
-   1,S
-  52
-   1,X
-  42
-   1,R
-   9
-   1,J
-  43
-   1,J
+Add 58
+Read,LoadAFromB,SkipExit,Summit
   46
+Add 1
 
 read,9S,6
 
@@ -342,3 +200,4 @@ read,9S,6
  115
 
 Read,0 - Epilogue.tas
+#

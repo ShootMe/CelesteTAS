@@ -16,7 +16,7 @@ read,9-4,Start
 #Event Horizon
 read,9-5,Start,spike cycle
 
-   0
+   2
 
 read,9-5,Resume
 
@@ -45,9 +45,10 @@ read,9-9,Start
  122
    1,S
    1,D,J
-  80
+  18
 
 #end-cinematic
+  61
    1,S
    1,D,J
  165
