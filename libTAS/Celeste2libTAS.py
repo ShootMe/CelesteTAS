@@ -11,8 +11,6 @@ import math
 
 input_file = open(sys.argv[1], 'r')
 output_ltm = open(os.path.splitext(sys.argv[1])[0]+'.ltm' , 'w')
-frameCounter = 0
-pauses = []
 
 regex_input = re.compile(r'[\s]*([\d]*)((?:,(?:[RLUDJKXCGSQNFO]|[\d]*))*)')
 regex_comment = re.compile(r'[\s]*(#|[\s]*$)')
@@ -63,11 +61,10 @@ def GetReadData(line):
 
 
 def ExportFile(file, startLine = 0, endLine = float('inf')):
-    global frameCounter
-    global pauses
     file.seek(0)
     curLine = 0
-    print(file, startLine, endLine, frameCounter)
+    print(file, startLine, endLine)
+
     for line in file:
         curLine += 1
         if curLine <= startLine:
@@ -81,9 +78,6 @@ def ExportFile(file, startLine = 0, endLine = float('inf')):
             readPath, start, end = GetReadData(line[5:])
             if readPath != None:
                 ExportFile(readPath, start, end)
-            continue
-        if line.lower().startswith('pause'):
-            pauses.append(str(frameCounter))
             continue
         if line.lower().startswith('add'):
             line = line[3:]
@@ -135,27 +129,17 @@ def ExportFile(file, startLine = 0, endLine = float('inf')):
                 mapped_index = button_mapping.find(single_input)
                 output_buttons[mapped_index] = button_order[mapped_index]
 
-            # Write the constructed input line
+            # Write the constructed input line, ignore false positive matches
             output_line = '|' + output_keys + '|' + output_axes + ':0:0:0:0:' + ''.join(output_buttons) + '|\n'
-            for n in range(int(match.group(1))):
-                frameCounter += 1
-                output_ltm.write(output_line)
+            try:
+
+                for n in range(int(match.group(1))):
+                    output_ltm.write(output_line)
+            except ValueError:
+                print(line)
     print(curLine)
     file.close()
 
 ExportFile(input_file)
-
-if pauses != []:
-    pauseCode = '        int pause_frames[] = {'
-    for pause in pauses:
-        pauseCode += f'{pause}, '
-    pauseCode = pauseCode[0:-2]
-    pauseCode += '''};
-        for (int pp = 0; pp < (sizeof(pause_frames)/sizeof(pause_frames[0])); pp++)
-            if (pause_frames[pp] == (context->framecount-1))
-                sleep(1);'''
-    output_pauses = open(os.path.splitext(sys.argv[1])[0]+'Pauses.txt', 'w')
-    output_pauses.write(pauseCode)
-    output_pauses.close()
 
 output_ltm.close()
