@@ -120,7 +120,10 @@ read,5S,lvl_b-05,5SHC3
   13,L
    4,L,J
   14,L,D,X
-  34
+   5,R,J
+   6,K,G
+   2,L,J
+  21,L
 
 
 read,5HC,5SHC3,lvl_b-16
