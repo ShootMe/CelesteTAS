@@ -1,3 +1,5 @@
+read,StartFullGameFile
+
 #Start from Begin
    1,D
    1,J
@@ -17,6 +19,7 @@
   49
    1,U
    1,J
+Add 128
 
 #Prologue
    1,S
@@ -25,32 +28,33 @@
 
 Read,0 - Prologue.tas,6
 
- 196
-   1,J
-  41
-   1,J
- 230
-   1,J
- 136
+Read,Load1A
 
 Read,1SH0,lvl_1
 
 #Reenter City
+Add 197
  165
    1,J
- 275
+  83
+   1,S
+ 194
    1,L
-  12
+   9
    1,J
-  41
+  43
    1,J
   30
    1,R
    1,J
   46
+Add 1
 
 Read,1SH1,lvl_6
 
+Add 58
+  50
+   1,S
   52
    1,J
   30
@@ -58,453 +62,142 @@ Read,1SH1,lvl_6
    1,F,90
    1,J
   46
+Add 1
 
 Read,1SHC,6
 
 #Old Site
-  52
-   1,X
-  40
-   1,R
-  12
-   1,J
-  41
-   1,J
- 230
-   1,J
- 136
+Add 58
+Read,LoadAFromB,SkipExit
 
-Read,2SHC - Old Site.tas,6
+Read,2SHC,6
 
- 165
-   1,J
- 278
-   1,J
-  41
-   1,J
- 230
-   1,J
- 136
+Read,LoadA
 
-Read,3SHC - Celestial Resort.tas,6
+Read,3SHC,6
    
- 165
-   1,J
- 278
-   1,J
-  41
-   1,J
- 230
-   1,J
- 136
+Read,LoadA
 
-Read,4SHC - Golden Ridge.tas,6
+Read,4SHC,6
 
- 165
-   1,J
- 278
-   1,J
-  41
-   1,J
- 230
-   1,J
- 136
+Read,LoadA
 
-Read,5SHC - Mirror Temple.tas,6
+Read,5SHC,6
 
- 165
-   1,J
- 278
-   1,J
-  41
-   1,J
- 230
-   1,J
- 136
+Read,LoadA
 
-Read,6HC - Reflection.tas,6
+Read,6HC,6
 
- 165
-   1,J
- 183
-   1,J
- 235
-   1,J
-  41
-   1,J
+Read,LoadA,0,Summit
+
   45
+Add 29
    1,J
   32
 
-Read,7SHC - Summit.tas,6
+Read,7SHC,6
 
-#Credits
- 183
-   1,J
-  34
+Read,LoadCoreFromSummit
+
+Read,8S,6
+
+Read,Load1B
+
+Read,1B,6
+
+Read,LoadB
+
+Read,2B,6
+
+Read,LoadB
+
+Read,3B,6
+
+Read,LoadB
+
+Read,4B,6
+
+Read,LoadB
+
+Read,5B,6
+
+Read,LoadB
+
+Read,6B,6
+
+Read,LoadB
+
+Read,7B,6
+
+Read,LoadB,0,Core
+   1,R
+   9
+Read,LoadB,Core
+
+Read,8B,6
+
+Read,Load1C
+
+Read,1C,6
+
+Read,LoadC
+
+Read,2C,6
+
+Read,LoadC
+
+Read,3C,6
+
+Read,LoadC
+
+Read,4C,6
+
+Read,LoadC
+
+Read,5C,6
+
+Read,LoadC
+
+Read,6C,6
+
+Read,LoadC
+
+Read,7C,6
+
+Read,LoadC,0,Core
+   1,R
+   9
+Read,LoadC,Core
+
+Read,8C,6
+
+#Overworld
+   1
    1,S
-   1,D,J
-  88,L
+   1,U,J
+   1,O
+  31
+Add 58
+Read,LoadAFromB,SkipExit,Summit
+  46
+Add 1
+
+read,9S,6
 
 #Epilogue
-  10,L,X
-   7,L,J
-   2,L,J,G
-   5,L,D,X
-   1,L,J
- 156,L
+  51
    1,S
-   1,D,J
-  96
-   1,J
-
-#8A
- 473
-   1,J
-  41
-   1,J
-  45
-   1,S
-   1,D,J
-  32,R
-
-Read,8S - Core.tas,6
-
-  74
-   1,J
-
-#1B
- 361
-   1,J
- 142
+  52
    1,X
-  40
+  42
    1,L
-  12
+   9
    1,L
-  12
-   1,L
-  12
-   1,L
-  12
-   1,L
-  12
-   1,L
-  12
-   1,L
-  12
-   1,L
-  12
+   9
    1,J
-  41
-   1,R
+  43
    1,J
- 304
+ 115
 
-Read,1B - Forsaken City.tas,6
-
-#2B
-   1,S
-   1,U,J
-   1
-   1,J
-  86
-   1,X
-  40
-   1,R
-  12
-   1,J
-  41
-   1,R
-   1,J
- 304
-
-Read,2B - Old Site.tas,6
-
-#3B
-   1,S
-   1,U,J
-   1
-   1,J
-  86
-   1,X
-  40
-   1,R
-  12
-   1,J
-  41
-   1,R
-   1,J
- 304
-
-Read,3B - Celestial Resort.tas,6
-
-#4B
-   1,S
-   1,U,J
-   1
-   1,J
-  86
-   1,X
-  40
-   1,R
-  12
-   1,J
-  41
-   1,R
-   1,J
- 304
-
-Read,4B - Golden Ridge.tas,6
-
-#5B
-   1,S
-   1,U,J
-   1
-   1,J
-  86
-   1,X
-  40
-   1,R
-  12
-   1,J
-  41
-   1,R
-   1,J
- 304
-
-Read,5B - Mirror Temple.tas,6
-
-#6B
- 134,R
-   1,S
-   1,U,J
-   1
-   1,J
-  86
-   1,X
-  40
-   1,R
-  12
-   1,J
-  41
-   1,R
-   1,J
- 304
-
-Read,6B - Reflection.tas,6
-
-#7B
-   1
-   1,S
-   1,U,J
-   1
-   1,J
-  86
-   1,X
-  40
-   1,R
-  12
-   1,J
-  41
-   1,R
-   1,J
- 304
-
-Read,7B - Summit.tas,6
-
-#8B
-  10
-   1,S
-   1,U,J
-   1
-   1,J
-  86
-   1,X
-  40
-   1,R
-  12
-   1,R
-  17
-   1,J
-  41
-   1,R
-   1,J
- 304
-
-Read,8B - Core.tas,6
-
- 134
-   1,S
-   1,U,J
-   1
-   1,J
- 338
-   1,J
- 190
-
-#1C
-   1,X
-  40
-   1,L
-  12
-   1,L
-  12
-   1,L
-  12
-   1,L
-  12
-   1,L
-  12
-   1,L
-  12
-   1,L
-  12
-   1,L
-  12
-   1,J
-  41
-   1,R
-   1,F,90
-   1,J
-  46
-
-Read,1C - Forsaken City.tas,6
-
-#2C
-   1,S
-   1,U,J
-   1
-   1,J
-  86
-   1,X
-  40
-   1,R
-  12
-   1,J
-  41
-   1,R
-   1,F,90
-   1,J
-  46
-
-Read,2C - Old Site.tas,6
-
-#3C
-   1,S
-   1,U,J
-   1
-   1,J
-  86
-   1,X
-  40
-   1,R
-  12
-   1,J
-  41
-   1,R
-   1,F,90
-   1,J
-  46
-
-Read,3C - Celestial Resort.tas,6
-
-#4C
-   1,S
-   1,U,J
-   1
-   1,J
-  86
-   1,X
-  40
-   1,R
-  12
-   1,J
-  41
-   1,R
-   1,F,90
-   1,J
-  46
-
-Read,4C - Golden Ridge.tas,6
-
-#5C
-   1,S
-   1,U,J
-   1
-   1,J
-  86
-   1,X
-  40
-   1,R
-  12
-   1,J
-  41
-   1,R
-   1,F,90
-   1,J
-  46
-
-Read,5C - Mirror Temple.tas,6
-
-#6C
-   1,S
-   1,U,J
-   1
-   1,J
-  86
-   1,X
-  40
-   1,R
-  12
-   1,J
-  41
-   1,R
-   1,F,90
-   1,J
-  46
-
-Read,6C - Reflection.tas,6
-
-#7C
-   1,S
-   1,U,J
-   1
-   1,J
-  86
-   1,X
-  40
-   1,R
-  12
-   1,J
-  41
-   1,R
-   1,F,90
-   1,J
-  46
-
-Read,7C - Summit.tas,6
-
-#8C
-   1,S
-   1,U,J
-   1
-   1,J
-  86
-   1,X
-  40
-   1,R
-  12
-   1,R
-  12
-   1,J
-  41
-   1,R
-   1,F,90
-   1,J
-  46
-
-Read,8C - Core.tas,6
-
-  60
-   1,J
+Read,0 - Epilogue.tas
+#

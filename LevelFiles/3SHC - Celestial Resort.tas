@@ -150,11 +150,19 @@ read,3HC,lvl_01-c,lvl_04-c (2)
   40
 
 #lvl_04-d
-   6,L,J
-   5
-   6,L,D,X
+   3
+   1,R
+   4,J,G
    1,L,J
-   4,L
+   2,L
+   4,D,X
+   3,R,X
+   1,L,J
+   5,L
+   1
+   1,L,J
+   8,L,U,X
   40
 
 read,3SH,lvl_02-d
+#

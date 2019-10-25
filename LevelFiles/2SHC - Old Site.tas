@@ -9,12 +9,13 @@ Read,2HC,lvl_start,Restart
 Read,2S,Restart,lvl_d0 (2)
 
 #lvl_d0
-   3,L,D,X
-   1,L,J
-   8,L
-  27,L,D
+   4,L,D,X
+   2,L,J
+   3,L
+  35,L,D,X
+   1,R,D
   25,D
-  47,D,X
+  43,D,X
   40
 
 Read,2HC,lvl_d9,lvl_d0 (3)
@@ -34,3 +35,4 @@ Read,2HC,lvl_d9,lvl_d0 (3)
   40
 
 Read,2S,lvl_d6
+#

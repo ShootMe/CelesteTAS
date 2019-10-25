@@ -9,12 +9,14 @@
   10,X
    9,R,J
    5,J
-   5,U,X
-  51,R
+  15,U,X
+   1,R
+  40
 
 #lvl_0
-   5,U,X
-  52,L
+  15,U,X
+   2,L
+  40
 
 #lvl_start
    9,L
@@ -26,14 +28,15 @@
   16,R
   10,R,J,G
   10,R,K,G
-  10,R,J,G
+   7,J,G
+   3,L,J
   14,U,X
   24,L,J
   40,L
 
 #lvl_s1
   13,L
-  41,L,U,X
+  33,L,X
   40,L
 
 #lvl_s0
@@ -42,14 +45,17 @@
   40,L
 
 #lvl_s1
-  22,L
-  15,L,U,X
+  13,L
+   4,D,X
+  11,L,U,X
   12,R,J,G
   12,R,K,G
-  12,R,J,G
-   8,R,K,G
+   4,J,G
+   1,L,J
+  12,R,K,G
    7,R
-  10,R,J
+   3,R,J
+   7,J
   14,R,U,X
    3,J
   40,R
@@ -59,22 +65,25 @@
    1,R,J,G
    8,R,K,G
    4,D,X
-   4,R,X
+   5,R,X
    1,R,J
-   7
+   7,R
    1,R,J
   30,R,U,X
- 116,R,D
+ 114,R,D
+   1
 
 #Restart
-Read,2A - Old Site.tas,0,140
+Read,2A,Start,lvl_d0 (2)
 
 #lvl_d0
-   4,L,J
-  35,L,D
+   9,L,J
+  27,L,D,X
+   9,D
+   1,R,D
   25,D
-  47,D,X
-  40,R,D
+  43,D,X
+  40
 
 #lvl_d9
    5,R,D
@@ -83,19 +92,21 @@ Read,2A - Old Site.tas,0,140
   13,R,D,X
    4,R,J
   14,R,D,X
-   1,R,J
-  29,R,X
-  16,R,D
-  13,L,D
-  13,R,D,X
-  14,L,J
-  18,L,D,X
-   5,L,J
-   3,L,K,G
+   3,R,J
+  28,R,X
+  28,L
+  14,R,D,X
+  11,L,J
+  16,L,D,X
+   1,L
+   1,L,J
+   4,L
+   1,L,K,G
+   9,L
   14,L,D,X
    1,L,J
-   7,L
-  17,L,U,X
+   4,D,X
+  14,L,U,X
    4,L,J
    5,L,K
  257
@@ -142,4 +153,4 @@ Read,2A - Old Site.tas,0,140
    1,R,J
   56,U,X
 
-read,2A - Old Site.tas,164
+read,2A - Old Site.tas,lvl_1 (2)

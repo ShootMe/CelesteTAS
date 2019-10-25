@@ -1,0 +1,17 @@
+#By euni
+#Restart
+   1,Q
+   1,J
+  31
+
+read,9,Singular,Farewell
+
+#Farewell
+read,9-9S,Start
+
+   1,S
+   1,D,J
+  18
+
+read,9,end-granny
+#

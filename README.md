@@ -10,6 +10,7 @@ The easiest version to install is the [Everest version](https://github.com/Evere
 - Install [Everest](https://everestapi.github.io/) if you haven't already.
 - Use the 1-click installer [here.](https://gamebanana.com/tools/6715)
 - Enable TAS in the mod settings.
+- Download [Celeste Studio](https://github.com/ShootMe/CelesteTAS/releases/download/TAS/Celeste.Studio.exe), our input editor. (Note that Studio is Windows-only.)
 
 ### Manually
 
@@ -32,7 +33,7 @@ e.g. 123,R,J (For 123 frames, hold Right and Jump)
 - X = Dash / Talk
 - C = Dash Bind 2
 - G = Grab
-- S = Start
+- S = Pause
 - Q = Quick Reset
 - F = Feather Aim (Format: F,angle)
 - O = Confirm
