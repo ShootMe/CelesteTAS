@@ -46,39 +46,44 @@
    7,R,J
    4,R,D,X
   10,R,X
-   3,R,J
-   9,R
-   5,R,U,X
+   1,R,J
+  10,R,D,X
+   4,R,J
   40
 
 #lvl_s2
-  10,R,U,X
-   2,R
-  16,R,J,G
-  15,L,D,X
-  13,R,D
-   4,R,D,X
    1,R,J
+  12,R,U,X
+   2,R,K,G
+   1,J,G
+   4,J
+  15,L,D
+  13,R,D
+
+   1,R,D
+   3,D
+  10,R,D,X
+   6,R,J
+   4,R
+  15,R,D,X
+  21,D,C
+  19,R,D
+   5,R
+   1,R
+   1,R,D
+   4,D,X
+   1,R,J
+   6,R
+   4,R,J
    7,R
-   7,R,J
-  15,R,D,X
-  12,R,J
-  15,R,D,X
-   3,R,J
-  10,R
-  18,D,X
-  12,L,D
+   1,R,J
   16,R,D
-   2,R
-   6
   14,U,X
-   5,J
-  15,R,K,G
-   6,R,J,G
-   2
+   4,L,J
    1,R,K,G
-   3,L,K
-   3,R,K
+  12,R,J,G
+  14,R,K,G
+   3,R,J,G
    7,R
    4,R,D,X
    1,R,J
