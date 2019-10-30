@@ -65,8 +65,13 @@ Read,LoadA
 
 Read,6HC,6
 
-Read,LoadA,0,Summit
-
+ 165
+   1,J
+Add 7
+ 230
+   1,J
+  43
+   1.J
   45
 Add 29
    1,J
