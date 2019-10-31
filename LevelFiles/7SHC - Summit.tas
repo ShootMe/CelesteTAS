@@ -157,8 +157,9 @@ read,7S,7SHC2,lvl_c-06b
 read,7HC,lvl_c-06c,lvl_c-06b (2)
 
 #lvl_c-06b (2)
+   5,L
    4,D,X
-  21,L,U,X
+  15,L,U,X
    4,L,J
    1,L,K
    3,L

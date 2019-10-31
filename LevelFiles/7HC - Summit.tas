@@ -244,35 +244,44 @@ Read,7A - Summit.tas,lvl_b-03,lvl_c-04
   15,L,U,C
    4,L,J
    4,L,D,X
-   2,L,J
-   1,L
-  26,L,J
+  11,L,J
+  14,L,D,X
+   5,L
+   4,D,C
+   1,L,J
+  10,L
    4,D,X
-  18,L,X
-   4,L,J
-   4,L,K
-   4,L,K
-  15,U,X
-   1,R
-  40,R,C
-   2,R,J
-  14,U,X
-  13,L,J
   11,L,X
-   7,L,J
-   6,L,X
-  47,L,J
+   4,L,J
+   5,L,K
+   3,L
+   1,J
+   4,R,K,G
+   2,L,K
+  15,R,U,X
+  26,R,U,C
+   1,L,J,G
+   1,L,K,G
+   9,L,J,G
+  10,L
+   4,D,C
+  12,L,J
+   5,L,K,G
+   4,D,X
+   6,L,U,X
+  40
 
 #lvl_c-06b (2)
+   5,L
    4,D,X
-  21,L,U,X
+  15,L,U,X
    4,L,J
    1,L,K
    3,L
   16,L,D,X
   18,L,J
-  15,L,U,X
-  15,U,C
+  16,L,U,X
+  14,U,C
   40,R
 
 #lvl_c-07
