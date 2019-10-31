@@ -15,4 +15,4 @@
 /InputViewer/obj
 /InputViewer/TASViewer.csproj.user
 /Game/CelesteXNA.exe
-LevelFiles/0 - 100%.ltm
+LevelFiles/*.ltm
