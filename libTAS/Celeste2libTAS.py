@@ -10,10 +10,12 @@ import glob
 import math
 
 input_file = open(sys.argv[1], 'r')
-output_ltm = open(os.path.splitext(sys.argv[1])[0]+'.ltm' , 'w')
+output_file = open(os.path.splitext(sys.argv[1])[0]+'.ltm' , 'w')
 
 regex_input = re.compile(r'[\s]*([\d]*)((?:,(?:[RLUDJKXCGSQNFO]|[\d]*))*)')
 regex_comment = re.compile(r'[\s]*(#|[\s]*$)')
+
+frame_counter = 0
 
 def GetLine(labelOrLineNumber, file):
     try:
@@ -57,13 +59,15 @@ def GetReadData(line):
             skipLines = GetLine(startLine, file)
     if skipLines == None:
         skipLines = 0
+    print(f'Reading {line[0:-1]} from {skipLines} to {lineLen}')
     return file, skipLines, lineLen
 
 
 def ExportFile(file, startLine = 0, endLine = float('inf')):
     file.seek(0)
     curLine = 0
-    print(file, startLine, endLine)
+    skipLine = False
+    global frame_counter
 
     for line in file:
         curLine += 1
@@ -71,7 +75,9 @@ def ExportFile(file, startLine = 0, endLine = float('inf')):
             continue
         if curLine > endLine:
             break
-
+        if skipLine:
+            skipLine = False
+            continue
         if regex_comment.match(line):
             continue
         if line.lower().startswith('read'):
@@ -81,6 +87,10 @@ def ExportFile(file, startLine = 0, endLine = float('inf')):
             continue
         if line.lower().startswith('add'):
             line = line[3:]
+            print(line, frame_counter)
+        if line.lower().startswith('skip'):
+            skipLine = True
+            continue
 
         match = regex_input.match(line)
         if match:
@@ -122,6 +132,8 @@ def ExportFile(file, startLine = 0, endLine = float('inf')):
 
                 if single_input == 'O':
                     output_keys = "ff0d"
+                elif single_input == 'Q':
+                    output_keys = "72"
                 else:
                     output_keys = ''
 
@@ -132,14 +144,15 @@ def ExportFile(file, startLine = 0, endLine = float('inf')):
             # Write the constructed input line, ignore false positive matches
             output_line = '|' + output_keys + '|' + output_axes + ':0:0:0:0:' + ''.join(output_buttons) + '|\n'
             try:
-
                 for n in range(int(match.group(1))):
-                    output_ltm.write(output_line)
+                    frame_counter += 1
+                    output_file.write(output_line)
             except ValueError:
-                print(line)
-    print(curLine)
+                print('Ignoring', line[0:-1])
+
+    print(f'Read {curLine - startLine} lines from {file.name}')
     file.close()
 
 ExportFile(input_file)
 
-output_ltm.close()
+output_file.close()
