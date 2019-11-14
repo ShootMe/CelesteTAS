@@ -739,28 +739,29 @@ Read,SaveandQuit
 
 #lvl_11
    3,L
-   1,L,J,G
-  12,L,K,G
+   1,L,K,G
+  11,L,J,G
+   1,L,J
    6,L,X
   16,L
   16,U,X
-  10,R,J
-   8,L,J
-   1,L,K,G
-   1,L
-   1,L,K,G
-   1,L
-   3,L,K,G
+  11,R,J
+   7,L,J
+   1,K,G
+   1
+   1,K,G
+   1
+   1,K,G
+   2,L,K,G
    7,L
-   1,D,X
-   4,L,X
+   4,D,X
    1,L,J
    6,L
    7,L,J
-   4,L
+   5,L
   14,L,D,X
-   1,L,D,J
-  14,L,D,X
+   1,L,J
+  13,L,D,X
    7,L,J
   14,U,X
    8,R,J
