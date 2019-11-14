@@ -580,38 +580,44 @@
   12,R
    1,J
    7,R,J
-  55,R,G
+  56,R,G
   23,R,U,G
    1,R,J,G
    1,R,K,G
    1,R,J,G
    6,R,K,G
   29,R
-  27,R,J
+  25,R,J
+   1,J
   15,U,X
-  16,R
+  15,R
   15,R,X
-   4,R
+   3,R
   15,R,C
   39,R,D
   62,D
-  18,R,D
+  21,R,D
    4,D,X
-   4,R,U,X
+   8,R,U,X
    6
-  31,R,D
-  37,L
-  12,L,U,X
+  12,R
+   1,L,J,G
+   1,L,K,G
+   7,K
+   4,L,K
+   3,L,J,G
+   1,K,G
+   7,L,K
+   2,L
+  17,R
+   7,L,D,X
   12
-   5,R
-  15,R,D,X
-   9,R
-   3
-  10,R,X
-   9,R,J
-   3,R,K,G
-   1,D,X
-   5,R,X
+   8
+  29,R,D,X
+   3,R
+  12,R,J
+   4,D,X
+   8,R,X
    1,R,J
    7,R
    1,R,J
