@@ -1,4 +1,4 @@
-#By euni, Kilaye, fishmcuffins, and dahlukeh
+#By euni, Kilaye, fishmcuffins, dahlukeh, and Lanvilla
 #Restart
    1,Q
    1,J
@@ -16,7 +16,7 @@ read,9-4,Start
 #Event Horizon
 read,9-5,Start,spike cycle
 
-   1
+   0
 
 read,9-5,Resume
 

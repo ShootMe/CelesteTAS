@@ -13,5 +13,8 @@ read,9-9S,Start
    1,D,J
   18
 
+#Let moon berry sfx play
+ 100
+
 read,9,end-granny
 #

@@ -660,7 +660,12 @@
    1,S
    1,D,J
   34
-   5,R,J
+   3,R,J
+#libTAS syncing
+Skip
+   2,R,J
+Add 1,J
+Add 1,R,J
   11,R,D,X
    3,R,J,G
    1,R

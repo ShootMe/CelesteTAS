@@ -154,21 +154,18 @@ Read,LoadC,Core
 
 Read,8C,6
 
-#Overworld
-   1,S
-   1,U,J
-   1,O
-  31
-Add 58
-Read,LoadAFromB,SkipExit,Summit
-  46
-Add 1
+Read,Load9From8C,0,Postcard
 
-read,9S,6
+#Uncomment if variants aren't unlocked
+Read,Load9From8C,Postcard,Resume
+
+Read,Load9From8C,Resume
+
+Read,9S,6
 
 #Epilogue
   51
-Add 7
+Add 58
    1,S
   52
    1,X
