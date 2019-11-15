@@ -5,29 +5,8 @@
 #If you're using Everest, turn off show Mod Options in game
 #Start on the main save file
 #Start from Begin
-   1,D
-   1,J
-  70
-   1,D
-   1,F,180
-   1,R
-   1,J
-   1,U
-   1,F,
-   1,L
-   1,J
-   1,D
-   1,F,180
-   1,J
-   1,S
-  49
-   1,U
-   1,J
 
-#Prologue
-   1,S
-   1,D,J
-  32
+Read,StartFullGameFile
 
 Read,0 - Prologue.tas,lvl_0
 
@@ -36,9 +15,11 @@ Read,Load1A
 Read,1SH0,lvl_1
 
 #Reenter City
+Add 197
  165
    1,J
   83
+Add 7
    1,S
  194
    1,L
@@ -50,6 +31,7 @@ Read,1SH0,lvl_1
    1,R
    1,J
   46
+Add 1
 
 Read,1SH1,lvl_6
 
@@ -62,9 +44,12 @@ Read,1SH1,lvl_6
    1,F,90
    1,J
   46
+Add 1
 
 Read,1SH2,lvl_9b
 
+#Old Site
+Add 58
 Read,LoadAFromB,SkipExit
 
 Read,2S,lvl_start
@@ -94,8 +79,10 @@ Read,6B,lvl_a-00
 Read,LoadAFromB,0,Summit
 
   45
+Add 29
    1,J
   32
+Add 1
 
 Read,7S,lvl_a-00-intro
 
@@ -103,24 +90,21 @@ Read,LoadCoreFromSummit
 
 Read,8S,lvl_00
 
-  60
-   1,J
- 196
-
-#AreaComplete
- 165
-   1,J
+Read,LoadAFromB,0,SkipExit
 
 #Epilogue
- 104
-   1,X
-  40
+  51
+   1,S
+ 394
    1,L
-  12
+   9
+   1,L
+   9
    1,J
-  41
+  43
    1,J
+Add 1
  115
-
+***
 Read,0 - Epilogue.tas
 #
