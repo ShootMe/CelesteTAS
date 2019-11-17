@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# This script converts tas files from Celeste TAS tool
+# This script converts .tas files from Celeste TAS tool
 # (https://github.com/ShootMe/CelesteTAS/) to libTAS input file.
 # Just run ./Celeste2libTAS path/to/tasfile.tas
 
@@ -12,7 +12,7 @@ import math
 input_file = open(sys.argv[1], 'r')
 output_file = open(os.path.splitext(sys.argv[1])[0]+'.ltm' , 'w')
 
-regex_input = re.compile(r'[\s]*([\d]*)((?:,(?:[RLUDJKXCGSQNFO]|[\d]*))*)')
+regex_input = re.compile(r'[\s]*([\d]*)((?:,(?:[RLUDJKXCGSQNFO]|[\d.]*))*)')
 regex_comment = re.compile(r'[\s]*(#|[\s]*$)')
 
 frame_counter = 0
@@ -59,7 +59,7 @@ def GetReadData(line):
             skipLines = GetLine(startLine, file)
     if skipLines == None:
         skipLines = 0
-    print(f'Reading {line[0:-1]} from {skipLines} to {lineLen}')
+    print(f'Reading {line[0:-1]} from {skipLines} to {lineLen}, at frame {frame_counter}')
     return file, skipLines, lineLen
 
 
@@ -87,7 +87,6 @@ def ExportFile(file, startLine = 0, endLine = float('inf')):
             continue
         if line.lower().startswith('add'):
             line = line[3:]
-            print(line, frame_counter)
         if line.lower().startswith('skip'):
             skipLine = True
             continue
@@ -109,7 +108,7 @@ def ExportFile(file, startLine = 0, endLine = float('inf')):
                     if single_input == '':
                         angle = 0
                     else:
-                        angle = int(single_input)
+                        angle = float(single_input)
 
                     # Compute coordinates of the left analog stick to match the
                     # requested angle. Use the max amplitude to get precise values.
