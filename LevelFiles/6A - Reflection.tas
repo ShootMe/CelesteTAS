@@ -707,7 +707,10 @@ Add 1,R,J
    1,R,J
  181,D
   27,L,D
+#libTAS syncing
+Skip
    5,D
+Add 5,L,D
    4,L,D,X
    1,L,D,J
   16,L,D
