@@ -158,7 +158,7 @@ Read,8C,6
 Read,Load9From8C,0,Postcard
 
 #Uncomment if variants aren't unlocked
-Read,Load9From8C,Postcard,Resume
+#Read,Load9From8C,Postcard,Resume
 
 Read,Load9From8C,Resume
 
