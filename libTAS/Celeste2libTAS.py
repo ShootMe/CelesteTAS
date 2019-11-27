@@ -81,7 +81,7 @@ class Celeste2libTAS:
 
         print(f"Reading {line[0:-1]} from {skip_lines} to {line_len}, at frame {self.frame_counter}")
         return file, skip_lines, line_len
-    
+
     def export_file(self, file, start_line=0, end_line=float('inf')):
         file.seek(0)
         cur_line = 0
@@ -90,7 +90,7 @@ class Celeste2libTAS:
         for line in file:
             cur_line += 1
             line_lower = line.lower()
-            
+
             if cur_line <= start_line:
                 continue
             if cur_line > end_line:
@@ -155,7 +155,7 @@ class Celeste2libTAS:
                     output_buttons[mapped_index] = button_order[mapped_index]
 
                 # Write the constructed input line, ignore false positive matches
-                output_line = f'|{output_keys}|{output_axes}:0:0:0:0:{"".join(output_buttons)}|\n'
+                output_line = f'|{output_keys}|{output_axes}:0:0:0:0:{"".join(output_buttons)}|.........|\n'
                 try:
                     for n in range(int(match.group(1))):
                         self.frame_counter += 1
