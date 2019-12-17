@@ -4,166 +4,227 @@
    1,J
   31
 
-read,3A - Celestial Resort.tas,6,1023
+read,3A,lvl_s0,lvl_09-b (1)
 
-#lvl_12-x
-   6,D,X
- 103
-  14,R,X
-  11,R,J
-  15,U,X
-   1,R,J
-  10,R
-   2,R,J
-  14,U,X
-  47,R,J
-
-#lvl_11-a
-   7
-   5,R
-  11,R,X
-  40,R
-
-#lvl_13-a
-   4,R
-  16,U,X
-  12,L,J,G
-  12,L,K,G
-   8,L,J,G
-  18,R,K
-   7,R
-   1,R,J
-   3,R
-  10,R,U,X
-  40,R
+read,3SH,lvl_09-b (1),lvl_13-b (1)
 
 #lvl_13-b
-  11,R
-  14,R,D,X
-   1,R,J
-  14,R,D,X
-   7,R,J
-  15,U,X
-  14,L,J,G
-  11,L,K,G
-   7,L
-   8,L,D,J,X
-  10,L
-   1,L,J
+  11,R,U,X
+   2,R,J,G
+  13,R,K,G
+  10,L,J
+  35,L,D
+   4,L,D,X
+   8,L,J
+   5,L
+   3,L,J
   14,L,D,X
    3,L,J
-   1,L
-  17,L,D,X
-  42,L,J
+   8,D,X
+  40
 
-#lvl_12-b
-  23,L,J
-  14,L,D,X
-   1,L,J
-   2,L
-  14,L,D,X
-   1,L,J
-  12,L,D,X
-  40,L
+read,3SH,lvl_13-a (1),lvl_13-x
 
-#lvl_11-b
-   2,L
-  23,L,J
-  13,U,X
+#lvl_13-x
+   2,L,D
+   1,L,G
+   1,L,J,G
+   1,R
+  22,L,D,X
+   1,D
+   4,R,D
    1,R,J
-   2,R
-   1,R,J,G
-  13,R
-  10,R,X
-   5,R,J
-  13,U,X
-  40,L
-
-#lvl_11-c
-   1,L,J
-  10,L
-   8,L,D,X
-   1,L,J
-   7,L
-   1,L,J
-   5,L
-   7,L,U,X
-  69,L
-   5,L,D,J,X
-  35,L
-   1,L,J
-  86,L
-   1,J
-  34,L
-   9,D,X
-  40,D
-
-#lvl_11-b
-  19,D
-  11,L,D,X
-  40,L
-
-#lvl_09-b
-   3,L
-   1,L,J
-  15,L
-   1,L,J
-   6,L
-  14,L,D,X
-   1,L,J
-  31,L,D,X
-  11,L,J
-   8,L
-   5,L,J
-  15,L,U,X
-   7,L,J,G
-   7,L
-   6,L,D,J,X
-   3,R
-   6,L
+   7,R
+  25,R,D,X
+   5
+  10,L,X
+  12,J
   14,U,X
+  10,L,J
+   2,L,K,G
+   7,L
+  10,L,D,X
+   6,L,J
   11,L
-  20
+  11,L,D
+   1,R,D
+  12,L,D
+  13,L,D,X
+   1,L,J
+  40,J
 
-read,3A - Celestial Resort.tas,1087,1296
+#lvl_12-x
+   4,L,J
+   2,L,K,G
+  14,L,U,X
+   3,J,G
+   5
+   1,J
+   2
+   5,D,X
+ 103
+  10,R,X
+  13,R,J
+  15,U,X
+   1,R,J
+   7,R
+  15,U,X
+   7,R,J
+  40
 
+read,3SH,lvl_11-a,lvl_11-c (2)
+
+#lvl_11-c (2)
+   1,S
+   1,D,J
+   1,O
+  68
+  10,L,D,X
+   9,R,J
+  16,R,D,X
+   3,R,J
+  13,R
+  13,R,U,X
+   8,R,J,G
+   2,R
+   2,R,K,G
+   7,R
+   4,D,X
+   6,R,U,X
+  40
+
+#lvl_12-c
+   5,R
+   1,J
+   8,U,X
+  40
+
+read,3SH,lvl_12-d,lvl_11-d
+
+#lvl_11-d
+   1,L,J
+   7,L
+   5,L,J
+  17,L,D,X
+   1,D
+   8,R,D
+   8,R
+   1,D,X
+  13,L,X
+   2,L
+  13,L,J
+   0,L,J
+   1,D,X
+  13,L,X
+  28,L,D
+   4,D,X
+   1,L,J
+   7,L
+   3,L,J
+  40
+
+read,3SH,lvl_10-d,lvl_11-y (1)
+
+read,3A,lvl_11-y,lvl_11-z
+
+   1
+
+read,3SH,lvl_11-z,lvl_10-z
+
+#lvl_10-z
+   2,L,J
+   1,L
+   3,J
+   1,K
+   7,R,K
+   1,R
+  15,U,X
+   5,R
+  12,R,J,G
+   6,R
+   1
+   5,J
+  15,U,X
+  40
+
+read,3A,lvl_10-y,lvl_10-x (2)
+
+#lvl_10-x (2)
+  40
+  10,R
+  20,L,J
+   1,D,X
+   4,L,X
+   1,L,J
+   7,L
+   8,L,J
+   7,L,D,X
+ 103
+   4,L,D,X
+   2,L,X
+   3,L,J
+   6,L
+   8,L,D,J
+   4,L
+   1,J
+  15,R,K,G
+  17,U,X
+  40
+
+#lvl_09-b (3)
+  16,J
+  15,U,X
+   1,L,J,G
+   9,L
+   3,R
+  14
+   1,L
+   6,J,G
+   2,R,J
+  10,L,X
   12,L,J
-   1,L,K,G
-   8,L
+  12,L,X
+  11,L,J
+  14,L,U,X
+   2,L,J,G
+   7,L
+   4,L,D,C
+   1,L,J
+   3,R
+   1,L
+   5
+  20,L
+   2,L,J,G
+  95,L,D
+   1,J
+   5,R,K
+   8,R
+  10,L,D,X
+   1,L,J
+   3,L,K,G
+  10,L,J,G
    1,S
    1,D,J
   34
-   5,L,D,X
-   1,R,J
-  11,L
-  10,D,X
-  40,D
-
-#lvl_04-c
-   5,L,D
-  14,L,D,X
-   4,L,D
-   4,R,D
-  23,L,D
-  10,L,J
-  12,U,X
-  19,L,J
-  11,L,K,G
-   5,L,J,G
-   2,D
-  39,L,D
-  14,L,D,X
    1,L,J
-  14,L,D,X
-  40,L
+  11,U,X
+  40
+
+#lvl_09-d
+read,3A,lvl_09-d,lvl_04-d
+
+read,3SH,lvl_04-d (1),lvl_02-c (1)
 
 #lvl_02-c
-   9,L,J
-   6,L
-   9,L,J
+   4
+   6,L,J
+   1,J
+   1,L,J
+   4,L
+   8,L,J
   13,L,D,X
    2,L,J
-   9,L
+   8,L
    1,L,J
 #3SHC1
   12,L,D,X
@@ -172,12 +233,13 @@ read,3A - Celestial Resort.tas,1087,1296
    1,L,J
   12,L,D,X
    1,L,J
-   8,L
+   7,L
+   1
    1,L,J
   12,L,D,X
    1,L,J
   12,L
-  11,L,J
+  11,L,D,J
    3,L,K,G
    7,L,D,X
    1,L,J
@@ -239,24 +301,34 @@ read,3A - Celestial Resort.tas,1087,1296
   14
    1,J
   14
-   1,J
-  14
-   7
+   3
   12,J
   10,L,K,G
+   3
+   1,L
+   1
    4,D,X
   10,U,X
-  12,R,J
-   7
-   4,L
+  16,R,J
+   1,K,G
+   5
+   2,L
   11,U,X
   40
 
 #lvl_04-d
-   6,L,J
-   5
-   6,L,D,X
+   3
+   1,R
+   4,J,G
    1,L,J
-  44,L
+   2,L
+   4,D,X
+   3,R,X
+   1,L,J
+   5,L
+   1
+   1,L,J
+   8,L,U,X
+  40
 
-read,3A - Celestial Resort.tas,1329
+read,3A,lvl_02-d

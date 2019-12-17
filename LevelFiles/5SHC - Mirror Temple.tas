@@ -118,11 +118,7 @@ read,5S,lvl_b-05,5SHC3
    1,L,J,G
   13,L
    4,L,J
-  14,L,D,X
-   5,R,J
-   7,K,G
-   3,L,J
-  22,L
+   8,L
 
 read,5HC,5SHC3,lvl_b-16
 
