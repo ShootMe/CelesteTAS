@@ -17,13 +17,17 @@ Read,2A,6
 
 Read,LoadANoCollects
 
-Read,3A,6
+Read,3HC,6,lvl_09-d
+
+Read,3A,lvl_09-d
 
 Read,LoadA
 
-Read,4A,6
+Read,4A,6,lvl_b-00
 
-Read,LoadANoCollects
+Read,4HC,lvl_b-00
+
+Read,LoadA
 
 Read,5HC,6,Return
 
@@ -49,4 +53,40 @@ Add 29
 Add 1
 
 Read,7A,lvl_a-00-intro
+
+Read,LoadCoreFromSummit
+
+Read,8A,6
+
+Read,LoadAFromB,0,SkipExit
+
+  51
+   1,S
+ 394
+   1,J
+  43
+   1,J
+  46
+Add 1
+
+Read,9,6
+
+#Epilogue
+  51
+Add 58
+   1,S
+  52
+   1,X
+  42
+   1,L
+   9
+   1,L
+   9
+   1,J
+  43
+   1,J
+Add 1
+ 115
+
+Read,0 - Epilogue.tas
 #

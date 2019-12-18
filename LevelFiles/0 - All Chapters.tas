@@ -1,0 +1,146 @@
+read,StartFullGameFile
+
+Read,0 - Prologue.tas,6
+
+Read,Load1A
+
+Read,1HC,6
+
+Read,LoadA
+
+Read,2HC,6
+
+Read,LoadA
+
+Read,3HC,6
+
+Read,LoadA
+
+Read,4HC,6
+
+Read,LoadA
+
+Read,5HC,6
+
+Read,LoadA
+
+Read,6HC,6
+
+Add 197
+ 165
+   1,J
+Add 7
+ 230
+   1,J
+  43
+   1,J
+  45
+Add 29
+   1,J
+  32
+Add 1
+
+Read,7HC,6
+
+Read,LoadCoreFromSummit
+
+Read,8A,6
+
+Read,Load1B
+
+Read,1B,6
+
+Read,LoadB
+
+Read,2B,6
+
+Read,LoadB
+
+Read,3B,6
+
+Read,LoadB
+
+Read,4B,6
+
+Read,LoadB
+
+Read,5B,6
+
+Read,LoadB
+
+Read,6B,6
+
+Read,LoadB
+
+Read,7B,6
+
+Read,LoadB,0,Core
+   1,R
+   9
+Read,LoadB,Core
+
+Read,8B,6
+
+Read,Load1C
+
+Read,1C,6
+
+Read,LoadC
+
+Read,2C,6
+
+Read,LoadC
+
+Read,3C,6
+
+Read,LoadC
+
+Read,4C,6
+
+Read,LoadC
+
+Read,5C,6
+
+Read,LoadC
+
+Read,6C,6
+
+Read,LoadC
+
+Read,7C,6
+
+Read,LoadC,0,Core
+   1,R
+   9
+Read,LoadC,Core
+
+Read,8C,6
+
+Read,Load9From8C,0,Postcard
+
+#Uncomment if variants aren't unlocked
+#Read,Load9From8C,Postcard,Resume
+
+Read,Load9From8C,Resume
+
+Read,9,6
+
+#Epilogue
+  51
+Add 58
+   1,S
+  52
+   1,X
+  42
+   1,L
+   9
+   1,L
+   9
+   1,J
+  43
+   1,J
+Add 1
+ 115
+
+Read,0 - Epilogue.tas
+#

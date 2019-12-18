@@ -4,14 +4,19 @@
    1,J
   31
 
-read,4SH,lvl_a-00,+1f berry
+read,4SH,lvl_a-00,+2f berry
 
-  10,L,D,X
-  27,R,J
-   9,R,U,X
+   4,D,X
+   2,R,J
+   8,R
   40
 
-read,4SH,lvl_a-08 (1),4SHC1
+#lvl_a-05
+   1,R,J
+  14,R,D,X
+   1,R,J
+
+read,4SH,4SHC1,4SHC2
 
   14,R,D
   27,L,D

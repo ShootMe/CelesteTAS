@@ -6,7 +6,12 @@
 
 Read,2HC,lvl_start,Restart
 
-Read,2S,Restart,lvl_d0 (2)
+   1,Q
+   1,J
+  31
+Add 52
+
+Read,2S,lvl_start,lvl_d0 (2)
 
 #lvl_d0
    4,L,D,X

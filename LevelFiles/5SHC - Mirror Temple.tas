@@ -97,34 +97,28 @@ read,5S,lvl_b-05,5SHC3
 
    4,D,X
   10,R,X
-   1,R,J
-   3,R
+   4,R,J
   40
 
 #lvl_b-14
-   4,R
-  17,D,X
-   5,R,D,J,C
-   7,L,D
-   8,R,D
-  10,R,J
-  18,R,D,X
-  15,D,C
+   1,R,J
+   1,L,J
+   5,K,G
+   2
+  26,R,D,X
+  18,R,D,C
+  15,D,X
   12,R,D
-   5,R,D,J,X
-  12,R
+   4,D,X
+   1,R,J
+  17,R
   10,L,X
    1,L,J
    5,L
    1,L,J,G
   13,L
    4,L,J
-  14,L,D,X
-   5,R,J
-   6,K,G
-   2,L,J
-  21,L
-
+   8,L
 
 read,5HC,5SHC3,lvl_b-16
 

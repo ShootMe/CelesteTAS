@@ -83,18 +83,19 @@ Read,6A,lvl_start,lvl_04
    5,K,G
    3,R,K
   24,L,U,X
+   1,G
   11,J,G
    1,R,J
   14,L,K,G
   11,J,G
-   2,R,J
-  15,L,K,G
+   1,R,J
+  14,L,K,G
   11,J,G
-   2,R,J
-  15,L,K,G
+   1,R,J
+  14,L,K,G
   11,J,G
-   2,R,J
-  15,L,K,G
+   1,R,J
+  14,L,K,G
   11,J,G
    1,R,J
    1,K
@@ -107,18 +108,21 @@ Read,6A,lvl_start,lvl_04
    1,R,J
    1,K
   22,L,K
-  15,U,X
-   2,L
-  32,L,K
+   2,L,K
+  11,J,G
+   1,R,J
+  16,U,X
+  28,L,K
+   2,K
   11,J,G
    1,R,J
    1,K
   24,L,K
-  11,J,G
+  10,J,G
    1,R,J
    1,K
   24,L,K
-   8,J,G
+   1,J,G
    2,R,J
   12,L,K,G
    7,L
@@ -190,12 +194,14 @@ Read,6A,lvl_start,lvl_04
   15,L,X
  134,R
    1
+#Exit
    1,S
    1,U,J
    1,O
   31
 
 #Overworld
+Add 58
   51
    1,S
   52
@@ -205,6 +211,7 @@ Read,6A,lvl_start,lvl_04
    1,F,90
    1,J
   46
+Add 1
 
 #lvl_04
   36

@@ -194,36 +194,34 @@
 
 #lvl_6
    1,R,K,G
-  10,R,J,G
-   2,R
-   1,R,J,G
-   7,R
-   9,R,J
-   1,K
-  11,L,J
-  11,R,K
+  12,R,J,G
+  12,R,K,G
+   7,J,G
+   1,L,J
+  10,L,K
+   2,L
    1,J,G
-   2,L,J
-  15,R,K,G
-   1,R,K,G
-  23,R,J,G
-  14,R
-   2,R,K
-   5,R
-   2,R,J
-   3,R
-   5,R,J,G
-   5,R
+   7,L
+   1,R
    1,R,J
+   9,J
+   5,R,J
+   1,R,K,G
+  22,R,J,G
+  13,R,D
+   2,R,J
+   9,R
+   5,R,K,G
    8,R
+   6,R,K
    7,R,J,G
    5,R
    1,R,J
   28,R,D
    1,R,J
-   5,R
+   2,R
    1
-  18,R
+  21,R
    3,R,J
    1,R,K,G
    7,R,J,G
@@ -346,25 +344,20 @@
    1,R
    1,R,K,G
    1,R,J,G
-  16,R
-   1,R,J
-   1
-   8,R
-   1,R,J,G
-   5,R
-   4,R,J
-   7,R
-   1,R,J,G
-   5,R
-   2,J
-   1,R,J
-   6,R
-  34,R,J
+  17,R
+   2,R,J,G
+   1,R,K,G
+   4,R,J,G
+   4,R
+   8,R,K,G
+  17,R
+   2
+  32,R,J
    2,R,K,G
    2,L,K
-   5,R,K
-   1,R,J,G
-  25,R
+   4,R,K
+
+  28,R
   30,R,J
    1,R,K,G
   10,J,G
@@ -386,15 +379,16 @@
    3,R
    6,R,J
    5,R
-   2,R,J
-  27,R,D
+   5,R,J
+  28,R,D
+   1,R,J
+  13,R,D
+   4,R,J
+  29,R,D
    1,R,J
   13,R
-   7,R,J
-  31,R,D
-   1,R,J
-  14,R
-   8
+   7
+   2,R
    4,J
    5,R,J
    1,L,K,G
@@ -428,17 +422,20 @@
   40
 
 #lvl_9b
-   1,R,J
-  14,R
-   1,R,J
-  15,R
+   1,R
+   5,R,J
+   5,R
+   4,R,J
+  14,R,D
   13,R,J
    5,K
    2,L,J,G
    2,L,K,G
    1,L,J,G
-   3,L,K,G
-  30,L,G
+   1,L,K,G
+  12,L
+   1,L,J
+  17,L,G
   29,L,U,K,G
    1,L,J,G
    1,K,G
@@ -711,3 +708,9 @@
 #   6,R
 #   1,S
 #   1,D,J
+
+#-5f lvl_6 wallboost into the cornerboost shit
+#-5f lvl_8 double cornerboost at start
+#-1f lvl_8b wall push
+#-1f lvl_9b wall push
+#-2f lvl_9b jump into the traffic block...
