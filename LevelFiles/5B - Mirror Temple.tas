@@ -273,9 +273,10 @@
   41,R,U,G
    8,R,J,G
   37,U,X
-  40,L,U,C
-  34,L,D
-  22,L,X
+  37,L,U,C
+   1,L,J
+  29,L,D
+  24,L,X
   52,U,C
   33,R,X
   15,U,C
@@ -476,33 +477,24 @@
   15,R,D,X
   19,R,J
   16,U,X
-  22,R,J
-  12,R,K,G
-   1,R,J,G
-   4,L,J
+   3,L,J
+  11,L
+   3,K
+   6,R,K
+  16,U,X
   40
 
 #lvl_d-00
-   1,R
-   1,R,J,G
-   1,R,K,G
-   5,R
+  17,R,J
+   4,D,X
+  10,R,X
    1,R,J
-   1,R
-   1,R,J
-  22,R,U,X
-   2
-   4,D,C
-   3,L,D,C
-   1,R,J
-   6,R
-   1,R,J
-   5,R,D,X
-  13,G
+   9,R,D,X
+  13,R,G
    1,R,J,G
   28,R,D,G
    1,R,J,G
-   1,R,G
+   2,R,G
    1,R
   14,R,D,X
    1,R,J
