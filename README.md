@@ -17,7 +17,7 @@ The easiest version to install is the [Everest version](https://github.com/Evere
 Manual installation is only recommended if you're messing with CelesteTAS code. Instructions can be found [here.](https://github.com/ShootMe/CelesteTAS/blob/master/Game/ManualInstructions.md)
 
 ## Input File
-Input file is called Celeste.tas and needs to be in the main Celeste directory (usually C:\Program Files (x86)\Steam\steamapps\common\Celeste\Celeste.tas)
+Input file is called Celeste.tas and needs to be in the main Celeste directory (usually C:\Program Files (x86)\Steam\steamapps\common\Celeste\Celeste.tas) Celeste Studio will automatically create this file for you.
 
 Format for the input file is (Frames),(Actions)
 
@@ -48,6 +48,8 @@ While in game
 - Unpause: ]
 - These can be rebound in (Main Celeste Directory)\Saves\modsettings-CelesteTAS.celeste
   - Note that you may have to reload Mod Settings in Celeste for this file to appear.
+  - You can also set hotkeys for modifying TAS options (e.g. showing hitboxes) in this file.
+  - You can also set a default path for TAS files to be read from. (We recommend setting this to the LevelFiles folder in this repo.)
   
 ### Controller
 While in game
@@ -64,18 +66,8 @@ While in game
 - You can specify the speed with ***X, where X is the speedup factor. e.g. ***10 will go at 10x speed
 - ***! will force the TAS to pause even if there are breakpoints afterward in the file
 
-### Read
-- Read,File Name,Starting Line,(Optional Ending Line)
-- Will read inputs from the specified file.
-- Currently requires files to be in the main Celeste directory.
-- e.g. "Read,1A - Forsaken City.tas,6" will read all inputs after line 6 from the '1A - Forsaken City.tas' file
-- This will also work if you shorten the file name, i.e. "Read,1A,6" will do the same 
-- It's recommended to use labels instead of line numbers, so "Read,1A,lvl_1" would be the preferred format for this example.
-
-### Labels
-- Prefixing a line with # will comment out the line
-- A line beginning with # can be also be used as the starting point or ending point of a Read instruction.
-- You can comment highlighted text in Celeste Studio by hitting Ctrl+K
+### Commands
+- Various commands exist to facilitate TAS playback. Documentation can be found [here.](https://github.com/ShootMe/CelesteTAS/blob/master/Game/Commands.md)
   
 ## Celeste Studio
 Can be used instead of notepad or similar for easier editing of the TAS file. Is located in [Releases](https://github.com/ShootMe/CelesteTAS/releases) as well.
