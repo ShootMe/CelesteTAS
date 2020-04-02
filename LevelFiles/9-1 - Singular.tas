@@ -365,19 +365,19 @@ console load 10
    4,D,X
    9,L,X
    1,L,J,G
-  27,D
+  26,D
    2,R,D
-   4,R
-   9,L
+   4,R,D
+   2,L,D
+   6,L
   19,R
-  15,R,X
-  19,R,D
+  14,R,X
+  19,R
   32,R
   15,U,X
    1,R
    1
    1,R
-   1
    1,L,J
    2,L,K
   15,L
