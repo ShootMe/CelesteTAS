@@ -4,7 +4,8 @@
    1,J
   31
 
-Read,6A,lvl_start,lvl_04
+#Start
+Read,6A,Start,lvl_04
 
 #lvl_04
    1,J,G

@@ -1,8 +1,7 @@
-#Restart
-   1,Q
-   1,J
-  31
+console load 0
+   1
 
+#Start
 #lvl_0
   61
    1,R,D,J
