@@ -1,10 +1,9 @@
 #By EuniverseCat
-#Restart
-   1,Q
-   1,J
-  31
+console load 1 lvl_9b
+   1
 
-read,1SH2,lvl_9b,lvl_10 (1)
+#Start
+Read,1SH2,Start,lvl_10 (1)
 
 #lvl_10 (1)
    5,L

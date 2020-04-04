@@ -1,9 +1,8 @@
 #By EuniverseCat, fishmcmuffins, Kilaye
-#Restart
-   1,Q
-   1,J
-  31
- 
+console load 4
+   1
+
+#Start
 #lvl_a-00
   69
    5,R,D,X

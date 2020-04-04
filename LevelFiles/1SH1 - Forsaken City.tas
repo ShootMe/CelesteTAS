@@ -1,9 +1,8 @@
 #By EuniverseCat
-#Restart
-   1,Q
-   1,J
-  31
+console load 1 lvl_6
+   1
 
+#Start
 #lvl_6
   36
   10,R,X

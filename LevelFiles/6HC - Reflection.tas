@@ -1,8 +1,6 @@
 #By EuniverseCat and Kilaye
-#Restart
-   1,Q
-   1,J
-  31
+console load 6
+   1
 
 #Start
 Read,6A,Start,lvl_04
