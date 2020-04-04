@@ -1,3 +1,10 @@
+console load 8
+   1
+
+#Some files have this wait elsewhere already
+115
+
+#Start
    9,L,X
    1,L,J
    1,J

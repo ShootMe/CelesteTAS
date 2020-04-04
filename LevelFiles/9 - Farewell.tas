@@ -1,11 +1,10 @@
 #By euni, Kilaye, fishmcuffins, dahlukeh, and Lanvilla
-#Restart
-   1,Q
-   1,J
-  31
+console load 10
+   1
 
+#Start
 #Singular
-read,9-1,lvl_intro-00-past
+read,9-1,Start
 
 #Power Source
 read,9-3,Start
@@ -14,11 +13,7 @@ read,9-3,Start
 read,9-4,Start
 
 #Event Horizon
-read,9-5,Start,spike cycle
-
-   0
-
-read,9-5,Resume
+read,9-5,Start
 
 #Determination
 read,9-6,Start

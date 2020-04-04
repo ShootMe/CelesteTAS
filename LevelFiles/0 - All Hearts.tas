@@ -1,56 +1,56 @@
 Read,StartFullGameFile
 
-Read,0 - Prologue.tas,6
+Read,0 - Prologue.tas,Start
 
 Read,Load1A
 
-Read,1HC,6,Return
+Read,1HC,Start,Return
 
 Read,LoadBFromA
 
-Read,1B,6
+Read,1B,Start
 
 Read,LoadAFromB
 
-Read,2HC,6,Return
+Read,2HC,Start,Return
 
 Read,LoadBFromA
 
-Read,2B,6
+Read,2B,Start
 
 Read,LoadAFromB
 
-Read,3HC,6,Return
+Read,3HC,Start,Return
 
 Read,LoadBFromA
 
-Read,3B,6
+Read,3B,Start
 
 Read,LoadAFromB
 
-Read,4HC,6,Exit
+Read,4HC,Start,Exit
 
 Read,LoadBFromA,Exit
 
-Read,4B,6
+Read,4B,Start
 
 Read,LoadAFromB
 
-Read,5HC,6,Exit
+Read,5HC,Start,Exit
 
 Read,LoadBFromA,Exit
 
-Read,5B,6
+Read,5B,Start
 
 Read,LoadAFromB
 
-Read,6HC,6,Exit
+Read,6HC,Start,Exit
 
 Read,LoadBFromA,Exit
 
-Read,6B,6
+Read,6B,Start
 
-Read,LoadAFromB,0,Summit
+Read,LoadAFromB,Start,Summit
 
 #Summit
   45
@@ -59,13 +59,13 @@ Add 29
   32
 Add 1
 
-Read,7HC,6,Exit
+Read,7HC,Start,Exit
 
 Read,LoadBFromA
 
-Read,7B,6
+Read,7B,Start
 
-Read,LoadAFromB,0,Summit
+Read,LoadAFromB,Start,Summit
 
  115
 
@@ -73,46 +73,46 @@ Read,0 - Epilogue.tas
 
 Read,LoadCoreFromSummit,8A
 
-Read,8A,6
+Read,8A,Start
 
 Read,LoadBFromA,Exit
 
-Read,8B,6
+Read,8B,Start
 
 Read,Load1C
 
-Read,1C,6
+Read,1C,Start
 
 Read,LoadC
 
-Read,2C,6
+Read,2C,Start
 
 Read,LoadC
 
-Read,3C,6
+Read,3C,Start
 
 Read,LoadC
 
-Read,4C,6
+Read,4C,Start
 
 Read,LoadC
 
-Read,5C,6
+Read,5C,Start
 
 Read,LoadC
 
-Read,6C,6
+Read,6C,Start
 
 Read,LoadC
 
-Read,7C,6
+Read,7C,Start
 
-Read,LoadC,0,Core
+Read,LoadC,Start,Core
    1,R
    9
 Read,LoadC,Core
 
-Read,8C,6
+Read,8C,Start
 
 #Overworld
    1,S

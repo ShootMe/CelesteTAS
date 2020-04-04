@@ -39,7 +39,7 @@ Read,LoadBFromA
 
 Read,6B,Start
 
-Read,LoadAFromB,0,Summit
+Read,LoadAFromB,Start,Summit
 
 #Summit
   45
