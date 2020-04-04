@@ -13,7 +13,11 @@ read,9-3,Start
 read,9-4,Start
 
 #Event Horizon
-read,9-5,Start
+read,9-5,Start,spike cycle
+
+   1,R
+
+read,9-5,Resume
 
 #Determination
 read,9-6,Start
