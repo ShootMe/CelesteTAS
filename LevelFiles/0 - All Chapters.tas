@@ -1,3 +1,5 @@
+#Start from Begin
+
 Read,StartFullGameFile
 
 Read,0 - Prologue.tas,Start

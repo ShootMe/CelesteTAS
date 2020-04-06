@@ -1,223 +1,46 @@
 #Start from Begin
-   1,D
-   1,J
-  70
-   1,D
-   1,F,180
-   1,R
-   1,J
-   1,U
-   1,F,
-   1,L
-   1,J
-   1,D
-   1,F,180
-   1,J
-   1,S
-  49
-   1,U
-   1,J
 
-#Intro
-   1,S
-   1,D,J
-  93,L
+Read,StartFullGameFile
 
-#lvl_0
-   5,L
-   1,L,J
-   3,L
-  40
-  
-#lvl_-1
-   1,L
-   1,R,N
-   1,G
-   1,F,
-   1,L,U,D,G
-   1,J
+Read,LoadEnableCheatMode,Start
 
-#Overworld
- 123
-   1,X
-  40
-   1,R
-  12
-   1,J
-  41
-   1,R
-   1,F,90
-   1,J
-  46
+Read,LoadCCheatMode,SelectC
 
-Read,1C - Forsaken City.tas,6
+Read,1C,Start
 
-#Overworld
-   1,S
-   1,U,J
-   1
-   1,J
-  86
-   1,X
-  40
-   1,R
-  12
-   1,J
-  41
-   1,R
-   1,F,90
-   1,J
-  46
+Read,LoadCCheatMode,Start
 
-Read,2C - Old Site.tas,6
+Read,2C,Start
 
-#Overworld
-   1,S
-   1,U,J
-   1
-   1,J
-  86
-   1,X
-  40
-   1,R
-  12
-   1,J
-  41
-   1,R
-   1,F,90
-   1,J
-  46
+Read,LoadCCheatMode,Start
 
-Read,3C - Celestial Resort.tas,6
+Read,3C,Start
 
-#Overworld
-   1,S
-   1,U,J
-   1
-   1,J
-  86
-   1,X
-  40
-   1,R
-  12
-   1,J
-  41
-   1,R
-   1,F,90
-   1,J
-  46
+Read,LoadCCheatMode,Start
 
-Read,4C - Golden Ridge.tas,6
+Read,4C,Start
 
-#Overworld
-   1,S
-   1,U,J
-   1
-   1,J
-  86
-   1,X
-  40
-   1,R
-  12
-   1,J
-  41
-   1,R
-   1,F,90
-   1,J
-  46
+Read,LoadCCheatMode,Start
 
-Read,5C - Mirror Temple.tas,6
+Read,5C,Start
 
-#Overworld
-   1,S
-   1,U,J
-   1
-   1,J
-  86
-   1,X
-  40
-   1,R
-  12
-   1,J
-  41
-   1,R
-   1,F,90
-   1,J
-  46
+Read,LoadCCheatMode,Start
 
-Read,6C - Reflection.tas,6
+Read,6C,Start
 
-#Overworld
-   1,S
-   1,U,J
-   1
-   1,J
-  86
-   1,X
-  40
-   1,R
-  12
-   1,J
-  41
-   1,R
-   1,F,90
-   1,J
-  46
+Read,LoadCCheatMode,Start
 
-Read,7C - Summit.tas,6
+Read,7C,Start
 
-#Overworld
-   1,S
-   1,U,J
-   1
-   1,J
-  86
-   1,X
-  40
-   1,R
-  12
-   1,R
-  12
-   1,J
-  41
-   1,R
-   1,F,90
-   1,J
-  46
-
-Read,8C - Core.tas,6
-
-#Overworld
-   1,S
-   1,U,J
-   1
-   1,J
-  86
-   1,X
-  40
-
-#Journal
-   1,N
+Read,LoadCCheatMode,Start,GoldBerry
   50
+Read,LoadCCheatMode,GoldBerry,Core
    1,R
- 140
-   1,R
- 140
-   1,X
-  50
+   9
+Read,LoadCCheatMode,Core
 
-#Epilogue
-   1,L
-  12
+Read,8C,Start
+
+#Move to ending screen
+  59
    1,J
-  41
-   1,J
- 115
-  10,L,X
-   7,L,J
-   2,L,J,G
-   5,L,D,X
-   1,L,J
- 156,L
-   1,S
-   1,D,J

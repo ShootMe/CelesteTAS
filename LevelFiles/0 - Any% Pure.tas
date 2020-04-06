@@ -1,21 +1,5 @@
-#Start
-   1,J
+#Start from Begin
 
-#Intro
-   1,S
-   1,D,J
-  93,L
+Read,StartFullGameFile
 
-#lvl_0
-   5,L
-   1,L,J
-   3,L
-  40
-  
-#lvl_-1
-   1,L
-   1,R,N
-   1,G
-   1,F,
-   1,L,U,D,G
-   1,J
+Read,LoadEnableCheatMode,Start

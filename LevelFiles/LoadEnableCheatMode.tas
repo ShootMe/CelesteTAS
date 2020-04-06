@@ -1,0 +1,20 @@
+#We use cheat mode to enable all levels for the All B and All C side tas runs
+
+#Start
+#lvl_0
+  61
+   5,L
+   1,L,J
+   3,L
+  40
+
+#lvl_-1
+   1,L
+   1,R,N
+   1,G
+   1,F,
+   1,L,U,D,G
+   1,J
+
+#Overworld
+ 123

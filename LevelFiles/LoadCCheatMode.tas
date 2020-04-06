@@ -1,0 +1,22 @@
+#Used in the All C Sides tas, and accounts for gold berry currently earned in 7C
+
+#Start
+   1,S
+   1,U,J
+   1,O
+ 107
+#SelectC
+  86
+#GoldBerry
+   1,X
+  42
+   1,R
+   9
+#Core
+   1,J
+  43
+   1,R
+   1
+   1,R
+   1,J
+  46

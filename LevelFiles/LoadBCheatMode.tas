@@ -1,0 +1,21 @@
+#Used in the All B Sides tas, which require 2 level selections to begin the level
+
+#Start
+   1,S
+   1,U,J
+   1,O
+ 107
+#SelectB
+  86
+   1,X
+  42
+   1,R
+   9
+#Core
+   1,J
+  43
+   1,R
+   1,J
+  30
+   1,J
+ 304
