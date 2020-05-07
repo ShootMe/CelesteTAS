@@ -156,38 +156,48 @@ namespace CelesteStudio
 
                     Thread.Sleep(14);
                 }
-                catch { }
+                catch //(Exception e) 
+                {
+                    //Console.Write(e);
+                }
             }
         }
         public void EnableStudio(bool hooked)
         {
             if (hooked)
             {
-                string fileName;
-                if (Environment.OSVersion.Platform == PlatformID.Unix && Directory.Exists("~/.steam/steam/steamapps/common/Celeste"))
+                try
                 {
-                    fileName = Path.Combine(Path.GetFullPath("~/.steam/steam/steamapps/common/Celeste"), "Celeste.tas");
-                }
-                else
-                {
-                    fileName = Path.Combine(Path.GetDirectoryName(memory.Program.MainModule.FileName), "Celeste.tas");
-                }
-                if (!File.Exists(fileName)) { File.WriteAllText(fileName, string.Empty); }
-
-                if (string.IsNullOrEmpty(tasText.LastFileName))
-                {
-                    if (string.IsNullOrEmpty(tasText.SaveToFileName))
+                    string fileName;
+                    if (Environment.OSVersion.Platform == PlatformID.Unix)
                     {
-                        tasText.OpenBindingFile(fileName, Encoding.ASCII);
+                        if (null == (fileName = Environment.GetEnvironmentVariable("CELESTE_TAS_FILE")))
+                            fileName = Environment.GetEnvironmentVariable("HOME") + "/.steam/steam/steamapps/common/Celeste/Celeste.tas";
                     }
-                    tasText.LastFileName = fileName;
-                }
-                tasText.SaveToFileName = fileName;
-                if (tasText.LastFileName != tasText.SaveToFileName)
+                    else
+                    {
+                        fileName = Path.Combine(Path.GetDirectoryName(memory.Program.MainModule.FileName), "Celeste.tas");
+                    }
+                    if (!File.Exists(fileName)) { File.WriteAllText(fileName, string.Empty); }
+
+                    if (string.IsNullOrEmpty(tasText.LastFileName))
+                    {
+                        if (string.IsNullOrEmpty(tasText.SaveToFileName))
+                        {
+                            tasText.OpenBindingFile(fileName, Encoding.ASCII);
+                        }
+                        tasText.LastFileName = fileName;
+                    }
+                    tasText.SaveToFileName = fileName;
+                    if (tasText.LastFileName != tasText.SaveToFileName)
+                    {
+                        tasText.SaveFile(true);
+                    }
+                    tasText.Focus();
+                } catch (Exception e)
                 {
-                    tasText.SaveFile(true);
+                    Console.WriteLine(e);
                 }
-                tasText.Focus();
             }
             else
             {

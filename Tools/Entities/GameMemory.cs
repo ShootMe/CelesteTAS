@@ -23,7 +23,6 @@ namespace CelesteStudio.Entities
         public Process Program { get; set; }
         public bool IsHooked { get; set; } = false;
         private DateTime lastHooked;
-        public FileStream UnixRTC;
         private string room;
         private string output;
         private string playeroutput;
@@ -84,9 +83,7 @@ namespace CelesteStudio.Entities
         private void ReadStream()
         {
             string line = null;
-            UnixRTC.Close();
-            UnixRTC = File.OpenRead("/tmp/celestetas");
-            StreamReader UnixRTCStream = new StreamReader(UnixRTC);
+            StreamReader UnixRTCStream = new StreamReader("/tmp/celestetas");
             while (UnixRTCStream.Peek() > 0)
             {
                 line = UnixRTCStream.ReadLine();
@@ -113,10 +110,10 @@ namespace CelesteStudio.Entities
                 {
                     try
                     {
-                        UnixRTC = File.OpenRead("/tmp/celestetas");
-                        StreamReader UnixRTCStream = new StreamReader(UnixRTC);
+                        StreamReader UnixRTCStream = new StreamReader("/tmp/celestetas");
                         while (UnixRTCStream.Peek() > 0)
                             UnixRTCStream.Read();
+                        UnixRTCStream.Dispose();
                         Task.Run(() => ReadStreamAsync());
                         playeroutput = "";
                         output = "";
