@@ -4,7 +4,8 @@
    1,J
   31
 
-Read,6A,lvl_start,lvl_04
+#Start
+Read,6A,Start,lvl_04
 
 #lvl_04
    1,J,G
@@ -47,9 +48,9 @@ Read,6A,lvl_start,lvl_04
   14,L,D
    1,L,J
    6,L,U,X
- 
-#lvl_04e
   43
+
+#lvl_04e
    1,R,J,G
    7,L,J
    3,L
@@ -228,4 +229,3 @@ Add 1
    7,R
 
 Read,6A,6HC1
-#

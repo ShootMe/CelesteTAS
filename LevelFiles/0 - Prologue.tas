@@ -1,9 +1,7 @@
-#By DevilSquirrel, EuniverseCat, and Kilaye
-#Restart
-   1,Q
-   1,J
-  31
+console load 0
+   1
 
+#Start
 #lvl_0
   61
    1,R,D,J
@@ -45,9 +43,9 @@
   26,R,D
    1,R
    1,R,J
+  40
 
 #lvl_1
-  40
   14,R
    1,R,J
   14,R
@@ -98,9 +96,9 @@
    1,R,J,G
    9,R
    7,R,J
+  40
 
 #lvl_2
-  40
    6,R
    2,R,J
    1,R
@@ -122,9 +120,9 @@
   14,R
    1,R,J
    9,R
+  40
 
 #lvl_3
-  40
    5,R
    1,R,J
   14,R
