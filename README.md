@@ -10,7 +10,8 @@ The easiest version to install is the [Everest version](https://github.com/Evere
 - Install [Everest](https://everestapi.github.io/) if you haven't already.
 - Use the 1-click installer [here.](https://gamebanana.com/tools/6715)
 - Enable TAS in the mod settings.
-- Download [Celeste Studio](https://github.com/ShootMe/CelesteTAS/releases/download/TAS/Celeste.Studio.exe), our input editor. (Note that Studio is Windows-only.)
+- Enable `Unix RTC` in the mod settings and restart if on linux
+- Download [Celeste Studio](https://github.com/ShootMe/CelesteTAS/releases/download/TAS/Celeste.Studio.exe), our input editor. (Note that Studio is not supported for Mac, and old versions only run on Windows)
 
 ### Manually
 
