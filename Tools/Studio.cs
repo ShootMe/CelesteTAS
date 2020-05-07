@@ -4,6 +4,7 @@ using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Text;
+using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 using CelesteStudio.Controls;
@@ -72,6 +73,10 @@ namespace CelesteStudio
                 {
                     CommentText();
                 }
+                else if (e.Modifiers == Keys.Control && e.KeyCode == Keys.P)
+                {
+                    ClearBreakpoints();
+                }
             }
             catch (Exception ex)
             {
@@ -79,6 +84,13 @@ namespace CelesteStudio
                 Console.Write(ex);
             }
         }
+
+        private void ClearBreakpoints()
+        {
+            List<int> breakpoints = tasText.FindLines("\\*\\*\\*", System.Text.RegularExpressions.RegexOptions.None);
+            tasText.RemoveLines(breakpoints);
+        }
+
         private DialogResult ShowInputDialog(string title, ref string input)
         {
             Size size = new Size(200, 70);

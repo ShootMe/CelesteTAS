@@ -2496,6 +2496,9 @@ namespace CelesteStudio.Controls {
 				if (!AcceptsTab)
 					return false;
 
+                if (TabLength == 0)
+                    return true;
+
 				if ((lastModifiers & Keys.Shift) == 0) {
 					if (Selection.IsEmpty) {
 						//ClearSelected();
