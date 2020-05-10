@@ -22,11 +22,10 @@ namespace CelesteStudio.Controls {
 		public readonly Style AquaStyle = new TextStyle(Brushes.Aqua, null, FontStyle.Regular);
 
 		Dictionary<string, SyntaxDescriptor> descByXMLfileNames = new Dictionary<string, SyntaxDescriptor>();
-		static readonly Platform platformType = PlatformType.GetOperationSystemPlatform();
 
 		public static RegexOptions RegexCompiledOption {
 			get {
-				if (platformType == Platform.X86)
+				if (!Environment.Is64BitOperatingSystem)
 					return RegexOptions.Compiled;
 				else
 					return RegexOptions.None;
