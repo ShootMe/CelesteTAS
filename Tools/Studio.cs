@@ -77,6 +77,10 @@ namespace CelesteStudio
                 {
                     ClearBreakpoints();
                 }
+                else if (e.Modifiers == Keys.Control && e.KeyCode == Keys.R)
+                {
+                    AddRoom();
+                }
             }
             catch (Exception ex)
             {
@@ -89,6 +93,19 @@ namespace CelesteStudio
         {
             List<int> breakpoints = tasText.FindLines("\\*\\*\\*", System.Text.RegularExpressions.RegexOptions.None);
             tasText.RemoveLines(breakpoints);
+        }
+
+        private void AddRoom()
+        {
+            Range range = tasText.Selection;
+
+            int start = range.Start.iLine;
+
+            tasText.Selection = new Range(tasText, 0, start, 0, start);
+            string text = tasText.SelectedText;
+
+            tasText.SelectedText = "# lvl_" + memory.LevelName() + '\n';
+            tasText.Selection = new Range(tasText, 0, start, 0, start);
         }
 
         private DialogResult ShowInputDialog(string title, ref string input)
