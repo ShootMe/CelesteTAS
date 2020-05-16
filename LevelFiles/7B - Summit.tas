@@ -1705,16 +1705,17 @@ console hard 7
   10,L
   12
   12,R,C
-   9,R,J
-   1,K
-  12,R,K
-  11,L,K
-  18,L,U,C
-  17,U,X
-  17,L,J
-  12,L,K
-  12,L,J,G
-   6,L,K,G
+   1,R,J
+   8,J
+   1,L,K,G
+  26,L,K
+  15,U,X
+   2,L
+  15,U,X
+   2,L
+  28,L,J
+   3,L
+  10,L,K,G
    7,L
   10,L,X
    6,L,J
@@ -1757,8 +1758,3 @@ console hard 7
    5,L
    6,R
    7,L
-   8,R
-   9,L
-  10,R
-  15,L
-   5,R

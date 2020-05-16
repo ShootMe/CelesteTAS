@@ -39,6 +39,7 @@ namespace CelesteStudio.Controls {
 		private int startFoldingLine = -1, updating, wordWrapLinesCount, maxLineLength = 0, preferredLineWidth, leftPadding, lineInterval, endFoldingLine = -1, charHeight;
 		private WordWrapMode wordWrapMode = WordWrapMode.WordWrapControlWidth;
 		private Brush backBrush;
+        public bool InsertLocked = false;
 		public string SaveToFileName { get; set; }
 		public string LastFileName { get; set; }
 		internal bool allowInsertRemoveLines = true;
@@ -575,7 +576,7 @@ namespace CelesteStudio.Controls {
 		[Browsable(false)]
 		public bool IsReplaceMode {
 			get {
-				return IsKeyLocked(Keys.Insert) && Selection.IsEmpty &&
+				return InsertLocked && Selection.IsEmpty &&
 					   Selection.Start.iChar < lines[Selection.Start.iLine].Count;
 			}
 		}
@@ -1360,7 +1361,7 @@ namespace CelesteStudio.Controls {
 
 		protected override void OnLoad(EventArgs e) {
 			base.OnLoad(e);
-			m_hImc = ImmGetContext(Handle);
+			m_hImc = NativeMethodsWrapper.ImmGetContext(Handle);
 		}
 
 		public void AddVisualMarker(VisualMarker marker) {
@@ -1715,12 +1716,6 @@ namespace CelesteStudio.Controls {
 			return new SizeF(sz2.Width - sz3.Width + 1, /*sz2.Height*/font.Height);
 		}
 
-		[DllImport("Imm32.dll")]
-		public static extern IntPtr ImmGetContext(IntPtr hWnd);
-
-		[DllImport("Imm32.dll")]
-		public static extern IntPtr ImmAssociateContext(IntPtr hWnd, IntPtr hIMC);
-
 		protected override void WndProc(ref Message m) {
 			if (m.Msg == WM_HSCROLL || m.Msg == WM_VSCROLL)
 				if (m.WParam.ToInt32() != SB_ENDSCROLL)
@@ -1730,7 +1725,7 @@ namespace CelesteStudio.Controls {
 
 			if (ImeAllowed)
 				if (m.Msg == WM_IME_SETCONTEXT && m.WParam.ToInt32() == 1) {
-					ImmAssociateContext(Handle, m_hImc);
+					NativeMethodsWrapper.ImmAssociateContext(Handle, m_hImc);
 				}
 		}
 
@@ -2028,8 +2023,12 @@ namespace CelesteStudio.Controls {
 				diag.FilterIndex = 0;
 				if (!string.IsNullOrEmpty(LastFileName)) {
 					diag.InitialDirectory = Path.GetDirectoryName(LastFileName);
-				}
-				if (diag.ShowDialog() == DialogResult.OK) {
+				} else if (Environment.OSVersion.Platform == PlatformID.Unix
+                && Directory.Exists("~/.steam/steam/steamapps/common/Celeste"))
+                {
+                    diag.InitialDirectory = Path.GetFullPath("~/.steam/steam/steamapps/common/Celeste");
+                }
+                if (diag.ShowDialog() == DialogResult.OK) {
 					LastFileName = diag.FileName;
 					OpenBindingFile(diag.FileName, Encoding.ASCII);
 				}
@@ -2497,6 +2496,9 @@ namespace CelesteStudio.Controls {
 				if (!AcceptsTab)
 					return false;
 
+                if (TabLength == 0)
+                    return true;
+
 				if ((lastModifiers & Keys.Shift) == 0) {
 					if (Selection.IsEmpty) {
 						//ClearSelected();
@@ -2725,17 +2727,6 @@ namespace CelesteStudio.Controls {
 			return base.IsInputKey(keyData);
 		}
 
-		[DllImport("User32.dll")]
-		private static extern bool CreateCaret(IntPtr hWnd, int hBitmap, int nWidth, int nHeight);
-		[DllImport("User32.dll")]
-		private static extern bool SetCaretPos(int x, int y);
-		[DllImport("User32.dll")]
-		private static extern bool DestroyCaret();
-		[DllImport("User32.dll")]
-		private static extern bool ShowCaret(IntPtr hWnd);
-		[DllImport("User32.dll")]
-		private static extern bool HideCaret(IntPtr hWnd);
-
 		protected override void OnPaintBackground(PaintEventArgs e) {
 			if (BackBrush == null)
 				base.OnPaintBackground(e);
@@ -2905,14 +2896,14 @@ namespace CelesteStudio.Controls {
 
 			if ((Focused || IsDragDrop) && car.X >= LeftIndent && CaretVisible) {
 				int carWidth = IsReplaceMode ? CharWidth : 1;
-				//CreateCaret(Handle, 0, carWidth, CharHeight);
-				SetCaretPos(car.X, car.Y);
+                //CreateCaret(Handle, 0, carWidth, CharHeight);
+                NativeMethodsWrapper.SetCaretPos(car.X, car.Y);
 				//ShowCaret(Handle);
 				using (Pen pen = new Pen(Color.Black)) {
 					e.Graphics.DrawLine(pen, car.X, car.Y, car.X, car.Y + CharHeight - 1);
 				}
 			} else {
-				HideCaret(Handle);
+                NativeMethodsWrapper.HideCaret(Handle);
 			}
 
 			//draw disabled mask
