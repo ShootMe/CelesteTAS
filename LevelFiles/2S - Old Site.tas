@@ -1,4 +1,5 @@
 console load 2
+   1
 
 #Start
 #lvl_start
@@ -247,7 +248,7 @@ console load 2
    1,R,J
    3,R
   40
- 
+
 #lvl_d4 (1)
    4,R
    8,R,J
@@ -749,7 +750,7 @@ console load 2
    1,L
   15,L,D,C
    7,R,D
- 
+
 #lvl_2
   40
   19,R,D
@@ -985,7 +986,7 @@ console load 2
    1,J
   12,U,X
   40
- 
+
 #lvl_end_3c
    6,L
    1,L,J,G
