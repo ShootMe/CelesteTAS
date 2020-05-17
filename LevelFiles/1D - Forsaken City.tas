@@ -1,9 +1,7 @@
 #By RichConnorGMN, EuniverseCat
-#Restart
-   1,Q
-   1,J
-  31
- 
+console load 1
+   1
+
 #lvl_1
   88
    3,J
@@ -97,7 +95,7 @@
    8,R,J,G
    1,K
   40
- 
+
 #lvl_4
    2,R
    1,R,J,G
@@ -528,7 +526,7 @@
    2,J
   40
 
-#lvl_11 (1)
+#lvl_12
    4,R
    2,R,J,G
    2,J
@@ -538,94 +536,14 @@
   12,R
   41,R,J
   12,R,K,G
-   1,L,J
-  27,L,K
-  12,L,J,G
-  12,L,K,G
-   3,L,J,G
-   7
-   2,J
-  12,R,K
-   2,R
-   3,L
-   1,L,J,G
-   8,L,G
-   1,J,G
-   2,R,J
-  12,L,K,G
-  11,L,D
-   3,L
-   1
-   7,L
-   3,L,J
-   1,L,K,G
-   1,L,J,G
-  12,L
-   3,L,J
-   5,L
-   1
-  14,L
-   3,L,D,J
-   1,L,K,G
-   8,L,J,G
-   4,L
-  40
-
-#lvl_12
-   2,L
-   6,L,J
-  12,R,K,G
-  11,J,G
-   1,L,J
-   1,K
-  18,R,K
-   2,J,G
-   1,L,J
-   1,K
-  19,R,K
-   1,J,G
-   2,R,J
-   2,L,J
-  55,L,K
-   2
-   8,L
-  24,L,J,G
-  13,L
-  11,L,J
-  16,L
-  10,R,D
-  22,R,J,G
-   2,J
-   9,R,J
-  38,R,K,G
-  39,R,J,G
-  19,R,D
-   1,R,J,G
-   1,R,K,G
-  12,R
-   1,R,J
-  10,R
-  40
-
-#lvl_11 (2)
-   4,R
-   1,R,J
-  18,R
-   1,R,J
-  14,R
-   1,R,J
-  14,R
-   1,R,J
-   8,R,G
-   1,J
-   1,L,J
-   3,R,K,G
-   5,R
-  70,R,K
-  17,R,D
-  20,R,J
+  12,J,G
+   2,K,G
+   3,R,J,G
+  33,R
+   3,R,D
+  19,R,J
   16,R
-  20,R,J
+  22,R,J
    1,R
    7,R
    1,R
@@ -637,7 +555,8 @@
   17,R
    1,R,J
   14,R
-  12,R
+   1,R,J
+  14,R
   40
 
 #lvl_12a
@@ -690,27 +609,4 @@
   12,R,D,X
    1,S
    1,D,J
-
-#lvl_end
-#   4,R
-#   1,R,J,G
-#   1,R,K,G
-#  20,R
-#  17,R,J
-#   1,R,K,G
-#   1,R,J,G
-#  11,R
-#   1,R,J
-#  14,R
-#   1,R,J
-#  21,R
-#   1,R,J
-#   6,R
-#   1,S
-#   1,D,J
-
-#-5f lvl_6 wallboost into the cornerboost shit
-#-5f lvl_8 double cornerboost at start
-#-1f lvl_8b wall push
-#-1f lvl_9b wall push
-#-2f lvl_9b jump into the traffic block...
+  18
