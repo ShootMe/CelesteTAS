@@ -1,10 +1,9 @@
 #By EuniverseCat
-#Restart
-   1,Q
-   1,J
-  31
+console load 5
+   1
 
-read,5S,lvl_a-00b (1),+1f berry (1)
+#Start
+read,5S,Start,+1f berry (1)
 
    6,R
    1

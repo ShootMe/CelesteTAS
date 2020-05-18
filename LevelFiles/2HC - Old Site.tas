@@ -2,6 +2,7 @@
 console load 2
    1
 
+#Start
 #lvl_start
  190
   10,X
@@ -72,16 +73,16 @@ console load 2
    1
 
 #Restart
+   1,Q
+   1,J
+  31
 Read,2A,Start,lvl_d0 (2)
 
 #lvl_d0
-   6,L
-   3,L,J
-  27,L,D,X
-   9,D
-   1,R,D
-  25,D
-  43,D,X
+   2,L,J
+  15,L,D,X
+  40,D
+  53,D,X
   40
 
 #lvl_d9

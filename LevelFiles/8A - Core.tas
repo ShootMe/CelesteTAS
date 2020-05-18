@@ -1,9 +1,8 @@
 #By DevilSquirrel and EuniverseCat
-#Restart
-   1,Q
-   1,J
-  31
+console load 9
+   1
 
+#Start
 #lvl_00
   54
   17

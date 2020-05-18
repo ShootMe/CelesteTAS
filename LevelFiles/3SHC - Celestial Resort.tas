@@ -1,10 +1,9 @@
 #By EuniverseCat
-#Restart
-   1,Q
-   1,J
-  31
+console load 3
+   1
 
-read,3SH,lvl_s0,3SHC1
+#Start
+read,3SH,Start,3SHC1
 
    4,L,D,X
    7,L,X

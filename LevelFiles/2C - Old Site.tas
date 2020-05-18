@@ -1,9 +1,8 @@
 #By DevilSquirrel, EuniverseCat, Dahlukeh
-#Restart
-   1,Q
-   1,J
-  31
- 
+console rmx2 2
+   1
+
+#Start
 #lvl_00
   91
    4,R,D,X

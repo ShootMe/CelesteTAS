@@ -1,6 +1,7 @@
 console hard 4
    1
 
+#Start
 #lvl_a-00
   61
    6,L,D,X
@@ -249,7 +250,7 @@ console hard 4
    1,R,J
   12,R,D,X
   40
- 
+
 #lvl_b-01
    2,R,D,X
    1,R,J
@@ -989,7 +990,7 @@ console hard 4
    2,R,K,G
    6,R
   40
- 
+
 #lvl_d-03
    7,R
    2,R,J

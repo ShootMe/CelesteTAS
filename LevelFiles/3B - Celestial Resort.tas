@@ -1,9 +1,7 @@
-#By DevilSquirrel, EuniverseCat
-#Restart
-   1,Q
-   1,J
-  31
+console hard 3
+   1
 
+#Start
 #lvl_00
   61
    4,R,D,X
@@ -33,33 +31,30 @@
   17,R
   19,R,J
   16,R
-   4,R,D,X
    2,R,J
    8,R
+  14,L,D,X
    1,R,J
-   6,R,D,X
-  40,R
+   5,R,D,X
+   1,R,K,G
+  12,R
+  40
 
 #lvl_02
-   3,R
-  14,R,J
-   4,D,X
-   9,R,X
-  23,R,J
-   6,R
-  14,R,U,X
-   6,R,J,G
-   1
-   6,R
-   1
-  10,R
-   1,D
-   8,R,D
    1,R
-   1,R,J,G
-  11,R,K,G
-  25,R
-   7
+   6,R,J
+   8,R
+   9,R,J
+  19,R
+  14,R,U,X
+   1,J,G
+   1,J
+   7,R,J
+   5,R
+   1,R,J
+  24,R,D
+   3,R,J
+  22,R
   14,R,D,X
   17,R,J
    7,R
@@ -107,30 +102,38 @@
    1,R
   30,R,J
   26,R,D
-   5,R,D,J,X
-  42,R
+   7,R,X
+   1,R,J
+  40
 
 #lvl_05
-  14,R
-  15,R,X
+   3,L,J
+   2,L,K,G
+   4,R,K
+  10,R,J,G
    2,R
-   7,R,J,G
-  33,R
-  13,L
-  11,J,G
-   2,R,J
-   1,L,K,G
-   6,L,K
+  10,R,X
+   1,K,G
+   2,R,K,G
    1,R,K
-  10,L,K
-   7,R,J
-  19
-  18,R,D
-  10,R
-   2
-   2,D
-  12,L,X
-  21,R,D
+  24,R,D
+   1
+  15,L
+  12,L,K,G
+   5,J,G
+   2,R,J
+   3,L,K,G
+   1,R,K
+  14,L,K
+   1,J
+  41,D
+   4,R,D
+   4,R
+   5,L,X
+   5
+   5,R
+  12,R,D,X
+  18,R
    5,U,X
   10,R,J
   12,R
@@ -171,27 +174,22 @@
 
 #lvl_07
   11,R,D
-   7,R,J
-  15,R
-   2
-   4,D,X
-  11,R,X
-   1,R
+   9,R,J
+  18,R
+   1,D,X
+  20,R,X
+   1,L
+  11,R,K
+  22,R
+   1,D,X
+   3,R,X
    1,R,J
-  18,R,D
-   7,R,J
-   5,R
-   1,R,J
-  16,R,D
-   4,R,D,X
-   2,R,X
-   1,R,J
-  45,R
+   7,R
+  40
 
 #lvl_08
-   1,R
    7,R,J
-   2,R
+   4,R
   19,R,D,X
    1,R,J
    1,R
@@ -527,13 +525,10 @@
    3,R,J
   12,R
   14,R,X
-   1,J,G
-  10,R,J
-   6,R
-   4,R,J
-  10,R
    1,R,J,G
-  39,R,D
+   1,J
+  28,R,J
+  29,R,D
    4,D,X
    1,R,J
    7,R
