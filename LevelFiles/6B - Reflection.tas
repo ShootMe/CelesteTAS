@@ -137,12 +137,11 @@ console hard 6
   10,R
    6,R,D,X
    1,R,J
-  12,R
+   7,R
+   5,R,K
   17,R,J
-   1,R
-   5,D,X
-   1,J
-  32
+   5,R,D,X
+  33,D
    4,D,X
    1,R,J
    7
