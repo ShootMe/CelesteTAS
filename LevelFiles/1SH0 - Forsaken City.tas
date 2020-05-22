@@ -413,14 +413,17 @@ Read,SaveandQuit
    6,R
   10,D,X
    1,J
-  58,R,D
-   7,R,D,X
+   9,R,D
+  35,D,X
+  17,R,D
+   4,R,D,X
+   1,R,J
   40
  
 #lvl_6b (2)
-   3,R,D,X
-   7,R,J
-  15,R,D,X
+   4,R,J
+   2,R
+  19,R,D,X
    8,R,J
   10,R,K
    4,R,D,X
