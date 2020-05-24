@@ -1,9 +1,8 @@
 #By fishmcmuffins, EuniverseCat
-#Restart
-   1,Q
-   1,J
-  31
- 
+console hard 2
+   1
+
+#Start
 #lvl_start
  190
    4,D,X

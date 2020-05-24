@@ -1,9 +1,8 @@
 #By DevilSquirrel, Higashi Dong
-#Restart
-   1,Q
-   1,J
-  31
+console hard 9
+   1
 
+#Start
 #lvl_00
   54
    4,R,D,X

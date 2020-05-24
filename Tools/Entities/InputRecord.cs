@@ -218,8 +218,8 @@ namespace CelesteStudio.Entities {
 			}
 			return one.Actions != two.Actions || one.Angle != two.Angle;
 		}
-		public int ActionPosition() {
-			return Frames == 0 ? -1 : Math.Max(4, Frames.ToString().Length);
+        public int ActionPosition() {
+            return Frames == 0 ? -1 : Math.Max(4, Frames.ToString().Length);
 		}
 	}
 }

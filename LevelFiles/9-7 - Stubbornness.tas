@@ -1,93 +1,82 @@
-   1,S
-   1,D,J
-   1,O
-  68
- 349
+console load 10 43560 -8748
+   1
+  36
+  21,R,X
+ 348
   40
-#make a savestate as you hit badeline
 
 #Start
 #lvl_i-00
    1,S
    1,D,J
   34
-   5,J
-   2
-   4,L
-  10,R,D,X
-   5,R,J
-  10,R,X
+  13,L,J
+  10,L,X
+  12,L,J
+   3,L,K,G
+  14,L,X
+   1,R,J
+  15,D,C
+  15,D,X
+  15,D,C
+   2,L
+  14,R,D,C
+   1,L,J
+   4,D,C
+  10,L,C
+   1,R,J
+   7,R,D,X
+   1,R,J,G
+   1,R,K,G
+   7,R
+   1,R,J
+   5,R
+   2,R,J
+  12,R,U,X
    1,R,J,G
    2,R,K,G
    1,R,J,G
-   9,R,K,G
-   6,R
-   1
-  11,R,J
-   5,R
-  11,R,D,X
-   9,R,J,G
-   1
+   2,R,K,G
    7,R
-   7,R,J
-  15,R,D,X
-   5,R,J
-   1,J
-  10,R
-  14,R,X
-   2,R,J,G
+   2,R,J
+  11,R,D,X
+   1,R,J,G
+   1,R
+   1,R,K,G
+   1,R,J,G
+   1,R
+   1,R,K,G
    6,R
-  11,R,J,G
-  14,R
-   5,R,J
-   6,R,D,X
-   8,R,J,G
+   1,S
+  11,R,J
+   1,R
+   2,R,J
+  24,R,D,X
+  11,R,J
+   4,R
+   5,R,J,G
+  12,R,U,X
   40
 
 #lvl_i-00b
-   1,R,J
-  11,R
-   4,R,J
-   6,R
-  15,R,D,X
-   3,R,J
-  16,R
-   4,R,D
-   4,D,X
-  22,R,X
-   5,D,C
-  10
-  13,D,X
-  14,R
-  23
-  15,U,X
-  51
-   3,D
-   3,L,D
-   4,D,X
-  11,R,X
-  26,L
-   3,L,D
-  19,U,C
-   2
-   8
-  13
-   2,D
+   2,R,U,X
+   4,R,J,G
+  12,R
    4,D,X
   10,R,X
-  10,R,G
-   3,J,G
-  19,K,G
-   1,R,J,G
+  25,R,D
    7,R
-   3
-  12
+   4,D,X
+  13,R,X
+   3,R
+   4,D,X
+  10,R,X
+  15
   14,R,U,X
    1,R,J,G
-   2,L,J
-   7,R
-  15,D,C
-   5,D
+   1
+   1,J,G
+   7
    4,D,X
    7,R,X
    1,R,J
@@ -98,17 +87,25 @@
    2,R,J
    2,R,D
    9,R,D,J
-   3,R
-   1
-   1,R
-   1,R,J
+   2,R
+   3
    3,J
+   1
+   1,J
+   1
   11,U,X
-  48,R
-  60,R,U,X
-   9,R
-   5,R,D
-   1,R
+   8
+   4,D,X
+   9,L,X
+  12,R,J
+  31,R,D,X
+   5
+  11,R,D,C
+   8
+  15,R,D,X
+   4,D,C
+  10,R,C
+  18,R,D
    1,R
    6,R,D,X
   41,R
@@ -119,31 +116,29 @@
    1,R,J
   26,R,K
    1,K
-   1,R
-   1
-  15,D,C
-   5
-  10,D,X
-   5,J
-   5,L,J
-   5,L
+   2,R,K
+   1,R,J
    4,D,X
-  10,L,X
+   7,R,X
+   1,L,J
+  12,R
+   4,D,X
+   6,L,X
    1,R,J
    1,J
    7,R,J
    5,R,D,X
    3,R,J,G
-   6,R
+   5,R
+   1,R,J
   40
 
 #lvl_i-02
-   1,R,J
-   3,R
+   4,R
    4,R,J
   15,R,D,X
-   6,R,J
-  12,R
+   7,R,J
+  11,R
   14,R,U,X
    1,L,J,G
    5,R,J
@@ -152,16 +147,16 @@
    5,R
   17,R,J
   15,R,U,X
-  55,R,C
+  53,R,C
    4,D,X
   31,R,X
-  11,U,C
+  12,U,C
   24,R,J
    1,R,K
    4,R,J
    8,R
    1,R,J
-   3
+   1,R,K
    4,D,X
    3,R,X
    3,R,J

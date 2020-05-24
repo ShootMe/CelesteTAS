@@ -1,10 +1,9 @@
 #By DevilSquirrel, EuniverseCat
-#Restart
-   1,Q
-   1,J
-  31
+console load 3
+   1
 
-read,3A,lvl_s0,lvl_09-b (1)
+#Start
+read,3A,Start,lvl_09-b (1)
 
 read,3SH,lvl_09-b (1),lvl_13-b (1)
 
@@ -150,7 +149,6 @@ read,3SH,lvl_11-z,lvl_10-z
 read,3A,lvl_10-y,lvl_10-x (2)
 
 #lvl_10-x (2)
-  40
   10,R
   20,L,J
    1,D,X

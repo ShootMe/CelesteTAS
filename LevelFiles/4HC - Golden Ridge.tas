@@ -1,9 +1,8 @@
 #By DevilSquirrel, EuniverseCat
-#Restart
-   1,Q
-   1,J
-  31
+console load 4
+   1
 
+#Start
 Read,4A,lvl_a-00,lvl_a-07
 
 Read,4SH,lvl_a-07,+1f berry

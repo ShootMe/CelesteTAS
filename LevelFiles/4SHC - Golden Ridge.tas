@@ -1,9 +1,8 @@
 #By EuniverseCat
-#Restart
-   1,Q
-   1,J
-  31
+console load 4
+   1
 
+#Start
 read,4SH,lvl_a-00,+2f berry
 
    4,D,X

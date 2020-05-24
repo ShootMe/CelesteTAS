@@ -1,55 +1,16 @@
-   1,S
-   1,D,J
-   1,O
-  68
-#Start from state at start of j-15
+console load 10 76705 -10480
+   1
+
 #j-15
-  29,R,C
-   9,L,D,X
-  34,L,D
-   4
-  10,R,J
-  13,R,U,X
-  53,R
-  15,R,D,X
-   9,R,J
-   4,R
-  14,R,D,X
-   1,R
-   1,R,J
-   2,R
-  19,R,D,X
-   4,R,J
-   1,L,K,G
-   2,R,K
-   6,R
-   8,R,J
-   6,R
-  14,R,X
-  44,R
-   4,D,X
-   1,R,X
-   1,R,J
-   7,R
-   1,R,J
-   1,R
-  15,R,D,X
-  26,R,D
-   1,R,J
-  13,U,X
+  36
+   9,U,X
    6
   24,D
    5,L,D
-  13,U,X
+  14,U,X
   12
-   4,L
+   1
   14,L,D,X
-   7,L,D
-   8,L,J
-  18,L,X
-  20
-   4,D,C
-  10,R,C
 #Start
    3,R,J
   10,R,D,X
@@ -102,7 +63,7 @@
   15,L,D,X
   14,R,D
    7,R,D,X
-  26,R
+  25,R
   20
    4,D,X
    6,R,X

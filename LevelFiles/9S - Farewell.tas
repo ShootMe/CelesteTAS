@@ -1,10 +1,9 @@
 #By euni
-#Restart
-   1,Q
-   1,J
-  31
+console load 10
+   1
 
-read,9,Singular,Farewell
+#Start
+read,9,Start,Farewell
 
 #Farewell
 read,9-9S,Start

@@ -1,30 +1,32 @@
-read,StartFullGameFile
+#Start from Begin
 
-Read,0 - Prologue.tas,6
+Read,StartFullGameFile
+
+Read,0 - Prologue.tas,Start
 
 Read,Load1A
 
-Read,1HC,6
+Read,1HC,Start
 
 Read,LoadA
 
-Read,2HC,6
+Read,2HC,Start
 
 Read,LoadA
 
-Read,3HC,6
+Read,3HC,Start
 
 Read,LoadA
 
-Read,4HC,6
+Read,4HC,Start
 
 Read,LoadA
 
-Read,5HC,6
+Read,5HC,Start
 
 Read,LoadA
 
-Read,6HC,6
+Read,6HC,Start
 
 Add 197
  165
@@ -40,90 +42,90 @@ Add 29
   32
 Add 1
 
-Read,7HC,6
+Read,7HC,Start
 
 Read,LoadCoreFromSummit
 
-Read,8A,6
+Read,8A,Start
 
 Read,Load1B
 
-Read,1B,6
+Read,1B,Start
 
 Read,LoadB
 
-Read,2B,6
+Read,2B,Start
 
 Read,LoadB
 
-Read,3B,6
+Read,3B,Start
 
 Read,LoadB
 
-Read,4B,6
+Read,4B,Start
 
 Read,LoadB
 
-Read,5B,6
+Read,5B,Start
 
 Read,LoadB
 
-Read,6B,6
+Read,6B,Start
 
 Read,LoadB
 
-Read,7B,6
+Read,7B,Start
 
-Read,LoadB,0,Core
+Read,LoadB,Start,Core
    1,R
    9
 Read,LoadB,Core
 
-Read,8B,6
+Read,8B,Start
 
 Read,Load1C
 
-Read,1C,6
+Read,1C,Start
 
 Read,LoadC
 
-Read,2C,6
+Read,2C,Start
 
 Read,LoadC
 
-Read,3C,6
+Read,3C,Start
 
 Read,LoadC
 
-Read,4C,6
+Read,4C,Start
 
 Read,LoadC
 
-Read,5C,6
+Read,5C,Start
 
 Read,LoadC
 
-Read,6C,6
+Read,6C,Start
 
 Read,LoadC
 
-Read,7C,6
+Read,7C,Start
 
-Read,LoadC,0,Core
+Read,LoadC,Start,Core
    1,R
    9
 Read,LoadC,Core
 
-Read,8C,6
+Read,8C,Start
 
-Read,Load9From8C,0,Postcard
+Read,Load9From8C,Start,Postcard
 
 #Uncomment if variants aren't unlocked
 #Read,Load9From8C,Postcard,Resume
 
 Read,Load9From8C,Resume
 
-Read,9,6
+Read,9,Start
 
 #Epilogue
   51

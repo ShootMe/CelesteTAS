@@ -1,8 +1,7 @@
-#Restart
-   1,Q
-   1,J
-  31
+console load 10
+   1
 
+#Start
 #lvl_intro-00-past
   98
    4,D,X
@@ -72,20 +71,29 @@
    1,R,K,G
    1,R
    1,R,J,G
-   3,R,K,G
-   7,R,D
-   2,R,J
-   7,R
-   5,R,X
-   1,R,J,G
    2,R,K,G
-   1,R,J,G
+   1,R,K
    7,R
-   7,R,J
+   6,R,J
+   3,R
+   5,R,D,X
+   1,R,J,G
+   1,R,K,G
+   6,R
+   1,S
+   1,X
+   9,J
+   1,R,J
+   1,R
+   3,R,J
+   3,R
   15,R,D,X
-  17,R
-   5
-   6,L,J
+  14,R
+   4,R
+   1
+   1,D
+   1,L,J
+   5,J
   40
 
 #lvl_a-00
@@ -208,18 +216,23 @@
 #lvl_a-05
    4,R,K
   15,R,D,X
-   6,R,J
-  53,R
-   4,D,X
-  18,R,X
-   7,R
-  18,L,C
-  19,D,X
-  10,L,D,C
+   5,R,J
+  17,R
+  14,R,D
   10,R
-   8,L,D,C
+  25,R,X
+   9,R,J,G
+   8,R,G
+   4,R,K,G
+   6,R,J,G
+  13,R
+  10,L,D
+  11,L,G
+   1,L
+   1
+   1,R
   33,R
-  34,R,U,X
+  33,R,U,X
    7,R,J
    4,D,X
    3,R,X
@@ -353,19 +366,19 @@
    4,D,X
    9,L,X
    1,L,J,G
-  27,D
+  26,D
    2,R,D
-   4,R
-   9,L
+   4,R,D
+   2,L,D
+   6,L
   19,R
-  15,R,X
-  19,R,D
+  14,R,X
+  19,R
   32,R
   15,U,X
    1,R
    1
    1,R
-   1
    1,L,J
    2,L,K
   15,L
