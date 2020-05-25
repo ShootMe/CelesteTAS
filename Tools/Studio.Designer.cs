@@ -114,7 +114,7 @@
 		#endregion
 		private System.Windows.Forms.StatusStrip statusBar;
 		private System.Windows.Forms.ToolStripStatusLabel lblStatus;
-		private Controls.RichText tasText;
+		public Controls.RichText tasText;
 	}
 }
 

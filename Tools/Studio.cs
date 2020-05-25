@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using CelesteStudio.Controls;
 using CelesteStudio.Entities;
 using Microsoft.Win32;
+using CelesteStudio.Communication;
+
 namespace CelesteStudio
 {
     public partial class Studio : Form
@@ -25,10 +27,11 @@ namespace CelesteStudio
         }
 
         private List<InputRecord> Lines = new List<InputRecord>();
-        private GameMemory memory = new GameMemory();
+        //private GameMemory memory = new GameMemory();
         private int totalFrames = 0, currentFrame = 0;
         private bool updating = false;
         private DateTime lastChanged = DateTime.MinValue;
+        public static Studio instance;
         public Studio()
         {
             InitializeComponent();
@@ -40,6 +43,8 @@ namespace CelesteStudio
 
             DesktopLocation = new Point(RegRead("x", DesktopLocation.X), RegRead("y", DesktopLocation.Y));
             Size = new Size(RegRead("w", Size.Width), RegRead("h", Size.Height));
+
+            instance = this;
         }
         private void TASStudio_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -57,7 +62,10 @@ namespace CelesteStudio
         {
             try
             {
-                if (e.Modifiers == (Keys.Shift | Keys.Control) && e.KeyCode == Keys.S)
+                if (Wrapper.CheckControls()) {
+
+                }
+                else if (e.Modifiers == (Keys.Shift | Keys.Control) && e.KeyCode == Keys.S)
                 {
                     tasText.SaveNewFile();
                 }
@@ -104,7 +112,7 @@ namespace CelesteStudio
             tasText.Selection = new Range(tasText, 0, start, 0, start);
             string text = tasText.SelectedText;
 
-            tasText.SelectedText = "# lvl_" + memory.LevelName() + '\n';
+            tasText.SelectedText = "#lvl_" + Wrapper.LevelName() + '\n';
             tasText.Selection = new Range(tasText, 0, start, 0, start);
         }
 
@@ -161,7 +169,7 @@ namespace CelesteStudio
             {
                 try
                 {
-                    bool hooked = memory.HookProcess();
+                    bool hooked = StudioCommunicationServer.Initialized;
                     if (lastHooked != hooked)
                     {
                         lastHooked = hooked;
@@ -205,7 +213,7 @@ namespace CelesteStudio
                     }
                     else
                     {
-                        fileName = Path.Combine(Path.GetDirectoryName(memory.Program.MainModule.FileName), "Celeste.tas");
+                        fileName = Path.Combine(Wrapper.gamePath, "Celeste.tas");
                     }
                     if (!File.Exists(fileName)) { File.WriteAllText(fileName, string.Empty); }
 
@@ -233,6 +241,7 @@ namespace CelesteStudio
                 lblStatus.Text = "Searching...";
                 tasText.Height += statusBar.Height - 22;
                 statusBar.Height = 22;
+                StudioCommunicationServer.Run();
             }
         }
         public void UpdateValues()
@@ -243,7 +252,7 @@ namespace CelesteStudio
             }
             else
             {
-                string tas = memory.TASOutput();
+                string tas = Wrapper.state;
                 if (!string.IsNullOrEmpty(tas))
                 {
                     int index = tas.IndexOf('[');
@@ -319,10 +328,12 @@ namespace CelesteStudio
         }
         private void UpdateStatusBar()
         {
-            if (memory.IsHooked)
+            if (StudioCommunicationServer.Initialized)
             {
-                string playeroutput = memory.TASPlayerOutput();
-                lblStatus.Text = "(" + (currentFrame > 0 ? currentFrame + "/" : "") + totalFrames + ") \n" + playeroutput + new string('\n', 7 - playeroutput.Split('\n').Length) + '[' + memory.LevelName() + ']';
+                string playeroutput = Wrapper.playerData;
+                lblStatus.Text = "(" + (currentFrame > 0 ? currentFrame + "/" : "") 
+                    + totalFrames + ") \n" + playeroutput 
+                    + new string('\n', 7 - playeroutput.Split('\n').Length);
             }
             else
             {
