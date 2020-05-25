@@ -16,7 +16,7 @@ namespace CelesteStudio
 {
     public partial class Studio : Form
     {
-        private static string titleBarText = "Studio v" + Assembly.GetExecutingAssembly().GetName().Version.ToString(3);
+        private static string titleBarText = "Celeste.tas - Studio v" + Assembly.GetExecutingAssembly().GetName().Version.ToString(3);
         private const string RegKey = "HKEY_CURRENT_USER\\SOFTWARE\\CeletseStudio\\Form";
         [STAThread]
         public static void Main()
@@ -58,16 +58,29 @@ namespace CelesteStudio
             updateThread.IsBackground = true;
             updateThread.Start();
         }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData) {
+            if ((msg.Msg == 0x100) || (msg.Msg == 0x104)) {
+                if (Wrapper.CheckControls())
+                    return true;
+            }
+            //else if (msg.Msg == 0x101)
+            //    Wrapper.CheckFastForward();
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
         private void Studio_KeyDown(object sender, KeyEventArgs e)
         {
             try
             {
-                if (Wrapper.CheckControls()) {
-
-                }
-                else if (e.Modifiers == (Keys.Shift | Keys.Control) && e.KeyCode == Keys.S)
+                if (e.Modifiers == (Keys.Shift | Keys.Control) && e.KeyCode == Keys.S)
                 {
+                    StudioCommunicationServer.instance.WriteWait();
                     tasText.SaveNewFile();
+                    StudioCommunicationServer.instance.SendPath(Path.GetDirectoryName(tasText.LastFileName), true);
+                    Text = Path.GetFileName(tasText.LastFileName)
+                        + " - Studio v" 
+                        + Assembly.GetExecutingAssembly().GetName().Version.ToString(3);
                 }
                 else if (e.Modifiers == Keys.Control && e.KeyCode == Keys.S)
                 {
@@ -75,7 +88,12 @@ namespace CelesteStudio
                 }
                 else if (e.Modifiers == Keys.Control && e.KeyCode == Keys.O)
                 {
+                    StudioCommunicationServer.instance.WriteWait();
                     tasText.OpenFile();
+                    StudioCommunicationServer.instance.SendPath(Path.GetDirectoryName(tasText.LastFileName), true);
+                    Text = Path.GetFileName(tasText.LastFileName)
+                        + " - Studio v"
+                        + Assembly.GetExecutingAssembly().GetName().Version.ToString(3);
                 }
                 else if (e.Modifiers == Keys.Control && e.KeyCode == Keys.K)
                 {

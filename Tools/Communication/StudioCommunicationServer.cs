@@ -21,6 +21,7 @@ namespace CelesteStudio.Communication {
 			ThreadStart mainLoop = new ThreadStart(instance.UpdateLoop);
 			Thread updateThread = new Thread(mainLoop);
 			updateThread.Name = "StudioCom Server";
+			updateThread.IsBackground = true;
 			updateThread.Start();
 		}
 
@@ -28,6 +29,9 @@ namespace CelesteStudio.Communication {
 		#region Read
 		protected override void ReadData(Message message) {
 			switch (message.ID) {
+				case MessageIDs.Wait:
+					ProcessWait();
+					break;
 				case MessageIDs.SendState:
 					ProcessSendState(message.Data);
 					break;
@@ -36,6 +40,15 @@ namespace CelesteStudio.Communication {
 					break;
 				case MessageIDs.SendCurrentBindings:
 					ProcessSendCurrentBindings(message.Data);
+					break;
+				//Spaghetti af, there's no good way of handling this.
+				//The only way a send path can possibly end up here is if you restart Celeste then send a message through Studio.
+				//The celeste side is already partially through initialization so we have to go to midway through initialization code.
+				//EstablishConnection() takes care of the resyncing.
+				//Can it potentially go through here twice in a row? Oh you bet it can go through here twice in a row.
+				//But it works and frankly I'm terrified of fixing it.
+				case MessageIDs.SendPath:
+					EstablishConnection();
 					break;
 				default:
 					throw new InvalidOperationException($"{message.ID}");
@@ -49,9 +62,10 @@ namespace CelesteStudio.Communication {
 		}
 
 		private void ProcessSendState(byte[] data) {
-			string state = Encoding.Default.GetString(data);
-			Log(state);
-			Wrapper.state = state;
+			string[] stateAndData = FromByteArray<string[]>(data);
+			//Log(stateAndData[0]);
+			Wrapper.state = stateAndData[0];
+			Wrapper.playerData = stateAndData[1];
 		}
 
 		private void ProcessSendPlayerData(byte[] data) {
@@ -64,7 +78,7 @@ namespace CelesteStudio.Communication {
 			List<Keys>[] keys = FromByteArray<List<Keys>[]>(data);
 			foreach (List<Keys> key in keys)
 				Log(key.ToString());
-			Wrapper.bindings = keys;
+			Wrapper.SetBindings(keys);
 		}
 
 		#endregion
@@ -76,9 +90,16 @@ namespace CelesteStudio.Communication {
 			var studio = this;
 			var celeste = this;
 			celeste = null;
-
 			Message? lastMessage;
 
+			//See ReadData() for why this is necessary
+			//But tl;dr don't add anything between here and the label
+			if (Initialized) {
+				Initialized = false;
+				goto SyncReinitialization;
+			}
+
+			studio?.ReadMessage();
 			studio?.WriteMessageGuaranteed(new Message(MessageIDs.EstablishConnection, new byte[0]));
 			celeste?.ReadMessageGuaranteed();
 
@@ -86,7 +107,8 @@ namespace CelesteStudio.Communication {
 			lastMessage = studio?.ReadMessageGuaranteed();
 			studio?.ProcessSendPath(lastMessage?.Data);
 
-			studio?.SendPath(Studio.instance.tasText.LastFileName, false);
+			SyncReinitialization:
+			studio?.SendPathNow(Studio.instance.tasText.LastFileName, false);
 			lastMessage = celeste?.ReadMessageGuaranteed();
 			celeste?.ProcessSendPath(lastMessage?.Data);
 
@@ -98,6 +120,10 @@ namespace CelesteStudio.Communication {
 		}
 
 		public void SendPath(string path, bool canFail) {
+			pendingWrite = () => SendPathNow(path, canFail);
+		}
+
+		private void SendPathNow(string path, bool canFail) {
 			if (Initialized || !canFail) {
 				byte[] pathBytes;
 				if (path != null)
@@ -109,6 +135,10 @@ namespace CelesteStudio.Communication {
 		}
 
 		public void SendHotkeyPressed(HotkeyIDs hotkey) {
+			pendingWrite = () => SendHotkeyPressedNow(hotkey);
+		}
+
+		private void SendHotkeyPressedNow(HotkeyIDs hotkey) {
 			if (!Initialized)
 				return;
 			byte[] hotkeyByte = new byte[] { (byte)hotkey };

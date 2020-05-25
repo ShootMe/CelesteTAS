@@ -4,6 +4,7 @@ using System.IO;
 using System.IO.MemoryMappedFiles;
 using System.Linq;
 using System.Net.Security;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
@@ -20,7 +21,7 @@ namespace CelesteStudio.Communication {
 			public int Length { get; private set; }
 			public byte[] Data { get; private set; }
 
-			public static readonly int Signature = "Studio".GetHashCode();
+			public static readonly int Signature = Assembly.GetExecutingAssembly().GetHashCode();
 
 			public Message(MessageIDs id, byte[] data) {
 				ID = id;
@@ -36,6 +37,7 @@ namespace CelesteStudio.Communication {
 				Buffer.BlockCopy(Data, 0, bytes, HEADER_LENGTH, Length);
 				return bytes;
 			}
+
 		}
 
 		//I gave up on using pipes.
@@ -45,6 +47,10 @@ namespace CelesteStudio.Communication {
 		private Mutex mutex;
 		private int lastSignature;
 		private int timeout = 16;
+		private int failedWrites = 0;
+		private bool waiting;
+
+		protected Action pendingWrite;
 
 		protected const int BUFFER_SIZE = 0x1000;
 		protected const int HEADER_LENGTH = 9;
@@ -65,14 +71,33 @@ namespace CelesteStudio.Communication {
 		protected void UpdateLoop() {
 			EstablishConnection();
 			for (; ; ) {
-				Message? message = ReadMessage();
+				try {
+					Message? message = ReadMessage();
 
-				if (message != null) {
-					ReadData((Message)message);
+					if (message != null) {
+						ReadData((Message)message);
+						waiting = false;
+					}
+					Thread.Sleep(timeout);
+
+					if (!waiting) {
+						pendingWrite?.Invoke();
+						pendingWrite = null;
+					}
 				}
-				Thread.Sleep(timeout);
+				//For this to work all writes must occur in this thread
+				catch (TimeoutException e) {
+					Initialized = false;
+					Log(e.ToString());
+					//Ensure the first byte of the mmf is reset
+					ReadMessage();
+					EstablishConnection();
+				}
 			}
 		}
+
+		private bool IsHighPriority(MessageIDs ID) =>
+			Attribute.IsDefined(typeof(MessageIDs).GetField(Enum.GetName(typeof(MessageIDs), ID)), typeof(HighPriorityAttribute));
 
 		protected Message? ReadMessage() {
 
@@ -111,17 +136,21 @@ namespace CelesteStudio.Communication {
 
 
 			Message message = new Message(id, data);
-			Log($"{this} received {message.ID} with length {message.Length}");
+			if (id != MessageIDs.SendState)
+				Log($"{this} received {message.ID} with length {message.Length}");
 
 			return message;
 		}
 
 		protected Message ReadMessageGuaranteed() {
 			Log($"{this} forcing read");
+			int failedReads = 0;
 			for (; ; ) {
 				Message? message = ReadMessage();
 				if (message != null)
 					return (Message)message;
+				if (Initialized && ++failedReads > 100)
+					throw new TimeoutException();
 				Thread.Sleep(timeout);
 			}
 		}
@@ -136,11 +165,16 @@ namespace CelesteStudio.Communication {
 				BinaryWriter writer = new BinaryWriter(stream);
 
 				//Check that there isn't a message waiting to be read
-				if (reader.ReadByte() != 0) {
+				byte firstByte = reader.ReadByte();
+				if (firstByte != 0 && (!IsHighPriority(message.ID) || IsHighPriority((MessageIDs)firstByte))) {
+
 					mutex.ReleaseMutex();
+					if (Initialized && ++failedWrites > 100)
+						throw new TimeoutException();
 					return false;
 				}
-				Log($"{this} writing {message.ID} with length {message.Length}");
+				if (message.ID != MessageIDs.SendState)
+					Log($"{this} writing {message.ID} with length {message.Length}");
 
 				stream.Position = 0;
 				writer.Write(message.GetBytes());
@@ -149,13 +183,26 @@ namespace CelesteStudio.Communication {
 			}
 
 			lastSignature = Message.Signature;
+			failedWrites = 0;
 			return true;
 		}
 
 		protected void WriteMessageGuaranteed(Message message) {
 			Log($"{this} forcing write of {message.ID} with length {message.Length}");
-			while (!WriteMessage(message))
+
+			for (; ; ) {
+				if (WriteMessage(message))
+					break;
 				Thread.Sleep(timeout);
+			}
+		}
+
+		public void WriteWait() {
+			pendingWrite = () => WriteMessageGuaranteed(new Message(MessageIDs.Wait, new byte[0]));
+		}
+
+		protected void ProcessWait() {
+			waiting = true;
 		}
 
 		protected virtual void ReadData(Message message) { }

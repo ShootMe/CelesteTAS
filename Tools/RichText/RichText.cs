@@ -2032,7 +2032,6 @@ namespace CelesteStudio.Controls {
                 if (diag.ShowDialog() == DialogResult.OK) {
 					LastFileName = diag.FileName;
 					OpenBindingFile(diag.FileName, Encoding.ASCII);
-					StudioCommunicationServer.instance.SendPath(diag.FileName, true);
 				}
 			}
 		}
@@ -2058,7 +2057,6 @@ namespace CelesteStudio.Controls {
 				if (diag.ShowDialog() == DialogResult.OK) {
 					LastFileName = diag.FileName;
 					SaveFile();
-					StudioCommunicationServer.instance.SendPath(diag.FileName, true);
 				}
 			}
 		}
