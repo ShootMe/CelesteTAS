@@ -4,7 +4,8 @@ using System.IO;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Microsoft.Xna.Framework.Input;
+using System.Windows.Forms;
+//using Microsoft.Xna.Framework.Input;
 
 
 namespace CelesteStudio.Communication {
@@ -16,6 +17,10 @@ namespace CelesteStudio.Communication {
 		}
 
 		public static void Run() {
+			//this should be modified to check if there's another studio open as well
+			if (instance != null)
+				return;
+
 			instance = new StudioCommunicationServer();
 
 			ThreadStart mainLoop = new ThreadStart(instance.UpdateLoop);
@@ -29,6 +34,10 @@ namespace CelesteStudio.Communication {
 		#region Read
 		protected override void ReadData(Message message) {
 			switch (message.ID) {
+				case MessageIDs.EstablishConnection:
+					throw new NeedsResetException("Recieved initialization message (EstablishConnection) from main loop");
+				case MessageIDs.Reset:
+					throw new NeedsResetException("Recieved reset message from main loop");
 				case MessageIDs.Wait:
 					ProcessWait();
 					break;
@@ -48,8 +57,8 @@ namespace CelesteStudio.Communication {
 				//Can it potentially go through here twice in a row? Oh you bet it can go through here twice in a row.
 				//But it works and frankly I'm terrified of fixing it.
 				case MessageIDs.SendPath:
-					EstablishConnection();
-					break;
+					//EstablishConnection();
+					throw new NeedsResetException("Recieved initialization message (SendPath) from main loop");
 				default:
 					throw new InvalidOperationException($"{message.ID}");
 			}
@@ -92,12 +101,6 @@ namespace CelesteStudio.Communication {
 			celeste = null;
 			Message? lastMessage;
 
-			//See ReadData() for why this is necessary
-			//But tl;dr don't add anything between here and the label
-			if (Initialized) {
-				Initialized = false;
-				goto SyncReinitialization;
-			}
 
 			studio?.ReadMessage();
 			studio?.WriteMessageGuaranteed(new Message(MessageIDs.EstablishConnection, new byte[0]));
@@ -105,15 +108,18 @@ namespace CelesteStudio.Communication {
 
 			celeste?.SendPath(null, true);
 			lastMessage = studio?.ReadMessageGuaranteed();
+			if (lastMessage?.ID != MessageIDs.SendPath)
+				throw new NeedsResetException("Invalid data recieved while establishing connection");
 			studio?.ProcessSendPath(lastMessage?.Data);
 
-			SyncReinitialization:
 			studio?.SendPathNow(Studio.instance.tasText.LastFileName, false);
 			lastMessage = celeste?.ReadMessageGuaranteed();
 			celeste?.ProcessSendPath(lastMessage?.Data);
 
 			//celeste?.SendCurrentBindings(Hotkeys.listHotkeyKeys);
 			lastMessage = studio?.ReadMessageGuaranteed();
+			if (lastMessage?.ID != MessageIDs.SendCurrentBindings)
+				throw new NeedsResetException("Invalid data recieved while establishing connection");
 			studio?.ProcessSendCurrentBindings(lastMessage?.Data);
 
 			Initialized = true;

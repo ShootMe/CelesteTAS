@@ -107,6 +107,10 @@ namespace CelesteStudio
                 {
                     AddRoom();
                 }
+                else if (e.Modifiers == Keys.Control && e.KeyCode == Keys.D)
+                {
+                    Wrapper.updatingHotkeys = !Wrapper.updatingHotkeys;
+                }
             }
             catch (Exception ex)
             {

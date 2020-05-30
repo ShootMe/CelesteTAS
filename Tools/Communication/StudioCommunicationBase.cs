@@ -40,6 +40,11 @@ namespace CelesteStudio.Communication {
 
 		}
 
+		protected class NeedsResetException : Exception {
+			public NeedsResetException() { }
+			public NeedsResetException(string message) : base(message) { }
+		}
+
 		//I gave up on using pipes.
 		//Don't know whether i was doing something horribly wrong or if .net pipes are just *that* bad.
 		//Almost certainly the former.
@@ -69,29 +74,27 @@ namespace CelesteStudio.Communication {
 		}
 
 		protected void UpdateLoop() {
-			EstablishConnection();
 			for (; ; ) {
+				EstablishConnectionLoop();
 				try {
-					Message? message = ReadMessage();
+					for (; ; ) {
+						Message? message = ReadMessage();
 
-					if (message != null) {
-						ReadData((Message)message);
-						waiting = false;
-					}
-					Thread.Sleep(timeout);
+						if (message != null) {
+							ReadData((Message)message);
+							waiting = false;
+						}
+						Thread.Sleep(timeout);
 
-					if (!waiting) {
-						pendingWrite?.Invoke();
-						pendingWrite = null;
+						if (!waiting) {
+							pendingWrite?.Invoke();
+							pendingWrite = null;
+						}
 					}
 				}
 				//For this to work all writes must occur in this thread
-				catch (TimeoutException e) {
-					Initialized = false;
-					Log(e.ToString());
-					//Ensure the first byte of the mmf is reset
-					ReadMessage();
-					EstablishConnection();
+				catch (NeedsResetException e) {
+					ForceReset(e);
 				}
 			}
 		}
@@ -136,7 +139,7 @@ namespace CelesteStudio.Communication {
 
 
 			Message message = new Message(id, data);
-			if (id != MessageIDs.SendState)
+			if (message.ID != MessageIDs.SendState && message.ID != MessageIDs.SendHotkeyPressed)
 				Log($"{this} received {message.ID} with length {message.Length}");
 
 			return message;
@@ -149,8 +152,8 @@ namespace CelesteStudio.Communication {
 				Message? message = ReadMessage();
 				if (message != null)
 					return (Message)message;
-				if (Initialized && ++failedReads > 100)
-					throw new TimeoutException();
+				if (/*Initialized &&*/ ++failedReads > 100)
+					throw new NeedsResetException("Read timed out");
 				Thread.Sleep(timeout);
 			}
 		}
@@ -169,11 +172,12 @@ namespace CelesteStudio.Communication {
 				if (firstByte != 0 && (!IsHighPriority(message.ID) || IsHighPriority((MessageIDs)firstByte))) {
 
 					mutex.ReleaseMutex();
-					if (Initialized && ++failedWrites > 100)
-						throw new TimeoutException();
+					if (/*Initialized &&*/ ++failedWrites > 100)
+						throw new NeedsResetException("Write timed out");
 					return false;
 				}
-				if (message.ID != MessageIDs.SendState)
+
+				if (message.ID != MessageIDs.SendState && message.ID != MessageIDs.SendHotkeyPressed)
 					Log($"{this} writing {message.ID} with length {message.Length}");
 
 				stream.Position = 0;
@@ -188,12 +192,41 @@ namespace CelesteStudio.Communication {
 		}
 
 		protected void WriteMessageGuaranteed(Message message) {
-			Log($"{this} forcing write of {message.ID} with length {message.Length}");
+
+			if (message.ID != MessageIDs.SendState)
+				Log($"{this} forcing write of {message.ID} with length {message.Length}");
 
 			for (; ; ) {
 				if (WriteMessage(message))
 					break;
 				Thread.Sleep(timeout);
+			}
+		}
+
+		protected void ForceReset(NeedsResetException e) {
+			Initialized = false;
+			waiting = false;
+			failedWrites = 0;
+			pendingWrite = null;
+			Log($"Exception thrown - {e.Message}");
+			//Ensure the first byte of the mmf is reset
+			using (MemoryMappedViewStream stream = sharedMemory.CreateViewStream()) {
+				mutex.WaitOne();
+				BinaryWriter writer = new BinaryWriter(stream);
+				writer.Write((byte)0);
+				mutex.ReleaseMutex();
+			}
+			Thread.Sleep(timeout * 2);
+		}
+
+		//Only needs to be used on the Celeste end, as Celeste will detect disconnects much faster
+		protected void WriteReset() {
+			using (MemoryMappedViewStream stream = sharedMemory.CreateViewStream()) {
+				mutex.WaitOne();
+				BinaryWriter writer = new BinaryWriter(stream);
+				Message reset = new Message(MessageIDs.Reset, new byte[0]);
+				writer.Write(reset.GetBytes());
+				mutex.ReleaseMutex();
 			}
 		}
 
@@ -206,6 +239,18 @@ namespace CelesteStudio.Communication {
 		}
 
 		protected virtual void ReadData(Message message) { }
+
+		private void EstablishConnectionLoop() {
+			for (; ; ) {
+				try {
+					EstablishConnection();
+					break;
+				}
+				catch (NeedsResetException e) {
+					ForceReset(e);
+				}
+			}
+		}
 
 		protected virtual void EstablishConnection() { }
 
@@ -239,9 +284,9 @@ namespace CelesteStudio.Communication {
 		}
 
 		protected void Log(string s) {
-#if DEBUG
+//#if DEBUG
 			Console.WriteLine(s);
-#endif
+//#endif
 		}
 	}
 }
