@@ -5,14 +5,13 @@ console load 1 lvl_6
 #Start
 #lvl_6
   36
-  10,R,X
-   5,R,J
-   2,L,K
-   1,L
-  15,U,X
-  11,L,J,G
+   5,U,X
+  12,R,J
+   6,L,J
+  12,L,K,G
+   2,L,J,G
    7,L
-   4,L,D,X
+   4,D,X
   10,L,X
    1,L,J
    5,L,D,X
@@ -35,6 +34,8 @@ console load 1 lvl_6
   40
  
 #lvl_7zb
+   5
+  30,R,J
    1,R,J,G
    6,L
    4,R
