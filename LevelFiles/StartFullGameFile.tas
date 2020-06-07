@@ -1,3 +1,7 @@
+Set,DisableScreenShake,true
+Set,DisableFlashes,true
+Set,SpeedrunClock,2
+Set,Everest.ShowModOptionsInGame,false
 EnforceMaingame
 Unsafe
 Add 2
