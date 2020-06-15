@@ -22,7 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,12 +32,16 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Celeste.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FNA, Version=19.9.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Saved Games\Celesteopengl\FNA.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
@@ -49,6 +53,11 @@
     <Reference Include="Mono.Posix" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Communication\HotkeyIDs.cs" />
+    <Compile Include="Communication\MessageIDs.cs" />
+    <Compile Include="Communication\StudioCommunicationBase.cs" />
+    <Compile Include="Communication\StudioCommunicationServer.cs" />
+    <Compile Include="Communication\Wrapper.cs" />
     <Compile Include="Entities\GameMemory.cs" />
     <Compile Include="Entities\MemoryReader.cs" />
     <Compile Include="Entities\InputRecord.cs" />

@@ -528,15 +528,13 @@ console load 4
    8,L,G
   12,L,K,G
   12,L,J,G
-   6,L,K,G
-   1,J,G
-   6
-   2,R
-   2
-   1,R
+   3,K,G
+   6,J,G
    4,D,X
    2,R,X
-  21,R,J
+  10,R,J
+   1,J
+  12,R,J
   11,K
    7,L
   11,U,X
